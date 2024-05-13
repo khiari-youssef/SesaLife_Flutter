@@ -1,0 +1,35 @@
+name: Sesalife
+description: "StudentLife for sesame university students"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.1 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  users_management_feature:
+    path: ../features/users_management_feature
+  home_feature:
+    path: ../features/home_feature
+  shared_dependencies:
+    path: ../infrastructure/shared_dependencies
+  localizations:
+    path: ../infrastructure/localizations
+  core:
+    path: ../infrastructure/core
+
+
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  auto_route_generator: ^8.0.0
+  build_runner: ^2.4.9
+  flutter_lints: ^3.0.0
+
+flutter:
+  generate: true
+  uses-material-design: true

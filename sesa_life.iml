@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/build" />
+      <excludeFolder url="file://$MODULE_DIR$/designsystem/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/designsystem/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/designsystem/build" />
+      <excludeFolder url="file://$MODULE_DIR$/events_management_feature/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/events_management_feature/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/events_management_feature/build" />
+      <excludeFolder url="file://$MODULE_DIR$/users_management_feature/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/users_management_feature/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/users_management_feature/build" />
+      <excludeFolder url="file://$MODULE_DIR$/features_shared_dependencies/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/features_shared_dependencies/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/features_shared_dependencies/build" />
+      <excludeFolder url="file://$MODULE_DIR$/shared_dependencies/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/shared_dependencies/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/shared_dependencies/build" />
+    </content>
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Dart SDK" level="project" />
+    <orderEntry type="library" name="Dart Packages" level="project" />
+    <orderEntry type="library" name="Flutter Plugins" level="project" />
+  </component>
+</module>

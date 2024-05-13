@@ -1,0 +1,56 @@
+name: designsystem
+description: "This package bundles are components and protocols of the ui design system"
+version: 0.0.1
+publish_to: 'none'
+useMaterial3: true
+
+environment:
+  sdk: '>=3.3.1 <4.0.0'
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_svg: ^2.0.10+1
+  shimmer: ^3.0.0
+  toastification: ^1.2.1
+  flutter_screenutil: 5.9.0
+  lottie: ^3.1.0
+  localizations:
+    path: ../localizations
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  build_runner: ^2.4.9
+  flutter_gen: ^5.4.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+  uses-material-design: true
+  generate: true
+  assets:
+    - assets/images/vector/
+    - assets/lottie/
+  fonts:
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/roboto_regular.ttf
+        - asset: assets/fonts/roboto_regular.ttf
+          style: normal
+          weight: 400
+        - asset: assets/fonts/roboto_medium.ttf
+          style: normal
+          weight: 500
+        - asset: assets/fonts/roboto_bold.ttf
+          style: normal
+          weight: 700
+    - family: Arial
+      fonts:
+        - asset: assets/fonts/arial.ttf
+          style: normal
