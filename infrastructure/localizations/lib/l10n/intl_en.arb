@@ -29,5 +29,6 @@
     "settings" : "Settings",
     "myprofile" : "My profile",
     "mybadge" : "My badge",
-     "enrollment_notice" : "If the email you entered is not already registered, we will you send an OTP code for re-authentication in order to proceed to the next steps."
+     "enrollment_notice_step1" : "If the email you entered is not already registered, we will you send an OTP code for re-authentication in order to proceed to the next steps.",
+     "enrollment_code_verification_notice" : "An OTP code is sent via email to {email} And will expire in 10 minutes"
 }

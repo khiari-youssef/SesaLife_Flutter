@@ -22,13 +22,17 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m0(semester) => "Semester ${semester} timetable";
 
+  static String m1(email) =>
+      "An OTP code is sent via email to ${email} And will expire in 10 minutes";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "calendar_title": m0,
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
-        "enrollment_notice": MessageLookupByLibrary.simpleMessage(
+        "enrollment_code_verification_notice": m1,
+        "enrollment_notice_step1": MessageLookupByLibrary.simpleMessage(
             "If the email you entered is not already registered, we will you send an OTP code for re-authentication in order to proceed to the next steps."),
         "firstName": MessageLookupByLibrary.simpleMessage("FirstName"),
         "guest_space": MessageLookupByLibrary.simpleMessage("Guest space"),

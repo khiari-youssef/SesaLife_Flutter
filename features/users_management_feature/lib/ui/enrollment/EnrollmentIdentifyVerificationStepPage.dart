@@ -4,9 +4,25 @@ class EnrollmentIdentifyVerificationStepPageState
     extends State<EnrollmentIdentifyVerificationStep> {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text("EnrollementIdentifyVerificationStep"),
-    );
+    return Material(
+        child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
+            child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  SizedBox(height: 24.h),
+                  Expanded(
+                      child: Center(
+                          child: BodyLarge(
+                    text: S
+                        .of(context)
+                        .enrollment_code_verification_notice("email@email.com"),
+                    color: Theme.of(context).colorScheme.tertiary,
+                    textAlign: TextAlign.center,
+                  )))
+                ])));
   }
 }
 

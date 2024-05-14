@@ -351,12 +351,22 @@ class S {
   }
 
   /// `If the email you entered is not already registered, we will you send an OTP code for re-authentication in order to proceed to the next steps.`
-  String get enrollment_notice {
+  String get enrollment_notice_step1 {
     return Intl.message(
       'If the email you entered is not already registered, we will you send an OTP code for re-authentication in order to proceed to the next steps.',
-      name: 'enrollment_notice',
+      name: 'enrollment_notice_step1',
       desc: '',
       args: [],
+    );
+  }
+
+  /// `An OTP code is sent via email to {email} And will expire in 10 minutes`
+  String enrollment_code_verification_notice(Object email) {
+    return Intl.message(
+      'An OTP code is sent via email to $email And will expire in 10 minutes',
+      name: 'enrollment_code_verification_notice',
+      desc: '',
+      args: [email],
     );
   }
 }

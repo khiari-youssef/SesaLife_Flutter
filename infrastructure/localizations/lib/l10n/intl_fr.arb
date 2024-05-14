@@ -28,6 +28,7 @@
   "settings" : "Paramètres",
   "myprofile" : "Mon profile",
   "mybadge" : "Mon badge",
-  "enrollment_notice" : "Si l'email que vous avez entré n'est pas encore utilisé, on vous enverra un code OTP de ré-authentification pour procéder à l'étape suivante."
+  "enrollment_notice_step1" : "Si l'email que vous avez entré n'est pas encore utilisé, on vous enverra un code OTP de ré-authentification pour procéder à l'étape suivante.",
+  "enrollment_code_verification_notice" : "Un code OTP sera envoyé à {email} et sera expiré dans 10 minutes"
 
 }

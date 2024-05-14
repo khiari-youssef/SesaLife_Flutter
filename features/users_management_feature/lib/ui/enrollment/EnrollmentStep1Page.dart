@@ -41,7 +41,7 @@ class EnrollmentStep1PageState extends State<EnrollmentStep1Page> {
               Expanded(
                   child: Center(
                       child: BodyLarge(
-                text: S.of(context).enrollment_notice,
+                text: S.of(context).enrollment_notice_step1,
                 color: Theme.of(context).colorScheme.tertiary,
                 textAlign: TextAlign.center,
               )))
