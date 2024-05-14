@@ -1,4 +1,3 @@
-import 'package:designsystem/components/menus/ProfileMenuItem.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 
 class MyProfileMenu extends StatelessWidget {

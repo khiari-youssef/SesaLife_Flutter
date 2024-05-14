@@ -1,8 +1,6 @@
 import 'package:designsystem/components/images/CustomIcon.dart';
 import 'package:designsystem/designsystem_exports.dart';
 
-import 'ProfileMenuItem.dart';
-
 class SesameMenuItem extends StatelessWidget {
   final ProfileMenuItem data;
   const SesameMenuItem({super.key, required this.data});
