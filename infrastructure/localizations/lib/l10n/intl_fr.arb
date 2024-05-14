@@ -5,6 +5,9 @@
   "logout" : "Se déconnecter",
   "guest_space" : "Espace visiteur",
   "email" : "Email",
+  "phone" : "Téléphone",
+  "firstName" : "Prénom",
+  "lastName" : "Nom",
   "password" : "Mot de passe",
   "programs_label" : "Programmes",
   "registration_label" : "Inscriptions",
@@ -24,5 +27,7 @@
   "calendar_title" : "Calendrier du semestre {semester}",
   "settings" : "Paramètres",
   "myprofile" : "Mon profile",
-  "mybadge" : "Mon badge"
+  "mybadge" : "Mon badge",
+  "enrollment_notice" : "Si l'email que vous avez entré n'est pas encore utilisé, on vous enverra un code OTP de ré-authentification pour procéder à l'étape suivante."
+
 }

@@ -1,7 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-
 import 'intl/messages_all.dart';
 
 // **************************************************************************
@@ -106,6 +105,36 @@ class S {
     return Intl.message(
       'Email',
       name: 'email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Phone`
+  String get phone {
+    return Intl.message(
+      'Phone',
+      name: 'phone',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `FirstName`
+  String get firstName {
+    return Intl.message(
+      'FirstName',
+      name: 'firstName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `LastName`
+  String get lastName {
+    return Intl.message(
+      'LastName',
+      name: 'lastName',
       desc: '',
       args: [],
     );
@@ -316,6 +345,16 @@ class S {
     return Intl.message(
       'My badge',
       name: 'mybadge',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If the email you entered is not already registered, we will you send an OTP code for re-authentication in order to proceed to the next steps.`
+  String get enrollment_notice {
+    return Intl.message(
+      'If the email you entered is not already registered, we will you send an OTP code for re-authentication in order to proceed to the next steps.',
+      name: 'enrollment_notice',
       desc: '',
       args: [],
     );

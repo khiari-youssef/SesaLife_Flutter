@@ -28,9 +28,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
+        "enrollment_notice": MessageLookupByLibrary.simpleMessage(
+            "If the email you entered is not already registered, we will you send an OTP code for re-authentication in order to proceed to the next steps."),
+        "firstName": MessageLookupByLibrary.simpleMessage("FirstName"),
         "guest_space": MessageLookupByLibrary.simpleMessage("Guest space"),
         "identity_verification":
             MessageLookupByLibrary.simpleMessage("Identity verification"),
+        "lastName": MessageLookupByLibrary.simpleMessage("LastName"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "logout": MessageLookupByLibrary.simpleMessage("Logout"),
         "my_personal_details":
@@ -41,6 +45,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "no": MessageLookupByLibrary.simpleMessage("No"),
         "ok": MessageLookupByLibrary.simpleMessage("Ok"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
+        "phone": MessageLookupByLibrary.simpleMessage("Phone"),
         "privacy_policy_desc": MessageLookupByLibrary.simpleMessage(
             "Learn more about how the app uses and protects your personal data."),
         "privacy_policy_label":

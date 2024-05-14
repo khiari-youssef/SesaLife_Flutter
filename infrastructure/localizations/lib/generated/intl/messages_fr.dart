@@ -28,9 +28,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "cancel": MessageLookupByLibrary.simpleMessage("Annuler"),
         "confirm": MessageLookupByLibrary.simpleMessage("Confirmer"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
+        "enrollment_notice": MessageLookupByLibrary.simpleMessage(
+            "Si l\'email que vous avez entré n\'est pas encore utilisé, on vous enverra un code OTP de ré-authentification pour procéder à l\'étape suivante."),
+        "firstName": MessageLookupByLibrary.simpleMessage("Prénom"),
         "guest_space": MessageLookupByLibrary.simpleMessage("Espace visiteur"),
         "identity_verification":
             MessageLookupByLibrary.simpleMessage("Vérification d\'identitée"),
+        "lastName": MessageLookupByLibrary.simpleMessage("Nom"),
         "login": MessageLookupByLibrary.simpleMessage("Se connecter"),
         "logout": MessageLookupByLibrary.simpleMessage("Se déconnecter"),
         "my_personal_details":
@@ -40,6 +44,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "no": MessageLookupByLibrary.simpleMessage("Non"),
         "ok": MessageLookupByLibrary.simpleMessage("Ok"),
         "password": MessageLookupByLibrary.simpleMessage("Mot de passe"),
+        "phone": MessageLookupByLibrary.simpleMessage("Téléphone"),
         "privacy_policy_desc": MessageLookupByLibrary.simpleMessage(
             "Savoir plus sur la sécurité et l\'usage de mes données personnelles collectés par l\'application."),
         "privacy_policy_label": MessageLookupByLibrary.simpleMessage(

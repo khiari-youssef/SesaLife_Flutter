@@ -5,6 +5,9 @@
   "logout" : "Logout",
   "guest_space" : "Guest space",
    "email" : "Email",
+   "phone" : "Phone",
+   "firstName" : "FirstName",
+   "lastName" : "LastName",
   "password" : "Password",
   "programs_label" : "Programs",
    "registration_label" : "Registration",
@@ -25,5 +28,6 @@
     "calendar_title" : "Semester {semester} timetable",
     "settings" : "Settings",
     "myprofile" : "My profile",
-    "mybadge" : "My badge"
+    "mybadge" : "My badge",
+     "enrollment_notice" : "If the email you entered is not already registered, we will you send an OTP code for re-authentication in order to proceed to the next steps."
 }

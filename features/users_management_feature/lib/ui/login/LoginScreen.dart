@@ -63,15 +63,22 @@ class LoginScreenState extends State<LoginScreen> {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               SesameCustomTextField(
-                                  onChange: (updatedText) {
-                                    context.read<LoginStateBloc>().add(
-                                        LoginEvent.updateEmail(updatedText));
-                                  },
-                                  label: S.of(context).email),
+                                controller: emailController,
+                                onChange: (updatedText) {
+                                  context
+                                      .read<LoginStateBloc>()
+                                      .add(LoginEvent.updateEmail(updatedText));
+                                },
+                                label: S.of(context).email,
+                                rightIcon: TextFieldIcon("ic_clear.svg", () {
+                                  emailController.text = "";
+                                }),
+                              ),
                               SizedBox(
                                 height: 12.h,
                               ),
                               SesamePasswordTextField(
+                                  isRequired: false,
                                   onChange: (updatedText) {
                                     context.read<LoginStateBloc>().add(
                                         LoginEvent.updatePassword(updatedText));
