@@ -1,6 +1,6 @@
 import 'package:designsystem/components/buttons/FormStepButton.dart';
 import 'package:designsystem/components/images/CustomIcon.dart';
-import 'package:designsystem/components/textViews/FormStepTitle.dart';
+import 'package:designsystem/components/textViews/titles/FormStepTitle.dart';
 import 'package:designsystem/designsystem_exports.dart';
 
 class FormScreenTemplate extends StatelessWidget {

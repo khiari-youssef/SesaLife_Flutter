@@ -3,9 +3,11 @@ import 'package:shared_dependencies/shared_dependencies.dart';
 class EnrollmentStep4PageState extends State<EnrollmentStep4Page> {
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text("EnrollementStep4"),
-    );
+    return const Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisSize: MainAxisSize.max,
+        children: []);
   }
 }
 

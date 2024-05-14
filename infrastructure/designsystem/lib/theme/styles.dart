@@ -11,7 +11,8 @@ final TextTheme lightThemeText = TextTheme(
     bodyMedium: bodyBaseStyle,
     bodyLarge: bodyBaseStyle.copyWith(fontSize: 16.sp),
     bodySmall: bodyBaseStyle.copyWith(fontSize: 12.sp),
-    headlineLarge: titleBase.copyWith(fontSize: 20.sp),
+    headlineLarge:
+        titleBase.copyWith(fontSize: 20.sp, fontWeight: FontWeight.w700),
     headlineMedium: titleBase.copyWith(fontSize: 18.sp),
     headlineSmall: titleBase.copyWith(fontSize: 16.sp));
 

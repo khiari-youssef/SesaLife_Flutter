@@ -2,6 +2,15 @@ library designsystem;
 
 export 'package:designsystem/DesignSystemApp.dart';
 export 'package:designsystem/components/WelcomeLogo.dart';
+export 'components/textViews/titles/TitleLarge.dart';
+export 'components/textViews/titles/TitleMedium.dart';
+export 'components/textViews/titles/TitleSmall.dart';
+export 'components/textViews/headlines/HeadlineLarge.dart';
+export 'components/textViews/headlines/HeadlineMedium.dart';
+export 'components/textViews/headlines/HeadlineSmall.dart';
+export 'components/textViews/body/BodyLarge.dart';
+export 'components/textViews/body/BodyMedium.dart';
+export 'components/textViews/body/BodySmall.dart';
 export 'package:designsystem/components/buttons/SesameCustomButton.dart';
 export 'package:designsystem/components/datetime/SesameDatePicker.dart';
 export 'package:designsystem/components/images/SesameLogo.dart';

@@ -1,4 +1,5 @@
 import 'package:designsystem/components/images/CustomIcon.dart';
+import 'package:designsystem/components/textViews/titles/TitleSmall.dart';
 import 'package:designsystem/designsystem_exports.dart';
 
 class SesameMenuItem extends StatelessWidget {
@@ -18,12 +19,9 @@ class SesameMenuItem extends StatelessWidget {
                 iconSVGname: data.iconAssetPath,
                 color: Theme.of(context).primaryColor),
             SizedBox(width: 16.w),
-            Text(data.label,
-                style: Theme.of(context)
-                    .typography
-                    .black
-                    .titleSmall
-                    ?.copyWith(color: Theme.of(context).primaryColor),
+            TitleSmall(
+                text: data.label,
+                color: Theme.of(context).primaryColor,
                 textAlign: TextAlign.start)
           ],
         ));

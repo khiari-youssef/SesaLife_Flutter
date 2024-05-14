@@ -28,37 +28,11 @@ class MyProfilePreview extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              headline,
-              style: Theme.of(context)
-                  .typography
-                  .black
-                  .headlineLarge
-                  ?.copyWith(color: Theme.of(context).colorScheme.onBackground),
-              textAlign: TextAlign.start,
-            ),
+            HeadlineLarge(text: headline),
             SizedBox(height: 8.h),
-            Text(text1,
-                style: Theme.of(context)
-                    .typography
-                    .black
-                    .bodyLarge
-                    ?.copyWith(color: const Color(0xFF5F5F5F)),
-                textAlign: TextAlign.start),
-            Text(text2,
-                style: Theme.of(context)
-                    .typography
-                    .black
-                    .bodyLarge
-                    ?.copyWith(color: const Color(0xFF5F5F5F)),
-                textAlign: TextAlign.start),
-            Text(text3,
-                style: Theme.of(context)
-                    .typography
-                    .black
-                    .bodyLarge
-                    ?.copyWith(color: const Color(0xFF5F5F5F)),
-                textAlign: TextAlign.start),
+            BodyLarge(text: text1, color: const Color(0xFF5F5F5F)),
+            BodyLarge(text: text2, color: const Color(0xFF5F5F5F)),
+            BodyLarge(text: text3, color: const Color(0xFF5F5F5F)),
           ],
         )
       ],

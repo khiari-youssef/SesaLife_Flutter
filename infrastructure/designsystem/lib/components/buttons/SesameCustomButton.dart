@@ -43,7 +43,8 @@ class SesameCustomButton extends StatelessWidget {
     TextStyle? buttonTextStyle = theme.typography.black.labelLarge?.copyWith(
         color: variant == SesameButtonVariant.neutral
             ? theme.colorScheme.onBackground
-            : Colors.white);
+            : Colors.white,
+        letterSpacing: 0.12);
     return ConstrainedBox(
         constraints: BoxConstraints.loose(Size.fromHeight(48.h)),
         child: ElevatedButton(

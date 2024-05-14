@@ -1,3 +1,4 @@
+import 'package:designsystem/designsystem_exports.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 import 'package:users_management_feature/ui/myprofile/MyProfileMenu.dart';
 import 'package:users_management_feature/ui/myprofile/MyProfilePreview.dart';
@@ -26,7 +27,7 @@ class MyUserProfileState extends State<MyUserProfileScreen> {
                 padding: EdgeInsets.symmetric(vertical: 16.h),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     SesameCustomButton(

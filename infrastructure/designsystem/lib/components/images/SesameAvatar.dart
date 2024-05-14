@@ -1,4 +1,7 @@
+import 'package:cached_network_image/cached_network_image.dart';
+import 'package:designsystem/components/images/CustomIcon.dart';
 import 'package:designsystem/designsystem_exports.dart';
+import 'package:designsystem/extensions.dart';
 
 class SesameAvatar extends StatelessWidget {
   final String url;
@@ -16,8 +19,17 @@ class SesameAvatar extends StatelessWidget {
       height: height,
       width: width,
       child: ClipOval(
-        child:
-            Image.network(url, width: width, height: height, fit: BoxFit.fill),
+        child: CachedNetworkImage(
+          height: height,
+          width: width,
+          fit: BoxFit.fill,
+          imageUrl: url,
+          placeholder: (context, url) => Shimmer.fromColors(
+              baseColor: Colors.grey,
+              highlightColor: Colors.white,
+              child: SizedBox(width: width, height: height)),
+          errorWidget: (context, url, error) => const Icon(Icons.error),
+        ),
       ),
     );
   }
