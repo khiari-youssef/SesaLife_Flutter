@@ -1,7 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:designsystem/components/images/CustomIcon.dart';
 import 'package:designsystem/designsystem_exports.dart';
-import 'package:designsystem/extensions.dart';
 
 class SesameAvatar extends StatelessWidget {
   final String url;
