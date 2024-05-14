@@ -1,5 +1,4 @@
 import 'package:designsystem/components/images/CustomClickableIcon.dart';
-import 'package:designsystem/components/textViews/labels/LabelMedium.dart';
 import 'package:designsystem/designsystem_exports.dart';
 
 class TextFieldIcon {
