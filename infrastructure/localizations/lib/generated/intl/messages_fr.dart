@@ -32,15 +32,18 @@ class MessageLookup extends MessageLookupByLibrary {
         "identity_verification":
             MessageLookupByLibrary.simpleMessage("Vérification d\'identitée"),
         "login": MessageLookupByLibrary.simpleMessage("Se connecter"),
+        "logout": MessageLookupByLibrary.simpleMessage("Se déconnecter"),
         "my_personal_details":
             MessageLookupByLibrary.simpleMessage("Mes données personnelles"),
+        "mybadge": MessageLookupByLibrary.simpleMessage("Mon badge"),
+        "myprofile": MessageLookupByLibrary.simpleMessage("Mon profile"),
         "no": MessageLookupByLibrary.simpleMessage("Non"),
         "ok": MessageLookupByLibrary.simpleMessage("Ok"),
         "password": MessageLookupByLibrary.simpleMessage("Mot de passe"),
         "privacy_policy_desc": MessageLookupByLibrary.simpleMessage(
             "Savoir plus sur la sécurité et l\'usage de mes données personnelles collectés par l\'application."),
-        "privacy_policy_label":
-            MessageLookupByLibrary.simpleMessage("Politique de securité"),
+        "privacy_policy_label": MessageLookupByLibrary.simpleMessage(
+            "Régles & Politique de securité"),
         "programs_desc": MessageLookupByLibrary.simpleMessage(
             "Renseignez-vous sur les différentes formations fournis par l\'université sésame."),
         "programs_label": MessageLookupByLibrary.simpleMessage("Programmes"),
@@ -49,6 +52,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Remplir le formulaire d\'inscription avec vos données personnelles et votre choix de formation pour la candidature"),
         "registration_label":
             MessageLookupByLibrary.simpleMessage("Inscriptions"),
+        "settings": MessageLookupByLibrary.simpleMessage("Paramètres"),
         "welcome_logo_description":
             MessageLookupByLibrary.simpleMessage("Student Life"),
         "welcome_logo_sesame_name":

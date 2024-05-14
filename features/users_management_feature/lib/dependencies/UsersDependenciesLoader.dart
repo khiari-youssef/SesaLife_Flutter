@@ -1,12 +1,15 @@
 import 'package:shared_dependencies/shared_dependencies.dart';
 import 'package:users_management_feature/infrastructure/repositories/LoginRepositoryContract.dart';
 import 'package:users_management_feature/ui/login/LoginState.dart';
+import 'package:designsystem/components/menus/ProfileMenuItem.dart';
 
 import '../ui/login/LoginStateBloc.dart';
 import '../ui/navigation/UsersNavigationConfiguration.gr.dart';
 
 extension UsersDependenciesLoader on GetIt {
   void loadUsersDependencies() {
+    BuildContext context =
+        get<BuildContext>(instanceName: "ApplicationContext");
     registerFactory<LoginState>(() => const LoginState.idle(true));
 
     registerFactory<LoginStateBloc>(

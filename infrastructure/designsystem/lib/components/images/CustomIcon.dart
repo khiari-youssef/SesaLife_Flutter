@@ -15,7 +15,7 @@ class CustomIcon extends StatelessWidget {
             color ?? Theme.of(context).colorScheme.onBackground,
             BlendMode.srcIn),
         fit: BoxFit.fill,
-        width: 24.w,
-        height: 24.h);
+        width: 24.r,
+        height: 24.r);
   }
 }

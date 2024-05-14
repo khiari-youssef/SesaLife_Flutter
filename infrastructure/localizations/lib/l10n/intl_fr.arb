@@ -2,12 +2,13 @@
   "welcome_logo_sesame_name" : "SESAME",
   "welcome_logo_description" : "Student Life",
   "login" : "Se connecter",
+  "logout" : "Se déconnecter",
   "guest_space" : "Espace visiteur",
   "email" : "Email",
   "password" : "Mot de passe",
   "programs_label" : "Programmes",
   "registration_label" : "Inscriptions",
-  "privacy_policy_label" : "Politique de securité",
+  "privacy_policy_label" : "Régles & Politique de securité",
   "programs_desc" : "Renseignez-vous sur les différentes formations fournis par l'université sésame.",
   "registration_desc" : "Remplir le formulaire d'inscription avec vos données personnelles et votre choix de formation pour la candidature",
   "privacy_policy_desc" : "Savoir plus sur la sécurité et l'usage de mes données personnelles collectés par l'application.",
@@ -20,5 +21,8 @@
   "yes" : "Oui",
   "no" : "Non",
   "confirm" : "Confirmer",
-  "calendar_title" : "Calendrier du semestre {semester}"
+  "calendar_title" : "Calendrier du semestre {semester}",
+  "settings" : "Paramètres",
+  "myprofile" : "Mon profile",
+  "mybadge" : "Mon badge"
 }

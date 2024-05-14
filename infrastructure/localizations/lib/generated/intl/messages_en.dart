@@ -32,8 +32,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "identity_verification":
             MessageLookupByLibrary.simpleMessage("Identity verification"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
+        "logout": MessageLookupByLibrary.simpleMessage("Logout"),
         "my_personal_details":
             MessageLookupByLibrary.simpleMessage("My personal details"),
+        "mybadge": MessageLookupByLibrary.simpleMessage("My badge"),
+        "myprofile": MessageLookupByLibrary.simpleMessage("My profile"),
         "next_step": MessageLookupByLibrary.simpleMessage("Next step"),
         "no": MessageLookupByLibrary.simpleMessage("No"),
         "ok": MessageLookupByLibrary.simpleMessage("Ok"),
@@ -41,7 +44,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "privacy_policy_desc": MessageLookupByLibrary.simpleMessage(
             "Learn more about how the app uses and protects your personal data."),
         "privacy_policy_label":
-            MessageLookupByLibrary.simpleMessage("Security policy"),
+            MessageLookupByLibrary.simpleMessage("Rules & Security policy"),
         "program_selection":
             MessageLookupByLibrary.simpleMessage("Choose your program"),
         "programs_desc": MessageLookupByLibrary.simpleMessage(
@@ -52,6 +55,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Fill the registration form with your personal data and your preferred program for candidacy."),
         "registration_label":
             MessageLookupByLibrary.simpleMessage("Registration"),
+        "settings": MessageLookupByLibrary.simpleMessage("Settings"),
         "welcome_logo_description":
             MessageLookupByLibrary.simpleMessage("Student Life"),
         "welcome_logo_sesame_name":

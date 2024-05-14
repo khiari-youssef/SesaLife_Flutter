@@ -2,12 +2,13 @@
   "welcome_logo_sesame_name" : "SESAME",
   "welcome_logo_description" : "Student Life",
   "login" : "Login",
+  "logout" : "Logout",
   "guest_space" : "Guest space",
    "email" : "Email",
   "password" : "Password",
   "programs_label" : "Programs",
    "registration_label" : "Registration",
-   "privacy_policy_label" : "Security policy",
+   "privacy_policy_label" : "Rules & Security policy",
    "programs_desc" : "Learn more about the different curriculums offered by sesame university and future opportunities.",
    "registration_desc" : "Fill the registration form with your personal data and your preferred program for candidacy.",
    "privacy_policy_desc" : "Learn more about how the app uses and protects your personal data.",
@@ -21,5 +22,8 @@
     "yes" : "Yes",
     "no" : "No",
     "confirm" : "Confirm",
-    "calendar_title" : "Semester {semester} timetable"
+    "calendar_title" : "Semester {semester} timetable",
+    "settings" : "Settings",
+    "myprofile" : "My profile",
+    "mybadge" : "My badge"
 }

@@ -6,7 +6,7 @@ import '../images/CustomIcon.dart';
 export 'package:designsystem/components/buttons/SesameCustomButton.dart';
 export 'package:designsystem/components/input/SesameCustomTextField.dart';
 
-enum SesameButtonVariant { soft, hard, tertiary }
+enum SesameButtonVariant { soft, hard, tertiary, neutral }
 
 class SesameCustomButton extends StatelessWidget {
   final String buttonText;
@@ -29,17 +29,26 @@ class SesameCustomButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     ThemeData theme = Theme.of(context);
+    bool isDarkMode = theme.brightness == Brightness.dark;
+
     Color variantBackgroundColor = switch (variant) {
       SesameButtonVariant.soft => theme.colorScheme.secondary,
       SesameButtonVariant.hard => theme.colorScheme.primary,
-      SesameButtonVariant.tertiary => theme.colorScheme.tertiary
+      SesameButtonVariant.tertiary => theme.colorScheme.tertiary,
+      SesameButtonVariant.neutral =>
+        isDarkMode ? const Color(0xFF9D9999) : const Color(0xFFF3F3F3)
     };
     OutlinedBorder buttonBorder = RoundedRectangleBorder(
         borderRadius: BorderRadius.all(Radius.circular(8.r)));
+    TextStyle? buttonTextStyle = theme.typography.black.labelLarge?.copyWith(
+        color: variant == SesameButtonVariant.neutral
+            ? theme.colorScheme.onBackground
+            : Colors.white);
     return ConstrainedBox(
         constraints: BoxConstraints.loose(Size.fromHeight(48.h)),
         child: ElevatedButton(
             style: ButtonStyle(
+                elevation: const MaterialStatePropertyAll(0.0),
                 backgroundColor: MaterialStatePropertyAll(isEnabled
                     ? variantBackgroundColor
                     : Color.alphaBlend(
@@ -62,12 +71,7 @@ class SesameCustomButton extends StatelessWidget {
                       )
                     : (leftIconAssetName == null ||
                             leftIconAssetName?.isEmpty == true)
-                        ? Text(buttonText,
-                            style: Theme.of(context)
-                                .typography
-                                .black
-                                .labelLarge
-                                ?.copyWith(color: Colors.white))
+                        ? Text(buttonText, style: buttonTextStyle)
                         : Row(
                             mainAxisSize: MainAxisSize.min,
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -75,14 +79,12 @@ class SesameCustomButton extends StatelessWidget {
                             children: [
                                 CustomIcon(
                                     iconSVGname: leftIconAssetName!,
-                                    color: Colors.white),
+                                    color:
+                                        variant == SesameButtonVariant.neutral
+                                            ? theme.colorScheme.onBackground
+                                            : Colors.white),
                                 SizedBox(width: 12.w),
-                                Text(buttonText,
-                                    style: Theme.of(context)
-                                        .typography
-                                        .black
-                                        .labelLarge
-                                        ?.copyWith(color: Colors.white))
+                                Text(buttonText, style: buttonTextStyle)
                               ]),
               ),
             )));

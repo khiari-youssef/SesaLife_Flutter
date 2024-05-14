@@ -80,6 +80,16 @@ class S {
     );
   }
 
+  /// `Logout`
+  String get logout {
+    return Intl.message(
+      'Logout',
+      name: 'logout',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Guest space`
   String get guest_space {
     return Intl.message(
@@ -130,10 +140,10 @@ class S {
     );
   }
 
-  /// `Security policy`
+  /// `Rules & Security policy`
   String get privacy_policy_label {
     return Intl.message(
-      'Security policy',
+      'Rules & Security policy',
       name: 'privacy_policy_label',
       desc: '',
       args: [],
@@ -277,6 +287,36 @@ class S {
       name: 'calendar_title',
       desc: '',
       args: [semester],
+    );
+  }
+
+  /// `Settings`
+  String get settings {
+    return Intl.message(
+      'Settings',
+      name: 'settings',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `My profile`
+  String get myprofile {
+    return Intl.message(
+      'My profile',
+      name: 'myprofile',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `My badge`
+  String get mybadge {
+    return Intl.message(
+      'My badge',
+      name: 'mybadge',
+      desc: '',
+      args: [],
     );
   }
 }
