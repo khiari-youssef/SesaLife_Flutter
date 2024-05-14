@@ -30,6 +30,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "calendar_title": m0,
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
+        "diploma": MessageLookupByLibrary.simpleMessage("Diploma"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "enrollment_code_verification_notice": m1,
         "enrollment_notice_step1": MessageLookupByLibrary.simpleMessage(

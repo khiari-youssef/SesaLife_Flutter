@@ -12,6 +12,7 @@ class EnrollmentIdentifyVerificationStepPageState
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisSize: MainAxisSize.min,
                 children: [
+                  const CodeInputField(),
                   SizedBox(height: 24.h),
                   Expanded(
                       child: Center(

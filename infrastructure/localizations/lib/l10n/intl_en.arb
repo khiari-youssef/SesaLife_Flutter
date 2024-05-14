@@ -8,6 +8,7 @@
    "phone" : "Phone",
    "firstName" : "FirstName",
    "lastName" : "LastName",
+   "diploma" : "Diploma",
   "password" : "Password",
   "programs_label" : "Programs",
    "registration_label" : "Registration",
