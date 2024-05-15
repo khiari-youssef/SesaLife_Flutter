@@ -150,6 +150,26 @@ class S {
     );
   }
 
+  /// `Male`
+  String get sex_male {
+    return Intl.message(
+      'Male',
+      name: 'sex_male',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Female`
+  String get sex_female {
+    return Intl.message(
+      'Female',
+      name: 'sex_female',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Password`
   String get password {
     return Intl.message(

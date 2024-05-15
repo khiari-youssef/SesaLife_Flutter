@@ -14,7 +14,7 @@ build/
 # If you don't generate documentation locally you can remove this line.
 doc/api/
 
-pubspec_overrides.yaml
+*/pubspec_overrides.yaml
 
 # dotenv environment variables file
 .env*

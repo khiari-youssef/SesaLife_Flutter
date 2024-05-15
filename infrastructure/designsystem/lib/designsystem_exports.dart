@@ -12,6 +12,8 @@ export 'package:designsystem/components/scaffolds/SesameBottomNavigationBar.dart
 export 'package:designsystem/components/templates/BasicScreenBuilder.dart';
 export 'package:designsystem/components/templates/FormScreenTemplate.dart';
 export 'package:designsystem/components/templates/TitleScreenBuilder.dart';
+export 'components/checkables/SesameRadioButton.dart';
+export 'components/checkables/SesameCheckbox.dart';
 export 'components/input/CodeInputField.dart';
 export 'package:designsystem/theme/Theme.dart';
 export 'package:flutter/material.dart';

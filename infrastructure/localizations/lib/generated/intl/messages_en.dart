@@ -66,6 +66,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "registration_label":
             MessageLookupByLibrary.simpleMessage("Registration"),
         "settings": MessageLookupByLibrary.simpleMessage("Settings"),
+        "sex_female": MessageLookupByLibrary.simpleMessage("Female"),
+        "sex_male": MessageLookupByLibrary.simpleMessage("Male"),
         "welcome_logo_description":
             MessageLookupByLibrary.simpleMessage("Student Life"),
         "welcome_logo_sesame_name":

@@ -1,9 +1,11 @@
+import 'package:core/exports.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 
 class EnrollmentStep2PageState extends State<EnrollmentStep2Page> {
   final TextEditingController firstNameController = TextEditingController();
   final TextEditingController lastNameController = TextEditingController();
   final TextEditingController diplomaController = TextEditingController();
+  int? selectedSexButton;
 
   @override
   Widget build(BuildContext context) {
@@ -38,6 +40,34 @@ class EnrollmentStep2PageState extends State<EnrollmentStep2Page> {
                       label: S.of(context).lastName,
                       placeHolder: S.of(context).lastName),
                   SizedBox(height: 24.h),
+                  Row(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      SesameRadioButton(
+                          label: S.of(context).sex_male,
+                          onChecked: (groupid) {
+                            setState(() {
+                              selectedSexButton = groupid;
+                            });
+                          },
+                          id: 0,
+                          groupID: selectedSexButton),
+                      SizedBox(width: 24.w),
+                      SesameRadioButton(
+                          label: S.of(context).sex_female,
+                          onChecked: (groupid) {
+                            setState(() {
+                              selectedSexButton = groupid;
+                            });
+                          },
+                          id: 1,
+                          groupID: selectedSexButton)
+                    ],
+                  ),
+                  SizedBox(height: 24.h),
+                  SesameCheckbox(onChecked: (onChecked) {}, label: "Testbox"),
                   SesameCustomTextField(
                       keyboardType: TextInputType.datetime,
                       controller: diplomaController,

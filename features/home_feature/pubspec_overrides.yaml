@@ -1,0 +1,10 @@
+# melos_managed_dependency_overrides: events_management_feature,notifications_feature,sessions_feature,users_management_feature
+dependency_overrides:
+  events_management_feature:
+    path: ../events_management_feature
+  notifications_feature:
+    path: ../notifications_feature
+  sessions_feature:
+    path: ../sessions_feature
+  users_management_feature:
+    path: ../users_management_feature

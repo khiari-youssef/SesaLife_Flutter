@@ -9,6 +9,8 @@
   "firstName" : "Prénom",
   "lastName" : "Nom",
   "diploma" : "Diplôme",
+  "sex_male" : "Homme",
+  "sex_female" : "Femme",
   "password" : "Mot de passe",
   "programs_label" : "Programmes",
   "registration_label" : "Inscriptions",
