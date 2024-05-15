@@ -1,17 +1,17 @@
 import 'package:intl/intl.dart';
 
-final DateFormat dateFormat = DateFormat("dd/MM/yyyy");
-final DateFormat timeFormat = DateFormat("h\\hm");
+final DateFormat sesameStandardDateFormat = DateFormat("dd/MM/yyyy");
+final DateFormat sesameStandardTimeFormat = DateFormat("h\\hm");
 
 extension StringDateTimeExtension on String {}
 
 extension DateTimeExtension on DateTime {
   String toDisplayDate() {
-    return dateFormat.format(this);
+    return sesameStandardDateFormat.format(this);
   }
 
   String toDisplayTime() {
-    return timeFormat.format(this);
+    return sesameStandardTimeFormat.format(this);
   }
 }
 

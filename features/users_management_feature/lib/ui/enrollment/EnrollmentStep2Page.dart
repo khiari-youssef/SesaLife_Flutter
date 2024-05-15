@@ -1,4 +1,3 @@
-import 'package:core/exports.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 
 class EnrollmentStep2PageState extends State<EnrollmentStep2Page> {
@@ -67,7 +66,9 @@ class EnrollmentStep2PageState extends State<EnrollmentStep2Page> {
                     ],
                   ),
                   SizedBox(height: 24.h),
-                  SesameCheckbox(onChecked: (onChecked) {}, label: "Testbox"),
+                  SesameCustomTextDateField(
+                      label: "Birthdate", onChange: (String value) {}),
+                  SizedBox(height: 24.h),
                   SesameCustomTextField(
                       keyboardType: TextInputType.datetime,
                       controller: diplomaController,

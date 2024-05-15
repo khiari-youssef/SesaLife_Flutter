@@ -6,6 +6,7 @@ export 'package:designsystem/components/buttons/SesameCustomButton.dart';
 export 'package:designsystem/components/datetime/SesameDatePicker.dart';
 export 'package:designsystem/components/images/SesameLogo.dart';
 export 'package:designsystem/components/input/SesamePasswordTextField.dart';
+export 'components/input/SesameCustomDateTextField.dart';
 export 'package:designsystem/components/popups/InfoDialogPopup.dart';
 export 'package:designsystem/components/popups/QuestionDialogPopup.dart';
 export 'package:designsystem/components/scaffolds/SesameBottomNavigationBar.dart';
