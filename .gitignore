@@ -1,13 +1,15 @@
 # See https://www.dartlang.org/guides/libraries/private-files
 
 # Files and directories created by pub
-.dart_tool/*
-.packages
+application/.dart_tool
+application/.packages
 .idea
 .melos_tool/*
-build/
+application/build/
 # If you're building an application, you may want to check-in your pubspec.lock
 */pubspec.lock
+application/pubspec.lock
+application/pubspec_overrides.yaml
 
 
 # Directory created by dartdoc
