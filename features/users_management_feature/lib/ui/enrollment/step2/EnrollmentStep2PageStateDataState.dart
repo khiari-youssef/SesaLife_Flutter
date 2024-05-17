@@ -1,6 +1,5 @@
 import 'package:core/core_domain/FormTextValidationState.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
-import 'package:users_management_feature/domain/entities/SesameUser.dart';
 
 part 'EnrollmentStep2PageStateDataState.freezed.dart';
 

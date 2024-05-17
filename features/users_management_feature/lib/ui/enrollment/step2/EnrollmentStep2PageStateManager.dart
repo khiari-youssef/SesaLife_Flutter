@@ -1,4 +1,3 @@
-import 'package:core/core_domain/FormTextValidationState.dart';
 import 'package:core/exports.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 

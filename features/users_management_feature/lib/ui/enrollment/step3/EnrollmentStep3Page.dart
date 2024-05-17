@@ -1,5 +1,4 @@
 import 'package:designsystem/designsystem_exports.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 import 'package:users_management_feature/domain/entities/SesameDiplomaOption.dart';
 

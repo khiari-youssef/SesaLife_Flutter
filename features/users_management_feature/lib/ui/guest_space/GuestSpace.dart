@@ -1,5 +1,4 @@
 import 'package:shared_dependencies/shared_dependencies.dart';
-import 'package:users_management_feature/ui/navigation/UsersNavigationConfiguration.gr.dart';
 
 import '../../domain/entities/GuestWelcomeInfoOption.dart';
 import 'GuestWelcomeInfoOptionCard.dart';

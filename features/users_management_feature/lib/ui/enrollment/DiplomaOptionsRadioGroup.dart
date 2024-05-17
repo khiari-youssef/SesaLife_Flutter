@@ -1,6 +1,4 @@
-import 'package:designsystem/components/checkables/SesameRadioButton.dart';
 import 'package:designsystem/designsystem_exports.dart';
-import 'package:flutter/cupertino.dart';
 
 import '../../domain/entities/SesameDiplomaOption.dart';
 

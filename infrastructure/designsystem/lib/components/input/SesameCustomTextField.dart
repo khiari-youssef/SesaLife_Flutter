@@ -1,8 +1,6 @@
 import 'package:designsystem/components/images/CustomClickableIcon.dart';
 import 'package:designsystem/designsystem_exports.dart';
 
-import '../../designsystem_exports.dart';
-
 class TextFieldIcon {
   final String iconAsset;
   final VoidCallback onIconClicked;

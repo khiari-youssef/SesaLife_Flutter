@@ -1,7 +1,6 @@
 import 'package:core/core_domain/FormTextValidationState.dart';
 import 'package:core/core_utils/Logger.dart';
 import 'package:designsystem/designsystem_exports.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 
 import 'EnrollmentStep2PageStateDataState.dart';

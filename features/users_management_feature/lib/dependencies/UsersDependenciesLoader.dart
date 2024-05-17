@@ -3,7 +3,6 @@ import 'package:users_management_feature/infrastructure/repositories/LoginReposi
 import 'package:users_management_feature/ui/login/LoginState.dart';
 
 import '../ui/login/LoginStateBloc.dart';
-import '../ui/navigation/UsersNavigationConfiguration.gr.dart';
 
 extension UsersDependenciesLoader on GetIt {
   void loadUsersDependencies() {

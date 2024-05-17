@@ -1,4 +1,3 @@
-import 'package:designsystem/components/textViews/headlines/HeadlineMedium.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 
 enum EnrollmentResultState {
