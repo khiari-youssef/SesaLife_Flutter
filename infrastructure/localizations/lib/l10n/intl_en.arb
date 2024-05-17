@@ -6,6 +6,7 @@
   "guest_space" : "Guest space",
    "email" : "Email",
    "phone" : "Phone",
+   "birthdate" : "Birthdate",
    "firstName" : "FirstName",
    "lastName" : "LastName",
    "diploma" : "Diploma",
@@ -36,10 +37,16 @@
     "yes" : "Yes",
     "no" : "No",
     "confirm" : "Confirm",
+    "required" : "required",
     "calendar_title" : "Semester {semester} timetable",
     "settings" : "Settings",
     "myprofile" : "My profile",
     "mybadge" : "My badge",
      "enrollment_notice_step1" : "If the email you entered is not already registered, we will you send an OTP code for re-authentication in order to proceed to the next steps.",
-     "enrollment_code_verification_notice" : "An OTP code is sent via email to {email} And will expire in 10 minutes"
+     "enrollment_code_verification_notice" : "An OTP code is sent via email to {email} And will expire in 10 minutes",
+       "form_error_message_required_field" : "This field is required",
+       "form_error_message_email_format" : "Invalid email format",
+       "form_error_message_phone_format" : "Invalid phone format",
+       "form_error_message_name_format" : "Invalid name format"
+
 }

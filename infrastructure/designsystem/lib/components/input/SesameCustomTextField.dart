@@ -1,6 +1,8 @@
 import 'package:designsystem/components/images/CustomClickableIcon.dart';
 import 'package:designsystem/designsystem_exports.dart';
 
+import '../../designsystem_exports.dart';
+
 class TextFieldIcon {
   final String iconAsset;
   final VoidCallback onIconClicked;
@@ -59,11 +61,11 @@ class SesameCustomTextField extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   LabelMedium(text: label),
-                  const Expanded(
+                  Expanded(
                       child: Align(
                     alignment: Alignment.centerRight,
                     child: LabelSmall(
-                        text: "Required",
+                        text: S.of(context).required,
                         textAlign: TextAlign.end,
                         color: Colors.red),
                   ))
@@ -71,7 +73,7 @@ class SesameCustomTextField extends StatelessWidget {
               )
             : LabelMedium(text: label),
         const SizedBox(height: 10),
-        TextField(
+        TextFormField(
           obscureText: isObscure,
           keyboardType: keyboardType,
           controller: controller,
@@ -91,7 +93,6 @@ class SesameCustomTextField extends StatelessWidget {
                       onClicked: rightIcon!.onIconClicked,
                     )
                   : null,
-              constraints: BoxConstraints(minHeight: 32.h, maxHeight: 48.h),
               contentPadding:
                   EdgeInsets.symmetric(vertical: 12.r, horizontal: 12.r),
               border: textFieldBorder,

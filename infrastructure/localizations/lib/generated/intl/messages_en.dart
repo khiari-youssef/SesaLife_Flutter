@@ -27,6 +27,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "birthdate": MessageLookupByLibrary.simpleMessage("Birthdate"),
         "calendar_title": m0,
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
@@ -47,6 +48,14 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage(
                 "Your request has been submitted successfully ! you will receive a reply as soon as it gets reviewed !"),
         "firstName": MessageLookupByLibrary.simpleMessage("FirstName"),
+        "form_error_message_email_format":
+            MessageLookupByLibrary.simpleMessage("Invalid email format"),
+        "form_error_message_name_format":
+            MessageLookupByLibrary.simpleMessage("Invalid name format"),
+        "form_error_message_phone_format":
+            MessageLookupByLibrary.simpleMessage("Invalid phone format"),
+        "form_error_message_required_field":
+            MessageLookupByLibrary.simpleMessage("This field is required"),
         "guest_space": MessageLookupByLibrary.simpleMessage("Guest space"),
         "identity_verification":
             MessageLookupByLibrary.simpleMessage("Identity verification"),
@@ -76,6 +85,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Fill the registration form with your personal data and your preferred program for candidacy."),
         "registration_label":
             MessageLookupByLibrary.simpleMessage("Registration"),
+        "required": MessageLookupByLibrary.simpleMessage("required"),
         "settings": MessageLookupByLibrary.simpleMessage("Settings"),
         "sex_female": MessageLookupByLibrary.simpleMessage("Female"),
         "sex_male": MessageLookupByLibrary.simpleMessage("Male"),

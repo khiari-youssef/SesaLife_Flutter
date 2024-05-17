@@ -1,8 +1,24 @@
+import 'dart:async';
+
+import 'package:core/exports.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
+
+import 'EnrollmentStep1PageStateManager.dart';
 
 class EnrollmentStep1PageState extends State<EnrollmentStep1Page> {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController phoneController = TextEditingController();
+  EnrollmentStep1PageStateManager stateManager =
+      EnrollmentStep1PageStateManager(
+          const FormTextValidationState.unchecked());
+
+  @override
+  void initState() {
+    super.initState();
+    stateManager.stream.listen((state) {
+      widget.onNextStepEnabled(state == const FormTextValidationState.valid());
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -16,16 +32,24 @@ class EnrollmentStep1PageState extends State<EnrollmentStep1Page> {
             children: [
               SesameCustomTextField(
                   isRequired: true,
+                  errorMessage: stateManager.state.when(
+                      unchecked: () => null,
+                      invalid: (type) => switch (type) {
+                            FormTextInvalidStateType.required =>
+                              S.of(context).form_error_message_required_field,
+                            FormTextInvalidStateType.format =>
+                              S.of(context).form_error_message_email_format,
+                          },
+                      valid: () => null),
                   keyboardType: TextInputType.emailAddress,
                   controller: emailController,
                   rightIcon: TextFieldIcon("ic_clear.svg", () {
                     emailController.text = "";
-                    widget.onNextStepEnabled(false);
+                    stateManager.checkEmailState(emailController.text);
                   }),
                   onChange: (newText) {
                     emailController.text = newText;
-                    widget.onNextStepEnabled(
-                        emailController.text.trim().isNotEmpty);
+                    stateManager.checkEmailState(emailController.text);
                   },
                   label: S.of(context).email,
                   placeHolder: S.of(context).email),

@@ -47,6 +47,7 @@ class SesameCustomTextDateField extends StatelessWidget {
           if (selectedDate != null) {
             controller.text =
                 (format ?? DateFormat("dd/MM/yyyy")).format(selectedDate);
+            onChange(controller.text);
           }
         }),
         label: label);

@@ -1,12 +1,12 @@
 import 'package:core/core_utils/Logger.dart';
 import 'package:designsystem/designsystem_exports.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
-import 'package:users_management_feature/ui/enrollment/EnrollmentStep1Page.dart';
+import 'package:users_management_feature/ui/enrollment/step1/EnrollmentStep1Page.dart';
 
 import '../navigation/UsersNavigationConfiguration.gr.dart';
-import 'EnrollmentIdentifyVerificationStepPage.dart';
+import 'verificationStep/EnrollmentIdentifyVerificationStepPage.dart';
 import 'EnrollmentResultPage.dart';
-import 'EnrollmentStep2Page.dart';
+import 'step2/EnrollmentStep2Page.dart';
 import 'EnrollmentStep3Page.dart';
 import 'EnrollmentStep4Page.dart';
 
@@ -30,19 +30,23 @@ class EnrollmentScreenState extends State<EnrollmentScreen> {
         });
       }),
       const EnrollmentIdentifyVerificationStep(),
-      const EnrollmentStep2Page(),
+      EnrollmentStep2Page(onNextStepEnabled: (isEnabled) {
+        setState(() {
+          isButtonEnabled = isEnabled;
+        });
+      }),
       const EnrollmentStep3Page(),
       const EnrollmentStep4Page(),
       const EnrollmentResultPage(
           state: EnrollmentResultState.errorRequestRejected),
     ];
-    final _pageController =
+    final pageController =
         PageController(initialPage: 0, viewportFraction: 1.0, keepPage: true);
     return PopScope(
         canPop: false,
         onPopInvoked: (canPop) {
           if (currentPageIndex > 0) {
-            _pageController.animateToPage((currentPageIndex - 1),
+            pageController.animateToPage((currentPageIndex - 1),
                 curve: Curves.linear,
                 duration: const Duration(milliseconds: 300));
           } else {
@@ -57,7 +61,7 @@ class EnrollmentScreenState extends State<EnrollmentScreen> {
             onPageChanged: (index) {
               currentPageIndex = index;
             },
-            controller: _pageController,
+            controller: pageController,
             physics: const NeverScrollableScrollPhysics(),
             itemBuilder: (context, index) {
               currentPageIndex = index;
@@ -71,7 +75,7 @@ class EnrollmentScreenState extends State<EnrollmentScreen> {
                     isButtonEnabled: isButtonEnabled,
                     onNextStepClicked: () {
                       if (index < pages.length - 1) {
-                        _pageController.animateToPage((index + 1),
+                        pageController.animateToPage((index + 1),
                             curve: Curves.linear,
                             duration: const Duration(milliseconds: 300));
                       } else {
@@ -81,7 +85,7 @@ class EnrollmentScreenState extends State<EnrollmentScreen> {
                     },
                     onBackPressed: () {
                       if (currentPageIndex > 0) {
-                        _pageController.animateToPage((currentPageIndex - 1),
+                        pageController.animateToPage((currentPageIndex - 1),
                             curve: Curves.linear,
                             duration: const Duration(milliseconds: 300));
                       } else {

@@ -120,6 +120,16 @@ class S {
     );
   }
 
+  /// `Birthdate`
+  String get birthdate {
+    return Intl.message(
+      'Birthdate',
+      name: 'birthdate',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `FirstName`
   String get firstName {
     return Intl.message(
@@ -420,6 +430,16 @@ class S {
     );
   }
 
+  /// `required`
+  String get required {
+    return Intl.message(
+      'required',
+      name: 'required',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Semester {semester} timetable`
   String calendar_title(Object semester) {
     return Intl.message(
@@ -477,6 +497,46 @@ class S {
       name: 'enrollment_code_verification_notice',
       desc: '',
       args: [email],
+    );
+  }
+
+  /// `This field is required`
+  String get form_error_message_required_field {
+    return Intl.message(
+      'This field is required',
+      name: 'form_error_message_required_field',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Invalid email format`
+  String get form_error_message_email_format {
+    return Intl.message(
+      'Invalid email format',
+      name: 'form_error_message_email_format',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Invalid phone format`
+  String get form_error_message_phone_format {
+    return Intl.message(
+      'Invalid phone format',
+      name: 'form_error_message_phone_format',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Invalid name format`
+  String get form_error_message_name_format {
+    return Intl.message(
+      'Invalid name format',
+      name: 'form_error_message_name_format',
+      desc: '',
+      args: [],
     );
   }
 }

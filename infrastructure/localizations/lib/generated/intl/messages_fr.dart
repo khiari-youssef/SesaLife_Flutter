@@ -27,6 +27,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "birthdate": MessageLookupByLibrary.simpleMessage("Date de naissance"),
         "calendar_title": m0,
         "cancel": MessageLookupByLibrary.simpleMessage("Annuler"),
         "confirm": MessageLookupByLibrary.simpleMessage("Confirmer"),
@@ -47,6 +48,14 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage(
                 "Votre demande de candidature a été soumise avec succés ! vous auriez une réponse le plut tot possible!"),
         "firstName": MessageLookupByLibrary.simpleMessage("Prénom"),
+        "form_error_message_email_format":
+            MessageLookupByLibrary.simpleMessage("Adresse email invalide !"),
+        "form_error_message_name_format":
+            MessageLookupByLibrary.simpleMessage("Nom invalide !"),
+        "form_error_message_phone_format": MessageLookupByLibrary.simpleMessage(
+            "Numéro de téléphone invalide !"),
+        "form_error_message_required_field":
+            MessageLookupByLibrary.simpleMessage("Ce champ est obligatoire !"),
         "guest_space": MessageLookupByLibrary.simpleMessage("Espace visiteur"),
         "identity_verification":
             MessageLookupByLibrary.simpleMessage("Vérification d\'identitée"),
@@ -73,6 +82,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Remplir le formulaire d\'inscription avec vos données personnelles et votre choix de formation pour la candidature"),
         "registration_label":
             MessageLookupByLibrary.simpleMessage("Inscriptions"),
+        "required": MessageLookupByLibrary.simpleMessage("obligatoire"),
         "settings": MessageLookupByLibrary.simpleMessage("Paramètres"),
         "sex_female": MessageLookupByLibrary.simpleMessage("Femme"),
         "sex_male": MessageLookupByLibrary.simpleMessage("Homme"),

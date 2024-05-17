@@ -6,6 +6,7 @@
   "guest_space" : "Espace visiteur",
   "email" : "Email",
   "phone" : "Téléphone",
+  "birthdate" : "Date de naissance",
   "firstName" : "Prénom",
   "lastName" : "Nom",
   "diploma" : "Diplôme",
@@ -35,11 +36,15 @@
   "yes" : "Oui",
   "no" : "Non",
   "confirm" : "Confirmer",
+  "required" : "obligatoire",
   "calendar_title" : "Calendrier du semestre {semester}",
   "settings" : "Paramètres",
   "myprofile" : "Mon profile",
   "mybadge" : "Mon badge",
   "enrollment_notice_step1" : "Si l'email que vous avez entré n'est pas encore utilisé, on vous enverra un code OTP de ré-authentification pour procéder à l'étape suivante.",
-  "enrollment_code_verification_notice" : "Un code OTP sera envoyé à {email} et sera expiré dans 10 minutes"
-
+  "enrollment_code_verification_notice" : "Un code OTP sera envoyé à {email} et sera expiré dans 10 minutes",
+  "form_error_message_required_field" : "Ce champ est obligatoire !",
+  "form_error_message_email_format" : "Adresse email invalide !",
+  "form_error_message_phone_format" : "Numéro de téléphone invalide !",
+  "form_error_message_name_format" : "Nom invalide !"
 }
