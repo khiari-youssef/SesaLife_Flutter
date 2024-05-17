@@ -51,8 +51,9 @@ class EnrollmentScreenState extends State<EnrollmentScreen> {
           title: S.of(context).program_selection,
           content: EnrollmentStep3Page(onNextStepEnabled: onNextStepEnabled)),
       ViewPagerCustomPage(
+          title: S.of(context).program_selection,
           content: EnrollmentStep4Page(onNextStepEnabled: onNextStepEnabled)),
-      ViewPagerCustomPage(title: "", content: const EnrollmentResultPage())
+      ViewPagerCustomPage(content: const EnrollmentResultPage())
     ];
     return PopScope(
         canPop: false,
