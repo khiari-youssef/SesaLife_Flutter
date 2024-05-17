@@ -1,64 +1,99 @@
+import 'package:core/core_utils/Logger.dart';
+import 'package:designsystem/designsystem_exports.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
+import 'package:users_management_feature/ui/enrollment/EnrollmentStep1Page.dart';
 
 import '../navigation/UsersNavigationConfiguration.gr.dart';
+import 'EnrollmentIdentifyVerificationStepPage.dart';
+import 'EnrollmentResultPage.dart';
+import 'EnrollmentStep2Page.dart';
+import 'EnrollmentStep3Page.dart';
+import 'EnrollmentStep4Page.dart';
 
 @RoutePage(name: "EnrollmentRoute")
-class EnrollmentScreen extends StatelessWidget {
-  final VoidCallback onExitEnrollment;
-  const EnrollmentScreen({super.key, required this.onExitEnrollment});
+class EnrollmentScreen extends StatefulWidget {
+  const EnrollmentScreen({super.key});
 
   @override
+  State<StatefulWidget> createState() => EnrollmentScreenState();
+}
+
+class EnrollmentScreenState extends State<EnrollmentScreen> {
+  bool isButtonEnabled = false;
+  late int currentPageIndex;
+  @override
   Widget build(BuildContext context) {
-    const routes = [
-      EnrollmentStep1Route(),
-      EnrollmentIdentifyVerificationStepRoute(),
-      EnrollmentStep2Route(),
-      EnrollmentStep3Route(),
-      EnrollmentStep4Route(),
-      EnrollmentResultRoute(),
+    List<Widget> pages = [
+      EnrollmentStep1Page(onNextStepEnabled: (isEnabled) {
+        setState(() {
+          isButtonEnabled = isEnabled;
+        });
+      }),
+      const EnrollmentIdentifyVerificationStep(),
+      const EnrollmentStep2Page(),
+      const EnrollmentStep3Page(),
+      const EnrollmentStep4Page(),
+      const EnrollmentResultPage(
+          state: EnrollmentResultState.errorRequestRejected),
     ];
-    return AutoTabsRouter.pageView(
-        routes: routes,
-        physics: const NeverScrollableScrollPhysics(),
-        inheritNavigatorObservers: false,
-        builder: (context, child, _) {
-          final tabsRouter = AutoTabsRouter.of(context);
-          return PopScope(
-              canPop: false,
-              onPopInvoked: (canPop) {
-                if (tabsRouter.activeIndex > 0) {
-                  tabsRouter.setActiveIndex((tabsRouter.activeIndex - 1));
-                } else {
-                  AutoRouter.of(context)
-                      .removeWhere((route) => route.name == "EnrollmentRoute");
-                  //AutoRouter.of(context).popUntilRoot();
-                }
-              },
-              child: basicScreenBuilder(
+    final _pageController =
+        PageController(initialPage: 0, viewportFraction: 1.0, keepPage: true);
+    return PopScope(
+        canPop: false,
+        onPopInvoked: (canPop) {
+          if (currentPageIndex > 0) {
+            _pageController.animateToPage((currentPageIndex - 1),
+                curve: Curves.linear,
+                duration: const Duration(milliseconds: 300));
+          } else {
+            AutoRouter.of(context)
+                .removeWhere((route) => route.name == "EnrollmentRoute");
+          }
+        },
+        child: PageView.builder(
+            itemCount: pages.length,
+            padEnds: false,
+            pageSnapping: false,
+            onPageChanged: (index) {
+              currentPageIndex = index;
+            },
+            controller: _pageController,
+            physics: const NeverScrollableScrollPhysics(),
+            itemBuilder: (context, index) {
+              currentPageIndex = index;
+              return basicScreenBuilder(
                   context,
                   null,
                   FormScreenTemplate(
-                    body: child,
-                    title: tabsRouter.current.title(context),
+                    body: pages[index],
+                    title: "title",
                     buttonText: S.of(context).next_step,
+                    isButtonEnabled: isButtonEnabled,
                     onNextStepClicked: () {
-                      if (tabsRouter.activeIndex < routes.length - 1) {
-                        tabsRouter.setActiveIndex((tabsRouter.activeIndex + 1));
+                      if (index < pages.length - 1) {
+                        _pageController.animateToPage((index + 1),
+                            curve: Curves.linear,
+                            duration: const Duration(milliseconds: 300));
                       } else {
                         AutoRouter.of(context).removeWhere(
                             (route) => route.name == "EnrollmentRoute");
                       }
                     },
                     onBackPressed: () {
-                      if (tabsRouter.activeIndex > 0) {
-                        tabsRouter.setActiveIndex((tabsRouter.activeIndex - 1));
+                      if (currentPageIndex > 0) {
+                        _pageController.animateToPage((currentPageIndex - 1),
+                            curve: Curves.linear,
+                            duration: const Duration(milliseconds: 300));
                       } else {
                         AutoRouter.of(context).removeWhere(
                             (route) => route.name == "EnrollmentRoute");
-                        //AutoRouter.of(context).popUntilRoot();
                       }
                     },
-                  )));
-        });
+                  ));
+            }));
   }
+}
+
+class EnrollmentIdentifyVerificationStepPage {
+  const EnrollmentIdentifyVerificationStepPage();
 }

@@ -13,6 +13,11 @@ dependencies:
 
 dev_dependencies:
   melos: ^6.0.0
-
+  auto_route_generator: ^8.0.0
+  build_runner: ^2.4.9
+  flutter_lints: ^3.0.0
+  flutter_gen: ^5.4.0
 
 flutter:
+  generate: true
+  uses-material-design: true

@@ -31,10 +31,21 @@ class MessageLookup extends MessageLookupByLibrary {
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
         "diploma": MessageLookupByLibrary.simpleMessage("Diploma"),
+        "diploma_choice_title":
+            MessageLookupByLibrary.simpleMessage("Choose your diploma :"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "enrollment_code_verification_notice": m1,
         "enrollment_notice_step1": MessageLookupByLibrary.simpleMessage(
             "If the email you entered is not already registered, we will you send an OTP code for re-authentication in order to proceed to the next steps."),
+        "enrollment_submit_result_error_rejected_message":
+            MessageLookupByLibrary.simpleMessage(
+                "Your candidacy has been rejected !"),
+        "enrollment_submit_result_error_unknown_message":
+            MessageLookupByLibrary.simpleMessage(
+                "Your request could not be submitted ! try again"),
+        "enrollment_submit_result_success_message":
+            MessageLookupByLibrary.simpleMessage(
+                "Your request has been submitted successfully ! you will receive a reply as soon as it gets reviewed !"),
         "firstName": MessageLookupByLibrary.simpleMessage("FirstName"),
         "guest_space": MessageLookupByLibrary.simpleMessage("Guest space"),
         "identity_verification":
@@ -72,6 +83,16 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Student Life"),
         "welcome_logo_sesame_name":
             MessageLookupByLibrary.simpleMessage("SESAME"),
+        "work_opportunity_suggestion_accepted":
+            MessageLookupByLibrary.simpleMessage(
+                "Yes, i would like to learn more about it."),
+        "work_opportunity_suggestion_description":
+            MessageLookupByLibrary.simpleMessage(
+                "Sesame university offers the possibility to get a job in IT company that will also be in charge of paying your yearly tuitions."),
+        "work_opportunity_suggestion_rejected":
+            MessageLookupByLibrary.simpleMessage("No , i’m not interested"),
+        "work_opportunity_suggestion_title": MessageLookupByLibrary.simpleMessage(
+            "Do you want to start a career in IT along with your education ?"),
         "yes": MessageLookupByLibrary.simpleMessage("Yes")
       };
 }

@@ -31,10 +31,21 @@ class MessageLookup extends MessageLookupByLibrary {
         "cancel": MessageLookupByLibrary.simpleMessage("Annuler"),
         "confirm": MessageLookupByLibrary.simpleMessage("Confirmer"),
         "diploma": MessageLookupByLibrary.simpleMessage("Diplôme"),
+        "diploma_choice_title":
+            MessageLookupByLibrary.simpleMessage("Choisissez votre diploma :"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "enrollment_code_verification_notice": m1,
         "enrollment_notice_step1": MessageLookupByLibrary.simpleMessage(
             "Si l\'email que vous avez entré n\'est pas encore utilisé, on vous enverra un code OTP de ré-authentification pour procéder à l\'étape suivante."),
+        "enrollment_submit_result_error_rejected_message":
+            MessageLookupByLibrary.simpleMessage(
+                "Votre demande de candidature a été rejeté !"),
+        "enrollment_submit_result_error_unknown_message":
+            MessageLookupByLibrary.simpleMessage(
+                "La soumission de votre demande a échoué ! ré-essayer !"),
+        "enrollment_submit_result_success_message":
+            MessageLookupByLibrary.simpleMessage(
+                "Votre demande de candidature a été soumise avec succés ! vous auriez une réponse le plut tot possible!"),
         "firstName": MessageLookupByLibrary.simpleMessage("Prénom"),
         "guest_space": MessageLookupByLibrary.simpleMessage("Espace visiteur"),
         "identity_verification":
@@ -69,6 +80,17 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Student Life"),
         "welcome_logo_sesame_name":
             MessageLookupByLibrary.simpleMessage("SESAME"),
+        "work_opportunity_suggestion_accepted":
+            MessageLookupByLibrary.simpleMessage(
+                "Oui, je veux en savoir plus."),
+        "work_opportunity_suggestion_description":
+            MessageLookupByLibrary.simpleMessage(
+                "L\'université sésame vous offre la possiblité de travailler dans une entreprise prestigieuse qui prendra en charge les frais de la formation."),
+        "work_opportunity_suggestion_rejected":
+            MessageLookupByLibrary.simpleMessage(
+                "Non, je ne suis pas intéréssé."),
+        "work_opportunity_suggestion_title": MessageLookupByLibrary.simpleMessage(
+            "Voulez-vous commencer votre carrière professionnelle en poursuivant une formation en alternance ?"),
         "yes": MessageLookupByLibrary.simpleMessage("Oui")
       };
 }

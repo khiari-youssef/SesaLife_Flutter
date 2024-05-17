@@ -17,6 +17,7 @@ export 'components/checkables/SesameRadioButton.dart';
 export 'components/checkables/SesameCheckbox.dart';
 export 'components/input/CodeInputField.dart';
 export 'package:designsystem/theme/Theme.dart';
+export 'components/images/CustomAssetImage.dart';
 export 'package:flutter/material.dart';
 export 'package:flutter_screenutil/flutter_screenutil.dart';
 export 'package:localizations/localizations.dart';

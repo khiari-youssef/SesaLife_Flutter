@@ -3,10 +3,11 @@ import 'package:designsystem/components/images/CustomIcon.dart';
 import 'package:designsystem/components/textViews/titles/FormStepTitle.dart';
 import 'package:designsystem/designsystem_exports.dart';
 
-class FormScreenTemplate extends StatelessWidget {
+class FormScreenTemplate extends StatefulWidget {
   final String? title;
   final Widget body;
   final String? buttonText;
+  final bool isButtonEnabled;
   final VoidCallback onNextStepClicked;
   final VoidCallback onBackPressed;
   const FormScreenTemplate(
@@ -15,8 +16,14 @@ class FormScreenTemplate extends StatelessWidget {
       this.title,
       required this.onNextStepClicked,
       this.buttonText,
-      required this.onBackPressed});
+      required this.onBackPressed,
+      this.isButtonEnabled = true});
 
+  @override
+  State<StatefulWidget> createState() => FormScreenTemplateState();
+}
+
+class FormScreenTemplateState extends State<FormScreenTemplate> {
   @override
   Widget build(BuildContext context) => basicScreenBuilder(
       context,
@@ -34,7 +41,7 @@ class FormScreenTemplate extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 GestureDetector(
-                  onTap: onBackPressed,
+                  onTap: widget.onBackPressed,
                   child: Padding(
                       padding: EdgeInsets.all(12.r),
                       child: const Center(
@@ -43,23 +50,24 @@ class FormScreenTemplate extends StatelessWidget {
                 )
               ],
             ),
-            title != null
+            widget.title != null
                 ? Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [FormStepTitle(title: title!)],
+                    children: [FormStepTitle(title: widget.title!)],
                   )
                 : SizedBox(height: 24.h),
-            Expanded(child: body),
+            Expanded(child: widget.body),
             Row(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.end,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 FormStepButton(
-                    label: buttonText ?? S.of(context).next_step,
-                    onClicked: onNextStepClicked)
+                    isEnabled: widget.isButtonEnabled,
+                    label: widget.buttonText ?? S.of(context).next_step,
+                    onClicked: widget.onNextStepClicked)
               ],
             )
           ],

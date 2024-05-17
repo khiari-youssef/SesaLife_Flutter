@@ -1,3 +1,5 @@
+import 'package:designsystem/designsystem_exports.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 
 class EnrollmentStep2PageState extends State<EnrollmentStep2Page> {
@@ -52,8 +54,9 @@ class EnrollmentStep2PageState extends State<EnrollmentStep2Page> {
                             });
                           },
                           id: 0,
-                          groupID: selectedSexButton),
-                      SizedBox(width: 24.w),
+                          groupID: selectedSexButton,
+                          maxWidth: 150.w),
+                      Flexible(child: SizedBox(width: 24.w)),
                       SesameRadioButton(
                           label: S.of(context).sex_female,
                           onChecked: (groupid) {
@@ -62,7 +65,8 @@ class EnrollmentStep2PageState extends State<EnrollmentStep2Page> {
                             });
                           },
                           id: 1,
-                          groupID: selectedSexButton)
+                          groupID: selectedSexButton,
+                          maxWidth: 150.w)
                     ],
                   ),
                   SizedBox(height: 24.h),
@@ -84,7 +88,6 @@ class EnrollmentStep2PageState extends State<EnrollmentStep2Page> {
   }
 }
 
-@RoutePage(name: "EnrollmentStep2Route")
 class EnrollmentStep2Page extends StatefulWidget {
   const EnrollmentStep2Page({super.key});
 

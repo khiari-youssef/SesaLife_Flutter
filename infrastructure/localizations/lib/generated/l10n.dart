@@ -170,6 +170,86 @@ class S {
     );
   }
 
+  /// `Choose your diploma :`
+  String get diploma_choice_title {
+    return Intl.message(
+      'Choose your diploma :',
+      name: 'diploma_choice_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Do you want to start a career in IT along with your education ?`
+  String get work_opportunity_suggestion_title {
+    return Intl.message(
+      'Do you want to start a career in IT along with your education ?',
+      name: 'work_opportunity_suggestion_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sesame university offers the possibility to get a job in IT company that will also be in charge of paying your yearly tuitions.`
+  String get work_opportunity_suggestion_description {
+    return Intl.message(
+      'Sesame university offers the possibility to get a job in IT company that will also be in charge of paying your yearly tuitions.',
+      name: 'work_opportunity_suggestion_description',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Yes, i would like to learn more about it.`
+  String get work_opportunity_suggestion_accepted {
+    return Intl.message(
+      'Yes, i would like to learn more about it.',
+      name: 'work_opportunity_suggestion_accepted',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No , i’m not interested`
+  String get work_opportunity_suggestion_rejected {
+    return Intl.message(
+      'No , i’m not interested',
+      name: 'work_opportunity_suggestion_rejected',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your request has been submitted successfully ! you will receive a reply as soon as it gets reviewed !`
+  String get enrollment_submit_result_success_message {
+    return Intl.message(
+      'Your request has been submitted successfully ! you will receive a reply as soon as it gets reviewed !',
+      name: 'enrollment_submit_result_success_message',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your request could not be submitted ! try again`
+  String get enrollment_submit_result_error_unknown_message {
+    return Intl.message(
+      'Your request could not be submitted ! try again',
+      name: 'enrollment_submit_result_error_unknown_message',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your candidacy has been rejected !`
+  String get enrollment_submit_result_error_rejected_message {
+    return Intl.message(
+      'Your candidacy has been rejected !',
+      name: 'enrollment_submit_result_error_rejected_message',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Password`
   String get password {
     return Intl.message(

@@ -1,4 +1,3 @@
-import 'package:designsystem/components/images/CustomClickableIcon.dart';
 import 'package:designsystem/designsystem_exports.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:intl/intl.dart';

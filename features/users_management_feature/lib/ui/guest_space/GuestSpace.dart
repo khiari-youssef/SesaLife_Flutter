@@ -35,15 +35,7 @@ class GuestSpace extends StatelessWidget {
               child: GuestWelcomeInfoOptionCard(
                 data: options[index],
                 onClicked: () {
-                  if (options[index].clickDestinationPath ==
-                      "/EnrollmentRoute") {
-                    currentRouter.push(EnrollmentRoute(onExitEnrollment: () {
-                      currentRouter.navigationHistory.back();
-                    }));
-                  } else {
-                    currentRouter
-                        .pushNamed(options[index].clickDestinationPath);
-                  }
+                  currentRouter.pushNamed(options[index].clickDestinationPath);
                 },
               ),
             );

@@ -15,13 +15,17 @@ class EnrollmentStep1PageState extends State<EnrollmentStep1Page> {
             mainAxisSize: MainAxisSize.min,
             children: [
               SesameCustomTextField(
+                  isRequired: true,
                   keyboardType: TextInputType.emailAddress,
                   controller: emailController,
                   rightIcon: TextFieldIcon("ic_clear.svg", () {
                     emailController.text = "";
+                    widget.onNextStepEnabled(false);
                   }),
                   onChange: (newText) {
                     emailController.text = newText;
+                    widget.onNextStepEnabled(
+                        emailController.text.trim().isNotEmpty);
                   },
                   label: S.of(context).email,
                   placeHolder: S.of(context).email),
@@ -51,9 +55,9 @@ class EnrollmentStep1PageState extends State<EnrollmentStep1Page> {
   }
 }
 
-@RoutePage(name: "EnrollmentStep1Route")
 class EnrollmentStep1Page extends StatefulWidget {
-  const EnrollmentStep1Page({super.key});
+  final Function(bool isEnabled) onNextStepEnabled;
+  const EnrollmentStep1Page({super.key, required this.onNextStepEnabled});
 
   @override
   State<StatefulWidget> createState() => EnrollmentStep1PageState();

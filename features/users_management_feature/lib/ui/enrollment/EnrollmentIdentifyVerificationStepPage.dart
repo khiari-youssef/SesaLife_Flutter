@@ -27,7 +27,6 @@ class EnrollmentIdentifyVerificationStepPageState
   }
 }
 
-@RoutePage(name: "EnrollmentIdentifyVerificationStepRoute")
 class EnrollmentIdentifyVerificationStep extends StatefulWidget {
   const EnrollmentIdentifyVerificationStep({super.key});
 
