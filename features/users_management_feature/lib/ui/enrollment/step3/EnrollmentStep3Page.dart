@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 import 'package:users_management_feature/domain/entities/SesameDiplomaOption.dart';
 
-import 'DiplomaOptionsRadioGroup.dart';
+import '../DiplomaOptionsRadioGroup.dart';
 
 class EnrollmentStep3PageState extends State<EnrollmentStep3Page> {
   final List<SesameDiplomaOption> diplomaOptions = [
@@ -53,7 +53,8 @@ class EnrollmentStep3PageState extends State<EnrollmentStep3Page> {
 }
 
 class EnrollmentStep3Page extends StatefulWidget {
-  const EnrollmentStep3Page({super.key});
+  final Function(bool isEnabled) onNextStepEnabled;
+  const EnrollmentStep3Page({super.key, required this.onNextStepEnabled});
 
   @override
   State<StatefulWidget> createState() => EnrollmentStep3PageState();

@@ -1,7 +1,18 @@
 import 'package:shared_dependencies/shared_dependencies.dart';
 
+import 'EnrollmentIdentifyVerificationStepPageStateManager.dart';
+
 class EnrollmentIdentifyVerificationStepPageState
     extends State<EnrollmentIdentifyVerificationStep> {
+  EnrollmentIdentifyVerificationStepPageStateManager stateManager =
+      EnrollmentIdentifyVerificationStepPageStateManager(false);
+
+  @override
+  void initState() {
+    super.initState();
+    stateManager.refreshVerificationCode();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -12,23 +23,27 @@ class EnrollmentIdentifyVerificationStepPageState
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  const CodeInputField(),
+                  CodeInputField(
+                    onCompleted: (code) {
+                      stateManager.checkVerificationCode(code);
+                    },
+                  ),
                   SizedBox(height: 24.h),
-                  Expanded(
-                      child: Center(
-                          child: BodyLarge(
-                    text: S
-                        .of(context)
-                        .enrollment_code_verification_notice("email@email.com"),
-                    color: Theme.of(context).colorScheme.tertiary,
-                    textAlign: TextAlign.center,
-                  )))
+                  BodyLarge(
+                      text: S.of(context).enrollment_code_verification_notice(
+                          "email@email.com"),
+                      color: Theme.of(context).brightness == Brightness.dark
+                          ? const Color(0xFFE6E6E6)
+                          : const Color(0xFFA4A4A4),
+                      textAlign: TextAlign.center)
                 ])));
   }
 }
 
 class EnrollmentIdentifyVerificationStep extends StatefulWidget {
-  const EnrollmentIdentifyVerificationStep({super.key});
+  final Function(bool isEnabled) onNextStepEnabled;
+  const EnrollmentIdentifyVerificationStep(
+      {super.key, required this.onNextStepEnabled});
 
   @override
   State<StatefulWidget> createState() =>

@@ -60,7 +60,8 @@ class EnrollmentStep4PageState extends State<EnrollmentStep4Page> {
 }
 
 class EnrollmentStep4Page extends StatefulWidget {
-  const EnrollmentStep4Page({super.key});
+  final Function(bool isEnabled) onNextStepEnabled;
+  const EnrollmentStep4Page({super.key, required this.onNextStepEnabled});
 
   @override
   State<StatefulWidget> createState() => EnrollmentStep4PageState();

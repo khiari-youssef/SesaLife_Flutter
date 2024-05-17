@@ -3,7 +3,7 @@ import 'package:shared_dependencies/shared_dependencies.dart';
 class EnrollmentIdentifyVerificationStepPageStateManager extends Cubit<bool> {
   EnrollmentIdentifyVerificationStepPageStateManager(super.initialState);
 
-  void checkVerificationCode() async {
+  void checkVerificationCode(String code) async {
     emit(true);
   }
 
