@@ -1,3 +1,5 @@
+import 'package:users_management_feature/domain/entities/SesameBadge.dart';
+import 'package:users_management_feature/domain/entities/SesameRole.dart';
 import 'package:users_management_feature/domain/entities/SesameUser.dart';
 
 abstract interface class LoginRepositoryContract {
@@ -19,7 +21,12 @@ class LoginRepository implements LoginRepositoryContract {
         email: "khiari.youssef98@gmail.com",
         sex: UserSex.male,
         birthdate: DateTime.now(),
-        profilePictureUrl: "");
+        profilePictureUrl: "",
+        role: SesameRole.defaultRole,
+        badge: SesameBadge(
+            creationDate: DateTime(2024, 1, 1),
+            expirationDate: DateTime(2024, 12, 1),
+            signature: "aegdsgsd"));
   }
 
   @override

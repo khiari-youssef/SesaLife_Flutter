@@ -1,4 +1,7 @@
 import 'package:intl/intl.dart';
+import 'package:users_management_feature/domain/entities/SesameRole.dart';
+
+import 'SesameBadge.dart';
 
 enum UserSex { male, female }
 
@@ -11,6 +14,8 @@ class SesameUser {
   final UserSex sex;
   final DateTime birthdate;
   final String profilePictureUrl;
+  final SesameRole role;
+  final SesameBadge badge;
 
   final DateFormat format = DateFormat("dd/MM/yyyy");
 
@@ -22,7 +27,9 @@ class SesameUser {
       required this.email,
       required this.sex,
       required this.birthdate,
-      required this.profilePictureUrl});
+      required this.profilePictureUrl,
+      required this.role,
+      required this.badge});
 
   String get displayBirthdate {
     return format.format(birthdate);

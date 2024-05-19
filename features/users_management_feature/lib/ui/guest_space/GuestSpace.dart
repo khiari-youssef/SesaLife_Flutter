@@ -1,3 +1,4 @@
+import 'package:designsystem/extensions.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 
 import '../../domain/entities/GuestWelcomeInfoOption.dart';
@@ -6,6 +7,12 @@ import 'GuestWelcomeInfoOptionCard.dart';
 @RoutePage(name: "GuestSpaceRoute")
 class GuestSpace extends StatelessWidget {
   const GuestSpace({super.key});
+
+  Future<void> _launchProgramsUrl(BuildContext context) async {
+    if (!await launchUrl(Uri.parse("https://universitesesame.com"))) {
+      throw Exception();
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +41,16 @@ class GuestSpace extends StatelessWidget {
               child: GuestWelcomeInfoOptionCard(
                 data: options[index],
                 onClicked: () {
-                  currentRouter.pushNamed(options[index].clickDestinationPath);
+                  if (options[index].clickDestinationPath ==
+                      "/SesameProgramsCatalog") {
+                    _launchProgramsUrl(context).catchError((onError) {
+                      context.showToast(
+                          "Error", "Could not launch url", ToastType.Error);
+                    });
+                  } else {
+                    currentRouter
+                        .pushNamed(options[index].clickDestinationPath);
+                  }
                 },
               ),
             );
