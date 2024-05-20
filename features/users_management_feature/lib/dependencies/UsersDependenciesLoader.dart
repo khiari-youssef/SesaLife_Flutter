@@ -1,7 +1,8 @@
 import 'package:shared_dependencies/shared_dependencies.dart';
-import 'package:users_management_feature/infrastructure/repositories/LoginRepositoryContract.dart';
+import 'package:users_management_feature/infrastructure/ports/LoginRepositoryContract.dart';
 import 'package:users_management_feature/ui/login/LoginState.dart';
 
+import '../infrastructure/repositories/LoginRepository.dart';
 import '../ui/login/LoginStateBloc.dart';
 
 extension UsersDependenciesLoader on GetIt {

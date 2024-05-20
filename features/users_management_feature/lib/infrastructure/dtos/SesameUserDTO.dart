@@ -18,7 +18,7 @@ class SesameUserDTO extends HiveObject {
   final SesameRoleDTO role;
   final SesameBadgeDTO badge;
 
-  SesameUserDTO(this.badge,
+  SesameUserDTO(
       {required this.registrationID,
       required this.candidatureID,
       required this.firstName,
@@ -27,7 +27,8 @@ class SesameUserDTO extends HiveObject {
       required this.sex,
       required this.birthdate,
       required this.profilePictureUrl,
-      required this.role});
+      required this.role,
+      required this.badge});
 
   factory SesameUserDTO.fromJson(Map<String, dynamic> json) =>
       _$SesameUserDTOFromJson(json);

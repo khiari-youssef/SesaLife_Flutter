@@ -5,14 +5,14 @@ import 'package:users_management_feature/infrastructure/dtos/SesameUserDTO.dart'
 
 class UsersLocalDataSource {
   Future<void> saveUserToken(String email, String token) async {
-    await Isolate.run(() async {
+    return await Isolate.run(() async {
       LazyBox usersBox = await Hive.openLazyBox("usersBox");
       return usersBox.put("token:$email", token);
     });
   }
 
   Future<void> saveUserProfile(SesameUserDTO user) async {
-    await Isolate.run(() async {
+    return await Isolate.run(() async {
       LazyBox usersBox = await Hive.openLazyBox("usersBox");
       return usersBox.put("profile:${user.email}", user);
     });

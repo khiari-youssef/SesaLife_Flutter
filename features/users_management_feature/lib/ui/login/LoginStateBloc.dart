@@ -1,6 +1,6 @@
 import 'package:shared_dependencies/shared_dependencies.dart';
 
-import '../../infrastructure/repositories/LoginRepositoryContract.dart';
+import '../../infrastructure/ports/LoginRepositoryContract.dart';
 import 'LoginState.dart';
 
 class LoginStateBloc extends Bloc<LoginEvent, LoginState> {

@@ -17,3 +17,4 @@ export 'package:hive_flutter/hive_flutter.dart';
 export 'package:json_annotation/json_annotation.dart';
 export 'package:logger/logger.dart';
 export 'package:url_launcher/url_launcher.dart';
+export 'package:dio/dio.dart';

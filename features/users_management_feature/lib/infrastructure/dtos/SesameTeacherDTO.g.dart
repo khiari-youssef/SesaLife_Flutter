@@ -1,13 +1,17 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'SesameUserDTO.dart';
+part of 'SesameTeacherDTO.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-SesameUserDTO _$SesameUserDTOFromJson(Map<String, dynamic> json) =>
-    SesameUserDTO(
+SesameTeacherDTO _$SesameTeacherDTOFromJson(Map<String, dynamic> json) =>
+    SesameTeacherDTO(
+      json['profBackground'] as String,
+      (json['assignedClasses'] as List<dynamic>)
+          .map((e) => SesameClassDTO.fromJson(e as Map<String, dynamic>))
+          .toList(),
       registrationID: json['registrationID'] as String,
       candidatureID: json['candidatureID'] as String,
       firstName: json['firstName'] as String,
@@ -20,7 +24,7 @@ SesameUserDTO _$SesameUserDTOFromJson(Map<String, dynamic> json) =>
       badge: SesameBadgeDTO.fromJson(json['badge'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$SesameUserDTOToJson(SesameUserDTO instance) =>
+Map<String, dynamic> _$SesameTeacherDTOToJson(SesameTeacherDTO instance) =>
     <String, dynamic>{
       'registrationID': instance.registrationID,
       'candidatureID': instance.candidatureID,
@@ -32,4 +36,6 @@ Map<String, dynamic> _$SesameUserDTOToJson(SesameUserDTO instance) =>
       'profilePictureUrl': instance.profilePictureUrl,
       'role': instance.role,
       'badge': instance.badge,
+      'profBackground': instance.profBackground,
+      'assignedClasses': instance.assignedClasses,
     };

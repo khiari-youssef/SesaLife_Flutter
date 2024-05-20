@@ -1,12 +1,7 @@
-import 'package:users_management_feature/domain/entities/SesameBadge.dart';
-import 'package:users_management_feature/domain/entities/SesameRole.dart';
-import 'package:users_management_feature/domain/entities/SesameUser.dart';
-
-abstract interface class LoginRepositoryContract {
-  Future<SesameUser> authenticateUserWithCredentials(
-      String email, String password);
-  Future<SesameUser> authenticateUserWithToken(String token);
-}
+import '../../domain/entities/SesameBadge.dart';
+import '../../domain/entities/SesameRole.dart';
+import '../../domain/entities/SesameUser.dart';
+import '../ports/LoginRepositoryContract.dart';
 
 class LoginRepository implements LoginRepositoryContract {
   @override
