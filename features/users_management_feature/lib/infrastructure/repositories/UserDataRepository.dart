@@ -38,4 +38,7 @@ class UserDataRepository implements UserdataRepositoryContract {
   Future<String?> getCurrentUserProfileToken() async {
     return Future.value("tokentest");
   }
+
+  @override
+  Future<void> saveCurrentUserProfileDataLocally(SesameUser sesameUser) async {}
 }
