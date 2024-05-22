@@ -4,6 +4,7 @@ library shared_dependencies;
 export 'package:auto_route/auto_route.dart';
 //design system
 export 'package:designsystem/designsystem_exports.dart';
+export 'package:dio/dio.dart';
 //bloc state management
 export 'package:flutter_bloc/flutter_bloc.dart';
 //freezed
@@ -17,4 +18,3 @@ export 'package:hive_flutter/hive_flutter.dart';
 export 'package:json_annotation/json_annotation.dart';
 export 'package:logger/logger.dart';
 export 'package:url_launcher/url_launcher.dart';
-export 'package:dio/dio.dart';

@@ -1,6 +1,7 @@
 import 'package:shared_dependencies/shared_dependencies.dart';
 
 import 'MyProfileDataState.dart';
+
 part 'MyProfileScreenGlobalState.freezed.dart';
 
 @freezed

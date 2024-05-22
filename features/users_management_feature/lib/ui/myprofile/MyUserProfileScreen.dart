@@ -1,6 +1,3 @@
-import 'package:core/core_domain/DomainErrorType.dart';
-import 'package:designsystem/designsystem_exports.dart';
-import 'package:flutter/material.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 import 'package:users_management_feature/domain/entities/SesameUser.dart';
 import 'package:users_management_feature/ui/myprofile/MyProfileMenu.dart';
@@ -8,9 +5,6 @@ import 'package:users_management_feature/ui/myprofile/MyProfilePreview.dart';
 import 'package:users_management_feature/ui/myprofile/stateManagement/MyProfileBlocStateManager.dart';
 import 'package:users_management_feature/ui/myprofile/stateManagement/MyProfileScreenEvent.dart';
 import 'package:users_management_feature/ui/myprofile/stateManagement/MyProfileScreenGlobalState.dart';
-
-import '../../domain/entities/SesameStudent.dart';
-import '../../domain/entities/SesameTeacher.dart';
 
 class MyUserProfileState extends State<MyUserProfileScreen> {
   @override
