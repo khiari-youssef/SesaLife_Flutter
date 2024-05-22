@@ -1,10 +1,8 @@
 import 'package:flutter/widgets.dart';
-import 'package:qr_flutter/qr_flutter.dart';
+import 'package:pretty_qr_code/pretty_qr_code.dart';
 
-Widget getQrCodeWidgetForData(String data, double size) {
-  return QrImageView(
+Widget getQrCodeWidgetForData(String data) {
+  return PrettyQrView.data(
     data: data,
-    version: QrVersions.auto,
-    size: size,
   );
 }
