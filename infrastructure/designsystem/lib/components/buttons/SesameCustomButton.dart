@@ -49,13 +49,13 @@ class SesameCustomButton extends StatelessWidget {
         constraints: BoxConstraints.loose(Size.fromHeight(48.h)),
         child: ElevatedButton(
             style: ButtonStyle(
-                elevation: const MaterialStatePropertyAll(0.0),
-                backgroundColor: MaterialStatePropertyAll(isEnabled
+                elevation: const WidgetStatePropertyAll(0.0),
+                backgroundColor: WidgetStatePropertyAll(isEnabled
                     ? variantBackgroundColor
                     : Color.alphaBlend(
                         const Color(0xCCF3F3F3), variantBackgroundColor)),
-                shape: MaterialStatePropertyAll(buttonBorder)),
-            onPressed: isEnabled ? onPressed : null,
+                shape: WidgetStatePropertyAll(buttonBorder)),
+            onPressed: isEnabled ? (isLoading ? null : onPressed) : null,
             child: Padding(
               padding: EdgeInsets.symmetric(vertical: 8.r),
               child: AnimatedContainer(

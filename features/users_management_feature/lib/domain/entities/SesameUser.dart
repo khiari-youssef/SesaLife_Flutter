@@ -34,4 +34,8 @@ class SesameUser {
   String get displayBirthdate {
     return format.format(birthdate);
   }
+
+  String get getFullName{
+    return "$firstName $lastName";
+  }
 }

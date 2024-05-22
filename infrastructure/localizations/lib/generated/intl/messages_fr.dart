@@ -47,6 +47,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "enrollment_submit_result_success_message":
             MessageLookupByLibrary.simpleMessage(
                 "Votre demande de candidature a été soumise avec succés ! vous auriez une réponse le plut tot possible!"),
+        "error_profile_data_not_available_message":
+            MessageLookupByLibrary.simpleMessage("Essayez de vous reconnecter"),
+        "error_profile_data_not_available_title":
+            MessageLookupByLibrary.simpleMessage(
+                "Vos données ne sont pas disponibles !"),
         "firstName": MessageLookupByLibrary.simpleMessage("Prénom"),
         "form_error_message_email_format":
             MessageLookupByLibrary.simpleMessage("Adresse email invalide !"),
@@ -74,6 +79,11 @@ class MessageLookup extends MessageLookupByLibrary {
             "Savoir plus sur la sécurité et l\'usage de mes données personnelles collectés par l\'application."),
         "privacy_policy_label": MessageLookupByLibrary.simpleMessage(
             "Régles & Politique de securité"),
+        "profile_professional_student":
+            MessageLookupByLibrary.simpleMessage("Etudiant Alternant"),
+        "profile_student": MessageLookupByLibrary.simpleMessage("Etudiant"),
+        "profile_teacher": MessageLookupByLibrary.simpleMessage("Enseignant"),
+        "profile_user": MessageLookupByLibrary.simpleMessage("Utilisateur"),
         "programs_desc": MessageLookupByLibrary.simpleMessage(
             "Renseignez-vous sur les différentes formations fournis par l\'université sésame."),
         "programs_label": MessageLookupByLibrary.simpleMessage("Programmes"),

@@ -23,7 +23,7 @@ mixin _$LoginState {
     required TResult Function(String password) onPasswordUpdated,
     required TResult Function() loading,
     required TResult Function() success,
-    required TResult Function(ErrorType errorType) error,
+    required TResult Function(DomainErrorType errorType) error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -33,7 +33,7 @@ mixin _$LoginState {
     TResult? Function(String password)? onPasswordUpdated,
     TResult? Function()? loading,
     TResult? Function()? success,
-    TResult? Function(ErrorType errorType)? error,
+    TResult? Function(DomainErrorType errorType)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -43,7 +43,7 @@ mixin _$LoginState {
     TResult Function(String password)? onPasswordUpdated,
     TResult Function()? loading,
     TResult Function()? success,
-    TResult Function(ErrorType errorType)? error,
+    TResult Function(DomainErrorType errorType)? error,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -167,7 +167,7 @@ class _$idleImpl implements _idle {
     required TResult Function(String password) onPasswordUpdated,
     required TResult Function() loading,
     required TResult Function() success,
-    required TResult Function(ErrorType errorType) error,
+    required TResult Function(DomainErrorType errorType) error,
   }) {
     return idle(hasInValidInput);
   }
@@ -180,7 +180,7 @@ class _$idleImpl implements _idle {
     TResult? Function(String password)? onPasswordUpdated,
     TResult? Function()? loading,
     TResult? Function()? success,
-    TResult? Function(ErrorType errorType)? error,
+    TResult? Function(DomainErrorType errorType)? error,
   }) {
     return idle?.call(hasInValidInput);
   }
@@ -193,7 +193,7 @@ class _$idleImpl implements _idle {
     TResult Function(String password)? onPasswordUpdated,
     TResult Function()? loading,
     TResult Function()? success,
-    TResult Function(ErrorType errorType)? error,
+    TResult Function(DomainErrorType errorType)? error,
     required TResult orElse(),
   }) {
     if (idle != null) {
@@ -325,7 +325,7 @@ class _$onEmailUpdatedImpl implements _onEmailUpdated {
     required TResult Function(String password) onPasswordUpdated,
     required TResult Function() loading,
     required TResult Function() success,
-    required TResult Function(ErrorType errorType) error,
+    required TResult Function(DomainErrorType errorType) error,
   }) {
     return onEmailUpdated(email);
   }
@@ -338,7 +338,7 @@ class _$onEmailUpdatedImpl implements _onEmailUpdated {
     TResult? Function(String password)? onPasswordUpdated,
     TResult? Function()? loading,
     TResult? Function()? success,
-    TResult? Function(ErrorType errorType)? error,
+    TResult? Function(DomainErrorType errorType)? error,
   }) {
     return onEmailUpdated?.call(email);
   }
@@ -351,7 +351,7 @@ class _$onEmailUpdatedImpl implements _onEmailUpdated {
     TResult Function(String password)? onPasswordUpdated,
     TResult Function()? loading,
     TResult Function()? success,
-    TResult Function(ErrorType errorType)? error,
+    TResult Function(DomainErrorType errorType)? error,
     required TResult orElse(),
   }) {
     if (onEmailUpdated != null) {
@@ -484,7 +484,7 @@ class _$onPasswordUpdatedImpl implements _onPasswordUpdated {
     required TResult Function(String password) onPasswordUpdated,
     required TResult Function() loading,
     required TResult Function() success,
-    required TResult Function(ErrorType errorType) error,
+    required TResult Function(DomainErrorType errorType) error,
   }) {
     return onPasswordUpdated(password);
   }
@@ -497,7 +497,7 @@ class _$onPasswordUpdatedImpl implements _onPasswordUpdated {
     TResult? Function(String password)? onPasswordUpdated,
     TResult? Function()? loading,
     TResult? Function()? success,
-    TResult? Function(ErrorType errorType)? error,
+    TResult? Function(DomainErrorType errorType)? error,
   }) {
     return onPasswordUpdated?.call(password);
   }
@@ -510,7 +510,7 @@ class _$onPasswordUpdatedImpl implements _onPasswordUpdated {
     TResult Function(String password)? onPasswordUpdated,
     TResult Function()? loading,
     TResult Function()? success,
-    TResult Function(ErrorType errorType)? error,
+    TResult Function(DomainErrorType errorType)? error,
     required TResult orElse(),
   }) {
     if (onPasswordUpdated != null) {
@@ -616,7 +616,7 @@ class _$LoadingImpl implements _Loading {
     required TResult Function(String password) onPasswordUpdated,
     required TResult Function() loading,
     required TResult Function() success,
-    required TResult Function(ErrorType errorType) error,
+    required TResult Function(DomainErrorType errorType) error,
   }) {
     return loading();
   }
@@ -629,7 +629,7 @@ class _$LoadingImpl implements _Loading {
     TResult? Function(String password)? onPasswordUpdated,
     TResult? Function()? loading,
     TResult? Function()? success,
-    TResult? Function(ErrorType errorType)? error,
+    TResult? Function(DomainErrorType errorType)? error,
   }) {
     return loading?.call();
   }
@@ -642,7 +642,7 @@ class _$LoadingImpl implements _Loading {
     TResult Function(String password)? onPasswordUpdated,
     TResult Function()? loading,
     TResult Function()? success,
-    TResult Function(ErrorType errorType)? error,
+    TResult Function(DomainErrorType errorType)? error,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -742,7 +742,7 @@ class _$SuccessImpl implements _Success {
     required TResult Function(String password) onPasswordUpdated,
     required TResult Function() loading,
     required TResult Function() success,
-    required TResult Function(ErrorType errorType) error,
+    required TResult Function(DomainErrorType errorType) error,
   }) {
     return success();
   }
@@ -755,7 +755,7 @@ class _$SuccessImpl implements _Success {
     TResult? Function(String password)? onPasswordUpdated,
     TResult? Function()? loading,
     TResult? Function()? success,
-    TResult? Function(ErrorType errorType)? error,
+    TResult? Function(DomainErrorType errorType)? error,
   }) {
     return success?.call();
   }
@@ -768,7 +768,7 @@ class _$SuccessImpl implements _Success {
     TResult Function(String password)? onPasswordUpdated,
     TResult Function()? loading,
     TResult Function()? success,
-    TResult Function(ErrorType errorType)? error,
+    TResult Function(DomainErrorType errorType)? error,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -831,7 +831,7 @@ abstract class _$$ErrorImplCopyWith<$Res> {
           _$ErrorImpl value, $Res Function(_$ErrorImpl) then) =
       __$$ErrorImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({ErrorType errorType});
+  $Res call({DomainErrorType errorType});
 }
 
 /// @nodoc
@@ -851,7 +851,7 @@ class __$$ErrorImplCopyWithImpl<$Res>
       null == errorType
           ? _value.errorType
           : errorType // ignore: cast_nullable_to_non_nullable
-              as ErrorType,
+              as DomainErrorType,
     ));
   }
 }
@@ -862,7 +862,7 @@ class _$ErrorImpl implements _Error {
   const _$ErrorImpl(this.errorType);
 
   @override
-  final ErrorType errorType;
+  final DomainErrorType errorType;
 
   @override
   String toString() {
@@ -895,7 +895,7 @@ class _$ErrorImpl implements _Error {
     required TResult Function(String password) onPasswordUpdated,
     required TResult Function() loading,
     required TResult Function() success,
-    required TResult Function(ErrorType errorType) error,
+    required TResult Function(DomainErrorType errorType) error,
   }) {
     return error(errorType);
   }
@@ -908,7 +908,7 @@ class _$ErrorImpl implements _Error {
     TResult? Function(String password)? onPasswordUpdated,
     TResult? Function()? loading,
     TResult? Function()? success,
-    TResult? Function(ErrorType errorType)? error,
+    TResult? Function(DomainErrorType errorType)? error,
   }) {
     return error?.call(errorType);
   }
@@ -921,7 +921,7 @@ class _$ErrorImpl implements _Error {
     TResult Function(String password)? onPasswordUpdated,
     TResult Function()? loading,
     TResult Function()? success,
-    TResult Function(ErrorType errorType)? error,
+    TResult Function(DomainErrorType errorType)? error,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -975,9 +975,9 @@ class _$ErrorImpl implements _Error {
 }
 
 abstract class _Error implements LoginState {
-  const factory _Error(final ErrorType errorType) = _$ErrorImpl;
+  const factory _Error(final DomainErrorType errorType) = _$ErrorImpl;
 
-  ErrorType get errorType;
+  DomainErrorType get errorType;
   @JsonKey(ignore: true)
   _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;

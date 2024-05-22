@@ -1,8 +1,7 @@
+import 'package:core/core_domain/DomainErrorType.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 
 part 'LoginState.freezed.dart';
-
-enum ErrorType { InvalidCredentials, UnknownError }
 
 @freezed
 sealed class LoginState with _$LoginState {
@@ -12,7 +11,7 @@ sealed class LoginState with _$LoginState {
       _onPasswordUpdated;
   const factory LoginState.loading() = _Loading;
   const factory LoginState.success() = _Success;
-  const factory LoginState.error(ErrorType errorType) = _Error;
+  const factory LoginState.error(DomainErrorType errorType) = _Error;
 }
 
 @freezed

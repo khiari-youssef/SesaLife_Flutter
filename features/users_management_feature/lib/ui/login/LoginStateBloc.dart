@@ -1,6 +1,7 @@
+import 'package:core/core_domain/DomainErrorType.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 
-import '../../infrastructure/ports/LoginRepositoryContract.dart';
+import '../../infrastructure/ports/repositoryGateway/LoginRepositoryContract.dart';
 import 'LoginState.dart';
 
 class LoginStateBloc extends Bloc<LoginEvent, LoginState> {
@@ -15,7 +16,7 @@ class LoginStateBloc extends Bloc<LoginEvent, LoginState> {
               .then((value) {
             emit(const LoginState.success());
           }, onError: (error) {
-            emit(const LoginState.error(ErrorType.UnknownError));
+            emit(const LoginState.error(DomainErrorType.UnknownError));
           });
         }, updateEmail: (email) {
           emit(LoginState.onEmailUpdated(email));

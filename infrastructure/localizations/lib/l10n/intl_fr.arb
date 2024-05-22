@@ -46,5 +46,11 @@
   "form_error_message_required_field" : "Ce champ est obligatoire !",
   "form_error_message_email_format" : "Adresse email invalide !",
   "form_error_message_phone_format" : "Numéro de téléphone invalide !",
-  "form_error_message_name_format" : "Nom invalide !"
+  "form_error_message_name_format" : "Nom invalide !",
+  "error_profile_data_not_available_title" : "Vos données ne sont pas disponibles !",
+  "error_profile_data_not_available_message" : "Essayez de vous reconnecter",
+  "profile_user" : "Utilisateur",
+  "profile_teacher" : "Enseignant",
+  "profile_student" : "Etudiant",
+  "profile_professional_student" : "Etudiant Alternant"
 }

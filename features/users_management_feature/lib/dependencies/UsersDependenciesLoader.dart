@@ -1,9 +1,15 @@
+import 'package:core/core_domain/DomainUseCaseProtocol.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
-import 'package:users_management_feature/infrastructure/ports/LoginRepositoryContract.dart';
+import 'package:users_management_feature/domain/usecases/GetMyProfileDataUseCase.dart';
+import 'package:users_management_feature/infrastructure/ports/repositoryGateway/LoginRepositoryContract.dart';
 import 'package:users_management_feature/ui/login/LoginState.dart';
 
+import '../domain/entities/SesameUser.dart';
 import '../infrastructure/repositories/LoginRepository.dart';
 import '../ui/login/LoginStateBloc.dart';
+import '../ui/myprofile/stateManagement/MyProfileBlocStateManager.dart';
+import '../ui/myprofile/stateManagement/MyProfileDataState.dart';
+import '../ui/myprofile/stateManagement/MyProfileScreenGlobalState.dart';
 
 extension UsersDependenciesLoader on GetIt {
   void loadUsersDependencies() {
@@ -11,6 +17,15 @@ extension UsersDependenciesLoader on GetIt {
 
     registerFactory<LoginStateBloc>(
         () => LoginStateBloc(get(), get(instanceName: "ActualImpl")));
+
+    registerFactory<NoInputDomainUseCaseProtocol<SesameUser>>(
+        () => GetMyProfileDataUseCase(),
+        instanceName: "GetMyProfileDataUseCase");
+
+    registerFactory(() => MyProfileBlocStateManager(
+        const MyProfileScreenGlobalState(
+            profileDataState: MyProfileDataState.loading(), isLoggedOut: false),
+        GetIt.instance.get(instanceName: "GetMyProfileDataUseCase")));
 
     registerFactory<LoginRepositoryContract>(() => LoginRepository(),
         instanceName: "ActualImpl");

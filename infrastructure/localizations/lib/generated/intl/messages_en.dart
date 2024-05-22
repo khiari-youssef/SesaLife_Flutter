@@ -47,6 +47,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "enrollment_submit_result_success_message":
             MessageLookupByLibrary.simpleMessage(
                 "Your request has been submitted successfully ! you will receive a reply as soon as it gets reviewed !"),
+        "error_profile_data_not_available_message":
+            MessageLookupByLibrary.simpleMessage("Try logging-in again !"),
+        "error_profile_data_not_available_title":
+            MessageLookupByLibrary.simpleMessage(
+                "Profile data not available !"),
         "firstName": MessageLookupByLibrary.simpleMessage("FirstName"),
         "form_error_message_email_format":
             MessageLookupByLibrary.simpleMessage("Invalid email format"),
@@ -75,6 +80,11 @@ class MessageLookup extends MessageLookupByLibrary {
             "Learn more about how the app uses and protects your personal data."),
         "privacy_policy_label":
             MessageLookupByLibrary.simpleMessage("Rules & Security policy"),
+        "profile_professional_student":
+            MessageLookupByLibrary.simpleMessage("Student"),
+        "profile_student": MessageLookupByLibrary.simpleMessage("Student"),
+        "profile_teacher": MessageLookupByLibrary.simpleMessage("Teacher"),
+        "profile_user": MessageLookupByLibrary.simpleMessage("User"),
         "program_selection":
             MessageLookupByLibrary.simpleMessage("Choose your program"),
         "programs_desc": MessageLookupByLibrary.simpleMessage(

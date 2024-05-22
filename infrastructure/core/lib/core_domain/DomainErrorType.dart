@@ -1,0 +1,1 @@
+enum DomainErrorType { InvalidCredentials, UnknownError }

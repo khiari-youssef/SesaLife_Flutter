@@ -1,7 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-
 import 'intl/messages_all.dart';
 
 // **************************************************************************
@@ -536,6 +535,66 @@ class S {
     return Intl.message(
       'Invalid name format',
       name: 'form_error_message_name_format',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Profile data not available !`
+  String get error_profile_data_not_available_title {
+    return Intl.message(
+      'Profile data not available !',
+      name: 'error_profile_data_not_available_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Try logging-in again !`
+  String get error_profile_data_not_available_message {
+    return Intl.message(
+      'Try logging-in again !',
+      name: 'error_profile_data_not_available_message',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `User`
+  String get profile_user {
+    return Intl.message(
+      'User',
+      name: 'profile_user',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Teacher`
+  String get profile_teacher {
+    return Intl.message(
+      'Teacher',
+      name: 'profile_teacher',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Student`
+  String get profile_student {
+    return Intl.message(
+      'Student',
+      name: 'profile_student',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Student`
+  String get profile_professional_student {
+    return Intl.message(
+      'Student',
+      name: 'profile_professional_student',
       desc: '',
       args: [],
     );
