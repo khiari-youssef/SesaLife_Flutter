@@ -6,7 +6,7 @@ import '../ui/myprofile/stateManagement/MyProfileBlocStateManager.dart';
 import '../ui/myprofile/stateManagement/MyProfileDataState.dart';
 import '../ui/myprofile/stateManagement/MyProfileScreenGlobalState.dart';
 
-extension uiModule on GetIt {
+extension UIModule on GetIt {
   void loadUiModule() {
     registerFactory<LoginState>(() => const LoginState.idle(true));
 

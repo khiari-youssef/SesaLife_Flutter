@@ -1,3 +1,6 @@
+import 'package:users_management_feature/domain/entities/SesameClass.dart';
+import 'package:users_management_feature/domain/entities/SesameStudent.dart';
+
 import '../../domain/entities/SesameBadge.dart';
 import '../../domain/entities/SesameRole.dart';
 import '../../domain/entities/SesameUser.dart';
@@ -8,7 +11,7 @@ class LoginRepository implements LoginRepositoryContract {
   Future<SesameUser> authenticateUserWithCredentials(
       String email, String password) async {
     await Future.delayed(const Duration(seconds: 2));
-    return SesameUser(
+    return SesameStudent(
         registrationID: "random",
         candidatureID: "randomcaid",
         firstName: "Youssef",
@@ -21,7 +24,9 @@ class LoginRepository implements LoginRepositoryContract {
         badge: SesameBadge(
             creationDate: DateTime(2024, 1, 1),
             expirationDate: DateTime(2024, 12, 1),
-            signature: "aegdsgsd"));
+            signature: "aegdsgsd"),
+        sesameClass:
+            SesameClass(id: 'ingta4c', name: "ingta", group: "C", level: "4"));
   }
 
   @override

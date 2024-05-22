@@ -7,7 +7,7 @@ import '../domain/usecases/GetMyProfileDataUseCase.dart';
 import '../domain/usecases/UserLoginUseCase.dart';
 import '../infrastructure/repositories/UserDataRepository.dart';
 
-extension useCasesModule on GetIt {
+extension UseCasesModule on GetIt {
   void loadUseCasesModule() {
     registerFactory<DomainUseCaseProtocol<LoginMethod, Future<SesameUser>>>(
         () => UserLoginUseCase(
@@ -15,7 +15,7 @@ extension useCasesModule on GetIt {
         instanceName: "UserLoginUseCase");
 
     registerFactory<NoInputDomainUseCaseProtocol<Future<SesameUser>>>(
-        () => GetMyProfileDataUseCase(UserDataRepository()),
+        () => GetMyProfileDataUseCase(get(instanceName: "UserDataRepository")),
         instanceName: "GetMyProfileDataUseCase");
   }
 }

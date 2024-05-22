@@ -5,7 +5,7 @@ import 'SesameBadge.dart';
 
 enum UserSex { male, female }
 
-class SesameUser {
+abstract class SesameUser {
   final String registrationID;
   final String candidatureID;
   final String firstName;
@@ -35,7 +35,7 @@ class SesameUser {
     return format.format(birthdate);
   }
 
-  String get getFullName{
+  String get getFullName {
     return "$firstName $lastName";
   }
 }

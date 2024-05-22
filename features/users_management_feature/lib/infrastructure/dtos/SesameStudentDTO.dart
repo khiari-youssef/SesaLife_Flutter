@@ -39,7 +39,6 @@ class SesameProfessionalStudentDTO extends SesameStudentDTO {
   final String company;
   final String contractType;
   SesameProfessionalStudentDTO(
-      this.jobPosition, this.company, this.contractType,
       {required super.sesameClass,
       super.portfolioId,
       required super.registrationID,
@@ -51,7 +50,10 @@ class SesameProfessionalStudentDTO extends SesameStudentDTO {
       required super.birthdate,
       required super.profilePictureUrl,
       required super.role,
-      required super.badge});
+      required super.badge,
+      required this.jobPosition,
+      required this.company,
+      required this.contractType});
   factory SesameProfessionalStudentDTO.fromJson(Map<String, dynamic> json) =>
       _$SesameProfessionalStudentDTOFromJson(json);
 

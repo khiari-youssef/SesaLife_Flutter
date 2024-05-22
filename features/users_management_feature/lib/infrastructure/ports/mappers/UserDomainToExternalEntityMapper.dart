@@ -1,217 +1,45 @@
 import 'package:core/core_domain/AbstractDomainToExternalEntityMapper.dart';
 import 'package:core/exports.dart';
-import 'package:users_management_feature/domain/entities/SesameBadge.dart';
-import 'package:users_management_feature/domain/entities/SesameClass.dart';
 import 'package:users_management_feature/domain/entities/SesameTeacher.dart';
 import 'package:users_management_feature/domain/entities/SesameUser.dart';
-import 'package:users_management_feature/infrastructure/dtos/SesameBadgeDTO.dart';
-import 'package:users_management_feature/infrastructure/dtos/SesameClassDTO.dart';
-import 'package:users_management_feature/infrastructure/dtos/SesameRoleDTO.dart';
 import 'package:users_management_feature/infrastructure/dtos/SesameStudentDTO.dart';
 import 'package:users_management_feature/infrastructure/dtos/SesameTeacherDTO.dart';
 import 'package:users_management_feature/infrastructure/dtos/SesameUserDTO.dart';
 
-import '../../../domain/entities/SesameRole.dart';
 import '../../../domain/entities/SesameStudent.dart';
 
 class UserDomainToExternalEntityMapper
     implements AbstractDomainToExternalEntityMapper<SesameUser, SesameUserDTO> {
+  final AbstractDomainToExternalEntityMapper<SesameTeacher, SesameTeacherDTO>
+      teacherUserMapper;
+  final AbstractDomainToExternalEntityMapper<SesameStudent, SesameStudentDTO>
+      studentUserMapper;
+  final AbstractDomainToExternalEntityMapper<SesameProfessionalStudent,
+      SesameProfessionalStudentDTO> profStudentUserMapper;
+  UserDomainToExternalEntityMapper(
+      {required this.teacherUserMapper,
+      required this.studentUserMapper,
+      required this.profStudentUserMapper});
+
   @override
   SesameUser toDomain(SesameUserDTO externalData) {
-    switch (externalData) {
-      case SesameProfessionalStudentDTO():
-        throw UnimplementedError();
-      case SesameStudentDTO():
-        return SesameStudent(
-            registrationID: externalData.registrationID,
-            candidatureID: externalData.candidatureID,
-            firstName: externalData.firstName,
-            lastName: externalData.lastName,
-            email: externalData.email,
-            sex: externalData.sex.toLowerCase() == "h"
-                ? UserSex.male
-                : (externalData.sex.toLowerCase() == "f"
-                    ? UserSex.female
-                    : null)!,
-            birthdate: externalData.birthdate.parseIsoDateTime()!,
-            profilePictureUrl: externalData.profilePictureUrl,
-            role: SesameRole(
-                id: externalData.role.id,
-                permissions: externalData.role.permissions
-                    .map((dto) => SesamePermission(
-                        dto.id,
-                        dto.label,
-                        switch (dto.state) {
-                          "denied" => SesamePermissionState.denied,
-                          "granted" => SesamePermissionState.granted,
-                          "req_auth" => SesamePermissionState.requ_auth,
-                          _ => null
-                        }!))
-                    .toList()),
-            badge: SesameBadge(
-                creationDate:
-                    externalData.badge.creationDate.parseIsoDateTime()!,
-                expirationDate:
-                    externalData.badge.expirationDate.parseIsoDateTime()!,
-                signature: externalData.badge.signature),
-            sesameClass: SesameClass(
-                id: externalData.sesameClass.id,
-                name: externalData.sesameClass.name,
-                group: externalData.sesameClass.group,
-                level: externalData.sesameClass.level),
-            portfolioId: externalData.portfolioId);
-      case SesameTeacherDTO():
-        return SesameTeacher(
-            registrationID: externalData.registrationID,
-            candidatureID: externalData.candidatureID,
-            firstName: externalData.firstName,
-            lastName: externalData.lastName,
-            email: externalData.email,
-            sex: externalData.sex.toLowerCase() == "h"
-                ? UserSex.male
-                : (externalData.sex.toLowerCase() == "f"
-                    ? UserSex.female
-                    : null)!,
-            birthdate: externalData.birthdate.parseIsoDateTime()!,
-            profilePictureUrl: externalData.profilePictureUrl,
-            role: SesameRole(
-                id: externalData.role.id,
-                permissions: externalData.role.permissions
-                    .map((dto) => SesamePermission(
-                        dto.id,
-                        dto.label,
-                        switch (dto.state) {
-                          "denied" => SesamePermissionState.denied,
-                          "granted" => SesamePermissionState.granted,
-                          "req_auth" => SesamePermissionState.requ_auth,
-                          _ => null
-                        }!))
-                    .toList()),
-            badge: SesameBadge(
-                creationDate:
-                    externalData.badge.creationDate.parseIsoDateTime()!,
-                expirationDate:
-                    externalData.badge.expirationDate.parseIsoDateTime()!,
-                signature: externalData.badge.signature),
-            profBackground: externalData.profBackground,
-            assignedClasses: externalData.assignedClasses
-                .map((sesameClass) => SesameClass(
-                    id: sesameClass.id,
-                    name: sesameClass.name,
-                    level: sesameClass.level,
-                    group: sesameClass.group))
-                .toList());
-      case SesameUserDTO():
-        return SesameUser(
-            registrationID: externalData.registrationID,
-            candidatureID: externalData.candidatureID,
-            firstName: externalData.firstName,
-            lastName: externalData.lastName,
-            email: externalData.email,
-            sex: externalData.sex.toLowerCase() == "h"
-                ? UserSex.male
-                : (externalData.sex.toLowerCase() == "f"
-                    ? UserSex.female
-                    : null)!,
-            birthdate: externalData.birthdate.parseIsoDateTime()!,
-            profilePictureUrl: externalData.profilePictureUrl,
-            role: SesameRole(
-                id: externalData.role.id,
-                permissions: externalData.role.permissions
-                    .map((dto) => SesamePermission(
-                        dto.id,
-                        dto.label,
-                        switch (dto.state) {
-                          "denied" => SesamePermissionState.denied,
-                          "granted" => SesamePermissionState.granted,
-                          "req_auth" => SesamePermissionState.requ_auth,
-                          _ => null
-                        }!))
-                    .toList()),
-            badge: SesameBadge(
-                creationDate:
-                    externalData.badge.creationDate.parseIsoDateTime()!,
-                expirationDate:
-                    externalData.badge.expirationDate.parseIsoDateTime()!,
-                signature: externalData.badge.signature));
-    }
+    return switch (externalData) {
+      SesameProfessionalStudentDTO() =>
+        profStudentUserMapper.toDomain(externalData),
+      SesameStudentDTO() => studentUserMapper.toDomain(externalData),
+      SesameTeacherDTO() => teacherUserMapper.toDomain(externalData),
+      SesameUserDTO() => throw Exception("Unkonw user role")
+    };
   }
 
   @override
   SesameUserDTO toExternal(SesameUser domainData) {
-    switch (domainData) {
-      case SesameProfessionalStudent():
-        throw UnimplementedError();
-      case SesameStudent():
-        throw UnimplementedError();
-      case SesameTeacher():
-        return SesameTeacherDTO(
-            registrationID: domainData.registrationID,
-            candidatureID: domainData.candidatureID,
-            firstName: domainData.firstName,
-            lastName: domainData.lastName,
-            email: domainData.email,
-            sex: switch (domainData.sex) {
-              UserSex.male => "h",
-              UserSex.female => "f"
-            },
-            birthdate: domainData.birthdate.toIso8601String(),
-            profilePictureUrl: domainData.profilePictureUrl,
-            role: SesameRoleDTO(
-                id: domainData.role.id,
-                permissions: domainData.role.permissions
-                    .map((permission) => SesamePermissionDTO(
-                        id: permission.id,
-                        label: permission.label,
-                        state: switch (permission.state) {
-                          SesamePermissionState.denied => "denied",
-                          SesamePermissionState.granted => "granted",
-                          SesamePermissionState.requ_auth => "req_auth",
-                        }))
-                    .toList()),
-            badge: SesameBadgeDTO(
-                creationDate: domainData.badge.creationDate.toIso8601String(),
-                expirationDate:
-                    domainData.badge.expirationDate.toIso8601String(),
-                signature: domainData.badge.signature),
-            profBackground: domainData.profBackground,
-            assignedClasses: domainData.assignedClasses
-                .map((sesameClass) => SesameClassDTO(
-                    id: sesameClass.id,
-                    name: sesameClass.name,
-                    level: sesameClass.level,
-                    group: sesameClass.group))
-                .toList());
-      case SesameUser():
-        return SesameUserDTO(
-            registrationID: domainData.registrationID,
-            candidatureID: domainData.candidatureID,
-            firstName: domainData.firstName,
-            lastName: domainData.lastName,
-            email: domainData.email,
-            sex: switch (domainData.sex) {
-              UserSex.male => "h",
-              UserSex.female => "f"
-            },
-            birthdate: domainData.birthdate.toIso8601String(),
-            profilePictureUrl: domainData.profilePictureUrl,
-            role: SesameRoleDTO(
-                id: domainData.role.id,
-                permissions: domainData.role.permissions
-                    .map((permission) => SesamePermissionDTO(
-                        id: permission.id,
-                        label: permission.label,
-                        state: switch (permission.state) {
-                          SesamePermissionState.denied => "denied",
-                          SesamePermissionState.granted => "granted",
-                          SesamePermissionState.requ_auth => "req_auth",
-                        }))
-                    .toList()),
-            badge: SesameBadgeDTO(
-                creationDate: domainData.badge.creationDate.toIso8601String(),
-                expirationDate:
-                    domainData.badge.expirationDate.toIso8601String(),
-                signature: domainData.badge.signature));
-    }
+    return switch (domainData) {
+      SesameProfessionalStudent() =>
+        profStudentUserMapper.toExternal(domainData),
+      SesameStudent() => studentUserMapper.toExternal(domainData),
+      SesameTeacher() => teacherUserMapper.toExternal(domainData),
+      SesameUser() => throw Exception("Unknown role"),
+    };
   }
 }
