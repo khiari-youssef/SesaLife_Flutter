@@ -7,7 +7,8 @@ class SesamePermissionDTO extends HiveObject {
   final String id;
   final String label;
   final String state;
-  SesamePermissionDTO(this.id, this.label, this.state);
+  SesamePermissionDTO(
+      {required this.id, required this.label, required this.state});
 
   factory SesamePermissionDTO.fromJson(Map<String, dynamic> json) =>
       _$SesamePermissionDTOFromJson(json);

@@ -7,7 +7,10 @@ class SesameBadgeDTO {
   final String creationDate;
   final String expirationDate;
   final String signature;
-  SesameBadgeDTO(this.creationDate, this.expirationDate, this.signature);
+  SesameBadgeDTO(
+      {required this.creationDate,
+      required this.expirationDate,
+      required this.signature});
 
   factory SesameBadgeDTO.fromJson(Map<String, dynamic> json) =>
       _$SesameBadgeDTOFromJson(json);

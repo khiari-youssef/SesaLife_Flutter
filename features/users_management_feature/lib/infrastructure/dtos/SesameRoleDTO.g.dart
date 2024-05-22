@@ -8,9 +8,9 @@ part of 'SesameRoleDTO.dart';
 
 SesamePermissionDTO _$SesamePermissionDTOFromJson(Map<String, dynamic> json) =>
     SesamePermissionDTO(
-      json['id'] as String,
-      json['label'] as String,
-      json['state'] as String,
+      id: json['id'] as String,
+      label: json['label'] as String,
+      state: json['state'] as String,
     );
 
 Map<String, dynamic> _$SesamePermissionDTOToJson(

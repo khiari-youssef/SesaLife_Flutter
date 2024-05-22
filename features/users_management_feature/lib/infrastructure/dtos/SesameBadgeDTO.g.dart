@@ -8,9 +8,9 @@ part of 'SesameBadgeDTO.dart';
 
 SesameBadgeDTO _$SesameBadgeDTOFromJson(Map<String, dynamic> json) =>
     SesameBadgeDTO(
-      json['creationDate'] as String,
-      json['expirationDate'] as String,
-      json['signature'] as String,
+      creationDate: json['creationDate'] as String,
+      expirationDate: json['expirationDate'] as String,
+      signature: json['signature'] as String,
     );
 
 Map<String, dynamic> _$SesameBadgeDTOToJson(SesameBadgeDTO instance) =>

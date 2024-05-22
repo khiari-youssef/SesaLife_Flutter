@@ -8,10 +8,6 @@ part of 'SesameTeacherDTO.dart';
 
 SesameTeacherDTO _$SesameTeacherDTOFromJson(Map<String, dynamic> json) =>
     SesameTeacherDTO(
-      json['profBackground'] as String,
-      (json['assignedClasses'] as List<dynamic>)
-          .map((e) => SesameClassDTO.fromJson(e as Map<String, dynamic>))
-          .toList(),
       registrationID: json['registrationID'] as String,
       candidatureID: json['candidatureID'] as String,
       firstName: json['firstName'] as String,
@@ -22,6 +18,10 @@ SesameTeacherDTO _$SesameTeacherDTOFromJson(Map<String, dynamic> json) =>
       profilePictureUrl: json['profilePictureUrl'] as String,
       role: SesameRoleDTO.fromJson(json['role'] as Map<String, dynamic>),
       badge: SesameBadgeDTO.fromJson(json['badge'] as Map<String, dynamic>),
+      profBackground: json['profBackground'] as String,
+      assignedClasses: (json['assignedClasses'] as List<dynamic>)
+          .map((e) => SesameClassDTO.fromJson(e as Map<String, dynamic>))
+          .toList(),
     );
 
 Map<String, dynamic> _$SesameTeacherDTOToJson(SesameTeacherDTO instance) =>

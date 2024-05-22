@@ -12,7 +12,7 @@ class SesameTeacherDTO extends SesameUserDTO {
   final String profBackground;
   final List<SesameClassDTO> assignedClasses;
 
-  SesameTeacherDTO(this.profBackground, this.assignedClasses,
+  SesameTeacherDTO(
       {required super.registrationID,
       required super.candidatureID,
       required super.firstName,
@@ -22,7 +22,9 @@ class SesameTeacherDTO extends SesameUserDTO {
       required super.birthdate,
       required super.profilePictureUrl,
       required super.role,
-      required super.badge});
+      required super.badge,
+      required this.profBackground,
+      required this.assignedClasses});
 
   factory SesameTeacherDTO.fromJson(Map<String, dynamic> json) =>
       _$SesameTeacherDTOFromJson(json);

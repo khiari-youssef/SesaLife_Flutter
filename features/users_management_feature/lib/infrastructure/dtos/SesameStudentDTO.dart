@@ -10,9 +10,9 @@ part 'SesameStudentDTO.g.dart';
 @JsonSerializable()
 class SesameStudentDTO extends SesameUserDTO {
   final SesameClassDTO sesameClass;
-  final String portfolioId;
+  final String? portfolioId;
 
-  SesameStudentDTO(this.sesameClass, this.portfolioId,
+  SesameStudentDTO(
       {required super.registrationID,
       required super.candidatureID,
       required super.firstName,
@@ -22,7 +22,9 @@ class SesameStudentDTO extends SesameUserDTO {
       required super.birthdate,
       required super.profilePictureUrl,
       required super.role,
-      required super.badge});
+      required super.badge,
+      required this.sesameClass,
+      this.portfolioId});
 
   factory SesameStudentDTO.fromJson(Map<String, dynamic> json) =>
       _$SesameStudentDTOFromJson(json);
@@ -36,9 +38,11 @@ class SesameProfessionalStudentDTO extends SesameStudentDTO {
   final String jobPosition;
   final String company;
   final String contractType;
-  SesameProfessionalStudentDTO(this.jobPosition, this.company,
-      this.contractType, super.sesameClass, super.portfolioId,
-      {required super.registrationID,
+  SesameProfessionalStudentDTO(
+      this.jobPosition, this.company, this.contractType,
+      {required super.sesameClass,
+      super.portfolioId,
+      required super.registrationID,
       required super.candidatureID,
       required super.firstName,
       required super.lastName,
