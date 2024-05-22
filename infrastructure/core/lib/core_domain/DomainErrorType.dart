@@ -1,1 +1,1 @@
-enum DomainErrorType { InvalidCredentials, UnknownError }
+enum DomainErrorType { InvalidCredentials, UnknownError, NotFound }

@@ -6,6 +6,7 @@ import 'package:users_management_feature/ui/login/LoginState.dart';
 
 import '../domain/entities/SesameUser.dart';
 import '../infrastructure/repositories/LoginRepository.dart';
+import '../infrastructure/repositories/UserDataRepository.dart';
 import '../ui/login/LoginStateBloc.dart';
 import '../ui/myprofile/stateManagement/MyProfileBlocStateManager.dart';
 import '../ui/myprofile/stateManagement/MyProfileDataState.dart';
@@ -18,8 +19,8 @@ extension UsersDependenciesLoader on GetIt {
     registerFactory<LoginStateBloc>(
         () => LoginStateBloc(get(), get(instanceName: "ActualImpl")));
 
-    registerFactory<NoInputDomainUseCaseProtocol<SesameUser>>(
-        () => GetMyProfileDataUseCase(),
+    registerFactory<NoInputDomainUseCaseProtocol<Future<SesameUser>>>(
+        () => GetMyProfileDataUseCase(UserDataRepository()),
         instanceName: "GetMyProfileDataUseCase");
 
     registerFactory(() => MyProfileBlocStateManager(
