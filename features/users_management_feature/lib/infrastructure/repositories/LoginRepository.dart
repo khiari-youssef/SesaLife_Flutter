@@ -1,7 +1,7 @@
 import '../../domain/entities/SesameBadge.dart';
 import '../../domain/entities/SesameRole.dart';
 import '../../domain/entities/SesameUser.dart';
-import '../ports/repositoryGateway/LoginRepositoryContract.dart';
+import '../ports/repositoryContracts/LoginRepositoryContract.dart';
 
 class LoginRepository implements LoginRepositoryContract {
   @override

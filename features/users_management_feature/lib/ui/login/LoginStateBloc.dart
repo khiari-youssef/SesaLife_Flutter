@@ -1,18 +1,20 @@
 import 'package:core/core_domain/DomainErrorType.dart';
+import 'package:core/core_domain/DomainUseCaseProtocol.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 
-import '../../infrastructure/ports/repositoryGateway/LoginRepositoryContract.dart';
+import '../../domain/entities/LoginMethod.dart';
+import '../../domain/entities/SesameUser.dart';
 import 'LoginState.dart';
 
 class LoginStateBloc extends Bloc<LoginEvent, LoginState> {
-  final LoginRepositoryContract repositoryContract;
-  LoginStateBloc(super.initialState, this.repositoryContract) {
+  final DomainUseCaseProtocol<LoginMethod, Future<SesameUser>> useCase;
+  LoginStateBloc(super.initialState, this.useCase) {
     on((event, emit) async {
       if (event is LoginEvent) {
         await event.when(login: (email, password) async {
           emit(const LoginState.loading());
-          await repositoryContract
-              .authenticateUserWithCredentials(email, password)
+          await useCase
+              .execute(LoginMethod.credentialLogin(email, password))
               .then((value) {
             emit(const LoginState.success());
           }, onError: (error) {

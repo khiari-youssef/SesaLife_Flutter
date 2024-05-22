@@ -1,10 +1,12 @@
 import 'package:core/core_domain/DomainUseCaseProtocol.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 import 'package:users_management_feature/domain/usecases/GetMyProfileDataUseCase.dart';
-import 'package:users_management_feature/infrastructure/ports/repositoryGateway/LoginRepositoryContract.dart';
+import 'package:users_management_feature/domain/usecases/UserLoginUseCase.dart';
 import 'package:users_management_feature/ui/login/LoginState.dart';
 
+import '../domain/entities/LoginMethod.dart';
 import '../domain/entities/SesameUser.dart';
+import '../infrastructure/ports/repositoryContracts/LoginRepositoryContract.dart';
 import '../infrastructure/repositories/LoginRepository.dart';
 import '../infrastructure/repositories/UserDataRepository.dart';
 import '../ui/login/LoginStateBloc.dart';
@@ -16,8 +18,16 @@ extension UsersDependenciesLoader on GetIt {
   void loadUsersDependencies() {
     registerFactory<LoginState>(() => const LoginState.idle(true));
 
+    registerFactory<LoginRepositoryContract>(() => LoginRepository(),
+        instanceName: "LoginRepository");
+
+    registerFactory<DomainUseCaseProtocol<LoginMethod, Future<SesameUser>>>(
+        () => UserLoginUseCase(
+            GetIt.instance.get(instanceName: "LoginRepository")),
+        instanceName: "UserLoginUseCase");
+
     registerFactory<LoginStateBloc>(
-        () => LoginStateBloc(get(), get(instanceName: "ActualImpl")));
+        () => LoginStateBloc(get(), get(instanceName: "UserLoginUseCase")));
 
     registerFactory<NoInputDomainUseCaseProtocol<Future<SesameUser>>>(
         () => GetMyProfileDataUseCase(UserDataRepository()),
@@ -27,9 +37,6 @@ extension UsersDependenciesLoader on GetIt {
         const MyProfileScreenGlobalState(
             profileDataState: MyProfileDataState.loading(), isLoggedOut: false),
         GetIt.instance.get(instanceName: "GetMyProfileDataUseCase")));
-
-    registerFactory<LoginRepositoryContract>(() => LoginRepository(),
-        instanceName: "ActualImpl");
 
     registerFactory<RouteTransitionsBuilder>(
         () => (BuildContext context, Animation<double> anim1,

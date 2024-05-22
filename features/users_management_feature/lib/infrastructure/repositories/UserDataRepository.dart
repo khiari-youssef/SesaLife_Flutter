@@ -1,12 +1,10 @@
-import 'dart:isolate';
-
 import 'package:users_management_feature/domain/entities/SesameUser.dart';
 
 import '../../domain/entities/SesameBadge.dart';
 import '../../domain/entities/SesameClass.dart';
 import '../../domain/entities/SesameRole.dart';
 import '../../domain/entities/SesameStudent.dart';
-import '../ports/repositoryGateway/UserDataRepositoryContract.dart';
+import '../ports/repositoryContracts/UserDataRepositoryContract.dart';
 
 class UserDataRepository implements UserdataRepositoryContract {
   @override

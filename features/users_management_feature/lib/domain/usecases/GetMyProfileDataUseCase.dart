@@ -1,11 +1,7 @@
 import 'package:core/core_domain/DomainUseCaseProtocol.dart';
-import 'package:users_management_feature/domain/entities/SesameClass.dart';
-import 'package:users_management_feature/domain/entities/SesameStudent.dart';
 import 'package:users_management_feature/domain/entities/SesameUser.dart';
 
-import '../../infrastructure/ports/repositoryGateway/UserDataRepositoryContract.dart';
-import '../entities/SesameBadge.dart';
-import '../entities/SesameRole.dart';
+import '../../infrastructure/ports/repositoryContracts/UserDataRepositoryContract.dart';
 
 class GetMyProfileDataUseCase
     implements NoInputDomainUseCaseProtocol<Future<SesameUser>> {
