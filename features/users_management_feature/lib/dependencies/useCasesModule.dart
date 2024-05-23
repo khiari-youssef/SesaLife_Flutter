@@ -5,7 +5,6 @@ import '../domain/entities/LoginMethod.dart';
 import '../domain/entities/SesameUser.dart';
 import '../domain/usecases/GetMyProfileDataUseCase.dart';
 import '../domain/usecases/UserLoginUseCase.dart';
-import '../infrastructure/repositories/UserDataRepository.dart';
 
 extension UseCasesModule on GetIt {
   void loadUseCasesModule() {
