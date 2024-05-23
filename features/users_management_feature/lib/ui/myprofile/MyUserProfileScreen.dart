@@ -5,6 +5,7 @@ import 'package:users_management_feature/ui/myprofile/MyProfilePreview.dart';
 import 'package:users_management_feature/ui/myprofile/stateManagement/MyProfileBlocStateManager.dart';
 import 'package:users_management_feature/ui/myprofile/stateManagement/MyProfileScreenEvent.dart';
 import 'package:users_management_feature/ui/myprofile/stateManagement/MyProfileScreenGlobalState.dart';
+import 'package:users_management_feature/ui/navigation/UsersNavigationConfiguration.gr.dart';
 
 class MyUserProfileState extends State<MyUserProfileScreen> {
   @override
@@ -61,7 +62,11 @@ class MyUserProfileState extends State<MyUserProfileScreen> {
                                       variant: SesameButtonVariant.neutral,
                                       leftIconAssetName: "ic_badge.svg",
                                       buttonText: S.of(context).mybadge,
-                                      onPressed: () {}),
+                                      onPressed: () {
+                                        AutoRouter.of(context).push(
+                                            MyBadgeRoute(
+                                                userBadge: userData.badge));
+                                      }),
                                   SesameCustomButton(
                                       variant: SesameButtonVariant.neutral,
                                       leftIconAssetName: "ic_visible.svg",

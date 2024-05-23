@@ -16,6 +16,5 @@ class AppNavigationConfiguration extends $AppNavigationConfiguration {
     ...UsersNavigationConfiguration().routes,
     ...HomeNavigationConfiguration().routes,
     AutoRoute(path: "/MyGuestSpaceRoute", page: GuestSpaceRoute.page)
-    //RedirectRoute(path: "*", redirectTo: "/HomeScreen")
   ];
 }

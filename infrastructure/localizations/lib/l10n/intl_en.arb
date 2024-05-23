@@ -1,4 +1,5 @@
 {
+  "@@locale": "en",
   "welcome_logo_sesame_name" : "SESAME",
   "welcome_logo_description" : "Student Life",
   "login" : "Login",
@@ -53,5 +54,11 @@
      "profile_user" : "User",
   "profile_teacher" : "Teacher",
   "profile_student" : "Student",
-  "profile_professional_student" : "Student"
+  "profile_professional_student" : "Student",
+   "profile_badge" : "My Sesame badge",
+   "badge_click_to_scan" : "Click to scan",
+   "badge_expired" : "Expired",
+    "note" : "Note",
+    "badge_usage_notice" : "for security reasons, When you reveal your badge, it will only be visible for 5s.",
+    "badge_usage_learn_more" : "Learn more about badge usage"
 }

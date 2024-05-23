@@ -10,12 +10,13 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i2;
 import 'package:events_management_feature/events_management_feature_exports.dart'
-    as _i5;
+    as _i6;
 import 'package:home_feature/ui/navigation/HomeRootScreen.dart' as _i1;
 import 'package:notifications_feature/ui/navigation/NotificationsNavigationConfiguration.dart'
-    as _i3;
-import 'package:sessions_feature/ui/navigation/SessionsNavigationConfiguration.dart'
     as _i4;
+import 'package:sessions_feature/ui/navigation/SessionsNavigationConfiguration.dart'
+    as _i5;
+import 'package:users_management_feature/exports.dart' as _i3;
 
 abstract class $HomeNavigationConfiguration extends _i2.RootStackRouter {
   $HomeNavigationConfiguration({super.navigatorKey});
@@ -28,9 +29,10 @@ abstract class $HomeNavigationConfiguration extends _i2.RootStackRouter {
         child: const _i1.HomeRootScreen(),
       );
     },
-    ..._i3.NotificationsNavigationConfiguration().pagesMap,
-    ..._i4.SessionsNavigationConfiguration().pagesMap,
-    ..._i5.EventsNavigationConfiguration().pagesMap,
+    ..._i3.UsersNavigationConfiguration().pagesMap,
+    ..._i4.NotificationsNavigationConfiguration().pagesMap,
+    ..._i5.SessionsNavigationConfiguration().pagesMap,
+    ..._i6.EventsNavigationConfiguration().pagesMap,
   };
 }
 

@@ -1,7 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-
 import 'intl/messages_all.dart';
 
 // **************************************************************************
@@ -596,6 +595,66 @@ class S {
     return Intl.message(
       'Student',
       name: 'profile_professional_student',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `My Sesame badge`
+  String get profile_badge {
+    return Intl.message(
+      'My Sesame badge',
+      name: 'profile_badge',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Click to scan`
+  String get badge_click_to_scan {
+    return Intl.message(
+      'Click to scan',
+      name: 'badge_click_to_scan',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Expired`
+  String get badge_expired {
+    return Intl.message(
+      'Expired',
+      name: 'badge_expired',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Note`
+  String get note {
+    return Intl.message(
+      'Note',
+      name: 'note',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `for security reasons, When you reveal your badge, it will only be visible for 5s.`
+  String get badge_usage_notice {
+    return Intl.message(
+      'for security reasons, When you reveal your badge, it will only be visible for 5s.',
+      name: 'badge_usage_notice',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Learn more about badge usage`
+  String get badge_usage_learn_more {
+    return Intl.message(
+      'Learn more about badge usage',
+      name: 'badge_usage_learn_more',
       desc: '',
       args: [],
     );

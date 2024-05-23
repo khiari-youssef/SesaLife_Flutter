@@ -1,4 +1,5 @@
 {
+  "@@locale": "fr",
   "welcome_logo_sesame_name" : "SESAME",
   "welcome_logo_description" : "Student Life",
   "login" : "Se connecter",
@@ -52,5 +53,11 @@
   "profile_user" : "Utilisateur",
   "profile_teacher" : "Enseignant",
   "profile_student" : "Etudiant",
-  "profile_professional_student" : "Etudiant Alternant"
+  "profile_professional_student" : "Etudiant Alternant",
+  "profile_badge" : "Mon badge Sesame",
+  "badge_click_to_scan" : "Cliquer pour scanner",
+  "badge_expired" : "Expiré",
+  "note" : "Remarque",
+  "badge_usage_notice" : "Pour des raisons de sécurité, votre badge n'est visible que pour 5s.",
+  "badge_usage_learn_more" : "En savoir plus sur l'usage de votre badge"
 }

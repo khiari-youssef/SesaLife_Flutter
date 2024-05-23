@@ -27,6 +27,13 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "badge_click_to_scan":
+            MessageLookupByLibrary.simpleMessage("Cliquer pour scanner"),
+        "badge_expired": MessageLookupByLibrary.simpleMessage("Expiré"),
+        "badge_usage_learn_more": MessageLookupByLibrary.simpleMessage(
+            "En savoir plus sur l\'usage de votre badge"),
+        "badge_usage_notice": MessageLookupByLibrary.simpleMessage(
+            "Pour des raisons de sécurité, votre badge n\'est visible que pour 5s."),
         "birthdate": MessageLookupByLibrary.simpleMessage("Date de naissance"),
         "calendar_title": m0,
         "cancel": MessageLookupByLibrary.simpleMessage("Annuler"),
@@ -72,6 +79,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "mybadge": MessageLookupByLibrary.simpleMessage("Mon badge"),
         "myprofile": MessageLookupByLibrary.simpleMessage("Mon profile"),
         "no": MessageLookupByLibrary.simpleMessage("Non"),
+        "note": MessageLookupByLibrary.simpleMessage("Remarque"),
         "ok": MessageLookupByLibrary.simpleMessage("Ok"),
         "password": MessageLookupByLibrary.simpleMessage("Mot de passe"),
         "phone": MessageLookupByLibrary.simpleMessage("Téléphone"),
@@ -79,6 +87,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Savoir plus sur la sécurité et l\'usage de mes données personnelles collectés par l\'application."),
         "privacy_policy_label": MessageLookupByLibrary.simpleMessage(
             "Régles & Politique de securité"),
+        "profile_badge":
+            MessageLookupByLibrary.simpleMessage("Mon badge Sesame"),
         "profile_professional_student":
             MessageLookupByLibrary.simpleMessage("Etudiant Alternant"),
         "profile_student": MessageLookupByLibrary.simpleMessage("Etudiant"),

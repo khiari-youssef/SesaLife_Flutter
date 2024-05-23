@@ -2,7 +2,8 @@ import 'package:designsystem/designsystem_exports.dart';
 
 class FormStepTitle extends StatelessWidget {
   final String title;
-  const FormStepTitle({super.key, required this.title});
+  final String? leftIconAssetName;
+  const FormStepTitle({super.key, required this.title, this.leftIconAssetName});
 
   @override
   Widget build(BuildContext context) {
