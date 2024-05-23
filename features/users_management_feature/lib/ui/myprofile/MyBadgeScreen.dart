@@ -1,7 +1,4 @@
-import 'dart:async';
-
 import 'package:core/coreUI/SesameBadgeWidget.dart';
-import 'package:core/core_utils/QrCode.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 
 import '../../domain/entities/SesameBadge.dart';
@@ -9,7 +6,6 @@ import '../../domain/entities/SesameBadge.dart';
 @RoutePage(name: "MyBadgeRoute")
 class MyBadgeScreen extends StatelessWidget {
   final SesameBadge userBadge;
-
   const MyBadgeScreen({super.key, required this.userBadge});
 
   @override
@@ -45,17 +41,28 @@ class MyBadgeScreen extends StatelessWidget {
                               style: Theme.of(context)
                                   .textTheme
                                   .bodyLarge
-                                  ?.copyWith(color: Colors.black)),
+                                  ?.copyWith(color: Colors.black, height: 1.4)),
                         ])),
-                        Text(
-                          S.of(context).badge_usage_learn_more,
-                          style: Theme.of(context)
-                              .textTheme
-                              .bodyLarge
-                              ?.copyWith(
-                                  color: Theme.of(context).colorScheme.tertiary,
-                                  decoration: TextDecoration.underline),
-                          textAlign: TextAlign.start,
+                        GestureDetector(
+                          onTap: () {
+                            AutoRouter.of(context)
+                                .pushNamed("/BadgeUsageGuidelineRoute");
+                          },
+                          child: Padding(
+                            padding: EdgeInsets.all(8.r),
+                            child: Text(
+                              S.of(context).badge_usage_learn_more,
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .bodyLarge
+                                  ?.copyWith(
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .tertiary,
+                                      decoration: TextDecoration.underline),
+                              textAlign: TextAlign.start,
+                            ),
+                          ),
                         )
                       ])
                 ])));
