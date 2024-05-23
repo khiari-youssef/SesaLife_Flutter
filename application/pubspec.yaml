@@ -9,6 +9,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
   users_management_feature:
     path: ../features/users_management_feature
   home_feature:

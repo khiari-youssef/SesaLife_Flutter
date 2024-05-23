@@ -10,6 +10,8 @@ void loadRuntimeDependencies(BuildContext ctx) {
       .isRegistered<BuildContext>(instanceName: "ApplicationContext")) {
     GetIt.instance.registerSingleton<BuildContext>(ctx,
         instanceName: "ApplicationContext");
+    GetIt.instance.registerFactory<SesameDeviceAuthManager>(
+        () => SesameDeviceAuthManager());
     GetIt.instance.loadDataAccessConfiguration();
     GetIt.instance.loadUsersDependencies();
     GetIt.instance.loadEventsDependencies();

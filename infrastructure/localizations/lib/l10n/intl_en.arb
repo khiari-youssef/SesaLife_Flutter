@@ -4,6 +4,7 @@
   "welcome_logo_description" : "Student Life",
   "login" : "Login",
   "logout" : "Logout",
+   "device_auth_unsupported" : "Your device either does not strong biometric authentication or you did not yet enroll one !",
   "guest_space" : "Guest space",
    "email" : "Email",
    "phone" : "Phone",

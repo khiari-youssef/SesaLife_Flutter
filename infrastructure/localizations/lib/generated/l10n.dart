@@ -90,6 +90,16 @@ class S {
     );
   }
 
+  /// `Your device either does not strong biometric authentication or you did not yet enroll one !`
+  String get device_auth_unsupported {
+    return Intl.message(
+      'Your device either does not strong biometric authentication or you did not yet enroll one !',
+      name: 'device_auth_unsupported',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Guest space`
   String get guest_space {
     return Intl.message(

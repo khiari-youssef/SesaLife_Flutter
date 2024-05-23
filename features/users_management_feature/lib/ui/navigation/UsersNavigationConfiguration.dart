@@ -6,7 +6,7 @@ import 'UsersNavigationConfiguration.gr.dart';
 class UsersNavigationConfiguration extends $UsersNavigationConfiguration {
   @override
   List<AutoRoute> get routes => [
-        AutoRoute(path: "/LoginRoute", page: LoginRoute.page, initial: true),
+        AutoRoute(path: "/LoginRoute", page: LoginRoute.page),
         AutoRoute(
           path: "/EnrollmentRoute",
           page: EnrollmentRoute.page,

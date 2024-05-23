@@ -38,6 +38,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "calendar_title": m0,
         "cancel": MessageLookupByLibrary.simpleMessage("Annuler"),
         "confirm": MessageLookupByLibrary.simpleMessage("Confirmer"),
+        "device_auth_unsupported": MessageLookupByLibrary.simpleMessage(
+            "Votre appareil ne supporte pas une forte authentification biometrique ! ou bien vous ne l\'avez pas encore enregistré"),
         "diploma": MessageLookupByLibrary.simpleMessage("Diplôme"),
         "diploma_choice_title":
             MessageLookupByLibrary.simpleMessage("Choisissez votre diploma :"),
