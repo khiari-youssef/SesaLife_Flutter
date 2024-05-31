@@ -1,12 +1,12 @@
 import 'package:core/core_domain/entities/AppPolicySection.dart';
-import 'package:designsystem/extensions.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 
 import 'SesamePrivacyAndSecurityPolicyCubitStateManager.dart';
 
 class SesamePrivacyAndSecurityPolicyState
     extends State<SesamePrivacyAndSecurityPolicy> {
-   final SesamePrivacyAndSecurityPolicyCubitStateManager state = GetIt.instance.get();
+  final SesamePrivacyAndSecurityPolicyCubitStateManager state =
+      GetIt.instance.get();
 
   @override
   void initState() {
@@ -18,7 +18,7 @@ class SesamePrivacyAndSecurityPolicyState
       titleScreenBuilder(context, S.of(context).privacy_policy_label, null, () {
         AutoRouter.of(context).popUntilRouteWithName("GuestSpaceRoute");
       }, ListView.builder(itemBuilder: (context, index) {
-        return widget.buildItemSection(context,state.state[index]);
+        return widget.buildItemSection(context, state.state[index]);
       }));
 }
 
