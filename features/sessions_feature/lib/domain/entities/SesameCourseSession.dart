@@ -1,11 +1,13 @@
-import 'package:events_management_feature/domain/entities/SesameSession.dart';
+import 'package:sessions_feature/domain/entities/SesameSession.dart';
 
-class SesameExamSession extends SesameSession {
-  final DateTime examEndDate;
-  final List<String> rules;
-  SesameExamSession(
-      {required this.examEndDate,
-      required this.rules,
+class SesameCourseSession extends SesameSession {
+  final DateTime firstHalfEndDateTime;
+  final DateTime secondHalfStartDateTime;
+  final DateTime secondHalfEndDateTime;
+  SesameCourseSession(
+      {required this.firstHalfEndDateTime,
+      required this.secondHalfEndDateTime,
+      required this.secondHalfStartDateTime,
       required super.id,
       required super.subject,
       required super.teacher,

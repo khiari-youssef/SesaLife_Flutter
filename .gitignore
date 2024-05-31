@@ -10,6 +10,7 @@ application/build/
 */pubspec.lock
 application/pubspec.lock
 application/pubspec_overrides.yaml
+/widgetplayground/*
 
 
 # Directory created by dartdoc
