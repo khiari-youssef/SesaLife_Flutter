@@ -9,9 +9,8 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i9;
+import 'package:core/core_domain/entities/SesameBadge.dart' as _i11;
 import 'package:shared_dependencies/shared_dependencies.dart' as _i10;
-import 'package:users_management_feature/domain/entities/SesameBadge.dart'
-    as _i11;
 import 'package:users_management_feature/ui/enrollment/EnrollmentScreen.dart'
     as _i2;
 import 'package:users_management_feature/ui/guest_space/GuestSpace.dart' as _i3;

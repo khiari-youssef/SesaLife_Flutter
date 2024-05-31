@@ -23,6 +23,7 @@ void main() {
         return MaterialApp.router(
             theme: designSystemLightTheme,
             themeMode: ThemeMode.system,
+            color: Theme.of(context).colorScheme.surface,
             darkTheme: designSystemDarkTheme,
             localizationsDelegates: const [
               GlobalMaterialLocalizations.delegate,

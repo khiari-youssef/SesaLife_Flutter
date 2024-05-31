@@ -13,6 +13,8 @@ dependencies:
   intl: any
   shared_dependencies:
     path: ../shared_dependencies
+  designsystem:
+    path: ../designsystem
   qr_code_scanner: ^1.0.1
   local_auth: ^2.2.0
   pretty_qr_code: ^3.3.0

@@ -1,3 +1,4 @@
+import 'package:core/core_domain/ApplicationMetaInfoFacade.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 
 import '../ui/login/LoginState.dart';
@@ -5,6 +6,8 @@ import '../ui/login/LoginStateBloc.dart';
 import '../ui/myprofile/stateManagement/MyProfileBlocStateManager.dart';
 import '../ui/myprofile/stateManagement/MyProfileDataState.dart';
 import '../ui/myprofile/stateManagement/MyProfileScreenGlobalState.dart';
+import '../ui/program&privacy/SesamePrivacyAndSecurityPolicy.dart';
+import '../ui/program&privacy/SesamePrivacyAndSecurityPolicyCubitStateManager.dart';
 
 extension UIModule on GetIt {
   void loadUiModule() {
@@ -31,5 +34,13 @@ extension UIModule on GetIt {
               );
             },
         instanceName: "SlideTransitionBuilder");
+
+    registerSingleton<ApplicationMetaInfoFacade>(ApplicationMetaInfoFacade());
+    registerFactory<SesamePrivacyAndSecurityPolicyCubitStateManager>(()=>SesamePrivacyAndSecurityPolicyCubitStateManager(
+        [],
+        Localizations.localeOf(
+            GetIt.instance.get(instanceName: "ApplicationContext")),
+        get()
+    ));
   }
 }

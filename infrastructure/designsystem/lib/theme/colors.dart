@@ -9,10 +9,14 @@ final lightColorScheme = ColorScheme.fromSeed(
     primary: sesamePrimary,
     secondary: sesameSecondary,
     tertiary: sesameTertiary,
-    surfaceVariant: const Color(0xFFF2F6FC));
+    onSurface: Colors.black,
+    surfaceContainerLow: Colors.white,
+    surfaceContainerHighest: const Color(0xFFF2F6FC));
 
 final darkColorScheme = ColorScheme.fromSeed(
     seedColor: sesameSecondary,
     primary: sesamePrimary,
     tertiary: sesameTertiary,
+    onSurface: Colors.white,
+    surfaceContainerLow: Colors.black,
     secondary: sesameSecondary);

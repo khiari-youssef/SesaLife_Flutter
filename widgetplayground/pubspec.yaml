@@ -2,6 +2,7 @@ name: widgetplayground
 description: "A playground app to play with widgets"
 version: 0.0.1
 publish_to: "none"
+useMaterial3: true
 
 environment:
   sdk: '>=3.3.4 <4.0.0'
@@ -25,5 +26,6 @@ dev_dependencies:
   flutter_lints: ^3.0.0
 
 flutter:
+  uses-material-design: true
   generate: true
 

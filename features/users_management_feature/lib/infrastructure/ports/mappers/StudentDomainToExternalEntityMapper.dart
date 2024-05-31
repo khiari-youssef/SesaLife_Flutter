@@ -1,11 +1,11 @@
 import 'package:core/core_domain/AbstractDomainToExternalEntityMapper.dart';
+import 'package:core/core_domain/entities/SesameBadge.dart';
+import 'package:core/core_domain/entities/SesameClass.dart';
 import 'package:core/core_domain/utilities.dart';
 import 'package:users_management_feature/domain/entities/SesameStudent.dart';
 import 'package:users_management_feature/infrastructure/dtos/SesameClassDTO.dart';
 import 'package:users_management_feature/infrastructure/dtos/SesameStudentDTO.dart';
 
-import '../../../domain/entities/SesameBadge.dart';
-import '../../../domain/entities/SesameClass.dart';
 import '../../../domain/entities/SesameRole.dart';
 import '../../../domain/entities/SesameUser.dart';
 import '../../dtos/SesameBadgeDTO.dart';

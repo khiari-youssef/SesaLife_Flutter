@@ -1,4 +1,5 @@
-import 'SesameClass.dart';
+import 'package:core/core_domain/entities/SesameClass.dart';
+
 import 'SesameUser.dart';
 
 class SesameStudent extends SesameUser {

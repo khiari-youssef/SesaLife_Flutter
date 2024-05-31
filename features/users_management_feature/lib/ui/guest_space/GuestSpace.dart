@@ -45,7 +45,9 @@ class GuestSpace extends StatelessWidget {
                       "/SesameProgramsCatalog") {
                     _launchProgramsUrl(context).catchError((onError) {
                       context.showToast(
-                          "Error", "Could not launch url", ToastType.Error);
+                          title: "Error",
+                          message: "Could not launch url",
+                          toastType: ToastType.Error);
                     });
                   } else {
                     currentRouter

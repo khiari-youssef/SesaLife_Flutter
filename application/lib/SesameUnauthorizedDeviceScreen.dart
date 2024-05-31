@@ -11,21 +11,21 @@ class SesameUnauthorizedDeviceScreen extends StatelessWidget {
         null,
         Column(
             mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Flexible(
-                  child: Center(
-                      child: CustomAssetImage(
+              Center(
+                  child: CustomAssetImage(
                 assetImagePath: 'raster/screen_error.png',
                 height: 200.h,
                 width: 200.w,
-              ))),
-              Flexible(
-                  child: Center(
-                      child: HeadlineLarge(
-                          text: S.of(context).device_auth_unsupported,
-                          textAlign: TextAlign.center)))
+              )),
+              Padding(
+                padding: EdgeInsets.all(8.r),
+                child: HeadlineLarge(
+                    text: S.of(context).device_auth_unsupported,
+                    textAlign: TextAlign.center),
+              )
             ]));
   }
 }

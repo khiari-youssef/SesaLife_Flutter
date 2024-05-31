@@ -38,7 +38,9 @@ class LoginScreenState extends State<LoginScreen> {
               },
               error: (errorType) {
                 context.showToast(
-                    errorType.name, errorType.name, ToastType.Error);
+                    title: errorType.name,
+                    message: errorType.name,
+                    toastType: ToastType.Error);
               });
         },
         builder: (context, state) {

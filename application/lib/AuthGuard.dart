@@ -6,8 +6,8 @@ class AuthGuard extends AutoRouteGuard {
   @override
   void onNavigation(NavigationResolver resolver, StackRouter router) async {
     SesameDeviceAuthManager deviceAuthenticator = GetIt.instance.get();
-    if (await deviceAuthenticator.hasBiometricCapabilities() &&
-        await deviceAuthenticator.hasEnrolledBiometric(
+    if (await deviceAuthenticator.hasBiometricCapabilitiesAsync() &&
+        await deviceAuthenticator.hasEnrolledBiometricAsync(
             requireStrongBio: true)) {
       resolver.redirect(const LoginRoute());
     } else {

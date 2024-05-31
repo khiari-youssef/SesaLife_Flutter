@@ -5,6 +5,7 @@
   "login" : "Se connecter",
   "logout" : "Se déconnecter",
   "device_auth_unsupported" : "Votre appareil ne supporte pas une forte authentification biometrique ! ou bien vous ne l'avez pas encore enregistré",
+  "device_auth_action" : "Cette action nécessite votre authentification",
   "guest_space" : "Espace visiteur",
   "email" : "Email",
   "phone" : "Téléphone",
@@ -60,5 +61,6 @@
   "badge_expired" : "Expiré",
   "note" : "Remarque",
   "badge_usage_notice" : "Pour des raisons de sécurité, votre badge n'est visible que pour 5s.",
-  "badge_usage_learn_more" : "En savoir plus sur l'usage de votre badge"
+  "badge_usage_learn_more" : "En savoir plus sur l'usage de votre badge",
+  "badge_guideline_question" : "Pourquoi utiliser le badge ?"
 }

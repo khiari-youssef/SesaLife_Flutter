@@ -5,17 +5,25 @@ class BodyMedium extends StatelessWidget {
   final TextAlign textAlign;
   final Color? color;
   final bool? softWrap;
+  final int? maxLines;
   const BodyMedium(
       {super.key,
       required this.text,
       this.textAlign = TextAlign.start,
       this.color,
-      this.softWrap});
+      this.softWrap,
+      this.maxLines});
 
   @override
-  Widget build(BuildContext context) => Text(text,
-      style: Theme.of(context).typography.black.bodyMedium?.copyWith(
-          color: color ?? Theme.of(context).colorScheme.onBackground),
-      textAlign: textAlign,
-      softWrap: softWrap);
+  Widget build(BuildContext context) => Text(
+        text,
+        style: Theme.of(context)
+            .typography
+            .black
+            .bodyMedium
+            ?.copyWith(color: color ?? Theme.of(context).colorScheme.onSurface),
+        textAlign: textAlign,
+        softWrap: softWrap,
+        maxLines: maxLines,
+      );
 }

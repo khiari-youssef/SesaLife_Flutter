@@ -1,7 +1,6 @@
 import 'package:core/coreUI/SesameBadgeWidget.dart';
+import 'package:core/core_domain/entities/SesameBadge.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
-
-import '../../domain/entities/SesameBadge.dart';
 
 @RoutePage(name: "MyBadgeRoute")
 class MyBadgeScreen extends StatelessWidget {

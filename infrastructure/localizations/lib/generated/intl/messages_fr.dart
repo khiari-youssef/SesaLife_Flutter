@@ -30,6 +30,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "badge_click_to_scan":
             MessageLookupByLibrary.simpleMessage("Cliquer pour scanner"),
         "badge_expired": MessageLookupByLibrary.simpleMessage("Expiré"),
+        "badge_guideline_question": MessageLookupByLibrary.simpleMessage(
+            "Pourquoi utiliser le badge ?"),
         "badge_usage_learn_more": MessageLookupByLibrary.simpleMessage(
             "En savoir plus sur l\'usage de votre badge"),
         "badge_usage_notice": MessageLookupByLibrary.simpleMessage(
@@ -38,6 +40,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "calendar_title": m0,
         "cancel": MessageLookupByLibrary.simpleMessage("Annuler"),
         "confirm": MessageLookupByLibrary.simpleMessage("Confirmer"),
+        "device_auth_action": MessageLookupByLibrary.simpleMessage(
+            "Cette action nécessite votre authentification"),
         "device_auth_unsupported": MessageLookupByLibrary.simpleMessage(
             "Votre appareil ne supporte pas une forte authentification biometrique ! ou bien vous ne l\'avez pas encore enregistré"),
         "diploma": MessageLookupByLibrary.simpleMessage("Diplôme"),

@@ -1,7 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-
 import 'intl/messages_all.dart';
 
 // **************************************************************************
@@ -91,11 +90,21 @@ class S {
     );
   }
 
-  /// `Your device either does not strong biometric authentication or you did not yet enroll one !`
+  /// `Your device either does not have strong biometric authentication or you did not yet enroll one !`
   String get device_auth_unsupported {
     return Intl.message(
-      'Your device either does not strong biometric authentication or you did not yet enroll one !',
+      'Your device either does not have strong biometric authentication or you did not yet enroll one !',
       name: 'device_auth_unsupported',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This action requires authentication`
+  String get device_auth_action {
+    return Intl.message(
+      'This action requires authentication',
+      name: 'device_auth_action',
       desc: '',
       args: [],
     );
@@ -666,6 +675,16 @@ class S {
     return Intl.message(
       'Learn more about badge usage',
       name: 'badge_usage_learn_more',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What is the badge used for ?`
+  String get badge_guideline_question {
+    return Intl.message(
+      'What is the badge used for ?',
+      name: 'badge_guideline_question',
       desc: '',
       args: [],
     );

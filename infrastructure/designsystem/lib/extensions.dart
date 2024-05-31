@@ -23,7 +23,8 @@ Widget buildWithLoadingState(Widget child, bool enableLoading) {
 enum ToastType { Success, Error, Info, Warning }
 
 extension UIextensions on BuildContext {
-  showToast(String title, String message, ToastType toastType) {
+  showToast(
+      {String? title, required String message, required ToastType toastType}) {
     toastification.show(
       context: this,
       type: switch (toastType) {
@@ -34,7 +35,7 @@ extension UIextensions on BuildContext {
       },
       style: ToastificationStyle.fillColored,
       autoCloseDuration: const Duration(seconds: 5),
-      title: Text(title),
+      title: title == null ? null : Text(title),
       description: RichText(text: TextSpan(text: message)),
       alignment: Alignment.bottomCenter,
       direction: TextDirection.ltr,

@@ -30,6 +30,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "badge_click_to_scan":
             MessageLookupByLibrary.simpleMessage("Click to scan"),
         "badge_expired": MessageLookupByLibrary.simpleMessage("Expired"),
+        "badge_guideline_question": MessageLookupByLibrary.simpleMessage(
+            "What is the badge used for ?"),
         "badge_usage_learn_more": MessageLookupByLibrary.simpleMessage(
             "Learn more about badge usage"),
         "badge_usage_notice": MessageLookupByLibrary.simpleMessage(
@@ -38,8 +40,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "calendar_title": m0,
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
+        "device_auth_action": MessageLookupByLibrary.simpleMessage(
+            "This action requires authentication"),
         "device_auth_unsupported": MessageLookupByLibrary.simpleMessage(
-            "Your device either does not strong biometric authentication or you did not yet enroll one !"),
+            "Your device either does not have strong biometric authentication or you did not yet enroll one !"),
         "diploma": MessageLookupByLibrary.simpleMessage("Diploma"),
         "diploma_choice_title":
             MessageLookupByLibrary.simpleMessage("Choose your diploma :"),

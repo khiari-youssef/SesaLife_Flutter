@@ -16,6 +16,24 @@ void main() {
               designSystemLightTheme.colorScheme.primary));
       return child!;
     },
-    child: Center(),
+    child: const Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisSize: MainAxisSize.min,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        HeadlineLarge(text: "Headline Large"),
+        HeadlineMedium(text: "Headline Medium"),
+        HeadlineSmall(text: "Headline Small"),
+        TitleLarge(text: "Title Large"),
+        TitleMedium(text: "Title Medium"),
+        TitleSmall(text: "Title Small"),
+        BodyLarge(text: "Body Large"),
+        BodyMedium(text: "Body Medium"),
+        BodySmall(text: "Body Small"),
+        LabelLarge(text: "Label Large"),
+        LabelMedium(text: "Label Medium"),
+        LabelSmall(text: "Label Small")
+      ],
+    ),
   ));
 }

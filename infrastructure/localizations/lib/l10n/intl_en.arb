@@ -4,7 +4,8 @@
   "welcome_logo_description" : "Student Life",
   "login" : "Login",
   "logout" : "Logout",
-   "device_auth_unsupported" : "Your device either does not strong biometric authentication or you did not yet enroll one !",
+   "device_auth_unsupported" : "Your device either does not have strong biometric authentication or you did not yet enroll one !",
+  "device_auth_action" : "This action requires authentication",
   "guest_space" : "Guest space",
    "email" : "Email",
    "phone" : "Phone",
@@ -61,5 +62,6 @@
    "badge_expired" : "Expired",
     "note" : "Note",
     "badge_usage_notice" : "for security reasons, When you reveal your badge, it will only be visible for 5s.",
-    "badge_usage_learn_more" : "Learn more about badge usage"
+    "badge_usage_learn_more" : "Learn more about badge usage",
+    "badge_guideline_question" : "What is the badge used for ?"
 }

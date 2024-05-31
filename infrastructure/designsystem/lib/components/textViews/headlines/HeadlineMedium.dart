@@ -5,12 +5,14 @@ class HeadlineMedium extends StatelessWidget {
   final TextAlign textAlign;
   final Color? color;
   final bool? softWrap;
+  final int maxLines;
   const HeadlineMedium(
       {super.key,
       required this.text,
       this.textAlign = TextAlign.start,
       this.color,
-      this.softWrap});
+      this.softWrap,
+      this.maxLines = 1});
 
   @override
   Widget build(BuildContext context) => Text(
@@ -19,5 +21,6 @@ class HeadlineMedium extends StatelessWidget {
             color: color ?? Theme.of(context).colorScheme.onBackground),
         textAlign: textAlign,
         softWrap: softWrap,
+        maxLines: maxLines,
       );
 }

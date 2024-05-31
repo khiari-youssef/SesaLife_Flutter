@@ -1,3 +1,4 @@
+import 'package:core/core_utils/BioUtils.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 import 'package:users_management_feature/domain/entities/SesameUser.dart';
 import 'package:users_management_feature/ui/myprofile/MyProfileMenu.dart';
@@ -8,6 +9,7 @@ import 'package:users_management_feature/ui/myprofile/stateManagement/MyProfileS
 import 'package:users_management_feature/ui/navigation/UsersNavigationConfiguration.gr.dart';
 
 class MyUserProfileState extends State<MyUserProfileScreen> {
+  SesameDeviceAuthManager authManager = GetIt.instance.get();
   @override
   Widget build(BuildContext context) => basicScreenBuilder(
       context,
@@ -83,7 +85,15 @@ class MyUserProfileState extends State<MyUserProfileScreen> {
                                         variant: SesameButtonVariant.neutral,
                                         leftIconAssetName: "ic_logout.svg",
                                         buttonText: S.of(context).logout,
-                                        onPressed: () {})))
+                                        onPressed: () {
+                                          authManager
+                                              .requireAuthenticationAsync(
+                                                  context,
+                                                  onActionAuthorized: () {
+                                            AutoRouter.of(context)
+                                                .replaceNamed("/LoginRoute");
+                                          });
+                                        })))
                           ],
                         ));
                   },
