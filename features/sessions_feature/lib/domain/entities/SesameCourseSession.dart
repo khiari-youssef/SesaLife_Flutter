@@ -4,20 +4,21 @@ class SesameCourseSession extends SesameSession {
   final DateTime firstHalfEndDateTime;
   final DateTime secondHalfStartDateTime;
   final DateTime secondHalfEndDateTime;
-  SesameCourseSession(
-      {required this.firstHalfEndDateTime,
-      required this.secondHalfEndDateTime,
-      required this.secondHalfStartDateTime,
-      required super.id,
-      required super.subject,
-      required super.teacher,
-      required super.date,
-      required super.toleratedDelayInMinutes,
-      required super.roomID,
-      required super.sessionClass,
-      required super.presentStudents,
-      required super.eliminatedStudents,
-      required super.sessionQrCode,
-      required super.attachments,
-      required super.uploadRepository});
+  SesameCourseSession({
+    required super.id,
+    required super.subject,
+    required super.teacher,
+    required super.date,
+    required super.toleratedDelayInMinutes,
+    required super.roomID,
+    required super.sessionClass,
+    required super.presentStudents,
+    required super.eliminatedStudents,
+    required super.sessionQrCode,
+    required super.attachments,
+    super.uploadRepository,
+    required this.firstHalfEndDateTime,
+    required this.secondHalfEndDateTime,
+    required this.secondHalfStartDateTime,
+  });
 }

@@ -39,3 +39,5 @@ export 'components/textViews/labels/LabelSmall.dart';
 export 'components/textViews/titles/TitleLarge.dart';
 export 'components/textViews/titles/TitleMedium.dart';
 export 'components/textViews/titles/TitleSmall.dart';
+export 'components/tabbars/sesame_tab_item.dart';
+export 'components/tabbars/sesame_tab_bar.dart';

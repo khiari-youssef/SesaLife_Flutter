@@ -11,5 +11,5 @@ class SesameSubject with _$SesameSubject {
       required String description,
       required String moduleId,
       required SesameClass sesameClass,
-      required double coeficient}) = _SesameSubject;
+      required double coefficient}) = _SesameSubject;
 }

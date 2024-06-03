@@ -689,6 +689,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Course`
+  String get sessions_course {
+    return Intl.message(
+      'Course',
+      name: 'sessions_course',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Exam`
+  String get sessions_exam {
+    return Intl.message(
+      'Exam',
+      name: 'sessions_exam',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

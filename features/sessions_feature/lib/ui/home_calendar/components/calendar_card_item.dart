@@ -1,9 +1,12 @@
 import 'package:designsystem/designsystem_exports.dart';
 import 'package:designsystem/extensions.dart';
+import 'package:sessions_feature/domain/entities/SesameSession.dart';
 
-class HomeCalendarEventCard extends StatelessWidget {
+class CalendarSessionCard extends StatelessWidget {
+  final SesameSession data;
   final bool isLoading;
-  const HomeCalendarEventCard({super.key, this.isLoading = false});
+  const CalendarSessionCard(
+      {super.key, this.isLoading = false, required this.data});
 
   @override
   Widget build(BuildContext context) => buildWithLoadingState(
@@ -12,7 +15,7 @@ class HomeCalendarEventCard extends StatelessWidget {
         child: Padding(
           padding: EdgeInsets.all(12.r),
           child: Column(
-            mainAxisSize: MainAxisSize.min,
+            mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [

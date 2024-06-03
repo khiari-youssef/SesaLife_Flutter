@@ -63,5 +63,7 @@
     "note" : "Note",
     "badge_usage_notice" : "for security reasons, When you reveal your badge, it will only be visible for 5s.",
     "badge_usage_learn_more" : "Learn more about badge usage",
-    "badge_guideline_question" : "What is the badge used for ?"
+    "badge_guideline_question" : "What is the badge used for ?",
+    "sessions_course" : "Course",
+    "sessions_exam" : "Exam"
 }

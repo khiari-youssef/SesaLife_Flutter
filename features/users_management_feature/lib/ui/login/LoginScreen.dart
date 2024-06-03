@@ -6,14 +6,22 @@ import 'LoginStateBloc.dart';
 
 class LoginScreenState extends State<LoginScreen> {
   bool canLogin = false;
-  TextEditingController emailController = TextEditingController();
-  TextEditingController passwordController = TextEditingController();
+  TextEditingController emailController = TextEditingController(text: "test");
+  TextEditingController passwordController =
+      TextEditingController(text: "test");
 
   void updateLoginButtonState() {
     setState(() {
       canLogin =
           emailController.text.isNotEmpty && passwordController.text.isNotEmpty;
     });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    canLogin =
+        emailController.text.isNotEmpty && passwordController.text.isNotEmpty;
   }
 
   @override
@@ -80,6 +88,7 @@ class LoginScreenState extends State<LoginScreen> {
                                 height: 12.h,
                               ),
                               SesamePasswordTextField(
+                                  controller: passwordController,
                                   isRequired: false,
                                   onChange: (updatedText) {
                                     context.read<LoginStateBloc>().add(

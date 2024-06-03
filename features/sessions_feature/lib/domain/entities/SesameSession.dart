@@ -12,7 +12,7 @@ abstract class SesameSession {
   final List<UserProfilePreview> eliminatedStudents;
   final String sessionQrCode;
   final List<SesameAttachment> attachments;
-  final SesameUploadRepository uploadRepository;
+  final SesameUploadRepository? uploadRepository;
   SesameSession(
       {required this.id,
       required this.subject,
@@ -25,7 +25,7 @@ abstract class SesameSession {
       required this.eliminatedStudents,
       required this.sessionQrCode,
       required this.attachments,
-      required this.uploadRepository});
+      this.uploadRepository});
 
   String getDisplayDate() {
     return date.toDisplayDate();
