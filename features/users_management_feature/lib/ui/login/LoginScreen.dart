@@ -54,7 +54,7 @@ class LoginScreenState extends State<LoginScreen> {
         builder: (context, state) {
           return SafeArea(
             child: Scaffold(
-              backgroundColor: Theme.of(context).colorScheme.background,
+              backgroundColor: Theme.of(context).colorScheme.surface,
               body: SingleChildScrollView(
                 child: Center(
                   child: Padding(

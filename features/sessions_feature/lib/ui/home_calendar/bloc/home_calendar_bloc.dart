@@ -1,8 +1,5 @@
-import 'package:core/core_domain/entities/SesameSubject.dart';
 import 'package:core/core_domain/entities/entities.dart';
 import 'package:sessions_feature/domain/entities/SesameCourseSession.dart';
-import 'package:sessions_feature/domain/entities/SesameExamSession.dart';
-import 'package:sessions_feature/domain/entities/SesameSession.dart';
 import 'package:sessions_feature/ui/home_calendar/bloc/home_calendar_event.dart';
 import 'package:sessions_feature/ui/home_calendar/bloc/home_calendar_state.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';

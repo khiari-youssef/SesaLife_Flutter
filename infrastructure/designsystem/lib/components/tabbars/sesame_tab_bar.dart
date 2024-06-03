@@ -1,7 +1,4 @@
 import 'package:designsystem/designsystem_exports.dart';
-import 'package:flutter/material.dart';
-
-import 'sesame_tab_item.dart';
 
 class SesameTabBar extends StatelessWidget {
   final Function(int selectedIndex)? onTabSelected;

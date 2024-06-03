@@ -1,6 +1,5 @@
 import 'package:core/exports.dart';
 import 'package:designsystem/designsystem_exports.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 
 import '../../domain/entities/SesameSession.dart';

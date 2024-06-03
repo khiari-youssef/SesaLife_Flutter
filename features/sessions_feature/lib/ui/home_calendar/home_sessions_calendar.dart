@@ -1,11 +1,10 @@
-import 'package:core/exports.dart';
-import 'package:sessions_feature/ui/home_calendar/components/calendar_top_bar.dart';
 import 'package:sessions_feature/ui/home_calendar/bloc/home_calendar_event.dart';
 import 'package:sessions_feature/ui/home_calendar/bloc/home_calendar_state.dart';
+import 'package:sessions_feature/ui/home_calendar/components/calendar_top_bar.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 
-import 'home_sessions_carousel_list.dart';
 import 'bloc/home_calendar_bloc.dart';
+import 'home_sessions_carousel_list.dart';
 
 class HomeCalendarScreenState extends State<HomeCalendarScreen>
     with SingleTickerProviderStateMixin {
