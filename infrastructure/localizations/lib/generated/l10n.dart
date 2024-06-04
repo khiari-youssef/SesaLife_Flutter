@@ -709,6 +709,16 @@ class S {
       args: [],
     );
   }
+
+  /// `All`
+  String get sessions_all {
+    return Intl.message(
+      'All',
+      name: 'sessions_all',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

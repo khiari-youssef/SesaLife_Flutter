@@ -7,8 +7,12 @@ import 'components/calendar_card_item.dart';
 class SessionsCalendarMode extends StatefulWidget {
   final List<SesameSession> sessionsList;
   final Function(int index) onSessionClicked;
+  final Function(DateTime date) onDatePicked;
   const SessionsCalendarMode(
-      {super.key, required this.sessionsList, required this.onSessionClicked});
+      {super.key,
+      required this.sessionsList,
+      required this.onSessionClicked,
+      required this.onDatePicked});
 
   @override
   State<StatefulWidget> createState() => SessionsCalendarModeState();
@@ -36,15 +40,12 @@ class SessionsCalendarModeState extends State<SessionsCalendarMode> {
       children: [
         SesameDatePicker(
             onDateChanged: (DateTime dateTime) {
-              int targetIndex = widget.sessionsList
-                  .indexWhere((session) => session.date == dateTime);
-              if (targetIndex >= 0) {
-                controller.animateToPage(targetIndex,
-                    duration: const Duration(milliseconds: 300),
-                    curve: Curves.linear);
+              if (dateTime != currentlySelectedDate) {
+                widget.onDatePicked(dateTime);
               }
             },
-            initialSelectedDate: DateTime.now()),
+            initialSelectedDate: DateTime.now(),
+            selectedDate: currentlySelectedDate),
         LimitedBox(
           maxHeight: 150.h,
           child: PageView.builder(

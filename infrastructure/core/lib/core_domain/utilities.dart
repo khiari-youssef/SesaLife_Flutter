@@ -35,6 +35,10 @@ extension DateTimeExtension on DateTime {
   String toDisplayTime() {
     return sesameStandardTimeFormat.format(this);
   }
+
+  bool areDatesOnlyEqual(DateTime other) {
+    return day == other.day && month == other.month && year == other.year;
+  }
 }
 
 extension DateTimeParsingExtension on String {

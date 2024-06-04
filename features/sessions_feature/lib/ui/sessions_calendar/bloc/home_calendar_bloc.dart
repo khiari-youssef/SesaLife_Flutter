@@ -1,4 +1,5 @@
 import 'package:core/core_domain/entities/entities.dart';
+import 'package:core/exports.dart';
 import 'package:sessions_feature/domain/entities/SesameCourseSession.dart';
 import 'package:sessions_feature/ui/sessions_calendar/bloc/home_calendar_event.dart';
 import 'package:sessions_feature/ui/sessions_calendar/bloc/home_calendar_state.dart';
@@ -45,9 +46,10 @@ class HomeSessionsBloc extends Bloc<HomeCalendarEvent, HomeSessionsState> {
         emit(HomeSessionsState.success(sessions));
       }, loadAllSessionOfTheDate: (date, filter) {
         emit(const HomeSessionsState.loading());
-        Future.delayed(const Duration(seconds: 2));
-        emit(HomeSessionsState.success(
-            sessions.where((session) => session.date == date).toList()));
+        Future.delayed(const Duration(seconds: 1));
+        emit(HomeSessionsState.success(sessions
+            .where((session) => session.date.areDatesOnlyEqual(date))
+            .toList()));
       });
     });
   }

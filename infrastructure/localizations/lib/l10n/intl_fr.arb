@@ -62,5 +62,8 @@
   "note" : "Remarque",
   "badge_usage_notice" : "Pour des raisons de sécurité, votre badge n'est visible que pour 5s.",
   "badge_usage_learn_more" : "En savoir plus sur l'usage de votre badge",
-  "badge_guideline_question" : "Pourquoi utiliser le badge ?"
+  "badge_guideline_question" : "Pourquoi utiliser le badge ?",
+  "sessions_course" : "Cours",
+  "sessions_exam" : "Examens",
+  "sessions_all" : "Tous"
 }

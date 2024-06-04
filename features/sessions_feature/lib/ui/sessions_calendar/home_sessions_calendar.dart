@@ -12,6 +12,7 @@ class HomeCalendarScreenState extends State<HomeCalendarScreen>
   HomeCalendarTopBarViewMode viewModeState =
       HomeCalendarTopBarViewMode.calendar;
   late TabController controller;
+  int? selectedFilterIndex;
 
   @override
   void initState() {
@@ -19,13 +20,12 @@ class HomeCalendarScreenState extends State<HomeCalendarScreen>
     controller = TabController(length: 2, initialIndex: 0, vsync: this);
   }
 
-  DateTime currentDate = DateTime.now();
   @override
   Widget build(BuildContext context) => BlocProvider<HomeSessionsBloc>(
         create: (context) => GetIt.instance.get<HomeSessionsBloc>()
           ..add(HomeCalendarEvent.loadAllSessionOfTheMonth(
-              year: currentDate.year,
-              month: currentDate.month,
+              year: DateTime.now().year,
+              month: DateTime.now().month,
               filter: SessionTypeFilter.all)),
         child: BlocConsumer<HomeSessionsBloc, HomeSessionsState>(
             listener: (BuildContext context, HomeSessionsState state) {},
@@ -56,9 +56,15 @@ class HomeCalendarScreenState extends State<HomeCalendarScreen>
                                   SesameTabItem(
                                       label: S.of(context).sessions_course),
                                   SesameTabItem(
-                                      label: S.of(context).sessions_exam)
+                                      label: S.of(context).sessions_exam),
+                                  SesameTabItem(
+                                      label: S.of(context).sessions_all)
                                 ],
-                                onTabSelected: (index) {},
+                                onTabSelected: (index) {
+                                  setState(() {
+                                    selectedFilterIndex = index;
+                                  });
+                                },
                               ),
                             )),
                         state.when(loading: () {
@@ -72,6 +78,16 @@ class HomeCalendarScreenState extends State<HomeCalendarScreen>
                               SessionsCalendarMode(
                                 sessionsList: data,
                                 onSessionClicked: (int index) {},
+                                onDatePicked: (date) {
+                                  context.read<HomeSessionsBloc>().add(
+                                      HomeCalendarEvent.loadAllSessionOfTheDate(
+                                          date: date,
+                                          filter: switch (selectedFilterIndex) {
+                                            0 => SessionTypeFilter.course,
+                                            1 => SessionTypeFilter.exam,
+                                            _ => SessionTypeFilter.all
+                                          }));
+                                },
                               ),
                             HomeCalendarTopBarViewMode.list => SessionsListMode(
                                 sessionsList: data,
