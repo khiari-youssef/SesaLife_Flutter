@@ -14,7 +14,7 @@ import 'package:events_management_feature/events_management_feature_exports.dart
 import 'package:home_feature/ui/navigation/HomeRootScreen.dart' as _i1;
 import 'package:notifications_feature/ui/navigation/NotificationsNavigationConfiguration.dart'
     as _i4;
-import 'package:sessions_feature/ui/navigation/SessionsNavigationConfiguration.dart'
+import 'package:sessions_feature/ui/navigation/sessions_navigation_configuration.dart'
     as _i5;
 import 'package:users_management_feature/exports.dart' as _i3;
 

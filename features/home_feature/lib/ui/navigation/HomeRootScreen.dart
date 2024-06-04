@@ -1,6 +1,6 @@
 import 'package:events_management_feature/ui/EventsNavigationConfiguration.gr.dart';
 import 'package:notifications_feature/ui/navigation/NotificationsNavigationConfiguration.gr.dart';
-import 'package:sessions_feature/ui/navigation/SessionsNavigationConfiguration.gr.dart';
+import 'package:sessions_feature/ui/navigation/sessions_navigation_configuration.gr.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 import 'package:users_management_feature/ui/navigation/UsersNavigationConfiguration.gr.dart';
 

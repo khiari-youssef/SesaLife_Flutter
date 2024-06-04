@@ -1,6 +1,6 @@
 import 'package:shared_dependencies/shared_dependencies.dart';
 
-import 'SessionsNavigationConfiguration.gr.dart';
+import 'sessions_navigation_configuration.gr.dart';
 
 @AutoRouterConfig(replaceInRouteName: 'Screen|Page,Route')
 class SessionsNavigationConfiguration extends $SessionsNavigationConfiguration {
