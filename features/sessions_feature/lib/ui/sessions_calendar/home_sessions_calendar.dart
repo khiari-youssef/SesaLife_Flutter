@@ -1,10 +1,11 @@
-import 'package:sessions_feature/ui/home_calendar/bloc/home_calendar_event.dart';
-import 'package:sessions_feature/ui/home_calendar/bloc/home_calendar_state.dart';
-import 'package:sessions_feature/ui/home_calendar/components/calendar_top_bar.dart';
+import 'package:sessions_feature/ui/sessions_calendar/bloc/home_calendar_event.dart';
+import 'package:sessions_feature/ui/sessions_calendar/bloc/home_calendar_state.dart';
+import 'package:sessions_feature/ui/sessions_calendar/components/calendar_top_bar.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 
 import 'bloc/home_calendar_bloc.dart';
-import 'home_sessions_carousel_list.dart';
+import 'home_sessions_calendar_mode.dart';
+import 'home_sessions_list.dart';
 
 class HomeCalendarScreenState extends State<HomeCalendarScreen>
     with SingleTickerProviderStateMixin {
@@ -20,12 +21,14 @@ class HomeCalendarScreenState extends State<HomeCalendarScreen>
 
   DateTime currentDate = DateTime.now();
   @override
-  Widget build(BuildContext context) => BlocProvider<HomeCalendarBloc>(
-        create: (context) => GetIt.instance.get<HomeCalendarBloc>()
+  Widget build(BuildContext context) => BlocProvider<HomeSessionsBloc>(
+        create: (context) => GetIt.instance.get<HomeSessionsBloc>()
           ..add(HomeCalendarEvent.loadAllSessionOfTheMonth(
-              currentDate.year, currentDate.month)),
-        child: BlocConsumer<HomeCalendarBloc, HomeCalendarState>(
-            listener: (BuildContext context, HomeCalendarState state) {},
+              year: currentDate.year,
+              month: currentDate.month,
+              filter: SessionTypeFilter.all)),
+        child: BlocConsumer<HomeSessionsBloc, HomeSessionsState>(
+            listener: (BuildContext context, HomeSessionsState state) {},
             builder: (context, state) {
               return basicScreenBuilder(
                   context,
@@ -58,58 +61,27 @@ class HomeCalendarScreenState extends State<HomeCalendarScreen>
                                 onTabSelected: (index) {},
                               ),
                             )),
-                        ...buildViewMode(viewModeState, state)
+                        state.when(loading: () {
+                          return const CircularProgressIndicator();
+                        }, error: (type) {
+                          return Center(child: Text(type.name));
+                        }, success: (data) {
+                          return Expanded(
+                              child: switch (viewModeState) {
+                            HomeCalendarTopBarViewMode.calendar =>
+                              SessionsCalendarMode(
+                                sessionsList: data,
+                                onSessionClicked: (int index) {},
+                              ),
+                            HomeCalendarTopBarViewMode.list => SessionsListMode(
+                                sessionsList: data,
+                                onSessionClicked: (int index) {},
+                              )
+                          });
+                        })
                       ]));
             }),
       );
-
-  List<Widget> buildViewMode(
-      HomeCalendarTopBarViewMode viewMode, HomeCalendarState state) {
-    return viewMode == HomeCalendarTopBarViewMode.calendar
-        ? [
-            SesameDatePicker(
-                onDateChanged: (DateTime dateTime) {},
-                initialSelectedDate: DateTime.now()),
-            state.when(loading: () {
-              return const HomeCalendarCardsList(
-                  direction: Axis.horizontal,
-                  isLoading: true,
-                  sessionsList: []);
-            }, error: (type) {
-              return const HomeCalendarCardsList(
-                direction: Axis.horizontal,
-                isLoading: false,
-                sessionsList: [],
-              );
-            }, success: (data) {
-              return HomeCalendarCardsList(
-                  direction: Axis.horizontal,
-                  isLoading: false,
-                  sessionsList: data);
-            })
-          ]
-        : [
-            Expanded(
-                child: state.when(loading: () {
-              return const HomeCalendarCardsList(
-                direction: Axis.vertical,
-                isLoading: true,
-                sessionsList: [],
-              );
-            }, error: (type) {
-              return const HomeCalendarCardsList(
-                direction: Axis.vertical,
-                isLoading: false,
-                sessionsList: [],
-              );
-            }, success: (data) {
-              return HomeCalendarCardsList(
-                  direction: Axis.vertical,
-                  isLoading: false,
-                  sessionsList: data);
-            }))
-          ];
-  }
 }
 
 @RoutePage(name: "HomeCalendarRoute")

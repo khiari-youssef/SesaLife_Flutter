@@ -9,7 +9,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i2;
-import 'package:sessions_feature/ui/home_calendar/home_sessions_calendar.dart'
+import 'package:sessions_feature/ui/sessions_calendar/home_sessions_calendar.dart'
     as _i1;
 
 abstract class $SessionsNavigationConfiguration extends _i2.RootStackRouter {

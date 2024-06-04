@@ -15,7 +15,7 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
-mixin _$HomeCalendarState {
+mixin _$HomeSessionsState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
@@ -63,16 +63,16 @@ mixin _$HomeCalendarState {
 }
 
 /// @nodoc
-abstract class $HomeCalendarStateCopyWith<$Res> {
-  factory $HomeCalendarStateCopyWith(
-          HomeCalendarState value, $Res Function(HomeCalendarState) then) =
-      _$HomeCalendarStateCopyWithImpl<$Res, HomeCalendarState>;
+abstract class $HomeSessionsStateCopyWith<$Res> {
+  factory $HomeSessionsStateCopyWith(
+          HomeSessionsState value, $Res Function(HomeSessionsState) then) =
+      _$HomeSessionsStateCopyWithImpl<$Res, HomeSessionsState>;
 }
 
 /// @nodoc
-class _$HomeCalendarStateCopyWithImpl<$Res, $Val extends HomeCalendarState>
-    implements $HomeCalendarStateCopyWith<$Res> {
-  _$HomeCalendarStateCopyWithImpl(this._value, this._then);
+class _$HomeSessionsStateCopyWithImpl<$Res, $Val extends HomeSessionsState>
+    implements $HomeSessionsStateCopyWith<$Res> {
+  _$HomeSessionsStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -89,7 +89,7 @@ abstract class _$$loadingImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$loadingImplCopyWithImpl<$Res>
-    extends _$HomeCalendarStateCopyWithImpl<$Res, _$loadingImpl>
+    extends _$HomeSessionsStateCopyWithImpl<$Res, _$loadingImpl>
     implements _$$loadingImplCopyWith<$Res> {
   __$$loadingImplCopyWithImpl(
       _$loadingImpl _value, $Res Function(_$loadingImpl) _then)
@@ -103,7 +103,7 @@ class _$loadingImpl implements _loading {
 
   @override
   String toString() {
-    return 'HomeCalendarState.loading()';
+    return 'HomeSessionsState.loading()';
   }
 
   @override
@@ -184,7 +184,7 @@ class _$loadingImpl implements _loading {
   }
 }
 
-abstract class _loading implements HomeCalendarState {
+abstract class _loading implements HomeSessionsState {
   const factory _loading() = _$loadingImpl;
 }
 
@@ -199,7 +199,7 @@ abstract class _$$errorImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$errorImplCopyWithImpl<$Res>
-    extends _$HomeCalendarStateCopyWithImpl<$Res, _$errorImpl>
+    extends _$HomeSessionsStateCopyWithImpl<$Res, _$errorImpl>
     implements _$$errorImplCopyWith<$Res> {
   __$$errorImplCopyWithImpl(
       _$errorImpl _value, $Res Function(_$errorImpl) _then)
@@ -229,7 +229,7 @@ class _$errorImpl implements _error {
 
   @override
   String toString() {
-    return 'HomeCalendarState.error(type: $type)';
+    return 'HomeSessionsState.error(type: $type)';
   }
 
   @override
@@ -318,7 +318,7 @@ class _$errorImpl implements _error {
   }
 }
 
-abstract class _error implements HomeCalendarState {
+abstract class _error implements HomeSessionsState {
   const factory _error(final DomainErrorType type) = _$errorImpl;
 
   DomainErrorType get type;
@@ -338,7 +338,7 @@ abstract class _$$successImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$successImplCopyWithImpl<$Res>
-    extends _$HomeCalendarStateCopyWithImpl<$Res, _$successImpl>
+    extends _$HomeSessionsStateCopyWithImpl<$Res, _$successImpl>
     implements _$$successImplCopyWith<$Res> {
   __$$successImplCopyWithImpl(
       _$successImpl _value, $Res Function(_$successImpl) _then)
@@ -374,7 +374,7 @@ class _$successImpl implements _success {
 
   @override
   String toString() {
-    return 'HomeCalendarState.success(sessions: $sessions)';
+    return 'HomeSessionsState.success(sessions: $sessions)';
   }
 
   @override
@@ -464,7 +464,7 @@ class _$successImpl implements _success {
   }
 }
 
-abstract class _success implements HomeCalendarState {
+abstract class _success implements HomeSessionsState {
   const factory _success(final List<SesameSession> sessions) = _$successImpl;
 
   List<SesameSession> get sessions;
