@@ -3,10 +3,12 @@ import 'dart:ui';
 
 import 'package:shared_dependencies/shared_dependencies.dart';
 
+import '../core_utils/BioUtils.dart';
 import '../core_utils/QrCode.dart';
 
 class SesameBadgeWidgetState extends State<SesameBadgeWidget> {
   bool isHidden = true;
+  SesameDeviceAuthManager authManager = GetIt.instance.get();
 
   void startTimer() {
     Timer(widget.visibilityDuration, () {
@@ -54,10 +56,13 @@ class SesameBadgeWidgetState extends State<SesameBadgeWidget> {
                       buttonText: S.of(context).badge_click_to_scan,
                       onPressed: () {
                         if (!widget.isExpired) {
-                          setState(() {
-                            isHidden = false;
+                          authManager.requireAuthenticationAsync(context,
+                              onActionAuthorized: () {
+                            setState(() {
+                              isHidden = false;
+                            });
+                            startTimer();
                           });
-                          startTimer();
                         }
                       })
                 ],
