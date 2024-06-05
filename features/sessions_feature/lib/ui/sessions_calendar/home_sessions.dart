@@ -91,7 +91,7 @@ class HomeSessionsScreenState extends State<HomeSessionsScreen>
                                 sessionsList: data,
                                 onSessionClicked: (int index) {
                                   AutoRouter.of(context)
-                                      .pushNamed("SessionDetailsRoute");
+                                      .pushNamed("/SessionDetailsRoute");
                                 },
                                 onDatePicked: (date) {
                                   context.read<HomeSessionsBloc>().add(

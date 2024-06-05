@@ -3,9 +3,12 @@ import 'package:shared_dependencies/shared_dependencies.dart';
 class SessionDetailsBaseScreenState extends State<SessionDetailsBaseScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text("SessionDetailsBaseScreen"),
-    );
+    return titleScreenBuilder(context, "", null, () {
+      AutoRouter.of(context).back();
+    },
+        const Center(
+          child: Text("SessionDetailsBaseScreen"),
+        ));
   }
 }
 

@@ -77,7 +77,13 @@ class MyUserProfileState extends State<MyUserProfileScreen> {
                                 ],
                               ),
                             ),
-                            const MyProfileMenu(),
+                            MyProfileMenu(
+                              onItemClicked: (path) {
+                                if (path != null) {
+                                  AutoRouter.of(context).pushNamed(path);
+                                }
+                              },
+                            ),
                             Expanded(
                                 child: Align(
                                     alignment: Alignment.bottomRight,

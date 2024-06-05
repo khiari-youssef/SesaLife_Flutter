@@ -5,6 +5,10 @@ import 'AppNavigationConfiguration.dart';
 import 'dependenciesLoader.dart';
 
 void main() {
+  const List<Locale> supportedLocals = [
+    Locale('en'),
+    Locale('fr'),
+  ];
   WidgetsFlutterBinding.ensureInitialized();
   runApp(ScreenUtilInit(
     designSize: const Size(360, 680),
@@ -31,10 +35,7 @@ void main() {
               GlobalCupertinoLocalizations.delegate,
               S.delegate
             ],
-            supportedLocales: const [
-              Locale('en'),
-              Locale('fr'),
-            ],
+            supportedLocales: supportedLocals,
             routerConfig:
                 GetIt.instance.get<AppNavigationConfiguration>().config());
       },

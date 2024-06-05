@@ -35,11 +35,5 @@ extension UIModule on GetIt {
         instanceName: "SlideTransitionBuilder");
 
     registerSingleton<ApplicationMetaInfoFacade>(ApplicationMetaInfoFacade());
-    registerFactory<SesamePrivacyAndSecurityPolicyCubitStateManager>(() =>
-        SesamePrivacyAndSecurityPolicyCubitStateManager(
-            [],
-            Localizations.localeOf(
-                GetIt.instance.get(instanceName: "ApplicationContext")),
-            get()));
   }
 }

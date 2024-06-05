@@ -27,6 +27,7 @@ class HomeNavigationConfiguration extends $HomeNavigationConfiguration {
               page: HomeNotificationsRoute.page),
           AutoRoute(path: "HomeUserProfileRoute", page: MyUserProfileRoute.page)
         ]),
-        AutoRoute(path: "/MyBadgeRoute", page: MyBadgeRoute.page)
+        AutoRoute(path: "/MyBadgeRoute", page: MyBadgeRoute.page),
+        AutoRoute(path: "/SessionDetailsRoute", page: SessionDetailsRoute.page),
       ];
 }
