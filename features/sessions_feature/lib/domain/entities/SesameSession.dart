@@ -4,7 +4,8 @@ abstract class SesameSession {
   final String id;
   final SesameSubject subject;
   final UserProfilePreview teacher;
-  final DateTime date;
+  final DateTime startDateTime;
+  final DateTime endDateTime;
   final int toleratedDelayInMinutes;
   final String roomID;
   final SesameClass sessionClass;
@@ -17,7 +18,8 @@ abstract class SesameSession {
       {required this.id,
       required this.subject,
       required this.teacher,
-      required this.date,
+      required this.startDateTime,
+      required this.endDateTime,
       required this.toleratedDelayInMinutes,
       required this.roomID,
       required this.sessionClass,
@@ -27,12 +29,24 @@ abstract class SesameSession {
       required this.attachments,
       this.uploadRepository});
 
-  String getDisplayDate() {
-    return date.toDisplayDate();
+  String getDisplayStartDate() {
+    return startDateTime.toDisplayDate();
+  }
+
+  String getDisplayStartTime() {
+    return startDateTime.toDisplayTime();
+  }
+
+  String getDisplayEndDate() {
+    return endDateTime.toDisplayDate();
+  }
+
+  String getDisplayEndTime() {
+    return endDateTime.toDisplayTime();
   }
 
   bool canNoLongerTolerateDelay() {
-    return DateTime.now().isAfter(
-        date.copyWith(minute: (date.minute + toleratedDelayInMinutes)));
+    return DateTime.now().isAfter(startDateTime.copyWith(
+        minute: (startDateTime.minute + toleratedDelayInMinutes)));
   }
 }

@@ -66,5 +66,6 @@
     "badge_guideline_question" : "What is the badge used for ?",
     "sessions_course" : "Course",
     "sessions_exam" : "Exam",
+     "sessions_any" : "Session",
     "sessions_all" : "All"
 }

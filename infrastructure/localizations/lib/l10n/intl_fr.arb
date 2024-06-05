@@ -65,5 +65,6 @@
   "badge_guideline_question" : "Pourquoi utiliser le badge ?",
   "sessions_course" : "Cours",
   "sessions_exam" : "Examens",
+  "sessions_any" : "Scéance",
   "sessions_all" : "Tous"
 }

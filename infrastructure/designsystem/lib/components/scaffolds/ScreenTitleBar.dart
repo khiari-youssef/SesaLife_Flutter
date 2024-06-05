@@ -26,8 +26,7 @@ class ScreenTitleBar extends StatelessWidget {
               child: Text(
                 title,
                 style: Theme.of(context)
-                    .typography
-                    .black
+                    .textTheme
                     .titleLarge
                     ?.copyWith(color: Theme.of(context).colorScheme.primary),
               ),

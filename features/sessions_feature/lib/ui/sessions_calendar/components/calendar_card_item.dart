@@ -1,5 +1,7 @@
 import 'package:designsystem/designsystem_exports.dart';
 import 'package:designsystem/extensions.dart';
+import 'package:sessions_feature/domain/entities/SesameCourseSession.dart';
+import 'package:sessions_feature/domain/entities/SesameExamSession.dart';
 import 'package:sessions_feature/domain/entities/SesameSession.dart';
 
 class CalendarSessionCard extends StatelessWidget {
@@ -27,7 +29,12 @@ class CalendarSessionCard extends StatelessWidget {
                     Expanded(
                         flex: 1,
                         child: Text(
-                          "Cours",
+                          switch (data) {
+                            SesameCourseSession() =>
+                              S.of(context).sessions_course,
+                            SesameExamSession() => S.of(context).sessions_exam,
+                            _ => S.of(context).sessions_any
+                          },
                           textAlign: TextAlign.start,
                           style: Theme.of(context)
                               .typography
@@ -38,7 +45,7 @@ class CalendarSessionCard extends StatelessWidget {
                     Expanded(
                         flex: 1,
                         child: Text(
-                          "8h30 -> 12h15",
+                          "${data.getDisplayStartTime()} -> ${data.getDisplayEndTime()}",
                           textAlign: TextAlign.end,
                           style: Theme.of(context)
                               .typography
@@ -50,7 +57,7 @@ class CalendarSessionCard extends StatelessWidget {
                         ))
                   ]),
               SizedBox(height: 20.h),
-              Text("Théorie des languages",
+              Text(data.subject.label,
                   textAlign: TextAlign.center,
                   style: Theme.of(context)
                       .typography
@@ -65,7 +72,7 @@ class CalendarSessionCard extends StatelessWidget {
                   children: [
                     SesameAvatar(width: 24.w, height: 24.h, url: ''),
                     SizedBox(width: 12.w),
-                    Text("Madame Blablabla",
+                    Text("${data.teacher.firstName} ${data.teacher.lastName}",
                         textAlign: TextAlign.start,
                         style: Theme.of(context)
                             .typography

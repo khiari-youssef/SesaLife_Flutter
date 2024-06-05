@@ -28,7 +28,7 @@ class SessionsCalendarModeState extends State<SessionsCalendarMode> {
     controller = PageController();
     currentlySelectedDate = widget.sessionsList.isEmpty
         ? null
-        : widget.sessionsList[controller.initialPage].date;
+        : widget.sessionsList[controller.initialPage].startDateTime;
   }
 
   @override
@@ -53,7 +53,7 @@ class SessionsCalendarModeState extends State<SessionsCalendarMode> {
             scrollDirection: Axis.horizontal,
             onPageChanged: (page) {
               setState(() {
-                currentlySelectedDate = widget.sessionsList[page].date;
+                currentlySelectedDate = widget.sessionsList[page].startDateTime;
               });
             },
             itemCount: widget.sessionsList.length,

@@ -1,14 +1,15 @@
+import 'package:core/core_domain/utilities.dart';
 import 'package:sessions_feature/domain/entities/SesameSession.dart';
 
 class SesameCourseSession extends SesameSession {
   final DateTime firstHalfEndDateTime;
   final DateTime secondHalfStartDateTime;
-  final DateTime secondHalfEndDateTime;
   SesameCourseSession({
     required super.id,
     required super.subject,
     required super.teacher,
-    required super.date,
+    required super.startDateTime,
+    required super.endDateTime,
     required super.toleratedDelayInMinutes,
     required super.roomID,
     required super.sessionClass,
@@ -18,7 +19,14 @@ class SesameCourseSession extends SesameSession {
     required super.attachments,
     super.uploadRepository,
     required this.firstHalfEndDateTime,
-    required this.secondHalfEndDateTime,
     required this.secondHalfStartDateTime,
   });
+
+  String getDisplayFirstHalfEndDateTime() {
+    return firstHalfEndDateTime.toDisplayTime();
+  }
+
+  String getDisplaySecondHalfStartDateTime() {
+    return secondHalfStartDateTime.toDisplayTime();
+  }
 }

@@ -710,6 +710,16 @@ class S {
     );
   }
 
+  /// `Session`
+  String get sessions_any {
+    return Intl.message(
+      'Session',
+      name: 'sessions_any',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `All`
   String get sessions_all {
     return Intl.message(

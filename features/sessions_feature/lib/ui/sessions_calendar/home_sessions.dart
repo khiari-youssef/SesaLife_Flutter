@@ -7,7 +7,7 @@ import 'bloc/home_calendar_bloc.dart';
 import 'home_sessions_calendar_mode.dart';
 import 'home_sessions_list.dart';
 
-class HomeCalendarScreenState extends State<HomeCalendarScreen>
+class HomeSessionsScreenState extends State<HomeSessionsScreen>
     with SingleTickerProviderStateMixin {
   HomeCalendarTopBarViewMode viewModeState =
       HomeCalendarTopBarViewMode.calendar;
@@ -17,7 +17,7 @@ class HomeCalendarScreenState extends State<HomeCalendarScreen>
   @override
   void initState() {
     super.initState();
-    controller = TabController(length: 2, initialIndex: 0, vsync: this);
+    controller = TabController(length: 3, initialIndex: 0, vsync: this);
   }
 
   @override
@@ -54,21 +54,33 @@ class HomeCalendarScreenState extends State<HomeCalendarScreen>
                                 controller: controller,
                                 tabs: [
                                   SesameTabItem(
+                                      label: S.of(context).sessions_all),
+                                  SesameTabItem(
                                       label: S.of(context).sessions_course),
                                   SesameTabItem(
-                                      label: S.of(context).sessions_exam),
-                                  SesameTabItem(
-                                      label: S.of(context).sessions_all)
+                                      label: S.of(context).sessions_exam)
                                 ],
                                 onTabSelected: (index) {
                                   setState(() {
                                     selectedFilterIndex = index;
+                                    context.read<HomeSessionsBloc>().add(
+                                        HomeCalendarEvent
+                                            .loadAllSessionOfTheDate(
+                                                date: DateTime.now(),
+                                                filter: switch (index) {
+                                                  1 => SessionTypeFilter.course,
+                                                  2 => SessionTypeFilter.exam,
+                                                  _ => SessionTypeFilter.all
+                                                }));
                                   });
                                 },
                               ),
                             )),
                         state.when(loading: () {
-                          return const CircularProgressIndicator();
+                          return const Expanded(
+                              child: Center(
+                            child: CircularProgressIndicator(),
+                          ));
                         }, error: (type) {
                           return Center(child: Text(type.name));
                         }, success: (data) {
@@ -77,21 +89,27 @@ class HomeCalendarScreenState extends State<HomeCalendarScreen>
                             HomeCalendarTopBarViewMode.calendar =>
                               SessionsCalendarMode(
                                 sessionsList: data,
-                                onSessionClicked: (int index) {},
+                                onSessionClicked: (int index) {
+                                  AutoRouter.of(context)
+                                      .pushNamed("SessionDetailsRoute");
+                                },
                                 onDatePicked: (date) {
                                   context.read<HomeSessionsBloc>().add(
                                       HomeCalendarEvent.loadAllSessionOfTheDate(
                                           date: date,
                                           filter: switch (selectedFilterIndex) {
-                                            0 => SessionTypeFilter.course,
-                                            1 => SessionTypeFilter.exam,
+                                            1 => SessionTypeFilter.course,
+                                            2 => SessionTypeFilter.exam,
                                             _ => SessionTypeFilter.all
                                           }));
                                 },
                               ),
                             HomeCalendarTopBarViewMode.list => SessionsListMode(
                                 sessionsList: data,
-                                onSessionClicked: (int index) {},
+                                onSessionClicked: (int index) {
+                                  AutoRouter.of(context)
+                                      .pushNamed("SessionDetailsRoute");
+                                },
                               )
                           });
                         })
@@ -100,10 +118,10 @@ class HomeCalendarScreenState extends State<HomeCalendarScreen>
       );
 }
 
-@RoutePage(name: "HomeCalendarRoute")
-class HomeCalendarScreen extends StatefulWidget {
-  const HomeCalendarScreen({super.key});
+@RoutePage(name: "HomeSessionsRoute")
+class HomeSessionsScreen extends StatefulWidget {
+  const HomeSessionsScreen({super.key});
 
   @override
-  State<StatefulWidget> createState() => HomeCalendarScreenState();
+  State<StatefulWidget> createState() => HomeSessionsScreenState();
 }

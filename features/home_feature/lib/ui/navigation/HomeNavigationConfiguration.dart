@@ -21,7 +21,7 @@ class HomeNavigationConfiguration extends $HomeNavigationConfiguration {
   List<AutoRoute> get routes => [
         AutoRoute(path: '/HomeRootRoute', page: HomeRootRoute.page, children: [
           AutoRoute(path: "HomeNewsRoute", page: HomeNewsRoute.page),
-          AutoRoute(path: "HomeCalendarRoute", page: HomeCalendarRoute.page),
+          AutoRoute(path: "HomeSessionsRoute", page: HomeSessionsRoute.page),
           AutoRoute(
               path: "HomeNotificationsRoute",
               page: HomeNotificationsRoute.page),

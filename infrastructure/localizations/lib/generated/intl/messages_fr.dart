@@ -110,6 +110,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Inscriptions"),
         "required": MessageLookupByLibrary.simpleMessage("obligatoire"),
         "sessions_all": MessageLookupByLibrary.simpleMessage("Tous"),
+        "sessions_any": MessageLookupByLibrary.simpleMessage("Scéance"),
         "sessions_course": MessageLookupByLibrary.simpleMessage("Cours"),
         "sessions_exam": MessageLookupByLibrary.simpleMessage("Examens"),
         "settings": MessageLookupByLibrary.simpleMessage("Paramètres"),

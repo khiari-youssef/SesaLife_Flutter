@@ -20,7 +20,7 @@ class HomeRootScreenState extends State<HomeRootScreen> {
     return AutoTabsScaffold(
         routes: const [
           HomeNewsRoute(),
-          HomeCalendarRoute(),
+          HomeSessionsRoute(),
           HomeNotificationsRoute(),
           MyUserProfileRoute()
         ],

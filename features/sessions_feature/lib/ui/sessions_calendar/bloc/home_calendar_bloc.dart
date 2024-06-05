@@ -25,7 +25,7 @@ class HomeSessionsBloc extends Bloc<HomeCalendarEvent, HomeSessionsState> {
             lastName: "",
             email: "teacher@sesame.com.tn",
             profilePicture: ""),
-        date: DateTime(2024, 06, index + 1, 8, 30),
+        startDateTime: DateTime(2024, 06, index + 1, 8, 30),
         toleratedDelayInMinutes: 15,
         roomID: "206",
         sessionClass:
@@ -35,20 +35,20 @@ class HomeSessionsBloc extends Bloc<HomeCalendarEvent, HomeSessionsState> {
         sessionQrCode: "qrcode",
         attachments: [],
         firstHalfEndDateTime: DateTime(2024, 06, index + 1, 10, 0),
-        secondHalfEndDateTime: DateTime(2024, 06, index + 1, 10, 15),
+        endDateTime: DateTime(2024, 06, index + 1, 10, 15),
         secondHalfStartDateTime: DateTime(2024, 06, index + 1, 12, 15));
   });
   HomeSessionsBloc(super.initialState) {
-    on((HomeCalendarEvent event, emit) {
-      event.when(loadAllSessionOfTheMonth: (year, month, filter) async {
+    on((HomeCalendarEvent event, emit) async {
+      await event.when(loadAllSessionOfTheMonth: (year, month, filter) async {
         emit(const HomeSessionsState.loading());
-        Future.delayed(const Duration(seconds: 2));
+        await Future.delayed(const Duration(seconds: 2));
         emit(HomeSessionsState.success(sessions));
-      }, loadAllSessionOfTheDate: (date, filter) {
+      }, loadAllSessionOfTheDate: (date, filter) async {
         emit(const HomeSessionsState.loading());
-        Future.delayed(const Duration(seconds: 1));
+        await Future.delayed(const Duration(seconds: 1));
         emit(HomeSessionsState.success(sessions
-            .where((session) => session.date.areDatesOnlyEqual(date))
+            .where((session) => session.startDateTime.areDatesOnlyEqual(date))
             .toList()));
       });
     });
