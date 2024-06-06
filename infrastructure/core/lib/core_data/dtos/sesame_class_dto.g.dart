@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'SesameClassDTO.dart';
+part of 'sesame_class_dto.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator

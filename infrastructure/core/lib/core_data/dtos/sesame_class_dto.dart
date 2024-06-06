@@ -1,6 +1,6 @@
 import 'package:shared_dependencies/shared_dependencies.dart';
 
-part 'SesameClassDTO.g.dart';
+part 'sesame_class_dto.g.dart';
 
 @JsonSerializable()
 class SesameClassDTO extends HiveObject {

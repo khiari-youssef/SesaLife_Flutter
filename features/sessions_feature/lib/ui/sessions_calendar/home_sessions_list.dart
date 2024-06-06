@@ -2,7 +2,7 @@ import 'package:core/exports.dart';
 import 'package:designsystem/designsystem_exports.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 
-import '../../domain/entities/SesameSession.dart';
+import '../../domain/entities/sesame_session.dart';
 import 'components/calendar_card_item.dart';
 
 class SessionsListModeState extends State<SessionsListMode> {

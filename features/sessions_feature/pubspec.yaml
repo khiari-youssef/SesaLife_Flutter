@@ -17,6 +17,8 @@ dependencies:
     path: ../../infrastructure/designsystem
   shared_dependencies:
     path: ../../infrastructure/shared_dependencies
+  users_management_feature:
+    path: ../../features/users_management_feature
   core:
     path: ../../infrastructure/core
 

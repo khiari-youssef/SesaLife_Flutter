@@ -1,5 +1,5 @@
 import 'package:core/core_domain/utilities.dart';
-import 'package:sessions_feature/domain/entities/SesameSession.dart';
+import 'package:sessions_feature/domain/entities/sesame_session.dart';
 
 class SesameCourseSession extends SesameSession {
   final DateTime firstHalfEndDateTime;

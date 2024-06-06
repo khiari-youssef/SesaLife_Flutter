@@ -1,4 +1,4 @@
-import 'SesameSession.dart';
+import 'sesame_session.dart';
 
 class SesameExamSession extends SesameSession {
   final DateTime examEndDate;

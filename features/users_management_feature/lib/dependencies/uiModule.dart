@@ -6,7 +6,6 @@ import '../ui/login/LoginStateBloc.dart';
 import '../ui/myprofile/stateManagement/MyProfileBlocStateManager.dart';
 import '../ui/myprofile/stateManagement/MyProfileDataState.dart';
 import '../ui/myprofile/stateManagement/MyProfileScreenGlobalState.dart';
-import '../ui/program&privacy/SesamePrivacyAndSecurityPolicyCubitStateManager.dart';
 
 extension UIModule on GetIt {
   void loadUiModule() {

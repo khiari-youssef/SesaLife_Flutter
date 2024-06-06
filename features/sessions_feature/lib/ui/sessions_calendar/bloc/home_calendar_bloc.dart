@@ -1,11 +1,10 @@
-import 'package:core/core_domain/entities/entities.dart';
 import 'package:core/exports.dart';
-import 'package:sessions_feature/domain/entities/SesameCourseSession.dart';
+import 'package:sessions_feature/domain/entities/sesame_course_session.dart';
 import 'package:sessions_feature/ui/sessions_calendar/bloc/home_calendar_event.dart';
 import 'package:sessions_feature/ui/sessions_calendar/bloc/home_calendar_state.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 
-import '../../../domain/entities/SesameSession.dart';
+import '../../../domain/entities/sesame_session.dart';
 
 class HomeSessionsBloc extends Bloc<HomeCalendarEvent, HomeSessionsState> {
   final List<SesameSession> sessions = List.generate(10, (index) {

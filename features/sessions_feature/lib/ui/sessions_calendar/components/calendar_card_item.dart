@@ -1,8 +1,8 @@
 import 'package:designsystem/designsystem_exports.dart';
 import 'package:designsystem/extensions.dart';
-import 'package:sessions_feature/domain/entities/SesameCourseSession.dart';
-import 'package:sessions_feature/domain/entities/SesameExamSession.dart';
-import 'package:sessions_feature/domain/entities/SesameSession.dart';
+import 'package:sessions_feature/domain/entities/sesame_course_session.dart';
+import 'package:sessions_feature/domain/entities/sesame_exam_session.dart';
+import 'package:sessions_feature/domain/entities/sesame_session.dart';
 
 class CalendarSessionCard extends StatelessWidget {
   final SesameSession data;

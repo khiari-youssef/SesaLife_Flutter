@@ -1,5 +1,5 @@
 import 'package:core/core_domain/DomainErrorType.dart';
-import 'package:sessions_feature/domain/entities/SesameSession.dart';
+import 'package:sessions_feature/domain/entities/sesame_session.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 
 part 'home_calendar_state.freezed.dart';

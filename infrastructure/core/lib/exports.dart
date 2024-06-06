@@ -3,7 +3,8 @@ library core;
 export 'package:designsystem/designsystem_exports.dart';
 
 export 'coreUI/SesameBadgeWidget.dart';
-export 'core_data/DataAccessConfig.dart';
+export 'core_data/data_access_config.dart';
+export 'core_data/dtos/dtos.dart';
 export 'core_domain/AbstractDomainToExternalEntityMapper.dart';
 export 'core_domain/ApplicationMetaInfoFacade.dart';
 export 'core_domain/DomainErrorType.dart';

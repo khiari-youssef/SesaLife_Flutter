@@ -1,7 +1,6 @@
 import 'package:core/exports.dart';
-import 'package:flutter/cupertino.dart';
 
-import '../../domain/entities/SesameSession.dart';
+import '../../domain/entities/sesame_session.dart';
 import 'components/calendar_card_item.dart';
 
 class SessionsCalendarMode extends StatefulWidget {
