@@ -70,5 +70,9 @@
     "sessions_all" : "All",
     "settings_stay_logged" : "Stay logged in",
     "settings_hide_my_data" : "Hide my work informations",
-    "settings_notify_me" : "Notify me about incoming events"
+    "settings_notify_me" : "Notify me about incoming events",
+    "profile_subscription" : "My subscription",
+    "profile_projects" : "My projects",
+    "profile_grades" : "My grades",
+    "profile_classes" : "My class"
 }

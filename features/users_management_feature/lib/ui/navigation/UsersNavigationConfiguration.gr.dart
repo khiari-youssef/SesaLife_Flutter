@@ -8,9 +8,9 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:auto_route/auto_route.dart' as _i10;
-import 'package:core/core_domain/entities/SesameBadge.dart' as _i12;
-import 'package:shared_dependencies/shared_dependencies.dart' as _i11;
+import 'package:auto_route/auto_route.dart' as _i11;
+import 'package:core/core_domain/entities/SesameBadge.dart' as _i13;
+import 'package:shared_dependencies/shared_dependencies.dart' as _i12;
 import 'package:users_management_feature/ui/enrollment/EnrollmentScreen.dart'
     as _i2;
 import 'package:users_management_feature/ui/guest_space/GuestSpace.dart' as _i3;
@@ -22,44 +22,46 @@ import 'package:users_management_feature/ui/myprofile/MyBadgeScreen.dart'
 import 'package:users_management_feature/ui/myprofile/MySettingsScreen.dart'
     as _i6;
 import 'package:users_management_feature/ui/myprofile/MyUserProfileScreen.dart'
-    as _i7;
-import 'package:users_management_feature/ui/program&privacy/SesamePrivacyAndSecurityPolicy.dart'
     as _i8;
-import 'package:users_management_feature/ui/program&privacy/SesameProgramsCatalog.dart'
+import 'package:users_management_feature/ui/program&privacy/SesamePrivacyAndSecurityPolicy.dart'
     as _i9;
+import 'package:users_management_feature/ui/program&privacy/SesameProgramsCatalog.dart'
+    as _i10;
+import 'package:users_management_feature/ui/subscription/my_subscription_screen.dart'
+    as _i7;
 
-abstract class $UsersNavigationConfiguration extends _i10.RootStackRouter {
+abstract class $UsersNavigationConfiguration extends _i11.RootStackRouter {
   $UsersNavigationConfiguration({super.navigatorKey});
 
   @override
-  final Map<String, _i10.PageFactory> pagesMap = {
+  final Map<String, _i11.PageFactory> pagesMap = {
     BadgeUsageGuidelineRoute.name: (routeData) {
-      return _i10.AutoRoutePage<dynamic>(
+      return _i11.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i1.BadgeUsageGuidelineScreen(),
       );
     },
     EnrollmentRoute.name: (routeData) {
-      return _i10.AutoRoutePage<dynamic>(
+      return _i11.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i2.EnrollmentScreen(),
       );
     },
     GuestSpaceRoute.name: (routeData) {
-      return _i10.AutoRoutePage<dynamic>(
+      return _i11.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i3.GuestSpace(),
       );
     },
     LoginRoute.name: (routeData) {
-      return _i10.AutoRoutePage<dynamic>(
+      return _i11.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i4.LoginScreen(),
       );
     },
     MyBadgeRoute.name: (routeData) {
       final args = routeData.argsAs<MyBadgeRouteArgs>();
-      return _i10.AutoRoutePage<dynamic>(
+      return _i11.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: _i5.MyBadgeScreen(
           key: args.key,
@@ -68,27 +70,33 @@ abstract class $UsersNavigationConfiguration extends _i10.RootStackRouter {
       );
     },
     MySettingsRoute.name: (routeData) {
-      return _i10.AutoRoutePage<dynamic>(
+      return _i11.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i6.MySettingsScreen(),
       );
     },
-    MyUserProfileRoute.name: (routeData) {
-      return _i10.AutoRoutePage<dynamic>(
+    MySubscriptionRoute.name: (routeData) {
+      return _i11.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i7.MyUserProfileScreen(),
+        child: const _i7.MySubscriptionScreen(),
+      );
+    },
+    MyUserProfileRoute.name: (routeData) {
+      return _i11.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i8.MyUserProfileScreen(),
       );
     },
     SesamePrivacyAndSecurityPolicyRoute.name: (routeData) {
-      return _i10.AutoRoutePage<dynamic>(
+      return _i11.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i8.SesamePrivacyAndSecurityPolicy(),
+        child: const _i9.SesamePrivacyAndSecurityPolicy(),
       );
     },
     SesameProgramsCatalog.name: (routeData) {
-      return _i10.AutoRoutePage<dynamic>(
+      return _i11.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i9.SesameProgramsCatalog(),
+        child: const _i10.SesameProgramsCatalog(),
       );
     },
   };
@@ -96,8 +104,8 @@ abstract class $UsersNavigationConfiguration extends _i10.RootStackRouter {
 
 /// generated route for
 /// [_i1.BadgeUsageGuidelineScreen]
-class BadgeUsageGuidelineRoute extends _i10.PageRouteInfo<void> {
-  const BadgeUsageGuidelineRoute({List<_i10.PageRouteInfo>? children})
+class BadgeUsageGuidelineRoute extends _i11.PageRouteInfo<void> {
+  const BadgeUsageGuidelineRoute({List<_i11.PageRouteInfo>? children})
       : super(
           BadgeUsageGuidelineRoute.name,
           initialChildren: children,
@@ -105,13 +113,13 @@ class BadgeUsageGuidelineRoute extends _i10.PageRouteInfo<void> {
 
   static const String name = 'BadgeUsageGuidelineRoute';
 
-  static const _i10.PageInfo<void> page = _i10.PageInfo<void>(name);
+  static const _i11.PageInfo<void> page = _i11.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i2.EnrollmentScreen]
-class EnrollmentRoute extends _i10.PageRouteInfo<void> {
-  const EnrollmentRoute({List<_i10.PageRouteInfo>? children})
+class EnrollmentRoute extends _i11.PageRouteInfo<void> {
+  const EnrollmentRoute({List<_i11.PageRouteInfo>? children})
       : super(
           EnrollmentRoute.name,
           initialChildren: children,
@@ -119,13 +127,13 @@ class EnrollmentRoute extends _i10.PageRouteInfo<void> {
 
   static const String name = 'EnrollmentRoute';
 
-  static const _i10.PageInfo<void> page = _i10.PageInfo<void>(name);
+  static const _i11.PageInfo<void> page = _i11.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i3.GuestSpace]
-class GuestSpaceRoute extends _i10.PageRouteInfo<void> {
-  const GuestSpaceRoute({List<_i10.PageRouteInfo>? children})
+class GuestSpaceRoute extends _i11.PageRouteInfo<void> {
+  const GuestSpaceRoute({List<_i11.PageRouteInfo>? children})
       : super(
           GuestSpaceRoute.name,
           initialChildren: children,
@@ -133,13 +141,13 @@ class GuestSpaceRoute extends _i10.PageRouteInfo<void> {
 
   static const String name = 'GuestSpaceRoute';
 
-  static const _i10.PageInfo<void> page = _i10.PageInfo<void>(name);
+  static const _i11.PageInfo<void> page = _i11.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i4.LoginScreen]
-class LoginRoute extends _i10.PageRouteInfo<void> {
-  const LoginRoute({List<_i10.PageRouteInfo>? children})
+class LoginRoute extends _i11.PageRouteInfo<void> {
+  const LoginRoute({List<_i11.PageRouteInfo>? children})
       : super(
           LoginRoute.name,
           initialChildren: children,
@@ -147,16 +155,16 @@ class LoginRoute extends _i10.PageRouteInfo<void> {
 
   static const String name = 'LoginRoute';
 
-  static const _i10.PageInfo<void> page = _i10.PageInfo<void>(name);
+  static const _i11.PageInfo<void> page = _i11.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i5.MyBadgeScreen]
-class MyBadgeRoute extends _i10.PageRouteInfo<MyBadgeRouteArgs> {
+class MyBadgeRoute extends _i11.PageRouteInfo<MyBadgeRouteArgs> {
   MyBadgeRoute({
-    _i11.Key? key,
-    required _i12.SesameBadge userBadge,
-    List<_i10.PageRouteInfo>? children,
+    _i12.Key? key,
+    required _i13.SesameBadge userBadge,
+    List<_i11.PageRouteInfo>? children,
   }) : super(
           MyBadgeRoute.name,
           args: MyBadgeRouteArgs(
@@ -168,8 +176,8 @@ class MyBadgeRoute extends _i10.PageRouteInfo<MyBadgeRouteArgs> {
 
   static const String name = 'MyBadgeRoute';
 
-  static const _i10.PageInfo<MyBadgeRouteArgs> page =
-      _i10.PageInfo<MyBadgeRouteArgs>(name);
+  static const _i11.PageInfo<MyBadgeRouteArgs> page =
+      _i11.PageInfo<MyBadgeRouteArgs>(name);
 }
 
 class MyBadgeRouteArgs {
@@ -178,9 +186,9 @@ class MyBadgeRouteArgs {
     required this.userBadge,
   });
 
-  final _i11.Key? key;
+  final _i12.Key? key;
 
-  final _i12.SesameBadge userBadge;
+  final _i13.SesameBadge userBadge;
 
   @override
   String toString() {
@@ -190,8 +198,8 @@ class MyBadgeRouteArgs {
 
 /// generated route for
 /// [_i6.MySettingsScreen]
-class MySettingsRoute extends _i10.PageRouteInfo<void> {
-  const MySettingsRoute({List<_i10.PageRouteInfo>? children})
+class MySettingsRoute extends _i11.PageRouteInfo<void> {
+  const MySettingsRoute({List<_i11.PageRouteInfo>? children})
       : super(
           MySettingsRoute.name,
           initialChildren: children,
@@ -199,13 +207,27 @@ class MySettingsRoute extends _i10.PageRouteInfo<void> {
 
   static const String name = 'MySettingsRoute';
 
-  static const _i10.PageInfo<void> page = _i10.PageInfo<void>(name);
+  static const _i11.PageInfo<void> page = _i11.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i7.MyUserProfileScreen]
-class MyUserProfileRoute extends _i10.PageRouteInfo<void> {
-  const MyUserProfileRoute({List<_i10.PageRouteInfo>? children})
+/// [_i7.MySubscriptionScreen]
+class MySubscriptionRoute extends _i11.PageRouteInfo<void> {
+  const MySubscriptionRoute({List<_i11.PageRouteInfo>? children})
+      : super(
+          MySubscriptionRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'MySubscriptionRoute';
+
+  static const _i11.PageInfo<void> page = _i11.PageInfo<void>(name);
+}
+
+/// generated route for
+/// [_i8.MyUserProfileScreen]
+class MyUserProfileRoute extends _i11.PageRouteInfo<void> {
+  const MyUserProfileRoute({List<_i11.PageRouteInfo>? children})
       : super(
           MyUserProfileRoute.name,
           initialChildren: children,
@@ -213,14 +235,14 @@ class MyUserProfileRoute extends _i10.PageRouteInfo<void> {
 
   static const String name = 'MyUserProfileRoute';
 
-  static const _i10.PageInfo<void> page = _i10.PageInfo<void>(name);
+  static const _i11.PageInfo<void> page = _i11.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i8.SesamePrivacyAndSecurityPolicy]
-class SesamePrivacyAndSecurityPolicyRoute extends _i10.PageRouteInfo<void> {
+/// [_i9.SesamePrivacyAndSecurityPolicy]
+class SesamePrivacyAndSecurityPolicyRoute extends _i11.PageRouteInfo<void> {
   const SesamePrivacyAndSecurityPolicyRoute(
-      {List<_i10.PageRouteInfo>? children})
+      {List<_i11.PageRouteInfo>? children})
       : super(
           SesamePrivacyAndSecurityPolicyRoute.name,
           initialChildren: children,
@@ -228,13 +250,13 @@ class SesamePrivacyAndSecurityPolicyRoute extends _i10.PageRouteInfo<void> {
 
   static const String name = 'SesamePrivacyAndSecurityPolicyRoute';
 
-  static const _i10.PageInfo<void> page = _i10.PageInfo<void>(name);
+  static const _i11.PageInfo<void> page = _i11.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i9.SesameProgramsCatalog]
-class SesameProgramsCatalog extends _i10.PageRouteInfo<void> {
-  const SesameProgramsCatalog({List<_i10.PageRouteInfo>? children})
+/// [_i10.SesameProgramsCatalog]
+class SesameProgramsCatalog extends _i11.PageRouteInfo<void> {
+  const SesameProgramsCatalog({List<_i11.PageRouteInfo>? children})
       : super(
           SesameProgramsCatalog.name,
           initialChildren: children,
@@ -242,5 +264,5 @@ class SesameProgramsCatalog extends _i10.PageRouteInfo<void> {
 
   static const String name = 'SesameProgramsCatalog';
 
-  static const _i10.PageInfo<void> page = _i10.PageInfo<void>(name);
+  static const _i11.PageInfo<void> page = _i11.PageInfo<void>(name);
 }

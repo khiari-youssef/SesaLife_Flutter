@@ -759,6 +759,46 @@ class S {
       args: [],
     );
   }
+
+  /// `My subscription`
+  String get profile_subscription {
+    return Intl.message(
+      'My subscription',
+      name: 'profile_subscription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `My projects`
+  String get profile_projects {
+    return Intl.message(
+      'My projects',
+      name: 'profile_projects',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `My grades`
+  String get profile_grades {
+    return Intl.message(
+      'My grades',
+      name: 'profile_grades',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `My class`
+  String get profile_classes {
+    return Intl.message(
+      'My class',
+      name: 'profile_classes',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

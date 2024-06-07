@@ -96,9 +96,14 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Rules & Security policy"),
         "profile_badge":
             MessageLookupByLibrary.simpleMessage("My Sesame badge"),
+        "profile_classes": MessageLookupByLibrary.simpleMessage("My class"),
+        "profile_grades": MessageLookupByLibrary.simpleMessage("My grades"),
         "profile_professional_student":
             MessageLookupByLibrary.simpleMessage("Student"),
+        "profile_projects": MessageLookupByLibrary.simpleMessage("My projects"),
         "profile_student": MessageLookupByLibrary.simpleMessage("Student"),
+        "profile_subscription":
+            MessageLookupByLibrary.simpleMessage("My subscription"),
         "profile_teacher": MessageLookupByLibrary.simpleMessage("Teacher"),
         "profile_user": MessageLookupByLibrary.simpleMessage("User"),
         "program_selection":

@@ -78,6 +78,7 @@ class MyUserProfileState extends State<MyUserProfileScreen> {
                               ),
                             ),
                             MyProfileMenu(
+                              user: userData,
                               onItemClicked: (path) {
                                 if (path != null) {
                                   AutoRouter.of(context).pushNamed(path);

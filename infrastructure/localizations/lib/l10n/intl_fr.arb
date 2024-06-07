@@ -69,5 +69,9 @@
   "sessions_all" : "Tous",
   "settings_stay_logged" : "Je veux rester connecté",
   "settings_hide_my_data" : "Cacher mes données professionnelles",
-  "settings_notify_me" : "Je veux recevoir les notifications importantes"
+  "settings_notify_me" : "Je veux recevoir les notifications importantes",
+  "profile_subscription" : "Mon abonnement",
+  "profile_projects" : "Mes projets",
+  "profile_grades" : "Mes notes",
+  "profile_classes" : "Mes classes"
 }
