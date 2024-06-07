@@ -3,9 +3,9 @@ import 'package:shared_dependencies/shared_dependencies.dart';
 
 import '../ui/login/LoginState.dart';
 import '../ui/login/LoginStateBloc.dart';
-import '../ui/myprofile/stateManagement/MyProfileBlocStateManager.dart';
-import '../ui/myprofile/stateManagement/MyProfileDataState.dart';
-import '../ui/myprofile/stateManagement/MyProfileScreenGlobalState.dart';
+import '../ui/myprofile/stateManagement/profile/MyProfileBlocStateManager.dart';
+import '../ui/myprofile/stateManagement/profile/MyProfileDataState.dart';
+import '../ui/myprofile/stateManagement/profile/MyProfileScreenGlobalState.dart';
 
 extension UIModule on GetIt {
   void loadUiModule() {

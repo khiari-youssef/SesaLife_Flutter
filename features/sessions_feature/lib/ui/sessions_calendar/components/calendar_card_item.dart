@@ -13,6 +13,10 @@ class CalendarSessionCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) => buildWithLoadingState(
       Card(
+        color: switch (data) {
+          SesameExamSession() => const Color(0xFFFFE9BD),
+          _ => const Color(0xFFD3E4FD)
+        },
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.r)),
         child: Padding(
           padding: EdgeInsets.all(12.r),
@@ -24,7 +28,7 @@ class CalendarSessionCard extends StatelessWidget {
               Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Expanded(
                         flex: 1,
@@ -68,7 +72,7 @@ class CalendarSessionCard extends StatelessWidget {
               Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     SesameAvatar(width: 24.w, height: 24.h, url: ''),
                     SizedBox(width: 12.w),

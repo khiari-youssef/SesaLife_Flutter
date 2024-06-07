@@ -10,6 +10,12 @@ class SesameCheckboxState extends State<SesameCheckbox> {
   }
 
   @override
+  void didUpdateWidget(covariant SesameCheckbox oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    isChecked = widget.initialState;
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Row(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -17,7 +23,6 @@ class SesameCheckboxState extends State<SesameCheckbox> {
         mainAxisSize: MainAxisSize.min,
         children: [
           Checkbox(
-              checkColor: Theme.of(context).colorScheme.primary,
               value: isChecked,
               onChanged: (isCheckedUpdated) {
                 setState(() {
@@ -26,17 +31,26 @@ class SesameCheckboxState extends State<SesameCheckbox> {
                 widget.onChecked(isChecked);
               }),
           SizedBox(width: 8.w),
-          LabelMedium(text: widget.label)
+          Text(widget.label,
+              style: TextStyle(
+                  color: Theme.of(context).colorScheme.onSurface,
+                  fontWeight: FontWeight.w500,
+                  fontSize: 14.sp,
+                  fontFamily: 'Roboto'),
+              textAlign: TextAlign.start)
         ]);
   }
 }
 
 class SesameCheckbox extends StatefulWidget {
-  final bool initialState = false;
+  final bool initialState;
   final String label;
   final Function(bool isChecked) onChecked;
   const SesameCheckbox(
-      {super.key, required this.onChecked, required this.label});
+      {super.key,
+      required this.onChecked,
+      required this.label,
+      this.initialState = false});
 
   @override
   State<StatefulWidget> createState() => SesameCheckboxState();

@@ -14,6 +14,7 @@ class UsersNavigationConfiguration extends $UsersNavigationConfiguration {
         AutoRoute(
             path: "/SesamePrivacyAndSecurityPolicyRoute",
             page: SesamePrivacyAndSecurityPolicyRoute.page),
+        AutoRoute(path: "/MySettingsRoute", page: MySettingsRoute.page),
         AutoRoute(
             path: "/SesameProgramsCatalog", page: SesameProgramsCatalog.page),
         AutoRoute(path: "/MyBadgeRoute", page: MyBadgeRoute.page),

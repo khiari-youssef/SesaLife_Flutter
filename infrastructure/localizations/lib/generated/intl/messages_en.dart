@@ -117,6 +117,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "sessions_course": MessageLookupByLibrary.simpleMessage("Course"),
         "sessions_exam": MessageLookupByLibrary.simpleMessage("Exam"),
         "settings": MessageLookupByLibrary.simpleMessage("Settings"),
+        "settings_hide_my_data":
+            MessageLookupByLibrary.simpleMessage("Hide my work informations"),
+        "settings_notify_me": MessageLookupByLibrary.simpleMessage(
+            "Notify me about incoming events"),
+        "settings_stay_logged":
+            MessageLookupByLibrary.simpleMessage("Stay logged in"),
         "sex_female": MessageLookupByLibrary.simpleMessage("Female"),
         "sex_male": MessageLookupByLibrary.simpleMessage("Male"),
         "welcome_logo_description":

@@ -729,6 +729,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Stay logged in`
+  String get settings_stay_logged {
+    return Intl.message(
+      'Stay logged in',
+      name: 'settings_stay_logged',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Hide my work informations`
+  String get settings_hide_my_data {
+    return Intl.message(
+      'Hide my work informations',
+      name: 'settings_hide_my_data',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Notify me about incoming events`
+  String get settings_notify_me {
+    return Intl.message(
+      'Notify me about incoming events',
+      name: 'settings_notify_me',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -67,5 +67,8 @@
     "sessions_course" : "Course",
     "sessions_exam" : "Exam",
      "sessions_any" : "Session",
-    "sessions_all" : "All"
+    "sessions_all" : "All",
+    "settings_stay_logged" : "Stay logged in",
+    "settings_hide_my_data" : "Hide my work informations",
+    "settings_notify_me" : "Notify me about incoming events"
 }

@@ -3,9 +3,9 @@ import 'package:shared_dependencies/shared_dependencies.dart';
 import 'package:users_management_feature/domain/entities/SesameUser.dart';
 import 'package:users_management_feature/ui/myprofile/MyProfileMenu.dart';
 import 'package:users_management_feature/ui/myprofile/MyProfilePreview.dart';
-import 'package:users_management_feature/ui/myprofile/stateManagement/MyProfileBlocStateManager.dart';
-import 'package:users_management_feature/ui/myprofile/stateManagement/MyProfileScreenEvent.dart';
-import 'package:users_management_feature/ui/myprofile/stateManagement/MyProfileScreenGlobalState.dart';
+import 'package:users_management_feature/ui/myprofile/stateManagement/profile/MyProfileBlocStateManager.dart';
+import 'package:users_management_feature/ui/myprofile/stateManagement/profile/MyProfileScreenEvent.dart';
+import 'package:users_management_feature/ui/myprofile/stateManagement/profile/MyProfileScreenGlobalState.dart';
 import 'package:users_management_feature/ui/navigation/UsersNavigationConfiguration.gr.dart';
 
 class MyUserProfileState extends State<MyUserProfileScreen> {

@@ -14,20 +14,17 @@ class MyProfileMenu extends StatelessWidget {
           SesameMenuItem(
               data: ProfileMenuItem(
                   S.of(context).privacy_policy_label, "ic_rules_policy.svg",
-                destinationPath: "/SesamePrivacyAndSecurityPolicyRoute"
-              )),
+                  destinationPath: "/SesamePrivacyAndSecurityPolicyRoute")),
           SesameMenuItem(
-              data: ProfileMenuItem(
-                  S.of(context).settings,
-                  "ic_settings.svg",
-                 destinationPath: "/MySettings"
-              )
-          )
-        ].map((item)=>GestureDetector(
-            child: item,
-            onTap: (){
-              onItemClicked(item.data.destinationPath);
-            },
-        )).toList());
+              data: ProfileMenuItem(S.of(context).settings, "ic_settings.svg",
+                  destinationPath: "/MySettingsRoute"))
+        ]
+            .map((item) => GestureDetector(
+                  child: item,
+                  onTap: () {
+                    onItemClicked(item.data.destinationPath);
+                  },
+                ))
+            .toList());
   }
 }

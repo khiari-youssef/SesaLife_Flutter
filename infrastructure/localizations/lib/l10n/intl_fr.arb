@@ -66,5 +66,8 @@
   "sessions_course" : "Cours",
   "sessions_exam" : "Examens",
   "sessions_any" : "Scéance",
-  "sessions_all" : "Tous"
+  "sessions_all" : "Tous",
+  "settings_stay_logged" : "Je veux rester connecté",
+  "settings_hide_my_data" : "Cacher mes données professionnelles",
+  "settings_notify_me" : "Je veux recevoir les notifications importantes"
 }

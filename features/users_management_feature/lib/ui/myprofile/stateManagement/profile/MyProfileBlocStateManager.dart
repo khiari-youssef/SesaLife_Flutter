@@ -1,10 +1,10 @@
 import 'package:core/core_domain/DomainErrorType.dart';
 import 'package:core/core_domain/DomainUseCaseProtocol.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
-import 'package:users_management_feature/ui/myprofile/stateManagement/MyProfileDataState.dart';
-import 'package:users_management_feature/ui/myprofile/stateManagement/MyProfileScreenEvent.dart';
+import 'MyProfileDataState.dart';
+import 'package:users_management_feature/ui/myprofile/stateManagement/profile/MyProfileScreenEvent.dart';
 
-import '../../../domain/entities/SesameUser.dart';
+import '../../../../domain/entities/SesameUser.dart';
 import 'MyProfileScreenGlobalState.dart';
 
 class MyProfileBlocStateManager
