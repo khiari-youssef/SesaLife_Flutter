@@ -17,10 +17,11 @@ class SesameUserDTO extends HiveObject {
   final String profilePictureUrl;
   final SesameRoleDTO role;
   final SesameBadgeDTO badge;
-
+  final String registrationDate;
   SesameUserDTO(
       {required this.registrationID,
       required this.candidatureID,
+      required this.registrationDate,
       required this.firstName,
       required this.lastName,
       required this.email,

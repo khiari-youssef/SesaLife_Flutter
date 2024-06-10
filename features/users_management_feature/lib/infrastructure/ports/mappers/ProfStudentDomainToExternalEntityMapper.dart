@@ -23,6 +23,7 @@ class ProfStudentDomainToExternalEntityMapper
         candidatureID: externalData.candidatureID,
         firstName: externalData.firstName,
         lastName: externalData.lastName,
+        registrationDate: DateTime(2021, 1, 1),
         email: externalData.email,
         sex: externalData.sex.toLowerCase() == "h"
             ? UserSex.male
@@ -66,6 +67,7 @@ class ProfStudentDomainToExternalEntityMapper
         candidatureID: domainData.candidatureID,
         firstName: domainData.firstName,
         lastName: domainData.lastName,
+        registrationDate: domainData.registrationDate.toIso8601String(),
         email: domainData.email,
         sex: switch (domainData.sex) {
           UserSex.male => "h",

@@ -25,4 +25,12 @@ class UsersRemoteDataSource {
       return SesameUserDTO.fromJson(payload);
     });
   }
+
+  Future<SesameUserDTO> loginWithToken(String token) async {
+    return await Isolate.run(() async {
+      Response<dynamic> response = await dio.get("");
+      Map<String, dynamic> payload = jsonDecode(response.data.toString());
+      return SesameUserDTO.fromJson(payload);
+    });
+  }
 }

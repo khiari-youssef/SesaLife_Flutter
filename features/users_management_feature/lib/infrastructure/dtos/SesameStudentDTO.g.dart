@@ -14,6 +14,7 @@ SesameStudentDTO _$SesameStudentDTOFromJson(Map<String, dynamic> json) =>
       lastName: json['lastName'] as String,
       email: json['email'] as String,
       sex: json['sex'] as String,
+      registrationDate: json['registrationDate'] as String,
       birthdate: json['birthdate'] as String,
       profilePictureUrl: json['profilePictureUrl'] as String,
       role: SesameRoleDTO.fromJson(json['role'] as Map<String, dynamic>),
@@ -35,6 +36,7 @@ Map<String, dynamic> _$SesameStudentDTOToJson(SesameStudentDTO instance) =>
       'profilePictureUrl': instance.profilePictureUrl,
       'role': instance.role,
       'badge': instance.badge,
+      'registrationDate': instance.registrationDate,
       'sesameClass': instance.sesameClass,
       'portfolioId': instance.portfolioId,
     };
@@ -58,6 +60,7 @@ SesameProfessionalStudentDTO _$SesameProfessionalStudentDTOFromJson(
       jobPosition: json['jobPosition'] as String,
       company: json['company'] as String,
       contractType: json['contractType'] as String,
+      registrationDate: json['registrationDate'] as String,
     );
 
 Map<String, dynamic> _$SesameProfessionalStudentDTOToJson(
@@ -73,6 +76,7 @@ Map<String, dynamic> _$SesameProfessionalStudentDTOToJson(
       'profilePictureUrl': instance.profilePictureUrl,
       'role': instance.role,
       'badge': instance.badge,
+      'registrationDate': instance.registrationDate,
       'sesameClass': instance.sesameClass,
       'portfolioId': instance.portfolioId,
       'jobPosition': instance.jobPosition,

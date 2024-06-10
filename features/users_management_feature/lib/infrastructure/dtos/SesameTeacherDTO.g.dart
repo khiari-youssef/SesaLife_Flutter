@@ -22,6 +22,7 @@ SesameTeacherDTO _$SesameTeacherDTOFromJson(Map<String, dynamic> json) =>
       assignedClasses: (json['assignedClasses'] as List<dynamic>)
           .map((e) => SesameClassDTO.fromJson(e as Map<String, dynamic>))
           .toList(),
+      registrationDate: json['registrationDate'] as String,
     );
 
 Map<String, dynamic> _$SesameTeacherDTOToJson(SesameTeacherDTO instance) =>
@@ -36,6 +37,7 @@ Map<String, dynamic> _$SesameTeacherDTOToJson(SesameTeacherDTO instance) =>
       'profilePictureUrl': instance.profilePictureUrl,
       'role': instance.role,
       'badge': instance.badge,
+      'registrationDate': instance.registrationDate,
       'profBackground': instance.profBackground,
       'assignedClasses': instance.assignedClasses,
     };

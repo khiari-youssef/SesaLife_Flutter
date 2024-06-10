@@ -12,6 +12,7 @@ class SesameStudent extends SesameUser {
       required super.lastName,
       required super.email,
       required super.sex,
+      required super.registrationDate,
       required super.birthdate,
       required super.profilePictureUrl,
       required this.sesameClass,
@@ -39,5 +40,6 @@ class SesameProfessionalStudent extends SesameStudent {
       required this.company,
       required this.contractType,
       required super.role,
-      required super.badge});
+      required super.badge,
+      required super.registrationDate});
 }

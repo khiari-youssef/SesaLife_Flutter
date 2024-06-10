@@ -10,6 +10,7 @@ abstract class SesameUser {
   final String lastName;
   final String email;
   final UserSex sex;
+  final DateTime registrationDate;
   final DateTime birthdate;
   final String profilePictureUrl;
   final SesameRole role;
@@ -22,6 +23,7 @@ abstract class SesameUser {
       required this.lastName,
       required this.email,
       required this.sex,
+      required this.registrationDate,
       required this.birthdate,
       required this.profilePictureUrl,
       required this.role,

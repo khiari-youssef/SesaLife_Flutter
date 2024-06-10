@@ -10,6 +10,7 @@ SesameUserDTO _$SesameUserDTOFromJson(Map<String, dynamic> json) =>
     SesameUserDTO(
       registrationID: json['registrationID'] as String,
       candidatureID: json['candidatureID'] as String,
+      registrationDate: json['registrationDate'] as String,
       firstName: json['firstName'] as String,
       lastName: json['lastName'] as String,
       email: json['email'] as String,
@@ -32,4 +33,5 @@ Map<String, dynamic> _$SesameUserDTOToJson(SesameUserDTO instance) =>
       'profilePictureUrl': instance.profilePictureUrl,
       'role': instance.role,
       'badge': instance.badge,
+      'registrationDate': instance.registrationDate,
     };

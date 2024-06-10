@@ -16,5 +16,6 @@ class SesameTeacher extends SesameUser {
       required this.profBackground,
       required this.assignedClasses,
       required super.role,
-      required super.badge});
+      required super.badge,
+      required super.registrationDate});
 }

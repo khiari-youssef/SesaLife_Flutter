@@ -17,6 +17,7 @@ class UserDataRepository implements UserdataRepositoryContract {
         candidatureID: "randomcaid",
         firstName: "Youssef",
         lastName: "Khiari",
+        registrationDate: DateTime(2021, 1, 1),
         email: "khiari.youssef98@gmail.com",
         sex: UserSex.male,
         birthdate: DateTime.now(),

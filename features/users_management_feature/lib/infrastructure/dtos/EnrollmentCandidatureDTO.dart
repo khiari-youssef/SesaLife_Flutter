@@ -10,7 +10,7 @@ class EnrollmentCandidatureDTO {
   final String birthDate;
   final String firstName;
   final String lastName;
-  final String program_id;
+  final String programId;
   final String status;
   EnrollmentCandidatureDTO(
       this.personalEmail,
@@ -19,7 +19,7 @@ class EnrollmentCandidatureDTO {
       this.birthDate,
       this.firstName,
       this.lastName,
-      this.program_id,
+      this.programId,
       this.status);
 
   factory EnrollmentCandidatureDTO.fromJson(Map<String, dynamic> json) =>

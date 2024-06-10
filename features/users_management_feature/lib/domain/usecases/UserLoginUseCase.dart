@@ -14,7 +14,7 @@ class UserLoginUseCase
       return repositoryContract.authenticateUserWithCredentials(
           email, password);
     }, tokenLogin: (token) {
-      return repositoryContract.authenticateUserWithToken(token);
+      return repositoryContract.authenticateUserWithExistingUserToken();
     });
   }
 }

@@ -24,7 +24,8 @@ class SesameTeacherDTO extends SesameUserDTO {
       required super.role,
       required super.badge,
       required this.profBackground,
-      required this.assignedClasses});
+      required this.assignedClasses,
+      required super.registrationDate});
 
   factory SesameTeacherDTO.fromJson(Map<String, dynamic> json) =>
       _$SesameTeacherDTOFromJson(json);
