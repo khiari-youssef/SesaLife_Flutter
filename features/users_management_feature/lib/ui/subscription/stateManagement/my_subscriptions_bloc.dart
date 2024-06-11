@@ -6,9 +6,9 @@ import 'package:users_management_feature/domain/entities/AnnualSubscriptionModel
 
 import '../../../domain/entities/student_subscription_record.dart';
 
+part 'my_subscriptions_bloc.freezed.dart';
 part 'my_subscriptions_event.dart';
 part 'my_subscriptions_state.dart';
-part 'my_subscriptions_bloc.freezed.dart';
 
 class MySubscriptionsBloc
     extends Bloc<MySubscriptionsEvent, MySubscriptionsState> {

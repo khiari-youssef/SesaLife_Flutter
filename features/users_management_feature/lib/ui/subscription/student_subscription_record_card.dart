@@ -1,7 +1,6 @@
 import 'package:core/exports.dart';
 import 'package:designsystem/components/images/CustomIcon.dart';
 import 'package:intl/intl.dart';
-import 'package:shared_dependencies/shared_dependencies.dart';
 
 import '../../domain/entities/student_subscription_record.dart';
 

@@ -1,6 +1,5 @@
 import 'package:users_management_feature/domain/entities/my_settings_data.dart';
 
-import '../../ui/myprofile/stateManagement/settings/my_settings_state.dart';
 import '../dataSources/UsersSettingsLocalDataSource.dart';
 
 class UserSettingsRepository {

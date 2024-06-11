@@ -1,4 +1,3 @@
-import 'package:core/core_domain/entities/entities.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 import 'package:users_management_feature/ui/subscription/stateManagement/my_subscriptions_bloc.dart';
 import 'package:users_management_feature/ui/subscription/student_subscription_record_card.dart';
