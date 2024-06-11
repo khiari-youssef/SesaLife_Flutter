@@ -74,5 +74,14 @@
     "profile_subscription" : "My subscription",
     "profile_projects" : "My projects",
     "profile_grades" : "My grades",
-    "profile_classes" : "My class"
+    "profile_classes" : "My class",
+    "payment_subscription_expected_date" : "Payment expected before {date}",
+    "payment_subscription_overdue" : "Payment overdue !",
+    "payment_subscription_completion_date" : "Payment completed on {date}",
+    "payment_subscription_period" : "Subscription period :",
+    "payment_fee" : "Fee :",
+    "payment_receipt_download" : "Download payment receipt",
+   "payment_receipt_view" : "View payment receipt",
+    "payment_pay_now_action" : "Pay now",
+    "payment_overdue_action" : "Contact financial service"
 }

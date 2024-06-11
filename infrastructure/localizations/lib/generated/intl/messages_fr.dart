@@ -25,6 +25,10 @@ class MessageLookup extends MessageLookupByLibrary {
   static String m1(email) =>
       "Un code OTP sera envoyé à ${email} et sera expiré dans 10 minutes";
 
+  static String m2(date) => "Paiement effectué le ${date}";
+
+  static String m3(date) => "Paiement prévu avant le ${date}";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "badge_click_to_scan":
@@ -88,6 +92,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "note": MessageLookupByLibrary.simpleMessage("Remarque"),
         "ok": MessageLookupByLibrary.simpleMessage("Ok"),
         "password": MessageLookupByLibrary.simpleMessage("Mot de passe"),
+        "payment_fee": MessageLookupByLibrary.simpleMessage("Frais :"),
+        "payment_pay_now_action":
+            MessageLookupByLibrary.simpleMessage("Payer maintenant"),
+        "payment_receipt_download": MessageLookupByLibrary.simpleMessage(
+            "Télécharger le récu de paiement"),
+        "payment_receipt_view":
+            MessageLookupByLibrary.simpleMessage("Voir le reçu de paiement"),
+        "payment_subscription_completion_date": m2,
+        "payment_subscription_expected_date": m3,
+        "payment_subscription_overdue":
+            MessageLookupByLibrary.simpleMessage("Paiement en retard !"),
+        "payment_subscription_period":
+            MessageLookupByLibrary.simpleMessage("Période d\'abonnement :"),
         "phone": MessageLookupByLibrary.simpleMessage("Téléphone"),
         "privacy_policy_desc": MessageLookupByLibrary.simpleMessage(
             "Savoir plus sur la sécurité et l\'usage de mes données personnelles collectés par l\'application."),

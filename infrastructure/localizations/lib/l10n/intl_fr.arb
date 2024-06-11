@@ -73,5 +73,13 @@
   "profile_subscription" : "Mon abonnement",
   "profile_projects" : "Mes projets",
   "profile_grades" : "Mes notes",
-  "profile_classes" : "Mes classes"
+  "profile_classes" : "Mes classes",
+  "payment_subscription_expected_date" : "Paiement prévu avant le {date}",
+  "payment_subscription_overdue" : "Paiement en retard !",
+  "payment_subscription_completion_date" : "Paiement effectué le {date}",
+  "payment_subscription_period" : "Période d'abonnement :",
+  "payment_fee" : "Frais :",
+  "payment_receipt_download" : "Télécharger le récu de paiement",
+  "payment_receipt_view" : "Voir le reçu de paiement",
+  "payment_pay_now_action" : "Payer maintenant"
 }

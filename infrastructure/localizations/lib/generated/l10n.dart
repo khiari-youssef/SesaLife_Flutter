@@ -799,6 +799,96 @@ class S {
       args: [],
     );
   }
+
+  /// `Payment expected before {date}`
+  String payment_subscription_expected_date(Object date) {
+    return Intl.message(
+      'Payment expected before $date',
+      name: 'payment_subscription_expected_date',
+      desc: '',
+      args: [date],
+    );
+  }
+
+  /// `Payment overdue !`
+  String get payment_subscription_overdue {
+    return Intl.message(
+      'Payment overdue !',
+      name: 'payment_subscription_overdue',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Payment completed on {date}`
+  String payment_subscription_completion_date(Object date) {
+    return Intl.message(
+      'Payment completed on $date',
+      name: 'payment_subscription_completion_date',
+      desc: '',
+      args: [date],
+    );
+  }
+
+  /// `Subscription period :`
+  String get payment_subscription_period {
+    return Intl.message(
+      'Subscription period :',
+      name: 'payment_subscription_period',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Fee :`
+  String get payment_fee {
+    return Intl.message(
+      'Fee :',
+      name: 'payment_fee',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Download payment receipt`
+  String get payment_receipt_download {
+    return Intl.message(
+      'Download payment receipt',
+      name: 'payment_receipt_download',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `View payment receipt`
+  String get payment_receipt_view {
+    return Intl.message(
+      'View payment receipt',
+      name: 'payment_receipt_view',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pay now`
+  String get payment_pay_now_action {
+    return Intl.message(
+      'Pay now',
+      name: 'payment_pay_now_action',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Contact financial service`
+  String get payment_overdue_action {
+    return Intl.message(
+      'Contact financial service',
+      name: 'payment_overdue_action',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
