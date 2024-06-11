@@ -1,8 +1,9 @@
 import 'package:shared_dependencies/shared_dependencies.dart';
 import 'package:users_management_feature/ui/subscription/stateManagement/my_subscriptions_bloc.dart';
-import 'package:users_management_feature/ui/subscription/student_subscription_record_card.dart';
+import 'package:users_management_feature/ui/subscription/components/student_subscription_record_card.dart';
 
 import '../../domain/entities/student_subscription_record.dart';
+import '../navigation/UsersNavigationConfiguration.gr.dart';
 
 class MySubscriptionScreenState extends State<MySubscriptionScreen> {
   @override
@@ -19,10 +20,14 @@ class MySubscriptionScreenState extends State<MySubscriptionScreen> {
                 builder: (context, state) {
                   return state.when(
                       loading: () {
-                        return Center();
+                        return Center(
+                          child: CircularProgressIndicator(
+                            color: Theme.of(context).colorScheme.primary,
+                          ),
+                        );
                       },
                       error: (errorType) {
-                        return Center();
+                        return const Center();
                       },
                       success: (data) => Padding(
                           padding: EdgeInsets.all(8.r),
@@ -32,7 +37,19 @@ class MySubscriptionScreenState extends State<MySubscriptionScreen> {
                                 StudentSubscriptionRecord record =
                                     data.transactions[index];
                                 return StudentSubscriptionRecordCard(
-                                    record: record, onClicked: () {});
+                                    record: record,
+                                    onClicked: () {
+                                      record.when(
+                                          unPaid: (data) {
+                                            if (data.isPaymentOverdue()) {
+                                            } else {
+                                              AutoRouter.of(context).push(
+                                                  SubscriptionPaymentDetailsRoute(
+                                                      paymentRecord: record));
+                                            }
+                                          },
+                                          paid: (data) {});
+                                    });
                               })));
                 })));
   }

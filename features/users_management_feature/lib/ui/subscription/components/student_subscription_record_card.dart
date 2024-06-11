@@ -2,7 +2,7 @@ import 'package:core/exports.dart';
 import 'package:designsystem/components/images/CustomIcon.dart';
 import 'package:intl/intl.dart';
 
-import '../../domain/entities/student_subscription_record.dart';
+import '../../../domain/entities/student_subscription_record.dart';
 
 class StudentSubscriptionRecordCard extends StatelessWidget {
   final StudentSubscriptionRecord record;
