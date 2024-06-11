@@ -18,8 +18,8 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$AnnualSubscriptionModel {
   String get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
-  Int? get upFrontFee => throw _privateConstructorUsedError;
-  Map<String, Int> get paymentParts => throw _privateConstructorUsedError;
+  List<StudentSubscriptionRecord> get transactions =>
+      throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $AnnualSubscriptionModelCopyWith<AnnualSubscriptionModel> get copyWith =>
@@ -33,7 +33,7 @@ abstract class $AnnualSubscriptionModelCopyWith<$Res> {
       _$AnnualSubscriptionModelCopyWithImpl<$Res, AnnualSubscriptionModel>;
   @useResult
   $Res call(
-      {String id, String name, Int? upFrontFee, Map<String, Int> paymentParts});
+      {String id, String name, List<StudentSubscriptionRecord> transactions});
 }
 
 /// @nodoc
@@ -52,8 +52,7 @@ class _$AnnualSubscriptionModelCopyWithImpl<$Res,
   $Res call({
     Object? id = null,
     Object? name = null,
-    Object? upFrontFee = freezed,
-    Object? paymentParts = null,
+    Object? transactions = null,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -64,14 +63,10 @@ class _$AnnualSubscriptionModelCopyWithImpl<$Res,
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      upFrontFee: freezed == upFrontFee
-          ? _value.upFrontFee
-          : upFrontFee // ignore: cast_nullable_to_non_nullable
-              as Int?,
-      paymentParts: null == paymentParts
-          ? _value.paymentParts
-          : paymentParts // ignore: cast_nullable_to_non_nullable
-              as Map<String, Int>,
+      transactions: null == transactions
+          ? _value.transactions
+          : transactions // ignore: cast_nullable_to_non_nullable
+              as List<StudentSubscriptionRecord>,
     ) as $Val);
   }
 }
@@ -86,7 +81,7 @@ abstract class _$$AnnualSubscriptionModelImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String id, String name, Int? upFrontFee, Map<String, Int> paymentParts});
+      {String id, String name, List<StudentSubscriptionRecord> transactions});
 }
 
 /// @nodoc
@@ -104,8 +99,7 @@ class __$$AnnualSubscriptionModelImplCopyWithImpl<$Res>
   $Res call({
     Object? id = null,
     Object? name = null,
-    Object? upFrontFee = freezed,
-    Object? paymentParts = null,
+    Object? transactions = null,
   }) {
     return _then(_$AnnualSubscriptionModelImpl(
       id: null == id
@@ -116,14 +110,10 @@ class __$$AnnualSubscriptionModelImplCopyWithImpl<$Res>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      upFrontFee: freezed == upFrontFee
-          ? _value.upFrontFee
-          : upFrontFee // ignore: cast_nullable_to_non_nullable
-              as Int?,
-      paymentParts: null == paymentParts
-          ? _value._paymentParts
-          : paymentParts // ignore: cast_nullable_to_non_nullable
-              as Map<String, Int>,
+      transactions: null == transactions
+          ? _value._transactions
+          : transactions // ignore: cast_nullable_to_non_nullable
+              as List<StudentSubscriptionRecord>,
     ));
   }
 }
@@ -134,27 +124,24 @@ class _$AnnualSubscriptionModelImpl implements _AnnualSubscriptionModel {
   const _$AnnualSubscriptionModelImpl(
       {required this.id,
       required this.name,
-      this.upFrontFee,
-      required final Map<String, Int> paymentParts})
-      : _paymentParts = paymentParts;
+      required final List<StudentSubscriptionRecord> transactions})
+      : _transactions = transactions;
 
   @override
   final String id;
   @override
   final String name;
+  final List<StudentSubscriptionRecord> _transactions;
   @override
-  final Int? upFrontFee;
-  final Map<String, Int> _paymentParts;
-  @override
-  Map<String, Int> get paymentParts {
-    if (_paymentParts is EqualUnmodifiableMapView) return _paymentParts;
+  List<StudentSubscriptionRecord> get transactions {
+    if (_transactions is EqualUnmodifiableListView) return _transactions;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableMapView(_paymentParts);
+    return EqualUnmodifiableListView(_transactions);
   }
 
   @override
   String toString() {
-    return 'AnnualSubscriptionModel(id: $id, name: $name, upFrontFee: $upFrontFee, paymentParts: $paymentParts)';
+    return 'AnnualSubscriptionModel(id: $id, name: $name, transactions: $transactions)';
   }
 
   @override
@@ -164,15 +151,13 @@ class _$AnnualSubscriptionModelImpl implements _AnnualSubscriptionModel {
             other is _$AnnualSubscriptionModelImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
-            (identical(other.upFrontFee, upFrontFee) ||
-                other.upFrontFee == upFrontFee) &&
             const DeepCollectionEquality()
-                .equals(other._paymentParts, _paymentParts));
+                .equals(other._transactions, _transactions));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, id, name, upFrontFee,
-      const DeepCollectionEquality().hash(_paymentParts));
+  int get hashCode => Object.hash(runtimeType, id, name,
+      const DeepCollectionEquality().hash(_transactions));
 
   @JsonKey(ignore: true)
   @override
@@ -186,8 +171,7 @@ abstract class _AnnualSubscriptionModel implements AnnualSubscriptionModel {
   const factory _AnnualSubscriptionModel(
           {required final String id,
           required final String name,
-          final Int? upFrontFee,
-          required final Map<String, Int> paymentParts}) =
+          required final List<StudentSubscriptionRecord> transactions}) =
       _$AnnualSubscriptionModelImpl;
 
   @override
@@ -195,9 +179,7 @@ abstract class _AnnualSubscriptionModel implements AnnualSubscriptionModel {
   @override
   String get name;
   @override
-  Int? get upFrontFee;
-  @override
-  Map<String, Int> get paymentParts;
+  List<StudentSubscriptionRecord> get transactions;
   @override
   @JsonKey(ignore: true)
   _$$AnnualSubscriptionModelImplCopyWith<_$AnnualSubscriptionModelImpl>
