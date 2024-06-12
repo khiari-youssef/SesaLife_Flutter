@@ -94,6 +94,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "password": MessageLookupByLibrary.simpleMessage("Mot de passe"),
         "payment": MessageLookupByLibrary.simpleMessage("Paiement"),
         "payment_fee": MessageLookupByLibrary.simpleMessage("Frais :"),
+        "payment_method_cachOrBank":
+            MessageLookupByLibrary.simpleMessage("Espèce / Chèque bancaire"),
+        "payment_method_choice_title": MessageLookupByLibrary.simpleMessage(
+            "Choisissez un moyen de paiement : "),
+        "payment_method_clickToPay":
+            MessageLookupByLibrary.simpleMessage("ClickToPay"),
+        "payment_method_googleOrApplePay":
+            MessageLookupByLibrary.simpleMessage("Google/Apple pay"),
         "payment_pay_now_action":
             MessageLookupByLibrary.simpleMessage("Payer maintenant"),
         "payment_receipt_download": MessageLookupByLibrary.simpleMessage(

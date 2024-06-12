@@ -899,6 +899,46 @@ class S {
       args: [],
     );
   }
+
+  /// `Select payment method : `
+  String get payment_method_choice_title {
+    return Intl.message(
+      'Select payment method : ',
+      name: 'payment_method_choice_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `ClickToPay`
+  String get payment_method_clickToPay {
+    return Intl.message(
+      'ClickToPay',
+      name: 'payment_method_clickToPay',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Google/Apple pay`
+  String get payment_method_googleOrApplePay {
+    return Intl.message(
+      'Google/Apple pay',
+      name: 'payment_method_googleOrApplePay',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cach / Bank check`
+  String get payment_method_cachOrBank {
+    return Intl.message(
+      'Cach / Bank check',
+      name: 'payment_method_cachOrBank',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

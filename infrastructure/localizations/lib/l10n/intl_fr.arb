@@ -82,5 +82,9 @@
   "payment_receipt_download" : "Télécharger le récu de paiement",
   "payment_receipt_view" : "Voir le reçu de paiement",
   "payment_pay_now_action" : "Payer maintenant",
-  "payment" : "Paiement"
+  "payment" : "Paiement",
+  "payment_method_choice_title" : "Choisissez un moyen de paiement : ",
+  "payment_method_clickToPay" : "ClickToPay",
+  "payment_method_googleOrApplePay" : "Google/Apple pay",
+  "payment_method_cachOrBank" : "Espèce / Chèque bancaire"
 }

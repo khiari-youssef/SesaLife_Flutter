@@ -12,7 +12,7 @@ class SesameRadioButtonState<T> extends State<SesameRadioButton<T>> {
             children: [
               Radio<T>(
                   value: widget.id,
-                  fillColor: MaterialStatePropertyAll(widget.isEnabled
+                  fillColor: WidgetStatePropertyAll(widget.isEnabled
                       ? primaryColor
                       : Color.alphaBlend(
                           const Color(0xCCF3F3F3), primaryColor)),

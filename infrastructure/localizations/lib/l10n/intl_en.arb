@@ -84,5 +84,9 @@
    "payment_receipt_view" : "View payment receipt",
     "payment_pay_now_action" : "Pay now",
     "payment_overdue_action" : "Contact financial service",
-    "payment" : "Payment"
+    "payment" : "Payment",
+    "payment_method_choice_title" : "Select payment method : ",
+    "payment_method_clickToPay" : "ClickToPay",
+    "payment_method_googleOrApplePay" : "Google/Apple pay",
+    "payment_method_cachOrBank" : "Cach / Bank check"
 }
