@@ -6,10 +6,10 @@ import '../../../domain/entities/student_subscription_record.dart';
 
 class StudentSubscriptionRecordCard extends StatelessWidget {
   final StudentSubscriptionRecord record;
-  final VoidCallback onClicked;
+  final VoidCallback? onClicked;
 
   const StudentSubscriptionRecordCard(
-      {super.key, required this.record, required this.onClicked});
+      {super.key, required this.record, this.onClicked});
 
   @override
   Widget build(BuildContext context) {
@@ -88,36 +88,39 @@ class StudentSubscriptionRecordCard extends StatelessWidget {
                           color: Theme.of(context).colorScheme.onSurface)),
                 ])),
                 8.verticalSpace,
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: record.when(
-                      unPaid: (data) => SesameCustomButton(
-                            sizeType: SesameButtonSize.listSize,
-                            leftIconAssetName: data.isPaymentOverdue()
-                                ? null
-                                : "ic_next_arrow.svg",
-                            variant: data.isPaymentOverdue()
-                                ? SesameButtonVariant.warning
-                                : SesameButtonVariant.positif,
-                            buttonText: data.isPaymentOverdue()
-                                ? S.of(context).payment_overdue_action
-                                : S.of(context).payment_pay_now_action,
-                            onPressed: onClicked,
-                          ),
-                      paid: (data) => SesameCustomButton(
-                            sizeType: SesameButtonSize.listSize,
-                            leftIconAssetName: data.paymentReceipt.when(
-                                local: (uri, type) => "ic_export_document.svg",
-                                network: (url, type) => "ic_download.svg"),
-                            variant: SesameButtonVariant.soft,
-                            buttonText: data.paymentReceipt.when(
-                                local: (uri, type) =>
-                                    S.of(context).payment_receipt_view,
-                                network: (url, type) =>
-                                    S.of(context).payment_receipt_download),
-                            onPressed: onClicked,
-                          )),
-                )
+                buildWhenNullSafe(onClicked, (safeOnClicked) {
+                  return Align(
+                    alignment: Alignment.centerRight,
+                    child: record.when(
+                        unPaid: (data) => SesameCustomButton(
+                              sizeType: SesameButtonSize.listSize,
+                              leftIconAssetName: data.isPaymentOverdue()
+                                  ? null
+                                  : "ic_next_arrow.svg",
+                              variant: data.isPaymentOverdue()
+                                  ? SesameButtonVariant.warning
+                                  : SesameButtonVariant.positif,
+                              buttonText: data.isPaymentOverdue()
+                                  ? S.of(context).payment_overdue_action
+                                  : S.of(context).payment_pay_now_action,
+                              onPressed: safeOnClicked,
+                            ),
+                        paid: (data) => SesameCustomButton(
+                              sizeType: SesameButtonSize.listSize,
+                              leftIconAssetName: data.paymentReceipt.when(
+                                  local: (uri, type) =>
+                                      "ic_export_document.svg",
+                                  network: (url, type) => "ic_download.svg"),
+                              variant: SesameButtonVariant.soft,
+                              buttonText: data.paymentReceipt.when(
+                                  local: (uri, type) =>
+                                      S.of(context).payment_receipt_view,
+                                  network: (url, type) =>
+                                      S.of(context).payment_receipt_download),
+                              onPressed: safeOnClicked,
+                            )),
+                  );
+                })
               ]),
         ));
   }

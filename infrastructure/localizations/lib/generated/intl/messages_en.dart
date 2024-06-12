@@ -93,6 +93,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "note": MessageLookupByLibrary.simpleMessage("Note"),
         "ok": MessageLookupByLibrary.simpleMessage("Ok"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
+        "payment": MessageLookupByLibrary.simpleMessage("Payment"),
         "payment_fee": MessageLookupByLibrary.simpleMessage("Fee :"),
         "payment_overdue_action":
             MessageLookupByLibrary.simpleMessage("Contact financial service"),

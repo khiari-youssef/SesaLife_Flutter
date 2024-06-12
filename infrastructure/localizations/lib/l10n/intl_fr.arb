@@ -81,5 +81,6 @@
   "payment_fee" : "Frais :",
   "payment_receipt_download" : "Télécharger le récu de paiement",
   "payment_receipt_view" : "Voir le reçu de paiement",
-  "payment_pay_now_action" : "Payer maintenant"
+  "payment_pay_now_action" : "Payer maintenant",
+  "payment" : "Paiement"
 }

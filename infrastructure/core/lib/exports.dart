@@ -15,3 +15,4 @@ export 'core_domain/utilities.dart';
 export 'core_utils/BioUtils.dart';
 export 'core_utils/Logger.dart';
 export 'core_utils/QrCode.dart';
+export 'coreUI/UIextensions.dart';

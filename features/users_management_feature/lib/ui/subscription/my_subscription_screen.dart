@@ -44,7 +44,7 @@ class MySubscriptionScreenState extends State<MySubscriptionScreen> {
                                             if (data.isPaymentOverdue()) {
                                             } else {
                                               AutoRouter.of(context).push(
-                                                  SubscriptionPaymentDetailsRoute(
+                                                  SubscriptionPaymentMethodRoute(
                                                       paymentRecord: record));
                                             }
                                           },
