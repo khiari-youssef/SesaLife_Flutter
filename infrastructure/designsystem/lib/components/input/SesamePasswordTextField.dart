@@ -11,6 +11,7 @@ class SesamePasswordTextField extends StatefulWidget {
   final TextInputType keyboardType;
   final TextEditingController? controller;
   final int? maxLength;
+  final Function(bool isVisible)? onVisibilityChanged;
 
   const SesamePasswordTextField(
       {super.key,
@@ -23,7 +24,8 @@ class SesamePasswordTextField extends StatefulWidget {
       this.isEnabled = true,
       this.errorMessage,
       this.keyboardType = TextInputType.text,
-      this.maxLength});
+      this.maxLength,
+      this.onVisibilityChanged});
 
   @override
   State<StatefulWidget> createState() => SesamePasswordTextFieldState();
@@ -39,14 +41,26 @@ class SesamePasswordTextFieldState extends State<SesamePasswordTextField> {
   }
 
   @override
+  void didUpdateWidget(covariant SesamePasswordTextField oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (widget.onVisibilityChanged != null) {
+      isVisibleState = widget.isVisible;
+    }
+  }
+
+  @override
   Widget build(BuildContext context) {
     return SesameCustomTextField(
       isObscure: !isVisibleState,
       rightIcon: TextFieldIcon(
           isVisibleState ? "ic_visible.svg" : "ic_invisible.svg", () {
-        setState(() {
-          isVisibleState = !isVisibleState;
-        });
+        if (widget.onVisibilityChanged != null) {
+          widget.onVisibilityChanged!(!isVisibleState);
+        } else {
+          setState(() {
+            isVisibleState = !isVisibleState;
+          });
+        }
       }),
       onChange: widget.onChange,
       label: widget.label,

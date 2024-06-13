@@ -16,11 +16,13 @@ import 'components/CreditCardPreview.dart';
 class SubscriptionPaymentInterfaceState
     extends State<SubscriptionPaymentInterface> {
   bool hasReadTheTermsAndPolicy = false;
+  SesameDeviceAuthManager authManager = GetIt.instance.get();
   CreditCardType? creditCardType;
   TextEditingController cardHolderNameController = TextEditingController();
   TextEditingController cardNumberController = TextEditingController();
   TextEditingController cardExpiryController = TextEditingController();
   TextEditingController cardCVVController = TextEditingController();
+  bool shouldShowCCNumber = false;
   late String lastCreditCardNumberSaved;
 
   @override
@@ -53,6 +55,7 @@ class SubscriptionPaymentInterfaceState
                               duration: const Duration(milliseconds: 300),
                               curve: Curves.linear,
                               child: CreditCardPreview(
+                                shouldShowCCNumber: shouldShowCCNumber,
                                 cardType: creditCardType,
                                 cardHolderNameController:
                                     cardHolderNameController,
@@ -61,7 +64,7 @@ class SubscriptionPaymentInterfaceState
                                     cardExpiryController,
                               )),
                           16.verticalSpace,
-                          SesamePasswordTextField(
+                          SesameCustomTextField(
                               keyboardType: TextInputType.text,
                               controller: cardHolderNameController,
                               placeHolder:
@@ -76,8 +79,23 @@ class SubscriptionPaymentInterfaceState
                           8.verticalSpace,
                           SesamePasswordTextField(
                               maxLength: 19,
+                              isVisible: shouldShowCCNumber,
                               keyboardType: TextInputType.number,
                               controller: cardNumberController,
+                              onVisibilityChanged: (isVisible) {
+                                if (isVisible) {
+                                  authManager.requireAuthenticationAsync(
+                                      context, onActionAuthorized: () {
+                                    setState(() {
+                                      shouldShowCCNumber = isVisible;
+                                    });
+                                  });
+                                } else {
+                                  setState(() {
+                                    shouldShowCCNumber = isVisible;
+                                  });
+                                }
+                              },
                               placeHolder:
                                   S.of(context).payment_card_number_placeholder,
                               onChange: (cardNumber) {
@@ -109,7 +127,7 @@ class SubscriptionPaymentInterfaceState
                           8.verticalSpace,
                           Row(children: [
                             Flexible(
-                                child: SesamePasswordTextField(
+                                child: SesameCustomTextField(
                                     keyboardType: TextInputType.datetime,
                                     controller: cardExpiryController,
                                     placeHolder: S
@@ -155,7 +173,11 @@ class SubscriptionPaymentInterfaceState
                                 SesameCustomButton(
                                     buttonText: S.of(context).pay,
                                     isEnabled: hasReadTheTermsAndPolicy,
-                                    onPressed: () {}),
+                                    onPressed: () {
+                                      authManager.requireAuthenticationAsync(
+                                          context,
+                                          onActionAuthorized: () {});
+                                    }),
                                 16.verticalSpace
                               ])
                         ]),
@@ -181,6 +203,7 @@ class SubscriptionPaymentInterfaceState
 class SubscriptionPaymentInterface extends StatefulWidget {
   final StudentSubscriptionRecord paymentRecord;
   final PaymentMethod paymentMethod;
+
   const SubscriptionPaymentInterface(
       {super.key, required this.paymentRecord, required this.paymentMethod});
 

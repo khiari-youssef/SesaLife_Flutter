@@ -95,5 +95,6 @@
   "payment_card_expiry_date" : "Date d'exipration",
   "payment_card_expiry_date_placeholder" : "MM/YY",
   "payment_card_number_placeholder" : "Ex : XXXX XXXX XXXX XXXX",
+  "payment_credit_card_label" : "Carte bancaire",
   "payment_card_invalid_type" : "Carte de credit non reconnue"
 }

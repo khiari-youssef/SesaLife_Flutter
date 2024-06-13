@@ -1020,6 +1020,16 @@ class S {
     );
   }
 
+  /// `Credit card`
+  String get payment_credit_card_label {
+    return Intl.message(
+      'Credit card',
+      name: 'payment_credit_card_label',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Credit Card Network Not recognized`
   String get payment_card_invalid_type {
     return Intl.message(

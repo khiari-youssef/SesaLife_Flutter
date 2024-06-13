@@ -14,11 +14,9 @@ class LabelMedium extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Text(text,
-      style: Theme.of(context)
-          .typography
-          .black
-          .labelMedium
-          ?.copyWith(color: color ?? Theme.of(context).colorScheme.onSurface),
+      style: Theme.of(context).typography.black.labelMedium?.copyWith(
+          color: color ?? Theme.of(context).colorScheme.onSurface,
+          decorationStyle: TextDecorationStyle.dotted),
       textAlign: textAlign,
       softWrap: softWrap);
 }

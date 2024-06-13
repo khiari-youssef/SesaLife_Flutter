@@ -10,12 +10,14 @@ class CreditCardPreview extends StatelessWidget {
   final TextEditingController cardHolderNameController;
   final TextEditingController cardExpirationDateController;
   final TextEditingController cardNumberController;
+  final bool shouldShowCCNumber;
   const CreditCardPreview({
     super.key,
     required this.cardType,
     required this.cardHolderNameController,
     required this.cardExpirationDateController,
     required this.cardNumberController,
+    required this.shouldShowCCNumber,
   });
 
   @override
@@ -89,9 +91,9 @@ class CreditCardPreview extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisSize: MainAxisSize.max,
                         children: [
-                          const Expanded(
+                          Expanded(
                               child: LabelMedium(
-                            text: "Credit card",
+                            text: S.of(context).payment_credit_card_label,
                             textAlign: TextAlign.start,
                             color: Colors.white,
                           )),
@@ -114,9 +116,10 @@ class CreditCardPreview extends StatelessWidget {
                           child: Align(
                         alignment: Alignment.centerLeft,
                         child: LabelMedium(
-                            text: cardNumberController.text
-                                .split(RegExp(r"[0-9]{4}"))
-                                .join(),
+                            text: shouldShowCCNumber
+                                ? cardNumberController.text
+                                : cardNumberController.text
+                                    .replaceAll(RegExp(r"."), "●"),
                             color: Colors.white),
                       )),
                       Row(

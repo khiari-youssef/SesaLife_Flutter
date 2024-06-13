@@ -109,6 +109,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Numéro de carte"),
         "payment_card_number_placeholder":
             MessageLookupByLibrary.simpleMessage("Ex : XXXX XXXX XXXX XXXX"),
+        "payment_credit_card_label":
+            MessageLookupByLibrary.simpleMessage("Carte bancaire"),
         "payment_fee": MessageLookupByLibrary.simpleMessage("Frais :"),
         "payment_method_cachOrBank":
             MessageLookupByLibrary.simpleMessage("Espèce / Chèque bancaire"),
