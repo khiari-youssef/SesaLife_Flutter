@@ -88,5 +88,14 @@
     "payment_method_choice_title" : "Select payment method : ",
     "payment_method_clickToPay" : "ClickToPay",
     "payment_method_googleOrApplePay" : "Google/Apple pay",
-    "payment_method_cachOrBank" : "Cach / Bank check"
+    "payment_method_cachOrBank" : "Cach / Bank check",
+  "pay" : "Pay",
+  "payment_card_holder_name" : "Card holder name",
+  "payment_card_number" : "Card number",
+  "payment_card_cvv" : "CVV",
+  "payment_card_expiry_date" : "Expiry date",
+  "payment_card_cvv_placeholer" : "XXX",
+  "payment_card_expiry_date_placeholder" : "MM/YY",
+  "payment_card_number_placeholder" : "Ex : XXXX XXXX XXXX XXXX",
+  "payment_card_invalid_type" : "Credit Card Network Not recognized"
 }

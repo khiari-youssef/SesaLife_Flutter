@@ -6,30 +6,32 @@ import 'package:flutter/cupertino.dart';
 enum CreditCardType { visa, masterCard }
 
 class CreditCardPreview extends StatelessWidget {
-  final CreditCardType cardType;
-  final String cardHolderName;
-  final String cardExpirationDate;
-  final String cardNumber;
+  final CreditCardType? cardType;
+  final TextEditingController cardHolderNameController;
+  final TextEditingController cardExpirationDateController;
+  final TextEditingController cardNumberController;
   const CreditCardPreview({
     super.key,
     required this.cardType,
-    required this.cardHolderName,
-    required this.cardExpirationDate,
-    required this.cardNumber,
+    required this.cardHolderNameController,
+    required this.cardExpirationDateController,
+    required this.cardNumberController,
   });
 
   @override
   Widget build(BuildContext context) {
     return DecoratedBox(
         decoration: BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage(
-                    "assets/images/raster/${switch (cardType) {
-                      CreditCardType.visa => "visa",
-                      CreditCardType.masterCard => "master-card"
-                    }}-mask.png",
-                    package: "designsystem"),
-                fit: BoxFit.fill),
+            image: cardType != null
+                ? DecorationImage(
+                    image: AssetImage(
+                        "assets/images/raster/${switch (cardType!) {
+                          CreditCardType.visa => "visa",
+                          CreditCardType.masterCard => "master-card"
+                        }}-mask.png",
+                        package: "designsystem"),
+                    fit: BoxFit.fill)
+                : null,
             shape: BoxShape.rectangle,
             borderRadius: BorderRadius.circular(12.r),
             gradient: switch (cardType) {
@@ -62,62 +64,80 @@ class CreditCardPreview extends StatelessWidget {
                       Color(0xFF0968E5),
                       Color(0xFF0941AB),
                       Color(0xFF091970)
-                    ])
+                    ]),
+              _ => const LinearGradient(
+                  begin: Alignment.centerLeft,
+                  end: Alignment.centerRight,
+                  stops: [0.5, 1.0],
+                  colors: [Color(0xFF284C8E), Color(0xFF0378A6)])
             }),
         child: SizedBox(
           height: 154.h,
           child: Padding(
             padding: EdgeInsets.all(20.r),
-            child: Column(
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    const Expanded(
-                        child: LabelMedium(
-                      text: "Credit card",
-                      textAlign: TextAlign.start,
-                      color: Colors.white,
-                    )),
-                    Expanded(
-                        child: Align(
-                            alignment: Alignment.centerRight,
-                            child: CustomIcon(
-                                iconSVGname: "${switch (cardType) {
-                                  CreditCardType.visa => "visa",
-                                  CreditCardType.masterCard => "master-card"
-                                }}.svg",
-                                sizeScale: 0.9,
-                                shouldApplyColorFilter: false)))
-                  ],
-                ),
-                Expanded(
-                    child: Align(
-                  alignment: Alignment.centerLeft,
-                  child: LabelMedium(
-                      text: "1234 5678 9357 2350", color: Colors.white),
-                )),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Expanded(
-                        child: LabelMedium(
-                            text: "JackLewis",
+            child: cardType == null
+                ? Center(
+                    child: HeadlineLarge(
+                        text: S.of(context).payment_card_invalid_type,
+                        color: Colors.white,
+                        textAlign: TextAlign.center),
+                  )
+                : Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          const Expanded(
+                              child: LabelMedium(
+                            text: "Credit card",
                             textAlign: TextAlign.start,
-                            color: Colors.white)),
-                    Expanded(
+                            color: Colors.white,
+                          )),
+                          cardType != null
+                              ? Expanded(
+                                  child: Align(
+                                      alignment: Alignment.centerRight,
+                                      child: CustomIcon(
+                                          iconSVGname: "${switch (cardType!) {
+                                            CreditCardType.visa => "visa",
+                                            CreditCardType.masterCard =>
+                                              "master-card"
+                                          }}.svg",
+                                          sizeScale: 0.9,
+                                          shouldApplyColorFilter: false)))
+                              : const SizedBox.shrink()
+                        ],
+                      ),
+                      Expanded(
+                          child: Align(
+                        alignment: Alignment.centerLeft,
                         child: LabelMedium(
-                            text: "07/24",
-                            textAlign: TextAlign.end,
-                            color: Colors.white))
-                  ],
-                )
-              ],
-            ),
+                            text: cardNumberController.text
+                                .split(RegExp(r"[0-9]{4}"))
+                                .join(),
+                            color: Colors.white),
+                      )),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          Expanded(
+                              child: LabelMedium(
+                                  text: cardHolderNameController.text,
+                                  textAlign: TextAlign.start,
+                                  color: Colors.white)),
+                          Expanded(
+                              child: LabelMedium(
+                                  text: cardExpirationDateController.text,
+                                  textAlign: TextAlign.end,
+                                  color: Colors.white))
+                        ],
+                      )
+                    ],
+                  ),
           ),
         ));
   }

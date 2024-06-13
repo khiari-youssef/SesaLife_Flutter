@@ -19,6 +19,7 @@ class SesameCustomTextField extends StatelessWidget {
   final TextFieldIcon? rightIcon;
   final String? errorMessage;
   final TextInputType keyboardType;
+  final int? maxLength;
 
   const SesameCustomTextField(
       {super.key,
@@ -32,7 +33,8 @@ class SesameCustomTextField extends StatelessWidget {
       this.isObscure = false,
       this.leftIcon,
       this.rightIcon,
-      this.keyboardType = TextInputType.text});
+      this.keyboardType = TextInputType.text,
+      this.maxLength});
 
   @override
   Widget build(BuildContext context) {
@@ -75,6 +77,7 @@ class SesameCustomTextField extends StatelessWidget {
           obscureText: isObscure,
           keyboardType: keyboardType,
           controller: controller,
+          maxLength: maxLength,
           decoration: InputDecoration(
               prefixIcon: leftIcon != null
                   ? CustomClickableIcon(

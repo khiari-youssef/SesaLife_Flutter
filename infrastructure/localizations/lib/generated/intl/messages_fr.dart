@@ -92,7 +92,23 @@ class MessageLookup extends MessageLookupByLibrary {
         "note": MessageLookupByLibrary.simpleMessage("Remarque"),
         "ok": MessageLookupByLibrary.simpleMessage("Ok"),
         "password": MessageLookupByLibrary.simpleMessage("Mot de passe"),
+        "pay": MessageLookupByLibrary.simpleMessage("Payer"),
         "payment": MessageLookupByLibrary.simpleMessage("Paiement"),
+        "payment_card_cvv": MessageLookupByLibrary.simpleMessage("CVV"),
+        "payment_card_cvv_placeholer":
+            MessageLookupByLibrary.simpleMessage("XXX"),
+        "payment_card_expiry_date":
+            MessageLookupByLibrary.simpleMessage("Date d\'exipration"),
+        "payment_card_expiry_date_placeholder":
+            MessageLookupByLibrary.simpleMessage("MM/YY"),
+        "payment_card_holder_name":
+            MessageLookupByLibrary.simpleMessage("Carte du proprietaire"),
+        "payment_card_invalid_type": MessageLookupByLibrary.simpleMessage(
+            "Carte de credit non reconnue"),
+        "payment_card_number":
+            MessageLookupByLibrary.simpleMessage("Numéro de carte"),
+        "payment_card_number_placeholder":
+            MessageLookupByLibrary.simpleMessage("Ex : XXXX XXXX XXXX XXXX"),
         "payment_fee": MessageLookupByLibrary.simpleMessage("Frais :"),
         "payment_method_cachOrBank":
             MessageLookupByLibrary.simpleMessage("Espèce / Chèque bancaire"),

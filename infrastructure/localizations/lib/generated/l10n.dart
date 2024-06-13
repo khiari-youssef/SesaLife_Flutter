@@ -939,6 +939,96 @@ class S {
       args: [],
     );
   }
+
+  /// `Pay`
+  String get pay {
+    return Intl.message(
+      'Pay',
+      name: 'pay',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Card holder name`
+  String get payment_card_holder_name {
+    return Intl.message(
+      'Card holder name',
+      name: 'payment_card_holder_name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Card number`
+  String get payment_card_number {
+    return Intl.message(
+      'Card number',
+      name: 'payment_card_number',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `CVV`
+  String get payment_card_cvv {
+    return Intl.message(
+      'CVV',
+      name: 'payment_card_cvv',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Expiry date`
+  String get payment_card_expiry_date {
+    return Intl.message(
+      'Expiry date',
+      name: 'payment_card_expiry_date',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `XXX`
+  String get payment_card_cvv_placeholer {
+    return Intl.message(
+      'XXX',
+      name: 'payment_card_cvv_placeholer',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `MM/YY`
+  String get payment_card_expiry_date_placeholder {
+    return Intl.message(
+      'MM/YY',
+      name: 'payment_card_expiry_date_placeholder',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ex : XXXX XXXX XXXX XXXX`
+  String get payment_card_number_placeholder {
+    return Intl.message(
+      'Ex : XXXX XXXX XXXX XXXX',
+      name: 'payment_card_number_placeholder',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Credit Card Network Not recognized`
+  String get payment_card_invalid_type {
+    return Intl.message(
+      'Credit Card Network Not recognized',
+      name: 'payment_card_invalid_type',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

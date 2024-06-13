@@ -93,7 +93,23 @@ class MessageLookup extends MessageLookupByLibrary {
         "note": MessageLookupByLibrary.simpleMessage("Note"),
         "ok": MessageLookupByLibrary.simpleMessage("Ok"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
+        "pay": MessageLookupByLibrary.simpleMessage("Pay"),
         "payment": MessageLookupByLibrary.simpleMessage("Payment"),
+        "payment_card_cvv": MessageLookupByLibrary.simpleMessage("CVV"),
+        "payment_card_cvv_placeholer":
+            MessageLookupByLibrary.simpleMessage("XXX"),
+        "payment_card_expiry_date":
+            MessageLookupByLibrary.simpleMessage("Expiry date"),
+        "payment_card_expiry_date_placeholder":
+            MessageLookupByLibrary.simpleMessage("MM/YY"),
+        "payment_card_holder_name":
+            MessageLookupByLibrary.simpleMessage("Card holder name"),
+        "payment_card_invalid_type": MessageLookupByLibrary.simpleMessage(
+            "Credit Card Network Not recognized"),
+        "payment_card_number":
+            MessageLookupByLibrary.simpleMessage("Card number"),
+        "payment_card_number_placeholder":
+            MessageLookupByLibrary.simpleMessage("Ex : XXXX XXXX XXXX XXXX"),
         "payment_fee": MessageLookupByLibrary.simpleMessage("Fee :"),
         "payment_method_cachOrBank":
             MessageLookupByLibrary.simpleMessage("Cach / Bank check"),

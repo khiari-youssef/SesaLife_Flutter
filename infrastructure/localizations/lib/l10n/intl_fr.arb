@@ -86,5 +86,14 @@
   "payment_method_choice_title" : "Choisissez un moyen de paiement : ",
   "payment_method_clickToPay" : "ClickToPay",
   "payment_method_googleOrApplePay" : "Google/Apple pay",
-  "payment_method_cachOrBank" : "Espèce / Chèque bancaire"
+  "payment_method_cachOrBank" : "Espèce / Chèque bancaire",
+  "pay" : "Payer",
+  "payment_card_holder_name" : "Carte du proprietaire",
+  "payment_card_number" : "Numéro de carte",
+  "payment_card_cvv" : "CVV",
+  "payment_card_cvv_placeholer" : "XXX",
+  "payment_card_expiry_date" : "Date d'exipration",
+  "payment_card_expiry_date_placeholder" : "MM/YY",
+  "payment_card_number_placeholder" : "Ex : XXXX XXXX XXXX XXXX",
+  "payment_card_invalid_type" : "Carte de credit non reconnue"
 }

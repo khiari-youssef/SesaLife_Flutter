@@ -8,7 +8,9 @@ class SesamePasswordTextField extends StatefulWidget {
   final bool isRequired;
   final bool isEnabled;
   final String? errorMessage;
+  final TextInputType keyboardType;
   final TextEditingController? controller;
+  final int? maxLength;
 
   const SesamePasswordTextField(
       {super.key,
@@ -19,7 +21,9 @@ class SesamePasswordTextField extends StatefulWidget {
       this.isVisible = false,
       this.isRequired = true,
       this.isEnabled = true,
-      this.errorMessage});
+      this.errorMessage,
+      this.keyboardType = TextInputType.text,
+      this.maxLength});
 
   @override
   State<StatefulWidget> createState() => SesamePasswordTextFieldState();
@@ -51,6 +55,8 @@ class SesamePasswordTextFieldState extends State<SesamePasswordTextField> {
       controller: widget.controller,
       errorMessage: widget.errorMessage,
       placeHolder: widget.placeHolder,
+      keyboardType: widget.keyboardType,
+      maxLength: widget.maxLength,
     );
   }
 }
