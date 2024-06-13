@@ -10,7 +10,7 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i13;
 import 'package:core/core_domain/entities/SesameBadge.dart' as _i15;
-import 'package:flutter/cupertino.dart' as _i16;
+import 'package:core/exports.dart' as _i16;
 import 'package:shared_dependencies/shared_dependencies.dart' as _i14;
 import 'package:users_management_feature/domain/entities/student_subscription_record.dart'
     as _i17;

@@ -4,7 +4,7 @@ import 'package:core/core_domain/entities/SesameAttachment.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:users_management_feature/domain/entities/AnnualSubscriptionModel.dart';
 
-import '../../../domain/entities/student_subscription_record.dart';
+import '../../../../domain/entities/student_subscription_record.dart';
 
 part 'my_subscriptions_bloc.freezed.dart';
 part 'my_subscriptions_event.dart';
