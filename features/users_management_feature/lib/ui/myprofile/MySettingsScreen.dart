@@ -25,7 +25,7 @@ class MySettingsScreenState extends State<MySettingsScreen> {
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     SesameCheckbox(
-                        initialState:
+                        selectedState:
                             state.data?.isStayLoggedInOptionEnabled ?? false,
                         onChecked: (isChecked) {
                           context.read<MySettingsStateManager>().add(
@@ -35,7 +35,7 @@ class MySettingsScreenState extends State<MySettingsScreen> {
                         label: S.of(context).settings_stay_logged),
                     8.verticalSpace,
                     SesameCheckbox(
-                        initialState:
+                        selectedState:
                             state.data?.isHideMyWorkDataOptionEnabled ?? false,
                         onChecked: (isChecked) {
                           context.read<MySettingsStateManager>().add(
@@ -45,7 +45,7 @@ class MySettingsScreenState extends State<MySettingsScreen> {
                         label: S.of(context).settings_hide_my_data),
                     8.verticalSpace,
                     SesameCheckbox(
-                        initialState:
+                        selectedState:
                             state.data?.isToggleNotifyMeOptionEnabled ?? false,
                         onChecked: (isChecked) {
                           context.read<MySettingsStateManager>().add(

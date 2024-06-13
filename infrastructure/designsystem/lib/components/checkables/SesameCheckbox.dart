@@ -6,13 +6,13 @@ class SesameCheckboxState extends State<SesameCheckbox> {
   @override
   void initState() {
     super.initState();
-    isChecked = widget.initialState;
+    isChecked = widget.selectedState;
   }
 
   @override
   void didUpdateWidget(covariant SesameCheckbox oldWidget) {
     super.didUpdateWidget(oldWidget);
-    isChecked = widget.initialState;
+    isChecked = widget.selectedState;
   }
 
   @override
@@ -43,14 +43,14 @@ class SesameCheckboxState extends State<SesameCheckbox> {
 }
 
 class SesameCheckbox extends StatefulWidget {
-  final bool initialState;
+  final bool selectedState;
   final String label;
   final Function(bool isChecked) onChecked;
   const SesameCheckbox(
       {super.key,
       required this.onChecked,
       required this.label,
-      this.initialState = false});
+      this.selectedState = false});
 
   @override
   State<StatefulWidget> createState() => SesameCheckboxState();

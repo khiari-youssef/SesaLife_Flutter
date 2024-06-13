@@ -1,7 +1,7 @@
 library designsystem;
 
-export 'package:designsystem/DesignSystemApp.dart';
-export 'package:designsystem/components/WelcomeLogo.dart';
+export 'package:designsystem/design_system_app.dart';
+export 'package:designsystem/components/welcome_logo.dart';
 export 'package:designsystem/components/buttons/SesameCustomButton.dart';
 export 'package:designsystem/components/datetime/SesameDatePicker.dart';
 export 'package:designsystem/components/images/SesameLogo.dart';
@@ -41,3 +41,4 @@ export 'components/textViews/labels/LabelSmall.dart';
 export 'components/textViews/titles/TitleLarge.dart';
 export 'components/textViews/titles/TitleMedium.dart';
 export 'components/textViews/titles/TitleSmall.dart';
+export 'components/checkables/sesame_terms_and_policy_check_box.dart';
