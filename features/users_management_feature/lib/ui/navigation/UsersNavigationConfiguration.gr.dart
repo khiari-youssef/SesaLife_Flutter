@@ -113,6 +113,7 @@ abstract class $UsersNavigationConfiguration extends _i13.RootStackRouter {
         child: _i11.SubscriptionPaymentInterface(
           key: args.key,
           paymentRecord: args.paymentRecord,
+          paymentMethod: args.paymentMethod,
         ),
       );
     },
@@ -301,12 +302,14 @@ class SubscriptionPaymentInterfaceRoute
   SubscriptionPaymentInterfaceRoute({
     _i16.Key? key,
     required _i17.StudentSubscriptionRecord paymentRecord,
+    required _i12.PaymentMethod paymentMethod,
     List<_i13.PageRouteInfo>? children,
   }) : super(
           SubscriptionPaymentInterfaceRoute.name,
           args: SubscriptionPaymentInterfaceRouteArgs(
             key: key,
             paymentRecord: paymentRecord,
+            paymentMethod: paymentMethod,
           ),
           initialChildren: children,
         );
@@ -321,15 +324,18 @@ class SubscriptionPaymentInterfaceRouteArgs {
   const SubscriptionPaymentInterfaceRouteArgs({
     this.key,
     required this.paymentRecord,
+    required this.paymentMethod,
   });
 
   final _i16.Key? key;
 
   final _i17.StudentSubscriptionRecord paymentRecord;
 
+  final _i12.PaymentMethod paymentMethod;
+
   @override
   String toString() {
-    return 'SubscriptionPaymentInterfaceRouteArgs{key: $key, paymentRecord: $paymentRecord}';
+    return 'SubscriptionPaymentInterfaceRouteArgs{key: $key, paymentRecord: $paymentRecord, paymentMethod: $paymentMethod}';
   }
 }
 
@@ -338,7 +344,7 @@ class SubscriptionPaymentInterfaceRouteArgs {
 class SubscriptionPaymentMethodRoute
     extends _i13.PageRouteInfo<SubscriptionPaymentMethodRouteArgs> {
   SubscriptionPaymentMethodRoute({
-    _i16.Key? key,
+    _i14.Key? key,
     required _i17.StudentSubscriptionRecord paymentRecord,
     List<_i13.PageRouteInfo>? children,
   }) : super(
@@ -362,7 +368,7 @@ class SubscriptionPaymentMethodRouteArgs {
     required this.paymentRecord,
   });
 
-  final _i16.Key? key;
+  final _i14.Key? key;
 
   final _i17.StudentSubscriptionRecord paymentRecord;
 

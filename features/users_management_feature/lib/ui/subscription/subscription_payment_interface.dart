@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
+import 'package:users_management_feature/ui/subscription/subscription_payment_method.dart';
 
 import '../../domain/entities/student_subscription_record.dart';
 
@@ -16,7 +17,9 @@ class SubscriptionPaymentInterfaceState
 @RoutePage(name: "SubscriptionPaymentInterfaceRoute")
 class SubscriptionPaymentInterface extends StatefulWidget {
   final StudentSubscriptionRecord paymentRecord;
-  const SubscriptionPaymentInterface({super.key, required this.paymentRecord});
+  final PaymentMethod paymentMethod;
+  const SubscriptionPaymentInterface(
+      {super.key, required this.paymentRecord, required this.paymentMethod});
 
   @override
   State<StatefulWidget> createState() => SubscriptionPaymentInterfaceState();

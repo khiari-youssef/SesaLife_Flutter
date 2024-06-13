@@ -1,6 +1,7 @@
 import 'package:shared_dependencies/shared_dependencies.dart';
 
 import '../../domain/entities/student_subscription_record.dart';
+import '../navigation/UsersNavigationConfiguration.gr.dart';
 import 'components/student_subscription_record_card.dart';
 
 enum PaymentMethod { clickToPay, googleOrApplePay, cachOrCheck }
@@ -79,8 +80,14 @@ class SubscriptionPaymentMethodState extends State<SubscriptionPaymentMethod> {
                             16.verticalSpace,
                             SesameCustomButton(
                                 buttonText: S.of(context).confirm,
-                                isEnabled: hasReadTheTermsAndPolicy,
-                                onPressed: () {}),
+                                isEnabled: hasReadTheTermsAndPolicy &&
+                                    (paymentMethod != null),
+                                onPressed: () {
+                                  AutoRouter.of(context).push(
+                                      SubscriptionPaymentInterfaceRoute(
+                                          paymentRecord: widget.paymentRecord,
+                                          paymentMethod: paymentMethod!));
+                                }),
                             16.verticalSpace
                           ]))
                     ]))));
