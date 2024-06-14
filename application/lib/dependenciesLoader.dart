@@ -1,8 +1,7 @@
 import 'package:core/exports.dart';
 import 'package:home_feature/exports.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
-import 'package:users_management_feature/dependencies/UsersDependenciesLoader.dart';
-
+import 'package:users_management_feature/dependencies/users_dependencies_loader.dart';
 import 'AppNavigationConfiguration.dart';
 
 void loadRuntimeDependencies(BuildContext ctx) {

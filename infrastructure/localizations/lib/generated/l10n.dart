@@ -1039,6 +1039,56 @@ class S {
       args: [],
     );
   }
+
+  /// `required field !`
+  String get payment_cc_input_required {
+    return Intl.message(
+      'required field !',
+      name: 'payment_cc_input_required',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `invalid credit card number !`
+  String get payment_cc_number_input_invalid {
+    return Intl.message(
+      'invalid credit card number !',
+      name: 'payment_cc_number_input_invalid',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `invalid credit card CVV !`
+  String get payment_cc_cvv_input_invalid {
+    return Intl.message(
+      'invalid credit card CVV !',
+      name: 'payment_cc_cvv_input_invalid',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `invalid credit card expiry date !`
+  String get payment_cc_expiry_input_invalid {
+    return Intl.message(
+      'invalid credit card expiry date !',
+      name: 'payment_cc_expiry_input_invalid',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `invalid credit card holder name!`
+  String get payment_cc_holder_name_input_invalid {
+    return Intl.message(
+      'invalid credit card holder name!',
+      name: 'payment_cc_holder_name_input_invalid',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

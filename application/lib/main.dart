@@ -13,7 +13,6 @@ void main() async {
   ];
   WidgetsFlutterBinding.ensureInitialized();
   final appDocumentDirectory = await getApplicationDocumentsDirectory();
-  logger.i(appDocumentDirectory.path);
   await Hive.initFlutter(appDocumentDirectory.path);
   runApp(ScreenUtilInit(
     designSize: const Size(360, 680),

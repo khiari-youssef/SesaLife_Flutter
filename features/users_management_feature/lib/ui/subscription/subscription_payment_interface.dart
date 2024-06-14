@@ -44,6 +44,7 @@ class SubscriptionPaymentInterfaceState
                 SubscriptionPaymentInterfaceBlocState>(
               listener: (context, state) {},
               builder: (context, state) {
+                updateControllers(state);
                 return Material(
                   child: SingleChildScrollView(
                     child: Column(
@@ -67,21 +68,39 @@ class SubscriptionPaymentInterfaceState
                           SesameCustomTextField(
                               keyboardType: TextInputType.text,
                               controller: cardHolderNameController,
+                              errorMessage: switch (
+                                  state.ccHolderNameState.brokenConstraint) {
+                                CreditCardInputError.required =>
+                                  S.of(context).payment_cc_input_required,
+                                CreditCardInputError.invalid => S
+                                    .of(context)
+                                    .payment_cc_holder_name_input_invalid,
+                                _ => null
+                              },
                               placeHolder:
                                   S.of(context).payment_card_holder_name,
                               onChange: (cardHolderName) {
-                                setState(() {
-                                  cardHolderNameController.text =
-                                      cardHolderName;
-                                });
+                                context
+                                    .read<SubscriptionPaymentInterfaceBloc>()
+                                    .add(SubscriptionPaymentInterfaceEvent
+                                        .checkCreditCardHolderNameFormat(
+                                            cardHolderName));
                               },
                               label: S.of(context).payment_card_holder_name),
                           8.verticalSpace,
                           SesamePasswordTextField(
-                              maxLength: 19,
+                              maxLength: 16,
                               isVisible: shouldShowCCNumber,
                               keyboardType: TextInputType.number,
                               controller: cardNumberController,
+                              errorMessage: switch (
+                                  state.ccNumberState.brokenConstraint) {
+                                CreditCardInputError.required =>
+                                  S.of(context).payment_cc_input_required,
+                                CreditCardInputError.invalid =>
+                                  S.of(context).payment_cc_number_input_invalid,
+                                _ => null
+                              },
                               onVisibilityChanged: (isVisible) {
                                 if (isVisible) {
                                   authManager.requireAuthenticationAsync(
@@ -99,29 +118,11 @@ class SubscriptionPaymentInterfaceState
                               placeHolder:
                                   S.of(context).payment_card_number_placeholder,
                               onChange: (cardNumber) {
-                                setState(() {
-                                  if (cardNumber.isNotEmpty) {
-                                    creditCardType = switch (cardNumber[0]) {
-                                      "4" => CreditCardType.visa,
-                                      "5" => CreditCardType.masterCard,
-                                      _ => null
-                                    };
-                                  } else {
-                                    creditCardType = null;
-                                  }
-
-                                  int pureDigitsLength =
-                                      cardNumber.replaceAll(' ', '').length;
-                                  bool isWritingForward = cardNumber.length >
-                                      lastCreditCardNumberSaved.length;
-                                  if (isWritingForward &&
-                                      pureDigitsLength.remainder(4) == 0) {
-                                    cardNumberController.text = "$cardNumber ";
-                                  } else {
-                                    cardNumberController.text = cardNumber;
-                                  }
-                                  lastCreditCardNumberSaved = cardNumber;
-                                });
+                                context
+                                    .read<SubscriptionPaymentInterfaceBloc>()
+                                    .add(SubscriptionPaymentInterfaceEvent
+                                        .checkCreditCardNumberFormat(
+                                            cardNumber));
                               },
                               label: S.of(context).payment_card_number),
                           8.verticalSpace,
@@ -130,13 +131,25 @@ class SubscriptionPaymentInterfaceState
                                 child: SesameCustomTextField(
                                     keyboardType: TextInputType.datetime,
                                     controller: cardExpiryController,
+                                    errorMessage: switch (state
+                                        .ccExpiryDateState.brokenConstraint) {
+                                      CreditCardInputError.required =>
+                                        S.of(context).payment_cc_input_required,
+                                      CreditCardInputError.invalid => S
+                                          .of(context)
+                                          .payment_cc_expiry_input_invalid,
+                                      _ => null
+                                    },
                                     placeHolder: S
                                         .of(context)
                                         .payment_card_expiry_date_placeholder,
                                     onChange: (expiry) {
-                                      setState(() {
-                                        cardExpiryController.text = expiry;
-                                      });
+                                      context
+                                          .read<
+                                              SubscriptionPaymentInterfaceBloc>()
+                                          .add(SubscriptionPaymentInterfaceEvent
+                                              .checkCreditCardExpiryDateFormat(
+                                                  expiry));
                                     },
                                     label: S
                                         .of(context)
@@ -146,13 +159,24 @@ class SubscriptionPaymentInterfaceState
                                 child: SesamePasswordTextField(
                                     keyboardType: TextInputType.number,
                                     controller: cardCVVController,
+                                    errorMessage: switch (
+                                        state.ccCVVState.brokenConstraint) {
+                                      CreditCardInputError.required =>
+                                        S.of(context).payment_cc_input_required,
+                                      CreditCardInputError.invalid => S
+                                          .of(context)
+                                          .payment_cc_cvv_input_invalid,
+                                      _ => null
+                                    },
                                     placeHolder: S
                                         .of(context)
                                         .payment_card_cvv_placeholer,
                                     onChange: (cvv) {
-                                      setState(() {
-                                        cardCVVController.text = cvv;
-                                      });
+                                      context
+                                          .read<
+                                              SubscriptionPaymentInterfaceBloc>()
+                                          .add(SubscriptionPaymentInterfaceEvent
+                                              .checkCreditCardCVVFormat(cvv));
                                     },
                                     label: S.of(context).payment_card_cvv))
                           ]),
@@ -172,7 +196,11 @@ class SubscriptionPaymentInterfaceState
                                 16.verticalSpace,
                                 SesameCustomButton(
                                     buttonText: S.of(context).pay,
-                                    isEnabled: hasReadTheTermsAndPolicy,
+                                    isEnabled: hasReadTheTermsAndPolicy &&
+                                        context
+                                            .read<
+                                                SubscriptionPaymentInterfaceBloc>()
+                                            .areAllCreditCardInputStatesValid(),
                                     onPressed: () {
                                       authManager.requireAuthenticationAsync(
                                           context,
@@ -196,6 +224,32 @@ class SubscriptionPaymentInterfaceState
     cardNumberController.dispose();
     cardCVVController.dispose();
     cardExpiryController.dispose();
+  }
+
+  void updateControllers(SubscriptionPaymentInterfaceBlocState state) {
+    cardHolderNameController.text = state.ccHolderNameState.data;
+    cardCVVController.text = state.ccCVVState.data;
+    cardExpiryController.text = state.ccExpiryDateState.data;
+    String cardNumber = state.ccNumberState.data;
+    if (cardNumber.isNotEmpty) {
+      creditCardType = switch (cardNumber[0]) {
+        "4" => CreditCardType.visa,
+        "5" => CreditCardType.masterCard,
+        _ => null
+      };
+    } else {
+      creditCardType = null;
+    }
+
+    int pureDigitsLength = cardNumber.replaceAll(' ', '').length;
+    bool isWritingForward =
+        cardNumber.length > lastCreditCardNumberSaved.length;
+    if (isWritingForward && pureDigitsLength.remainder(4) == 0) {
+      cardNumberController.text = "$cardNumber ";
+    } else {
+      cardNumberController.text = cardNumber;
+    }
+    lastCreditCardNumberSaved = cardNumber;
   }
 }
 

@@ -98,5 +98,10 @@
   "payment_card_expiry_date_placeholder" : "MM/YY",
   "payment_card_number_placeholder" : "Ex : XXXX XXXX XXXX XXXX",
   "payment_credit_card_label" : "Credit card",
-  "payment_card_invalid_type" : "Credit Card Network Not recognized"
+  "payment_card_invalid_type" : "Credit Card Network Not recognized",
+  "payment_cc_input_required" : "required field !",
+  "payment_cc_number_input_invalid" : "invalid credit card number !",
+  "payment_cc_cvv_input_invalid" : "invalid credit card CVV !",
+  "payment_cc_expiry_input_invalid" : "invalid credit card expiry date !",
+  "payment_cc_holder_name_input_invalid" : "invalid credit card holder name!"
 }

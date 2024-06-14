@@ -110,6 +110,17 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Card number"),
         "payment_card_number_placeholder":
             MessageLookupByLibrary.simpleMessage("Ex : XXXX XXXX XXXX XXXX"),
+        "payment_cc_cvv_input_invalid":
+            MessageLookupByLibrary.simpleMessage("invalid credit card CVV !"),
+        "payment_cc_expiry_input_invalid": MessageLookupByLibrary.simpleMessage(
+            "invalid credit card expiry date !"),
+        "payment_cc_holder_name_input_invalid":
+            MessageLookupByLibrary.simpleMessage(
+                "invalid credit card holder name!"),
+        "payment_cc_input_required":
+            MessageLookupByLibrary.simpleMessage("required field !"),
+        "payment_cc_number_input_invalid": MessageLookupByLibrary.simpleMessage(
+            "invalid credit card number !"),
         "payment_credit_card_label":
             MessageLookupByLibrary.simpleMessage("Credit card"),
         "payment_fee": MessageLookupByLibrary.simpleMessage("Fee :"),

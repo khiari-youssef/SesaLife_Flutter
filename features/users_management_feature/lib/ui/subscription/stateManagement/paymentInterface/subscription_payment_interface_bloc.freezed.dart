@@ -760,97 +760,19 @@ abstract class _checkCreditCardExpiryDateFormat
 
 /// @nodoc
 mixin _$SubscriptionPaymentInterfaceBlocState {
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(
-            String ccNumber, CreditCardInputErrorConstraint? brokenConstraint)
-        creditCardNumberFormatState,
-    required TResult Function(
-            String name, CreditCardInputErrorConstraint? brokenConstraint)
-        creditCardHolderNameFormatState,
-    required TResult Function(
-            String cvv, CreditCardInputErrorConstraint? brokenConstraint)
-        creditCardCVVFormatState,
-    required TResult Function(
-            String date, CreditCardInputErrorConstraint? brokenConstraint)
-        creditCardExpiryDateFormatState,
-    required TResult Function() allStateCleared,
-  }) =>
+  CreditCardInputState<dynamic> get ccNumberState =>
       throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(
-            String ccNumber, CreditCardInputErrorConstraint? brokenConstraint)?
-        creditCardNumberFormatState,
-    TResult? Function(
-            String name, CreditCardInputErrorConstraint? brokenConstraint)?
-        creditCardHolderNameFormatState,
-    TResult? Function(
-            String cvv, CreditCardInputErrorConstraint? brokenConstraint)?
-        creditCardCVVFormatState,
-    TResult? Function(
-            String date, CreditCardInputErrorConstraint? brokenConstraint)?
-        creditCardExpiryDateFormatState,
-    TResult? Function()? allStateCleared,
-  }) =>
+  CreditCardInputState<dynamic> get ccHolderNameState =>
       throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(
-            String ccNumber, CreditCardInputErrorConstraint? brokenConstraint)?
-        creditCardNumberFormatState,
-    TResult Function(
-            String name, CreditCardInputErrorConstraint? brokenConstraint)?
-        creditCardHolderNameFormatState,
-    TResult Function(
-            String cvv, CreditCardInputErrorConstraint? brokenConstraint)?
-        creditCardCVVFormatState,
-    TResult Function(
-            String date, CreditCardInputErrorConstraint? brokenConstraint)?
-        creditCardExpiryDateFormatState,
-    TResult Function()? allStateCleared,
-    required TResult orElse(),
-  }) =>
+  CreditCardInputState<dynamic> get ccExpiryDateState =>
       throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_creditCardNumberFormatState value)
-        creditCardNumberFormatState,
-    required TResult Function(_creditCardHolderNameFormatState value)
-        creditCardHolderNameFormatState,
-    required TResult Function(_creditCardCVVFormatState value)
-        creditCardCVVFormatState,
-    required TResult Function(_creditCardExpiryDateFormatState value)
-        creditCardExpiryDateFormatState,
-    required TResult Function(_allStateCleared value) allStateCleared,
-  }) =>
+  CreditCardInputState<dynamic> get ccCVVState =>
       throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_creditCardNumberFormatState value)?
-        creditCardNumberFormatState,
-    TResult? Function(_creditCardHolderNameFormatState value)?
-        creditCardHolderNameFormatState,
-    TResult? Function(_creditCardCVVFormatState value)?
-        creditCardCVVFormatState,
-    TResult? Function(_creditCardExpiryDateFormatState value)?
-        creditCardExpiryDateFormatState,
-    TResult? Function(_allStateCleared value)? allStateCleared,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_creditCardNumberFormatState value)?
-        creditCardNumberFormatState,
-    TResult Function(_creditCardHolderNameFormatState value)?
-        creditCardHolderNameFormatState,
-    TResult Function(_creditCardCVVFormatState value)? creditCardCVVFormatState,
-    TResult Function(_creditCardExpiryDateFormatState value)?
-        creditCardExpiryDateFormatState,
-    TResult Function(_allStateCleared value)? allStateCleared,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
+
+  @JsonKey(ignore: true)
+  $SubscriptionPaymentInterfaceBlocStateCopyWith<
+          SubscriptionPaymentInterfaceBlocState>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -860,6 +782,12 @@ abstract class $SubscriptionPaymentInterfaceBlocStateCopyWith<$Res> {
           $Res Function(SubscriptionPaymentInterfaceBlocState) then) =
       _$SubscriptionPaymentInterfaceBlocStateCopyWithImpl<$Res,
           SubscriptionPaymentInterfaceBlocState>;
+  @useResult
+  $Res call(
+      {CreditCardInputState<dynamic> ccNumberState,
+      CreditCardInputState<dynamic> ccHolderNameState,
+      CreditCardInputState<dynamic> ccExpiryDateState,
+      CreditCardInputState<dynamic> ccCVVState});
 }
 
 /// @nodoc
@@ -872,981 +800,163 @@ class _$SubscriptionPaymentInterfaceBlocStateCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? ccNumberState = null,
+    Object? ccHolderNameState = null,
+    Object? ccExpiryDateState = null,
+    Object? ccCVVState = null,
+  }) {
+    return _then(_value.copyWith(
+      ccNumberState: null == ccNumberState
+          ? _value.ccNumberState
+          : ccNumberState // ignore: cast_nullable_to_non_nullable
+              as CreditCardInputState<dynamic>,
+      ccHolderNameState: null == ccHolderNameState
+          ? _value.ccHolderNameState
+          : ccHolderNameState // ignore: cast_nullable_to_non_nullable
+              as CreditCardInputState<dynamic>,
+      ccExpiryDateState: null == ccExpiryDateState
+          ? _value.ccExpiryDateState
+          : ccExpiryDateState // ignore: cast_nullable_to_non_nullable
+              as CreditCardInputState<dynamic>,
+      ccCVVState: null == ccCVVState
+          ? _value.ccCVVState
+          : ccCVVState // ignore: cast_nullable_to_non_nullable
+              as CreditCardInputState<dynamic>,
+    ) as $Val);
+  }
 }
 
 /// @nodoc
-abstract class _$$creditCardNumberFormatStateImplCopyWith<$Res> {
-  factory _$$creditCardNumberFormatStateImplCopyWith(
-          _$creditCardNumberFormatStateImpl value,
-          $Res Function(_$creditCardNumberFormatStateImpl) then) =
-      __$$creditCardNumberFormatStateImplCopyWithImpl<$Res>;
+abstract class _$$SubscriptionPaymentInterfaceBlocStateImplCopyWith<$Res>
+    implements $SubscriptionPaymentInterfaceBlocStateCopyWith<$Res> {
+  factory _$$SubscriptionPaymentInterfaceBlocStateImplCopyWith(
+          _$SubscriptionPaymentInterfaceBlocStateImpl value,
+          $Res Function(_$SubscriptionPaymentInterfaceBlocStateImpl) then) =
+      __$$SubscriptionPaymentInterfaceBlocStateImplCopyWithImpl<$Res>;
+  @override
   @useResult
   $Res call(
-      {String ccNumber, CreditCardInputErrorConstraint? brokenConstraint});
+      {CreditCardInputState<dynamic> ccNumberState,
+      CreditCardInputState<dynamic> ccHolderNameState,
+      CreditCardInputState<dynamic> ccExpiryDateState,
+      CreditCardInputState<dynamic> ccCVVState});
 }
 
 /// @nodoc
-class __$$creditCardNumberFormatStateImplCopyWithImpl<$Res>
+class __$$SubscriptionPaymentInterfaceBlocStateImplCopyWithImpl<$Res>
     extends _$SubscriptionPaymentInterfaceBlocStateCopyWithImpl<$Res,
-        _$creditCardNumberFormatStateImpl>
-    implements _$$creditCardNumberFormatStateImplCopyWith<$Res> {
-  __$$creditCardNumberFormatStateImplCopyWithImpl(
-      _$creditCardNumberFormatStateImpl _value,
-      $Res Function(_$creditCardNumberFormatStateImpl) _then)
+        _$SubscriptionPaymentInterfaceBlocStateImpl>
+    implements _$$SubscriptionPaymentInterfaceBlocStateImplCopyWith<$Res> {
+  __$$SubscriptionPaymentInterfaceBlocStateImplCopyWithImpl(
+      _$SubscriptionPaymentInterfaceBlocStateImpl _value,
+      $Res Function(_$SubscriptionPaymentInterfaceBlocStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? ccNumber = null,
-    Object? brokenConstraint = freezed,
+    Object? ccNumberState = null,
+    Object? ccHolderNameState = null,
+    Object? ccExpiryDateState = null,
+    Object? ccCVVState = null,
   }) {
-    return _then(_$creditCardNumberFormatStateImpl(
-      null == ccNumber
-          ? _value.ccNumber
-          : ccNumber // ignore: cast_nullable_to_non_nullable
-              as String,
-      freezed == brokenConstraint
-          ? _value.brokenConstraint
-          : brokenConstraint // ignore: cast_nullable_to_non_nullable
-              as CreditCardInputErrorConstraint?,
+    return _then(_$SubscriptionPaymentInterfaceBlocStateImpl(
+      ccNumberState: null == ccNumberState
+          ? _value.ccNumberState
+          : ccNumberState // ignore: cast_nullable_to_non_nullable
+              as CreditCardInputState<dynamic>,
+      ccHolderNameState: null == ccHolderNameState
+          ? _value.ccHolderNameState
+          : ccHolderNameState // ignore: cast_nullable_to_non_nullable
+              as CreditCardInputState<dynamic>,
+      ccExpiryDateState: null == ccExpiryDateState
+          ? _value.ccExpiryDateState
+          : ccExpiryDateState // ignore: cast_nullable_to_non_nullable
+              as CreditCardInputState<dynamic>,
+      ccCVVState: null == ccCVVState
+          ? _value.ccCVVState
+          : ccCVVState // ignore: cast_nullable_to_non_nullable
+              as CreditCardInputState<dynamic>,
     ));
   }
 }
 
 /// @nodoc
 
-class _$creditCardNumberFormatStateImpl
-    implements _creditCardNumberFormatState {
-  const _$creditCardNumberFormatStateImpl(this.ccNumber, this.brokenConstraint);
+class _$SubscriptionPaymentInterfaceBlocStateImpl
+    implements _SubscriptionPaymentInterfaceBlocState {
+  const _$SubscriptionPaymentInterfaceBlocStateImpl(
+      {required this.ccNumberState,
+      required this.ccHolderNameState,
+      required this.ccExpiryDateState,
+      required this.ccCVVState});
 
   @override
-  final String ccNumber;
+  final CreditCardInputState<dynamic> ccNumberState;
   @override
-  final CreditCardInputErrorConstraint? brokenConstraint;
+  final CreditCardInputState<dynamic> ccHolderNameState;
+  @override
+  final CreditCardInputState<dynamic> ccExpiryDateState;
+  @override
+  final CreditCardInputState<dynamic> ccCVVState;
 
   @override
   String toString() {
-    return 'SubscriptionPaymentInterfaceBlocState.creditCardNumberFormatState(ccNumber: $ccNumber, brokenConstraint: $brokenConstraint)';
+    return 'SubscriptionPaymentInterfaceBlocState(ccNumberState: $ccNumberState, ccHolderNameState: $ccHolderNameState, ccExpiryDateState: $ccExpiryDateState, ccCVVState: $ccCVVState)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$creditCardNumberFormatStateImpl &&
-            (identical(other.ccNumber, ccNumber) ||
-                other.ccNumber == ccNumber) &&
-            (identical(other.brokenConstraint, brokenConstraint) ||
-                other.brokenConstraint == brokenConstraint));
+            other is _$SubscriptionPaymentInterfaceBlocStateImpl &&
+            (identical(other.ccNumberState, ccNumberState) ||
+                other.ccNumberState == ccNumberState) &&
+            (identical(other.ccHolderNameState, ccHolderNameState) ||
+                other.ccHolderNameState == ccHolderNameState) &&
+            (identical(other.ccExpiryDateState, ccExpiryDateState) ||
+                other.ccExpiryDateState == ccExpiryDateState) &&
+            (identical(other.ccCVVState, ccCVVState) ||
+                other.ccCVVState == ccCVVState));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, ccNumber, brokenConstraint);
+  int get hashCode => Object.hash(runtimeType, ccNumberState, ccHolderNameState,
+      ccExpiryDateState, ccCVVState);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$creditCardNumberFormatStateImplCopyWith<_$creditCardNumberFormatStateImpl>
-      get copyWith => __$$creditCardNumberFormatStateImplCopyWithImpl<
-          _$creditCardNumberFormatStateImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(
-            String ccNumber, CreditCardInputErrorConstraint? brokenConstraint)
-        creditCardNumberFormatState,
-    required TResult Function(
-            String name, CreditCardInputErrorConstraint? brokenConstraint)
-        creditCardHolderNameFormatState,
-    required TResult Function(
-            String cvv, CreditCardInputErrorConstraint? brokenConstraint)
-        creditCardCVVFormatState,
-    required TResult Function(
-            String date, CreditCardInputErrorConstraint? brokenConstraint)
-        creditCardExpiryDateFormatState,
-    required TResult Function() allStateCleared,
-  }) {
-    return creditCardNumberFormatState(ccNumber, brokenConstraint);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(
-            String ccNumber, CreditCardInputErrorConstraint? brokenConstraint)?
-        creditCardNumberFormatState,
-    TResult? Function(
-            String name, CreditCardInputErrorConstraint? brokenConstraint)?
-        creditCardHolderNameFormatState,
-    TResult? Function(
-            String cvv, CreditCardInputErrorConstraint? brokenConstraint)?
-        creditCardCVVFormatState,
-    TResult? Function(
-            String date, CreditCardInputErrorConstraint? brokenConstraint)?
-        creditCardExpiryDateFormatState,
-    TResult? Function()? allStateCleared,
-  }) {
-    return creditCardNumberFormatState?.call(ccNumber, brokenConstraint);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(
-            String ccNumber, CreditCardInputErrorConstraint? brokenConstraint)?
-        creditCardNumberFormatState,
-    TResult Function(
-            String name, CreditCardInputErrorConstraint? brokenConstraint)?
-        creditCardHolderNameFormatState,
-    TResult Function(
-            String cvv, CreditCardInputErrorConstraint? brokenConstraint)?
-        creditCardCVVFormatState,
-    TResult Function(
-            String date, CreditCardInputErrorConstraint? brokenConstraint)?
-        creditCardExpiryDateFormatState,
-    TResult Function()? allStateCleared,
-    required TResult orElse(),
-  }) {
-    if (creditCardNumberFormatState != null) {
-      return creditCardNumberFormatState(ccNumber, brokenConstraint);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_creditCardNumberFormatState value)
-        creditCardNumberFormatState,
-    required TResult Function(_creditCardHolderNameFormatState value)
-        creditCardHolderNameFormatState,
-    required TResult Function(_creditCardCVVFormatState value)
-        creditCardCVVFormatState,
-    required TResult Function(_creditCardExpiryDateFormatState value)
-        creditCardExpiryDateFormatState,
-    required TResult Function(_allStateCleared value) allStateCleared,
-  }) {
-    return creditCardNumberFormatState(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_creditCardNumberFormatState value)?
-        creditCardNumberFormatState,
-    TResult? Function(_creditCardHolderNameFormatState value)?
-        creditCardHolderNameFormatState,
-    TResult? Function(_creditCardCVVFormatState value)?
-        creditCardCVVFormatState,
-    TResult? Function(_creditCardExpiryDateFormatState value)?
-        creditCardExpiryDateFormatState,
-    TResult? Function(_allStateCleared value)? allStateCleared,
-  }) {
-    return creditCardNumberFormatState?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_creditCardNumberFormatState value)?
-        creditCardNumberFormatState,
-    TResult Function(_creditCardHolderNameFormatState value)?
-        creditCardHolderNameFormatState,
-    TResult Function(_creditCardCVVFormatState value)? creditCardCVVFormatState,
-    TResult Function(_creditCardExpiryDateFormatState value)?
-        creditCardExpiryDateFormatState,
-    TResult Function(_allStateCleared value)? allStateCleared,
-    required TResult orElse(),
-  }) {
-    if (creditCardNumberFormatState != null) {
-      return creditCardNumberFormatState(this);
-    }
-    return orElse();
-  }
+  _$$SubscriptionPaymentInterfaceBlocStateImplCopyWith<
+          _$SubscriptionPaymentInterfaceBlocStateImpl>
+      get copyWith => __$$SubscriptionPaymentInterfaceBlocStateImplCopyWithImpl<
+          _$SubscriptionPaymentInterfaceBlocStateImpl>(this, _$identity);
 }
 
-abstract class _creditCardNumberFormatState
+abstract class _SubscriptionPaymentInterfaceBlocState
     implements SubscriptionPaymentInterfaceBlocState {
-  const factory _creditCardNumberFormatState(final String ccNumber,
-          final CreditCardInputErrorConstraint? brokenConstraint) =
-      _$creditCardNumberFormatStateImpl;
+  const factory _SubscriptionPaymentInterfaceBlocState(
+          {required final CreditCardInputState<dynamic> ccNumberState,
+          required final CreditCardInputState<dynamic> ccHolderNameState,
+          required final CreditCardInputState<dynamic> ccExpiryDateState,
+          required final CreditCardInputState<dynamic> ccCVVState}) =
+      _$SubscriptionPaymentInterfaceBlocStateImpl;
 
-  String get ccNumber;
-  CreditCardInputErrorConstraint? get brokenConstraint;
+  @override
+  CreditCardInputState<dynamic> get ccNumberState;
+  @override
+  CreditCardInputState<dynamic> get ccHolderNameState;
+  @override
+  CreditCardInputState<dynamic> get ccExpiryDateState;
+  @override
+  CreditCardInputState<dynamic> get ccCVVState;
+  @override
   @JsonKey(ignore: true)
-  _$$creditCardNumberFormatStateImplCopyWith<_$creditCardNumberFormatStateImpl>
+  _$$SubscriptionPaymentInterfaceBlocStateImplCopyWith<
+          _$SubscriptionPaymentInterfaceBlocStateImpl>
       get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$creditCardHolderNameFormatStateImplCopyWith<$Res> {
-  factory _$$creditCardHolderNameFormatStateImplCopyWith(
-          _$creditCardHolderNameFormatStateImpl value,
-          $Res Function(_$creditCardHolderNameFormatStateImpl) then) =
-      __$$creditCardHolderNameFormatStateImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({String name, CreditCardInputErrorConstraint? brokenConstraint});
-}
-
-/// @nodoc
-class __$$creditCardHolderNameFormatStateImplCopyWithImpl<$Res>
-    extends _$SubscriptionPaymentInterfaceBlocStateCopyWithImpl<$Res,
-        _$creditCardHolderNameFormatStateImpl>
-    implements _$$creditCardHolderNameFormatStateImplCopyWith<$Res> {
-  __$$creditCardHolderNameFormatStateImplCopyWithImpl(
-      _$creditCardHolderNameFormatStateImpl _value,
-      $Res Function(_$creditCardHolderNameFormatStateImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? name = null,
-    Object? brokenConstraint = freezed,
-  }) {
-    return _then(_$creditCardHolderNameFormatStateImpl(
-      null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      freezed == brokenConstraint
-          ? _value.brokenConstraint
-          : brokenConstraint // ignore: cast_nullable_to_non_nullable
-              as CreditCardInputErrorConstraint?,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$creditCardHolderNameFormatStateImpl
-    implements _creditCardHolderNameFormatState {
-  const _$creditCardHolderNameFormatStateImpl(this.name, this.brokenConstraint);
-
-  @override
-  final String name;
-  @override
-  final CreditCardInputErrorConstraint? brokenConstraint;
-
-  @override
-  String toString() {
-    return 'SubscriptionPaymentInterfaceBlocState.creditCardHolderNameFormatState(name: $name, brokenConstraint: $brokenConstraint)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$creditCardHolderNameFormatStateImpl &&
-            (identical(other.name, name) || other.name == name) &&
-            (identical(other.brokenConstraint, brokenConstraint) ||
-                other.brokenConstraint == brokenConstraint));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, name, brokenConstraint);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$creditCardHolderNameFormatStateImplCopyWith<
-          _$creditCardHolderNameFormatStateImpl>
-      get copyWith => __$$creditCardHolderNameFormatStateImplCopyWithImpl<
-          _$creditCardHolderNameFormatStateImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(
-            String ccNumber, CreditCardInputErrorConstraint? brokenConstraint)
-        creditCardNumberFormatState,
-    required TResult Function(
-            String name, CreditCardInputErrorConstraint? brokenConstraint)
-        creditCardHolderNameFormatState,
-    required TResult Function(
-            String cvv, CreditCardInputErrorConstraint? brokenConstraint)
-        creditCardCVVFormatState,
-    required TResult Function(
-            String date, CreditCardInputErrorConstraint? brokenConstraint)
-        creditCardExpiryDateFormatState,
-    required TResult Function() allStateCleared,
-  }) {
-    return creditCardHolderNameFormatState(name, brokenConstraint);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(
-            String ccNumber, CreditCardInputErrorConstraint? brokenConstraint)?
-        creditCardNumberFormatState,
-    TResult? Function(
-            String name, CreditCardInputErrorConstraint? brokenConstraint)?
-        creditCardHolderNameFormatState,
-    TResult? Function(
-            String cvv, CreditCardInputErrorConstraint? brokenConstraint)?
-        creditCardCVVFormatState,
-    TResult? Function(
-            String date, CreditCardInputErrorConstraint? brokenConstraint)?
-        creditCardExpiryDateFormatState,
-    TResult? Function()? allStateCleared,
-  }) {
-    return creditCardHolderNameFormatState?.call(name, brokenConstraint);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(
-            String ccNumber, CreditCardInputErrorConstraint? brokenConstraint)?
-        creditCardNumberFormatState,
-    TResult Function(
-            String name, CreditCardInputErrorConstraint? brokenConstraint)?
-        creditCardHolderNameFormatState,
-    TResult Function(
-            String cvv, CreditCardInputErrorConstraint? brokenConstraint)?
-        creditCardCVVFormatState,
-    TResult Function(
-            String date, CreditCardInputErrorConstraint? brokenConstraint)?
-        creditCardExpiryDateFormatState,
-    TResult Function()? allStateCleared,
-    required TResult orElse(),
-  }) {
-    if (creditCardHolderNameFormatState != null) {
-      return creditCardHolderNameFormatState(name, brokenConstraint);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_creditCardNumberFormatState value)
-        creditCardNumberFormatState,
-    required TResult Function(_creditCardHolderNameFormatState value)
-        creditCardHolderNameFormatState,
-    required TResult Function(_creditCardCVVFormatState value)
-        creditCardCVVFormatState,
-    required TResult Function(_creditCardExpiryDateFormatState value)
-        creditCardExpiryDateFormatState,
-    required TResult Function(_allStateCleared value) allStateCleared,
-  }) {
-    return creditCardHolderNameFormatState(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_creditCardNumberFormatState value)?
-        creditCardNumberFormatState,
-    TResult? Function(_creditCardHolderNameFormatState value)?
-        creditCardHolderNameFormatState,
-    TResult? Function(_creditCardCVVFormatState value)?
-        creditCardCVVFormatState,
-    TResult? Function(_creditCardExpiryDateFormatState value)?
-        creditCardExpiryDateFormatState,
-    TResult? Function(_allStateCleared value)? allStateCleared,
-  }) {
-    return creditCardHolderNameFormatState?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_creditCardNumberFormatState value)?
-        creditCardNumberFormatState,
-    TResult Function(_creditCardHolderNameFormatState value)?
-        creditCardHolderNameFormatState,
-    TResult Function(_creditCardCVVFormatState value)? creditCardCVVFormatState,
-    TResult Function(_creditCardExpiryDateFormatState value)?
-        creditCardExpiryDateFormatState,
-    TResult Function(_allStateCleared value)? allStateCleared,
-    required TResult orElse(),
-  }) {
-    if (creditCardHolderNameFormatState != null) {
-      return creditCardHolderNameFormatState(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _creditCardHolderNameFormatState
-    implements SubscriptionPaymentInterfaceBlocState {
-  const factory _creditCardHolderNameFormatState(final String name,
-          final CreditCardInputErrorConstraint? brokenConstraint) =
-      _$creditCardHolderNameFormatStateImpl;
-
-  String get name;
-  CreditCardInputErrorConstraint? get brokenConstraint;
-  @JsonKey(ignore: true)
-  _$$creditCardHolderNameFormatStateImplCopyWith<
-          _$creditCardHolderNameFormatStateImpl>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$creditCardCVVFormatStateImplCopyWith<$Res> {
-  factory _$$creditCardCVVFormatStateImplCopyWith(
-          _$creditCardCVVFormatStateImpl value,
-          $Res Function(_$creditCardCVVFormatStateImpl) then) =
-      __$$creditCardCVVFormatStateImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({String cvv, CreditCardInputErrorConstraint? brokenConstraint});
-}
-
-/// @nodoc
-class __$$creditCardCVVFormatStateImplCopyWithImpl<$Res>
-    extends _$SubscriptionPaymentInterfaceBlocStateCopyWithImpl<$Res,
-        _$creditCardCVVFormatStateImpl>
-    implements _$$creditCardCVVFormatStateImplCopyWith<$Res> {
-  __$$creditCardCVVFormatStateImplCopyWithImpl(
-      _$creditCardCVVFormatStateImpl _value,
-      $Res Function(_$creditCardCVVFormatStateImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? cvv = null,
-    Object? brokenConstraint = freezed,
-  }) {
-    return _then(_$creditCardCVVFormatStateImpl(
-      null == cvv
-          ? _value.cvv
-          : cvv // ignore: cast_nullable_to_non_nullable
-              as String,
-      freezed == brokenConstraint
-          ? _value.brokenConstraint
-          : brokenConstraint // ignore: cast_nullable_to_non_nullable
-              as CreditCardInputErrorConstraint?,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$creditCardCVVFormatStateImpl implements _creditCardCVVFormatState {
-  const _$creditCardCVVFormatStateImpl(this.cvv, this.brokenConstraint);
-
-  @override
-  final String cvv;
-  @override
-  final CreditCardInputErrorConstraint? brokenConstraint;
-
-  @override
-  String toString() {
-    return 'SubscriptionPaymentInterfaceBlocState.creditCardCVVFormatState(cvv: $cvv, brokenConstraint: $brokenConstraint)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$creditCardCVVFormatStateImpl &&
-            (identical(other.cvv, cvv) || other.cvv == cvv) &&
-            (identical(other.brokenConstraint, brokenConstraint) ||
-                other.brokenConstraint == brokenConstraint));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, cvv, brokenConstraint);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$creditCardCVVFormatStateImplCopyWith<_$creditCardCVVFormatStateImpl>
-      get copyWith => __$$creditCardCVVFormatStateImplCopyWithImpl<
-          _$creditCardCVVFormatStateImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(
-            String ccNumber, CreditCardInputErrorConstraint? brokenConstraint)
-        creditCardNumberFormatState,
-    required TResult Function(
-            String name, CreditCardInputErrorConstraint? brokenConstraint)
-        creditCardHolderNameFormatState,
-    required TResult Function(
-            String cvv, CreditCardInputErrorConstraint? brokenConstraint)
-        creditCardCVVFormatState,
-    required TResult Function(
-            String date, CreditCardInputErrorConstraint? brokenConstraint)
-        creditCardExpiryDateFormatState,
-    required TResult Function() allStateCleared,
-  }) {
-    return creditCardCVVFormatState(cvv, brokenConstraint);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(
-            String ccNumber, CreditCardInputErrorConstraint? brokenConstraint)?
-        creditCardNumberFormatState,
-    TResult? Function(
-            String name, CreditCardInputErrorConstraint? brokenConstraint)?
-        creditCardHolderNameFormatState,
-    TResult? Function(
-            String cvv, CreditCardInputErrorConstraint? brokenConstraint)?
-        creditCardCVVFormatState,
-    TResult? Function(
-            String date, CreditCardInputErrorConstraint? brokenConstraint)?
-        creditCardExpiryDateFormatState,
-    TResult? Function()? allStateCleared,
-  }) {
-    return creditCardCVVFormatState?.call(cvv, brokenConstraint);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(
-            String ccNumber, CreditCardInputErrorConstraint? brokenConstraint)?
-        creditCardNumberFormatState,
-    TResult Function(
-            String name, CreditCardInputErrorConstraint? brokenConstraint)?
-        creditCardHolderNameFormatState,
-    TResult Function(
-            String cvv, CreditCardInputErrorConstraint? brokenConstraint)?
-        creditCardCVVFormatState,
-    TResult Function(
-            String date, CreditCardInputErrorConstraint? brokenConstraint)?
-        creditCardExpiryDateFormatState,
-    TResult Function()? allStateCleared,
-    required TResult orElse(),
-  }) {
-    if (creditCardCVVFormatState != null) {
-      return creditCardCVVFormatState(cvv, brokenConstraint);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_creditCardNumberFormatState value)
-        creditCardNumberFormatState,
-    required TResult Function(_creditCardHolderNameFormatState value)
-        creditCardHolderNameFormatState,
-    required TResult Function(_creditCardCVVFormatState value)
-        creditCardCVVFormatState,
-    required TResult Function(_creditCardExpiryDateFormatState value)
-        creditCardExpiryDateFormatState,
-    required TResult Function(_allStateCleared value) allStateCleared,
-  }) {
-    return creditCardCVVFormatState(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_creditCardNumberFormatState value)?
-        creditCardNumberFormatState,
-    TResult? Function(_creditCardHolderNameFormatState value)?
-        creditCardHolderNameFormatState,
-    TResult? Function(_creditCardCVVFormatState value)?
-        creditCardCVVFormatState,
-    TResult? Function(_creditCardExpiryDateFormatState value)?
-        creditCardExpiryDateFormatState,
-    TResult? Function(_allStateCleared value)? allStateCleared,
-  }) {
-    return creditCardCVVFormatState?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_creditCardNumberFormatState value)?
-        creditCardNumberFormatState,
-    TResult Function(_creditCardHolderNameFormatState value)?
-        creditCardHolderNameFormatState,
-    TResult Function(_creditCardCVVFormatState value)? creditCardCVVFormatState,
-    TResult Function(_creditCardExpiryDateFormatState value)?
-        creditCardExpiryDateFormatState,
-    TResult Function(_allStateCleared value)? allStateCleared,
-    required TResult orElse(),
-  }) {
-    if (creditCardCVVFormatState != null) {
-      return creditCardCVVFormatState(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _creditCardCVVFormatState
-    implements SubscriptionPaymentInterfaceBlocState {
-  const factory _creditCardCVVFormatState(final String cvv,
-          final CreditCardInputErrorConstraint? brokenConstraint) =
-      _$creditCardCVVFormatStateImpl;
-
-  String get cvv;
-  CreditCardInputErrorConstraint? get brokenConstraint;
-  @JsonKey(ignore: true)
-  _$$creditCardCVVFormatStateImplCopyWith<_$creditCardCVVFormatStateImpl>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$creditCardExpiryDateFormatStateImplCopyWith<$Res> {
-  factory _$$creditCardExpiryDateFormatStateImplCopyWith(
-          _$creditCardExpiryDateFormatStateImpl value,
-          $Res Function(_$creditCardExpiryDateFormatStateImpl) then) =
-      __$$creditCardExpiryDateFormatStateImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({String date, CreditCardInputErrorConstraint? brokenConstraint});
-}
-
-/// @nodoc
-class __$$creditCardExpiryDateFormatStateImplCopyWithImpl<$Res>
-    extends _$SubscriptionPaymentInterfaceBlocStateCopyWithImpl<$Res,
-        _$creditCardExpiryDateFormatStateImpl>
-    implements _$$creditCardExpiryDateFormatStateImplCopyWith<$Res> {
-  __$$creditCardExpiryDateFormatStateImplCopyWithImpl(
-      _$creditCardExpiryDateFormatStateImpl _value,
-      $Res Function(_$creditCardExpiryDateFormatStateImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? date = null,
-    Object? brokenConstraint = freezed,
-  }) {
-    return _then(_$creditCardExpiryDateFormatStateImpl(
-      null == date
-          ? _value.date
-          : date // ignore: cast_nullable_to_non_nullable
-              as String,
-      freezed == brokenConstraint
-          ? _value.brokenConstraint
-          : brokenConstraint // ignore: cast_nullable_to_non_nullable
-              as CreditCardInputErrorConstraint?,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$creditCardExpiryDateFormatStateImpl
-    implements _creditCardExpiryDateFormatState {
-  const _$creditCardExpiryDateFormatStateImpl(this.date, this.brokenConstraint);
-
-  @override
-  final String date;
-  @override
-  final CreditCardInputErrorConstraint? brokenConstraint;
-
-  @override
-  String toString() {
-    return 'SubscriptionPaymentInterfaceBlocState.creditCardExpiryDateFormatState(date: $date, brokenConstraint: $brokenConstraint)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$creditCardExpiryDateFormatStateImpl &&
-            (identical(other.date, date) || other.date == date) &&
-            (identical(other.brokenConstraint, brokenConstraint) ||
-                other.brokenConstraint == brokenConstraint));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, date, brokenConstraint);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$creditCardExpiryDateFormatStateImplCopyWith<
-          _$creditCardExpiryDateFormatStateImpl>
-      get copyWith => __$$creditCardExpiryDateFormatStateImplCopyWithImpl<
-          _$creditCardExpiryDateFormatStateImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(
-            String ccNumber, CreditCardInputErrorConstraint? brokenConstraint)
-        creditCardNumberFormatState,
-    required TResult Function(
-            String name, CreditCardInputErrorConstraint? brokenConstraint)
-        creditCardHolderNameFormatState,
-    required TResult Function(
-            String cvv, CreditCardInputErrorConstraint? brokenConstraint)
-        creditCardCVVFormatState,
-    required TResult Function(
-            String date, CreditCardInputErrorConstraint? brokenConstraint)
-        creditCardExpiryDateFormatState,
-    required TResult Function() allStateCleared,
-  }) {
-    return creditCardExpiryDateFormatState(date, brokenConstraint);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(
-            String ccNumber, CreditCardInputErrorConstraint? brokenConstraint)?
-        creditCardNumberFormatState,
-    TResult? Function(
-            String name, CreditCardInputErrorConstraint? brokenConstraint)?
-        creditCardHolderNameFormatState,
-    TResult? Function(
-            String cvv, CreditCardInputErrorConstraint? brokenConstraint)?
-        creditCardCVVFormatState,
-    TResult? Function(
-            String date, CreditCardInputErrorConstraint? brokenConstraint)?
-        creditCardExpiryDateFormatState,
-    TResult? Function()? allStateCleared,
-  }) {
-    return creditCardExpiryDateFormatState?.call(date, brokenConstraint);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(
-            String ccNumber, CreditCardInputErrorConstraint? brokenConstraint)?
-        creditCardNumberFormatState,
-    TResult Function(
-            String name, CreditCardInputErrorConstraint? brokenConstraint)?
-        creditCardHolderNameFormatState,
-    TResult Function(
-            String cvv, CreditCardInputErrorConstraint? brokenConstraint)?
-        creditCardCVVFormatState,
-    TResult Function(
-            String date, CreditCardInputErrorConstraint? brokenConstraint)?
-        creditCardExpiryDateFormatState,
-    TResult Function()? allStateCleared,
-    required TResult orElse(),
-  }) {
-    if (creditCardExpiryDateFormatState != null) {
-      return creditCardExpiryDateFormatState(date, brokenConstraint);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_creditCardNumberFormatState value)
-        creditCardNumberFormatState,
-    required TResult Function(_creditCardHolderNameFormatState value)
-        creditCardHolderNameFormatState,
-    required TResult Function(_creditCardCVVFormatState value)
-        creditCardCVVFormatState,
-    required TResult Function(_creditCardExpiryDateFormatState value)
-        creditCardExpiryDateFormatState,
-    required TResult Function(_allStateCleared value) allStateCleared,
-  }) {
-    return creditCardExpiryDateFormatState(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_creditCardNumberFormatState value)?
-        creditCardNumberFormatState,
-    TResult? Function(_creditCardHolderNameFormatState value)?
-        creditCardHolderNameFormatState,
-    TResult? Function(_creditCardCVVFormatState value)?
-        creditCardCVVFormatState,
-    TResult? Function(_creditCardExpiryDateFormatState value)?
-        creditCardExpiryDateFormatState,
-    TResult? Function(_allStateCleared value)? allStateCleared,
-  }) {
-    return creditCardExpiryDateFormatState?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_creditCardNumberFormatState value)?
-        creditCardNumberFormatState,
-    TResult Function(_creditCardHolderNameFormatState value)?
-        creditCardHolderNameFormatState,
-    TResult Function(_creditCardCVVFormatState value)? creditCardCVVFormatState,
-    TResult Function(_creditCardExpiryDateFormatState value)?
-        creditCardExpiryDateFormatState,
-    TResult Function(_allStateCleared value)? allStateCleared,
-    required TResult orElse(),
-  }) {
-    if (creditCardExpiryDateFormatState != null) {
-      return creditCardExpiryDateFormatState(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _creditCardExpiryDateFormatState
-    implements SubscriptionPaymentInterfaceBlocState {
-  const factory _creditCardExpiryDateFormatState(final String date,
-          final CreditCardInputErrorConstraint? brokenConstraint) =
-      _$creditCardExpiryDateFormatStateImpl;
-
-  String get date;
-  CreditCardInputErrorConstraint? get brokenConstraint;
-  @JsonKey(ignore: true)
-  _$$creditCardExpiryDateFormatStateImplCopyWith<
-          _$creditCardExpiryDateFormatStateImpl>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$allStateClearedImplCopyWith<$Res> {
-  factory _$$allStateClearedImplCopyWith(_$allStateClearedImpl value,
-          $Res Function(_$allStateClearedImpl) then) =
-      __$$allStateClearedImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$allStateClearedImplCopyWithImpl<$Res>
-    extends _$SubscriptionPaymentInterfaceBlocStateCopyWithImpl<$Res,
-        _$allStateClearedImpl> implements _$$allStateClearedImplCopyWith<$Res> {
-  __$$allStateClearedImplCopyWithImpl(
-      _$allStateClearedImpl _value, $Res Function(_$allStateClearedImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$allStateClearedImpl implements _allStateCleared {
-  const _$allStateClearedImpl();
-
-  @override
-  String toString() {
-    return 'SubscriptionPaymentInterfaceBlocState.allStateCleared()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$allStateClearedImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(
-            String ccNumber, CreditCardInputErrorConstraint? brokenConstraint)
-        creditCardNumberFormatState,
-    required TResult Function(
-            String name, CreditCardInputErrorConstraint? brokenConstraint)
-        creditCardHolderNameFormatState,
-    required TResult Function(
-            String cvv, CreditCardInputErrorConstraint? brokenConstraint)
-        creditCardCVVFormatState,
-    required TResult Function(
-            String date, CreditCardInputErrorConstraint? brokenConstraint)
-        creditCardExpiryDateFormatState,
-    required TResult Function() allStateCleared,
-  }) {
-    return allStateCleared();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(
-            String ccNumber, CreditCardInputErrorConstraint? brokenConstraint)?
-        creditCardNumberFormatState,
-    TResult? Function(
-            String name, CreditCardInputErrorConstraint? brokenConstraint)?
-        creditCardHolderNameFormatState,
-    TResult? Function(
-            String cvv, CreditCardInputErrorConstraint? brokenConstraint)?
-        creditCardCVVFormatState,
-    TResult? Function(
-            String date, CreditCardInputErrorConstraint? brokenConstraint)?
-        creditCardExpiryDateFormatState,
-    TResult? Function()? allStateCleared,
-  }) {
-    return allStateCleared?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(
-            String ccNumber, CreditCardInputErrorConstraint? brokenConstraint)?
-        creditCardNumberFormatState,
-    TResult Function(
-            String name, CreditCardInputErrorConstraint? brokenConstraint)?
-        creditCardHolderNameFormatState,
-    TResult Function(
-            String cvv, CreditCardInputErrorConstraint? brokenConstraint)?
-        creditCardCVVFormatState,
-    TResult Function(
-            String date, CreditCardInputErrorConstraint? brokenConstraint)?
-        creditCardExpiryDateFormatState,
-    TResult Function()? allStateCleared,
-    required TResult orElse(),
-  }) {
-    if (allStateCleared != null) {
-      return allStateCleared();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_creditCardNumberFormatState value)
-        creditCardNumberFormatState,
-    required TResult Function(_creditCardHolderNameFormatState value)
-        creditCardHolderNameFormatState,
-    required TResult Function(_creditCardCVVFormatState value)
-        creditCardCVVFormatState,
-    required TResult Function(_creditCardExpiryDateFormatState value)
-        creditCardExpiryDateFormatState,
-    required TResult Function(_allStateCleared value) allStateCleared,
-  }) {
-    return allStateCleared(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_creditCardNumberFormatState value)?
-        creditCardNumberFormatState,
-    TResult? Function(_creditCardHolderNameFormatState value)?
-        creditCardHolderNameFormatState,
-    TResult? Function(_creditCardCVVFormatState value)?
-        creditCardCVVFormatState,
-    TResult? Function(_creditCardExpiryDateFormatState value)?
-        creditCardExpiryDateFormatState,
-    TResult? Function(_allStateCleared value)? allStateCleared,
-  }) {
-    return allStateCleared?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_creditCardNumberFormatState value)?
-        creditCardNumberFormatState,
-    TResult Function(_creditCardHolderNameFormatState value)?
-        creditCardHolderNameFormatState,
-    TResult Function(_creditCardCVVFormatState value)? creditCardCVVFormatState,
-    TResult Function(_creditCardExpiryDateFormatState value)?
-        creditCardExpiryDateFormatState,
-    TResult Function(_allStateCleared value)? allStateCleared,
-    required TResult orElse(),
-  }) {
-    if (allStateCleared != null) {
-      return allStateCleared(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _allStateCleared
-    implements SubscriptionPaymentInterfaceBlocState {
-  const factory _allStateCleared() = _$allStateClearedImpl;
 }

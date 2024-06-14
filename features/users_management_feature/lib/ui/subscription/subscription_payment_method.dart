@@ -16,11 +16,11 @@ class SubscriptionPaymentMethodState extends State<SubscriptionPaymentMethod> {
     },
         Material(
             child: Padding(
-                padding: EdgeInsets.all(8.r),
+                padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 8.h),
                 child: Column(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       StudentSubscriptionRecordCard(
                           record: widget.paymentRecord),
@@ -66,7 +66,7 @@ class SubscriptionPaymentMethodState extends State<SubscriptionPaymentMethod> {
                       ),
                       Expanded(
                           child: Column(
-                              mainAxisAlignment: MainAxisAlignment.end,
+                              mainAxisAlignment: MainAxisAlignment.center,
                               crossAxisAlignment: CrossAxisAlignment.center,
                               mainAxisSize: MainAxisSize.max,
                               children: [

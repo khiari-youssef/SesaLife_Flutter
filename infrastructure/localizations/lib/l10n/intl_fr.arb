@@ -96,5 +96,10 @@
   "payment_card_expiry_date_placeholder" : "MM/YY",
   "payment_card_number_placeholder" : "Ex : XXXX XXXX XXXX XXXX",
   "payment_credit_card_label" : "Carte bancaire",
-  "payment_card_invalid_type" : "Carte de credit non reconnue"
+  "payment_card_invalid_type" : "Carte de credit non reconnue",
+  "payment_cc_input_required" : "ce champ est requis!",
+  "payment_cc_number_input_invalid" : "ce numéro de carte de crédit est invalide !",
+  "payment_cc_cvv_input_invalid" : "ce code CVV est invalide !",
+  "payment_cc_expiry_input_invalid" : "cette date d'expiration est invalide",
+  "payment_cc_holder_name_input_invalid" : "Nom invalide !"
 }

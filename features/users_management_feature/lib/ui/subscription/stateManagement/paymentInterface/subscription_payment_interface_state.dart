@@ -1,24 +1,25 @@
 part of 'subscription_payment_interface_bloc.dart';
 
-enum CreditCardInputErrorConstraint { required, invalid }
+enum CreditCardInputError { required, invalid, none }
+
+class CreditCardInputState<DataType> {
+  final DataType data;
+  final CreditCardInputError? brokenConstraint;
+  const CreditCardInputState(
+      {required this.data, this.brokenConstraint = CreditCardInputError.none});
+
+  bool isNotValid() =>
+      brokenConstraint == CreditCardInputError.none || brokenConstraint == null;
+}
 
 @freezed
 @immutable
 sealed class SubscriptionPaymentInterfaceBlocState
     with _$SubscriptionPaymentInterfaceBlocState {
-  const factory SubscriptionPaymentInterfaceBlocState.creditCardNumberFormatState(
-          String ccNumber, CreditCardInputErrorConstraint? brokenConstraint) =
-      _creditCardNumberFormatState;
-  const factory SubscriptionPaymentInterfaceBlocState.creditCardHolderNameFormatState(
-          String name, CreditCardInputErrorConstraint? brokenConstraint) =
-      _creditCardHolderNameFormatState;
-  const factory SubscriptionPaymentInterfaceBlocState.creditCardCVVFormatState(
-          String cvv, CreditCardInputErrorConstraint? brokenConstraint) =
-      _creditCardCVVFormatState;
-  const factory SubscriptionPaymentInterfaceBlocState.creditCardExpiryDateFormatState(
-          String date, CreditCardInputErrorConstraint? brokenConstraint) =
-      _creditCardExpiryDateFormatState;
-
-  const factory SubscriptionPaymentInterfaceBlocState.allStateCleared() =
-      _allStateCleared;
+  const factory SubscriptionPaymentInterfaceBlocState(
+          {required CreditCardInputState ccNumberState,
+          required CreditCardInputState ccHolderNameState,
+          required CreditCardInputState ccExpiryDateState,
+          required CreditCardInputState ccCVVState}) =
+      _SubscriptionPaymentInterfaceBlocState;
 }
