@@ -96,7 +96,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "pay": MessageLookupByLibrary.simpleMessage("Pay"),
         "payment": MessageLookupByLibrary.simpleMessage("Payment"),
         "payment_card_cvv": MessageLookupByLibrary.simpleMessage("CVV"),
-        "payment_card_cvv_placeholer":
+        "payment_card_cvv_placeholder":
             MessageLookupByLibrary.simpleMessage("XXX"),
         "payment_card_expiry_date":
             MessageLookupByLibrary.simpleMessage("Expiry date"),
@@ -110,6 +110,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Card number"),
         "payment_card_number_placeholder":
             MessageLookupByLibrary.simpleMessage("Ex : XXXX XXXX XXXX XXXX"),
+        "payment_cashOrCheck_result_message": MessageLookupByLibrary.simpleMessage(
+            "You will need to go to the university financial service office to validate your payment !"),
         "payment_cc_cvv_input_invalid":
             MessageLookupByLibrary.simpleMessage("invalid credit card CVV !"),
         "payment_cc_expiry_input_invalid": MessageLookupByLibrary.simpleMessage(
@@ -123,6 +125,12 @@ class MessageLookup extends MessageLookupByLibrary {
             "invalid credit card number !"),
         "payment_credit_card_label":
             MessageLookupByLibrary.simpleMessage("Credit card"),
+        "payment_credit_card_result_message_error":
+            MessageLookupByLibrary.simpleMessage(
+                "Payment failed ! check your credit card informations or contact your bank for more details !"),
+        "payment_credit_card_result_message_success":
+            MessageLookupByLibrary.simpleMessage(
+                "Payment completed ! your payment receipt will be ready as soon as possible !"),
         "payment_fee": MessageLookupByLibrary.simpleMessage("Fee :"),
         "payment_method_cachOrBank":
             MessageLookupByLibrary.simpleMessage("Cach / Bank check"),

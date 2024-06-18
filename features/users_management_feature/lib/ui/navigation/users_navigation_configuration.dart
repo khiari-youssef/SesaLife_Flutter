@@ -1,6 +1,6 @@
 import 'package:shared_dependencies/shared_dependencies.dart';
 
-import 'UsersNavigationConfiguration.gr.dart';
+import 'users_navigation_configuration.gr.dart';
 
 @AutoRouterConfig(replaceInRouteName: 'Screen|Page,Route')
 class UsersNavigationConfiguration extends $UsersNavigationConfiguration {
@@ -22,6 +22,9 @@ class UsersNavigationConfiguration extends $UsersNavigationConfiguration {
         AutoRoute(
             path: "/SubscriptionPaymentInterfaceRoute",
             page: SubscriptionPaymentInterfaceRoute.page),
+        AutoRoute(
+            path: "/SubscriptionPaymentResultRoute",
+            page: SubscriptionPaymentResultRoute.page),
         AutoRoute(path: "/MySubscriptionRoute", page: MySubscriptionRoute.page),
         AutoRoute(
             path: "/SesameProgramsCatalog", page: SesameProgramsCatalog.page),

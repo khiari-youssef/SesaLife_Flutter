@@ -1,4 +1,4 @@
-import 'package:core/coreUI/SesameBadgeWidget.dart';
+import 'package:core/coreUI/sesame_badge_widget.dart';
 import 'package:core/core_domain/entities/SesameBadge.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 

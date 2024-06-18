@@ -95,7 +95,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "pay": MessageLookupByLibrary.simpleMessage("Payer"),
         "payment": MessageLookupByLibrary.simpleMessage("Paiement"),
         "payment_card_cvv": MessageLookupByLibrary.simpleMessage("CVV"),
-        "payment_card_cvv_placeholer":
+        "payment_card_cvv_placeholder":
             MessageLookupByLibrary.simpleMessage("XXX"),
         "payment_card_expiry_date":
             MessageLookupByLibrary.simpleMessage("Date d\'exipration"),
@@ -109,6 +109,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Numéro de carte"),
         "payment_card_number_placeholder":
             MessageLookupByLibrary.simpleMessage("Ex : XXXX XXXX XXXX XXXX"),
+        "payment_cashOrCheck_result_message": MessageLookupByLibrary.simpleMessage(
+            "Vous devez vous rendre au service financière pour valider le paiement !"),
         "payment_cc_cvv_input_invalid":
             MessageLookupByLibrary.simpleMessage("ce code CVV est invalide !"),
         "payment_cc_expiry_input_invalid": MessageLookupByLibrary.simpleMessage(
@@ -121,6 +123,12 @@ class MessageLookup extends MessageLookupByLibrary {
             "ce numéro de carte de crédit est invalide !"),
         "payment_credit_card_label":
             MessageLookupByLibrary.simpleMessage("Carte bancaire"),
+        "payment_credit_card_result_message_error":
+            MessageLookupByLibrary.simpleMessage(
+                "Payment echoué ! vérifier les détails de votre carte de paiment ou bien contacter votre banque  !"),
+        "payment_credit_card_result_message_success":
+            MessageLookupByLibrary.simpleMessage(
+                "Payment effecuté ! vous pouvez récupérer le reçu de paiement dés qu\'il sera  prêt !"),
         "payment_fee": MessageLookupByLibrary.simpleMessage("Frais :"),
         "payment_method_cachOrBank":
             MessageLookupByLibrary.simpleMessage("Espèce / Chèque bancaire"),

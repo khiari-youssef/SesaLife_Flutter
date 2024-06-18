@@ -1,6 +1,6 @@
 import 'package:core/core_utils/BioUtils.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
-import 'package:users_management_feature/ui/navigation/UsersNavigationConfiguration.gr.dart';
+import 'package:users_management_feature/ui/navigation/users_navigation_configuration.gr.dart';
 
 class AuthGuard extends AutoRouteGuard {
   @override

@@ -8,12 +8,12 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:auto_route/auto_route.dart' as _i13;
-import 'package:core/core_domain/entities/SesameBadge.dart' as _i15;
-import 'package:core/exports.dart' as _i16;
-import 'package:shared_dependencies/shared_dependencies.dart' as _i14;
+import 'package:auto_route/auto_route.dart' as _i14;
+import 'package:core/core_domain/entities/SesameBadge.dart' as _i16;
+import 'package:core/exports.dart' as _i17;
+import 'package:shared_dependencies/shared_dependencies.dart' as _i15;
 import 'package:users_management_feature/domain/entities/student_subscription_record.dart'
-    as _i17;
+    as _i18;
 import 'package:users_management_feature/ui/enrollment/EnrollmentScreen.dart'
     as _i2;
 import 'package:users_management_feature/ui/guest_space/GuestSpace.dart' as _i3;
@@ -26,49 +26,51 @@ import 'package:users_management_feature/ui/myprofile/MySettingsScreen.dart'
     as _i6;
 import 'package:users_management_feature/ui/myprofile/MyUserProfileScreen.dart'
     as _i8;
-import 'package:users_management_feature/ui/program&privacy/SesamePrivacyAndSecurityPolicy.dart'
+import 'package:users_management_feature/ui/program_privacy/SesamePrivacyAndSecurityPolicy.dart'
     as _i9;
-import 'package:users_management_feature/ui/program&privacy/SesameProgramsCatalog.dart'
+import 'package:users_management_feature/ui/program_privacy/SesameProgramsCatalog.dart'
     as _i10;
-import 'package:users_management_feature/ui/subscription/my_subscription_screen.dart'
+import 'package:users_management_feature/ui/subscription/screens/my_subscription_screen.dart'
     as _i7;
-import 'package:users_management_feature/ui/subscription/subscription_payment_interface.dart'
+import 'package:users_management_feature/ui/subscription/screens/subscription_payment_interface.dart'
     as _i11;
-import 'package:users_management_feature/ui/subscription/subscription_payment_method.dart'
+import 'package:users_management_feature/ui/subscription/screens/subscription_payment_method.dart'
     as _i12;
+import 'package:users_management_feature/ui/subscription/screens/subscription_payment_result.dart'
+    as _i13;
 
-abstract class $UsersNavigationConfiguration extends _i13.RootStackRouter {
+abstract class $UsersNavigationConfiguration extends _i14.RootStackRouter {
   $UsersNavigationConfiguration({super.navigatorKey});
 
   @override
-  final Map<String, _i13.PageFactory> pagesMap = {
+  final Map<String, _i14.PageFactory> pagesMap = {
     BadgeUsageGuidelineRoute.name: (routeData) {
-      return _i13.AutoRoutePage<dynamic>(
+      return _i14.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i1.BadgeUsageGuidelineScreen(),
       );
     },
     EnrollmentRoute.name: (routeData) {
-      return _i13.AutoRoutePage<dynamic>(
+      return _i14.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i2.EnrollmentScreen(),
       );
     },
     GuestSpaceRoute.name: (routeData) {
-      return _i13.AutoRoutePage<dynamic>(
+      return _i14.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i3.GuestSpace(),
       );
     },
     LoginRoute.name: (routeData) {
-      return _i13.AutoRoutePage<dynamic>(
+      return _i14.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i4.LoginScreen(),
       );
     },
     MyBadgeRoute.name: (routeData) {
       final args = routeData.argsAs<MyBadgeRouteArgs>();
-      return _i13.AutoRoutePage<dynamic>(
+      return _i14.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: _i5.MyBadgeScreen(
           key: args.key,
@@ -77,38 +79,38 @@ abstract class $UsersNavigationConfiguration extends _i13.RootStackRouter {
       );
     },
     MySettingsRoute.name: (routeData) {
-      return _i13.AutoRoutePage<dynamic>(
+      return _i14.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i6.MySettingsScreen(),
       );
     },
     MySubscriptionRoute.name: (routeData) {
-      return _i13.AutoRoutePage<dynamic>(
+      return _i14.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i7.MySubscriptionScreen(),
       );
     },
     MyUserProfileRoute.name: (routeData) {
-      return _i13.AutoRoutePage<dynamic>(
+      return _i14.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i8.MyUserProfileScreen(),
       );
     },
     SesamePrivacyAndSecurityPolicyRoute.name: (routeData) {
-      return _i13.AutoRoutePage<dynamic>(
+      return _i14.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i9.SesamePrivacyAndSecurityPolicy(),
       );
     },
     SesameProgramsCatalog.name: (routeData) {
-      return _i13.AutoRoutePage<dynamic>(
+      return _i14.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i10.SesameProgramsCatalog(),
       );
     },
     SubscriptionPaymentInterfaceRoute.name: (routeData) {
       final args = routeData.argsAs<SubscriptionPaymentInterfaceRouteArgs>();
-      return _i13.AutoRoutePage<dynamic>(
+      return _i14.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: _i11.SubscriptionPaymentInterface(
           key: args.key,
@@ -119,11 +121,22 @@ abstract class $UsersNavigationConfiguration extends _i13.RootStackRouter {
     },
     SubscriptionPaymentMethodRoute.name: (routeData) {
       final args = routeData.argsAs<SubscriptionPaymentMethodRouteArgs>();
-      return _i13.AutoRoutePage<dynamic>(
+      return _i14.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: _i12.SubscriptionPaymentMethod(
           key: args.key,
           paymentRecord: args.paymentRecord,
+        ),
+      );
+    },
+    SubscriptionPaymentResultRoute.name: (routeData) {
+      final args = routeData.argsAs<SubscriptionPaymentResultRouteArgs>();
+      return _i14.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: _i13.SubscriptionPaymentResultScreen(
+          key: args.key,
+          paymentMethod: args.paymentMethod,
+          isPaymentSuccessful: args.isPaymentSuccessful,
         ),
       );
     },
@@ -132,8 +145,8 @@ abstract class $UsersNavigationConfiguration extends _i13.RootStackRouter {
 
 /// generated route for
 /// [_i1.BadgeUsageGuidelineScreen]
-class BadgeUsageGuidelineRoute extends _i13.PageRouteInfo<void> {
-  const BadgeUsageGuidelineRoute({List<_i13.PageRouteInfo>? children})
+class BadgeUsageGuidelineRoute extends _i14.PageRouteInfo<void> {
+  const BadgeUsageGuidelineRoute({List<_i14.PageRouteInfo>? children})
       : super(
           BadgeUsageGuidelineRoute.name,
           initialChildren: children,
@@ -141,13 +154,13 @@ class BadgeUsageGuidelineRoute extends _i13.PageRouteInfo<void> {
 
   static const String name = 'BadgeUsageGuidelineRoute';
 
-  static const _i13.PageInfo<void> page = _i13.PageInfo<void>(name);
+  static const _i14.PageInfo<void> page = _i14.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i2.EnrollmentScreen]
-class EnrollmentRoute extends _i13.PageRouteInfo<void> {
-  const EnrollmentRoute({List<_i13.PageRouteInfo>? children})
+class EnrollmentRoute extends _i14.PageRouteInfo<void> {
+  const EnrollmentRoute({List<_i14.PageRouteInfo>? children})
       : super(
           EnrollmentRoute.name,
           initialChildren: children,
@@ -155,13 +168,13 @@ class EnrollmentRoute extends _i13.PageRouteInfo<void> {
 
   static const String name = 'EnrollmentRoute';
 
-  static const _i13.PageInfo<void> page = _i13.PageInfo<void>(name);
+  static const _i14.PageInfo<void> page = _i14.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i3.GuestSpace]
-class GuestSpaceRoute extends _i13.PageRouteInfo<void> {
-  const GuestSpaceRoute({List<_i13.PageRouteInfo>? children})
+class GuestSpaceRoute extends _i14.PageRouteInfo<void> {
+  const GuestSpaceRoute({List<_i14.PageRouteInfo>? children})
       : super(
           GuestSpaceRoute.name,
           initialChildren: children,
@@ -169,13 +182,13 @@ class GuestSpaceRoute extends _i13.PageRouteInfo<void> {
 
   static const String name = 'GuestSpaceRoute';
 
-  static const _i13.PageInfo<void> page = _i13.PageInfo<void>(name);
+  static const _i14.PageInfo<void> page = _i14.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i4.LoginScreen]
-class LoginRoute extends _i13.PageRouteInfo<void> {
-  const LoginRoute({List<_i13.PageRouteInfo>? children})
+class LoginRoute extends _i14.PageRouteInfo<void> {
+  const LoginRoute({List<_i14.PageRouteInfo>? children})
       : super(
           LoginRoute.name,
           initialChildren: children,
@@ -183,16 +196,16 @@ class LoginRoute extends _i13.PageRouteInfo<void> {
 
   static const String name = 'LoginRoute';
 
-  static const _i13.PageInfo<void> page = _i13.PageInfo<void>(name);
+  static const _i14.PageInfo<void> page = _i14.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i5.MyBadgeScreen]
-class MyBadgeRoute extends _i13.PageRouteInfo<MyBadgeRouteArgs> {
+class MyBadgeRoute extends _i14.PageRouteInfo<MyBadgeRouteArgs> {
   MyBadgeRoute({
-    _i14.Key? key,
-    required _i15.SesameBadge userBadge,
-    List<_i13.PageRouteInfo>? children,
+    _i15.Key? key,
+    required _i16.SesameBadge userBadge,
+    List<_i14.PageRouteInfo>? children,
   }) : super(
           MyBadgeRoute.name,
           args: MyBadgeRouteArgs(
@@ -204,8 +217,8 @@ class MyBadgeRoute extends _i13.PageRouteInfo<MyBadgeRouteArgs> {
 
   static const String name = 'MyBadgeRoute';
 
-  static const _i13.PageInfo<MyBadgeRouteArgs> page =
-      _i13.PageInfo<MyBadgeRouteArgs>(name);
+  static const _i14.PageInfo<MyBadgeRouteArgs> page =
+      _i14.PageInfo<MyBadgeRouteArgs>(name);
 }
 
 class MyBadgeRouteArgs {
@@ -214,9 +227,9 @@ class MyBadgeRouteArgs {
     required this.userBadge,
   });
 
-  final _i14.Key? key;
+  final _i15.Key? key;
 
-  final _i15.SesameBadge userBadge;
+  final _i16.SesameBadge userBadge;
 
   @override
   String toString() {
@@ -226,8 +239,8 @@ class MyBadgeRouteArgs {
 
 /// generated route for
 /// [_i6.MySettingsScreen]
-class MySettingsRoute extends _i13.PageRouteInfo<void> {
-  const MySettingsRoute({List<_i13.PageRouteInfo>? children})
+class MySettingsRoute extends _i14.PageRouteInfo<void> {
+  const MySettingsRoute({List<_i14.PageRouteInfo>? children})
       : super(
           MySettingsRoute.name,
           initialChildren: children,
@@ -235,13 +248,13 @@ class MySettingsRoute extends _i13.PageRouteInfo<void> {
 
   static const String name = 'MySettingsRoute';
 
-  static const _i13.PageInfo<void> page = _i13.PageInfo<void>(name);
+  static const _i14.PageInfo<void> page = _i14.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i7.MySubscriptionScreen]
-class MySubscriptionRoute extends _i13.PageRouteInfo<void> {
-  const MySubscriptionRoute({List<_i13.PageRouteInfo>? children})
+class MySubscriptionRoute extends _i14.PageRouteInfo<void> {
+  const MySubscriptionRoute({List<_i14.PageRouteInfo>? children})
       : super(
           MySubscriptionRoute.name,
           initialChildren: children,
@@ -249,13 +262,13 @@ class MySubscriptionRoute extends _i13.PageRouteInfo<void> {
 
   static const String name = 'MySubscriptionRoute';
 
-  static const _i13.PageInfo<void> page = _i13.PageInfo<void>(name);
+  static const _i14.PageInfo<void> page = _i14.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i8.MyUserProfileScreen]
-class MyUserProfileRoute extends _i13.PageRouteInfo<void> {
-  const MyUserProfileRoute({List<_i13.PageRouteInfo>? children})
+class MyUserProfileRoute extends _i14.PageRouteInfo<void> {
+  const MyUserProfileRoute({List<_i14.PageRouteInfo>? children})
       : super(
           MyUserProfileRoute.name,
           initialChildren: children,
@@ -263,14 +276,14 @@ class MyUserProfileRoute extends _i13.PageRouteInfo<void> {
 
   static const String name = 'MyUserProfileRoute';
 
-  static const _i13.PageInfo<void> page = _i13.PageInfo<void>(name);
+  static const _i14.PageInfo<void> page = _i14.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i9.SesamePrivacyAndSecurityPolicy]
-class SesamePrivacyAndSecurityPolicyRoute extends _i13.PageRouteInfo<void> {
+class SesamePrivacyAndSecurityPolicyRoute extends _i14.PageRouteInfo<void> {
   const SesamePrivacyAndSecurityPolicyRoute(
-      {List<_i13.PageRouteInfo>? children})
+      {List<_i14.PageRouteInfo>? children})
       : super(
           SesamePrivacyAndSecurityPolicyRoute.name,
           initialChildren: children,
@@ -278,13 +291,13 @@ class SesamePrivacyAndSecurityPolicyRoute extends _i13.PageRouteInfo<void> {
 
   static const String name = 'SesamePrivacyAndSecurityPolicyRoute';
 
-  static const _i13.PageInfo<void> page = _i13.PageInfo<void>(name);
+  static const _i14.PageInfo<void> page = _i14.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i10.SesameProgramsCatalog]
-class SesameProgramsCatalog extends _i13.PageRouteInfo<void> {
-  const SesameProgramsCatalog({List<_i13.PageRouteInfo>? children})
+class SesameProgramsCatalog extends _i14.PageRouteInfo<void> {
+  const SesameProgramsCatalog({List<_i14.PageRouteInfo>? children})
       : super(
           SesameProgramsCatalog.name,
           initialChildren: children,
@@ -292,18 +305,18 @@ class SesameProgramsCatalog extends _i13.PageRouteInfo<void> {
 
   static const String name = 'SesameProgramsCatalog';
 
-  static const _i13.PageInfo<void> page = _i13.PageInfo<void>(name);
+  static const _i14.PageInfo<void> page = _i14.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i11.SubscriptionPaymentInterface]
 class SubscriptionPaymentInterfaceRoute
-    extends _i13.PageRouteInfo<SubscriptionPaymentInterfaceRouteArgs> {
+    extends _i14.PageRouteInfo<SubscriptionPaymentInterfaceRouteArgs> {
   SubscriptionPaymentInterfaceRoute({
-    _i16.Key? key,
-    required _i17.StudentSubscriptionRecord paymentRecord,
+    _i17.Key? key,
+    required _i18.StudentSubscriptionRecord paymentRecord,
     required _i12.PaymentMethod paymentMethod,
-    List<_i13.PageRouteInfo>? children,
+    List<_i14.PageRouteInfo>? children,
   }) : super(
           SubscriptionPaymentInterfaceRoute.name,
           args: SubscriptionPaymentInterfaceRouteArgs(
@@ -316,8 +329,8 @@ class SubscriptionPaymentInterfaceRoute
 
   static const String name = 'SubscriptionPaymentInterfaceRoute';
 
-  static const _i13.PageInfo<SubscriptionPaymentInterfaceRouteArgs> page =
-      _i13.PageInfo<SubscriptionPaymentInterfaceRouteArgs>(name);
+  static const _i14.PageInfo<SubscriptionPaymentInterfaceRouteArgs> page =
+      _i14.PageInfo<SubscriptionPaymentInterfaceRouteArgs>(name);
 }
 
 class SubscriptionPaymentInterfaceRouteArgs {
@@ -327,9 +340,9 @@ class SubscriptionPaymentInterfaceRouteArgs {
     required this.paymentMethod,
   });
 
-  final _i16.Key? key;
+  final _i17.Key? key;
 
-  final _i17.StudentSubscriptionRecord paymentRecord;
+  final _i18.StudentSubscriptionRecord paymentRecord;
 
   final _i12.PaymentMethod paymentMethod;
 
@@ -342,11 +355,11 @@ class SubscriptionPaymentInterfaceRouteArgs {
 /// generated route for
 /// [_i12.SubscriptionPaymentMethod]
 class SubscriptionPaymentMethodRoute
-    extends _i13.PageRouteInfo<SubscriptionPaymentMethodRouteArgs> {
+    extends _i14.PageRouteInfo<SubscriptionPaymentMethodRouteArgs> {
   SubscriptionPaymentMethodRoute({
-    _i14.Key? key,
-    required _i17.StudentSubscriptionRecord paymentRecord,
-    List<_i13.PageRouteInfo>? children,
+    _i15.Key? key,
+    required _i18.StudentSubscriptionRecord paymentRecord,
+    List<_i14.PageRouteInfo>? children,
   }) : super(
           SubscriptionPaymentMethodRoute.name,
           args: SubscriptionPaymentMethodRouteArgs(
@@ -358,8 +371,8 @@ class SubscriptionPaymentMethodRoute
 
   static const String name = 'SubscriptionPaymentMethodRoute';
 
-  static const _i13.PageInfo<SubscriptionPaymentMethodRouteArgs> page =
-      _i13.PageInfo<SubscriptionPaymentMethodRouteArgs>(name);
+  static const _i14.PageInfo<SubscriptionPaymentMethodRouteArgs> page =
+      _i14.PageInfo<SubscriptionPaymentMethodRouteArgs>(name);
 }
 
 class SubscriptionPaymentMethodRouteArgs {
@@ -368,12 +381,56 @@ class SubscriptionPaymentMethodRouteArgs {
     required this.paymentRecord,
   });
 
-  final _i14.Key? key;
+  final _i15.Key? key;
 
-  final _i17.StudentSubscriptionRecord paymentRecord;
+  final _i18.StudentSubscriptionRecord paymentRecord;
 
   @override
   String toString() {
     return 'SubscriptionPaymentMethodRouteArgs{key: $key, paymentRecord: $paymentRecord}';
+  }
+}
+
+/// generated route for
+/// [_i13.SubscriptionPaymentResultScreen]
+class SubscriptionPaymentResultRoute
+    extends _i14.PageRouteInfo<SubscriptionPaymentResultRouteArgs> {
+  SubscriptionPaymentResultRoute({
+    _i15.Key? key,
+    required _i12.PaymentMethod paymentMethod,
+    required bool isPaymentSuccessful,
+    List<_i14.PageRouteInfo>? children,
+  }) : super(
+          SubscriptionPaymentResultRoute.name,
+          args: SubscriptionPaymentResultRouteArgs(
+            key: key,
+            paymentMethod: paymentMethod,
+            isPaymentSuccessful: isPaymentSuccessful,
+          ),
+          initialChildren: children,
+        );
+
+  static const String name = 'SubscriptionPaymentResultRoute';
+
+  static const _i14.PageInfo<SubscriptionPaymentResultRouteArgs> page =
+      _i14.PageInfo<SubscriptionPaymentResultRouteArgs>(name);
+}
+
+class SubscriptionPaymentResultRouteArgs {
+  const SubscriptionPaymentResultRouteArgs({
+    this.key,
+    required this.paymentMethod,
+    required this.isPaymentSuccessful,
+  });
+
+  final _i15.Key? key;
+
+  final _i12.PaymentMethod paymentMethod;
+
+  final bool isPaymentSuccessful;
+
+  @override
+  String toString() {
+    return 'SubscriptionPaymentResultRouteArgs{key: $key, paymentMethod: $paymentMethod, isPaymentSuccessful: $isPaymentSuccessful}';
   }
 }

@@ -94,7 +94,7 @@
   "payment_card_number" : "Card number",
   "payment_card_cvv" : "CVV",
   "payment_card_expiry_date" : "Expiry date",
-  "payment_card_cvv_placeholer" : "XXX",
+  "payment_card_cvv_placeholder" : "XXX",
   "payment_card_expiry_date_placeholder" : "MM/YY",
   "payment_card_number_placeholder" : "Ex : XXXX XXXX XXXX XXXX",
   "payment_credit_card_label" : "Credit card",
@@ -103,5 +103,8 @@
   "payment_cc_number_input_invalid" : "invalid credit card number !",
   "payment_cc_cvv_input_invalid" : "invalid credit card CVV !",
   "payment_cc_expiry_input_invalid" : "invalid credit card expiry date !",
-  "payment_cc_holder_name_input_invalid" : "invalid credit card holder name!"
+  "payment_cc_holder_name_input_invalid" : "invalid credit card holder name!",
+  "payment_cashOrCheck_result_message" : "You will need to go to the university financial service office to validate your payment !",
+  "payment_credit_card_result_message_success" : "Payment completed ! your payment receipt will be ready as soon as possible !",
+  "payment_credit_card_result_message_error" : "Payment failed ! check your credit card informations or contact your bank for more details !"
 }

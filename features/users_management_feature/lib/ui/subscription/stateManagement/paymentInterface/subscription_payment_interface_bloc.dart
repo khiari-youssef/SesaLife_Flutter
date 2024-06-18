@@ -2,9 +2,9 @@ import 'package:shared_dependencies/shared_dependencies.dart';
 
 import '../../../../domain/services/credit_card_input_validation_service.dart';
 
+part 'subscription_payment_interface_bloc.freezed.dart';
 part 'subscription_payment_interface_event.dart';
 part 'subscription_payment_interface_state.dart';
-part 'subscription_payment_interface_bloc.freezed.dart';
 
 class SubscriptionPaymentInterfaceBloc extends Bloc<
     SubscriptionPaymentInterfaceEvent, SubscriptionPaymentInterfaceBlocState> {

@@ -91,7 +91,7 @@
   "payment_card_holder_name" : "Carte du proprietaire",
   "payment_card_number" : "Numéro de carte",
   "payment_card_cvv" : "CVV",
-  "payment_card_cvv_placeholer" : "XXX",
+  "payment_card_cvv_placeholder" : "XXX",
   "payment_card_expiry_date" : "Date d'exipration",
   "payment_card_expiry_date_placeholder" : "MM/YY",
   "payment_card_number_placeholder" : "Ex : XXXX XXXX XXXX XXXX",
@@ -101,5 +101,8 @@
   "payment_cc_number_input_invalid" : "ce numéro de carte de crédit est invalide !",
   "payment_cc_cvv_input_invalid" : "ce code CVV est invalide !",
   "payment_cc_expiry_input_invalid" : "cette date d'expiration est invalide",
-  "payment_cc_holder_name_input_invalid" : "Nom invalide !"
+  "payment_cc_holder_name_input_invalid" : "Nom invalide !",
+  "payment_cashOrCheck_result_message" : "Vous devez vous rendre au service financière pour valider le paiement !",
+  "payment_credit_card_result_message_success" : "Payment effecuté ! vous pouvez récupérer le reçu de paiement dés qu'il sera  prêt !",
+  "payment_credit_card_result_message_error" : "Payment echoué ! vérifier les détails de votre carte de paiment ou bien contacter votre banque  !"
 }

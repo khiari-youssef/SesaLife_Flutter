@@ -991,10 +991,10 @@ class S {
   }
 
   /// `XXX`
-  String get payment_card_cvv_placeholer {
+  String get payment_card_cvv_placeholder {
     return Intl.message(
       'XXX',
-      name: 'payment_card_cvv_placeholer',
+      name: 'payment_card_cvv_placeholder',
       desc: '',
       args: [],
     );
@@ -1085,6 +1085,36 @@ class S {
     return Intl.message(
       'invalid credit card holder name!',
       name: 'payment_cc_holder_name_input_invalid',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You will need to go to the university financial service office to validate your payment !`
+  String get payment_cashOrCheck_result_message {
+    return Intl.message(
+      'You will need to go to the university financial service office to validate your payment !',
+      name: 'payment_cashOrCheck_result_message',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Payment completed ! your payment receipt will be ready as soon as possible !`
+  String get payment_credit_card_result_message_success {
+    return Intl.message(
+      'Payment completed ! your payment receipt will be ready as soon as possible !',
+      name: 'payment_credit_card_result_message_success',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Payment failed ! check your credit card informations or contact your bank for more details !`
+  String get payment_credit_card_result_message_error {
+    return Intl.message(
+      'Payment failed ! check your credit card informations or contact your bank for more details !',
+      name: 'payment_credit_card_result_message_error',
       desc: '',
       args: [],
     );

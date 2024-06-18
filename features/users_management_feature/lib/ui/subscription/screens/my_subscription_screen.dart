@@ -1,9 +1,9 @@
 import 'package:shared_dependencies/shared_dependencies.dart';
-import 'package:users_management_feature/ui/subscription/stateManagement/mySubscriptionRecords/my_subscriptions_bloc.dart';
 import 'package:users_management_feature/ui/subscription/components/student_subscription_record_card.dart';
+import 'package:users_management_feature/ui/subscription/stateManagement/mySubscriptionRecords/my_subscriptions_bloc.dart';
 
-import '../../domain/entities/student_subscription_record.dart';
-import '../navigation/UsersNavigationConfiguration.gr.dart';
+import '../../../domain/entities/student_subscription_record.dart';
+import '../../navigation/users_navigation_configuration.gr.dart';
 
 class MySubscriptionScreenState extends State<MySubscriptionScreen> {
   @override

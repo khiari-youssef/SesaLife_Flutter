@@ -1,7 +1,5 @@
 import 'package:core/exports.dart';
 import 'package:designsystem/components/images/CustomIcon.dart';
-import 'package:designsystem/components/textViews/labels/LabelMedium.dart';
-import 'package:flutter/cupertino.dart';
 
 enum CreditCardType { visa, masterCard }
 

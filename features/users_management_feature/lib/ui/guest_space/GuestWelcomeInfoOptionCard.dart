@@ -16,7 +16,7 @@ class GuestWelcomeInfoOptionCard extends StatelessWidget {
       onTap: onClicked,
       child: Card(
         elevation: 0.sp,
-        color: localTheme.colorScheme.surfaceVariant,
+        color: localTheme.colorScheme.surfaceContainerHighest,
         child: Padding(
           padding: EdgeInsets.all(12.r),
           child: Column(
@@ -48,8 +48,8 @@ class GuestWelcomeInfoOptionCard extends StatelessWidget {
               SizedBox(height: 12.h),
               Text(
                 data.description,
-                style: localTheme.typography.black.bodyMedium?.copyWith(
-                    color: Theme.of(context).colorScheme.onBackground),
+                style: localTheme.typography.black.bodyMedium
+                    ?.copyWith(color: Theme.of(context).colorScheme.onSurface),
               )
             ],
           ),

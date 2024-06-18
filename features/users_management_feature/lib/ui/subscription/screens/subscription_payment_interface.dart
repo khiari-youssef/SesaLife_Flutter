@@ -1,17 +1,12 @@
-import 'dart:ui';
-
 import 'package:core/exports.dart';
-import 'package:designsystem/components/images/CustomIcon.dart';
-import 'package:designsystem/designsystem_exports.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
+import 'package:users_management_feature/ui/subscription/screens/subscription_payment_method.dart';
+import 'package:users_management_feature/ui/subscription/screens/subscription_payment_result.dart';
 import 'package:users_management_feature/ui/subscription/stateManagement/paymentInterface/subscription_payment_interface_bloc.dart';
-import 'package:users_management_feature/ui/subscription/subscription_payment_method.dart';
 
-import '../../domain/entities/student_subscription_record.dart';
-import 'components/CreditCardPreview.dart';
+import '../../../domain/entities/student_subscription_record.dart';
+import '../../navigation/users_navigation_configuration.gr.dart';
+import '../components/CreditCardPreview.dart';
 
 class SubscriptionPaymentInterfaceState
     extends State<SubscriptionPaymentInterface> {
@@ -170,7 +165,7 @@ class SubscriptionPaymentInterfaceState
                                     },
                                     placeHolder: S
                                         .of(context)
-                                        .payment_card_cvv_placeholer,
+                                        .payment_card_cvv_placeholder,
                                     onChange: (cvv) {
                                       context
                                           .read<
@@ -203,8 +198,13 @@ class SubscriptionPaymentInterfaceState
                                             .areAllCreditCardInputStatesValid(),
                                     onPressed: () {
                                       authManager.requireAuthenticationAsync(
-                                          context,
-                                          onActionAuthorized: () {});
+                                          context, onActionAuthorized: () {
+                                        AutoRouter.of(context).push(
+                                            SubscriptionPaymentResultRoute(
+                                                paymentMethod:
+                                                    widget.paymentMethod,
+                                                isPaymentSuccessful: true));
+                                      });
                                     }),
                                 16.verticalSpace
                               ])
@@ -228,6 +228,7 @@ class SubscriptionPaymentInterfaceState
 
   void updateControllers(SubscriptionPaymentInterfaceBlocState state) {
     cardHolderNameController.text = state.ccHolderNameState.data;
+    cardCVVController.text = state.ccCVVState.data;
     cardCVVController.text = state.ccCVVState.data;
     cardExpiryController.text = state.ccExpiryDateState.data;
     String cardNumber = state.ccNumberState.data;

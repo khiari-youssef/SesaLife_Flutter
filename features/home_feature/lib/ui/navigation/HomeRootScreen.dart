@@ -2,7 +2,7 @@ import 'package:events_management_feature/ui/EventsNavigationConfiguration.gr.da
 import 'package:notifications_feature/ui/navigation/NotificationsNavigationConfiguration.gr.dart';
 import 'package:sessions_feature/ui/navigation/sessions_navigation_configuration.gr.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
-import 'package:users_management_feature/ui/navigation/UsersNavigationConfiguration.gr.dart';
+import 'package:users_management_feature/ui/navigation/users_navigation_configuration.gr.dart';
 
 @RoutePage(name: "HomeRootRoute")
 class HomeRootScreen extends StatefulWidget {

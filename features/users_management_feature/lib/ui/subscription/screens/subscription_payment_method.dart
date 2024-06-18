@@ -1,14 +1,16 @@
 import 'package:shared_dependencies/shared_dependencies.dart';
+import 'package:users_management_feature/ui/subscription/screens/subscription_payment_result.dart';
 
-import '../../domain/entities/student_subscription_record.dart';
-import '../navigation/UsersNavigationConfiguration.gr.dart';
-import 'components/student_subscription_record_card.dart';
+import '../../../domain/entities/student_subscription_record.dart';
+import '../../navigation/users_navigation_configuration.gr.dart';
+import '../components/student_subscription_record_card.dart';
 
-enum PaymentMethod { clickToPay, googleOrApplePay, cachOrCheck }
+enum PaymentMethod { clickToPay, cashOrCheck }
 
 class SubscriptionPaymentMethodState extends State<SubscriptionPaymentMethod> {
   PaymentMethod? paymentMethod;
   bool hasReadTheTermsAndPolicy = false;
+
   @override
   Widget build(BuildContext context) {
     return titleScreenBuilder(context, S.of(context).payment, null, () {
@@ -47,19 +49,7 @@ class SubscriptionPaymentMethodState extends State<SubscriptionPaymentMethod> {
                                   paymentMethod = groupID;
                                 });
                               },
-                              id: PaymentMethod.googleOrApplePay,
-                              groupID: paymentMethod,
-                              label: S
-                                  .of(context)
-                                  .payment_method_googleOrApplePay),
-                          8.verticalSpace,
-                          SesameRadioButton<PaymentMethod>(
-                              onChecked: (groupID) {
-                                setState(() {
-                                  paymentMethod = groupID;
-                                });
-                              },
-                              id: PaymentMethod.cachOrCheck,
+                              id: PaymentMethod.cashOrCheck,
                               groupID: paymentMethod,
                               label: S.of(context).payment_method_cachOrBank)
                         ],
@@ -83,10 +73,18 @@ class SubscriptionPaymentMethodState extends State<SubscriptionPaymentMethod> {
                                 isEnabled: hasReadTheTermsAndPolicy &&
                                     (paymentMethod != null),
                                 onPressed: () {
-                                  AutoRouter.of(context).push(
-                                      SubscriptionPaymentInterfaceRoute(
-                                          paymentRecord: widget.paymentRecord,
-                                          paymentMethod: paymentMethod!));
+                                  if (paymentMethod ==
+                                      PaymentMethod.cashOrCheck) {
+                                    AutoRouter.of(context).push(
+                                        SubscriptionPaymentResultRoute(
+                                            paymentMethod: paymentMethod!,
+                                            isPaymentSuccessful: false));
+                                  } else {
+                                    AutoRouter.of(context).push(
+                                        SubscriptionPaymentInterfaceRoute(
+                                            paymentRecord: widget.paymentRecord,
+                                            paymentMethod: paymentMethod!));
+                                  }
                                 }),
                             16.verticalSpace
                           ]))

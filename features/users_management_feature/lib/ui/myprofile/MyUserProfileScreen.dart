@@ -6,7 +6,8 @@ import 'package:users_management_feature/ui/myprofile/MyProfilePreview.dart';
 import 'package:users_management_feature/ui/myprofile/stateManagement/profile/MyProfileBlocStateManager.dart';
 import 'package:users_management_feature/ui/myprofile/stateManagement/profile/MyProfileScreenEvent.dart';
 import 'package:users_management_feature/ui/myprofile/stateManagement/profile/MyProfileScreenGlobalState.dart';
-import 'package:users_management_feature/ui/navigation/UsersNavigationConfiguration.gr.dart';
+
+import '../navigation/users_navigation_configuration.gr.dart';
 
 class MyUserProfileState extends State<MyUserProfileScreen> {
   SesameDeviceAuthManager authManager = GetIt.instance.get();
