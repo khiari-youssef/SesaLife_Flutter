@@ -1,5 +1,4 @@
 import 'package:shared_dependencies/shared_dependencies.dart';
-import 'package:users_management_feature/ui/subscription/screens/subscription_payment_result.dart';
 
 import '../../../domain/entities/student_subscription_record.dart';
 import '../../navigation/users_navigation_configuration.gr.dart';

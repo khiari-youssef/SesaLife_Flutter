@@ -1,7 +1,6 @@
 import 'package:core/exports.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 import 'package:users_management_feature/ui/subscription/screens/subscription_payment_method.dart';
-import 'package:users_management_feature/ui/subscription/screens/subscription_payment_result.dart';
 import 'package:users_management_feature/ui/subscription/stateManagement/paymentInterface/subscription_payment_interface_bloc.dart';
 
 import '../../../domain/entities/student_subscription_record.dart';
