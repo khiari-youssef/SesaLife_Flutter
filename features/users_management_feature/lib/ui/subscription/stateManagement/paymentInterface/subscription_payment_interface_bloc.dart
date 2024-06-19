@@ -4,9 +4,9 @@ import 'package:core/core_domain/DomainUseCaseProtocol.dart';
 import 'package:core/core_utils/Logger.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 import 'package:users_management_feature/ui/navigation/users_navigation_configuration.gr.dart';
-import 'package:users_management_feature/ui/subscription/screens/subscription_payment_result.dart';
+import 'package:users_management_feature/ui/subscription/screens/subscription_payment_result_screen.dart';
 
-import '../../../../domain/entities/SubscriptionPaymentResult.dart';
+import '../../../../domain/entities/subscription_payment_result.dart';
 import '../../../../domain/services/credit_card_input_validation_service.dart';
 
 part 'subscription_payment_interface_bloc.freezed.dart';

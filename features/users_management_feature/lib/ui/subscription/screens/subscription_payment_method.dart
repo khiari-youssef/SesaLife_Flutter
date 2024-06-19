@@ -78,7 +78,7 @@ class SubscriptionPaymentMethodState extends State<SubscriptionPaymentMethod> {
                                     AutoRouter.of(context).push(
                                         SubscriptionPaymentResultRoute(
                                             paymentMethod: paymentMethod!,
-                                            isPaymentSuccessful: false));
+                                            paymentTransactionResult: null));
                                   } else {
                                     AutoRouter.of(context).push(
                                         SubscriptionPaymentInterfaceRoute(

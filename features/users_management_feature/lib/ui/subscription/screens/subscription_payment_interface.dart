@@ -49,11 +49,11 @@ class SubscriptionPaymentInterfaceState
                   paymentTransactionFailed: (type) {
                 AutoRouter.of(context).push(SubscriptionPaymentResultRoute(
                     paymentMethod: widget.paymentMethod,
-                    isPaymentSuccessful: false));
+                    paymentTransactionResult: null));
               }, paymentTransactionResult: (result) {
                 AutoRouter.of(context).push(SubscriptionPaymentResultRoute(
                     paymentMethod: widget.paymentMethod,
-                    isPaymentSuccessful: true));
+                    paymentTransactionResult: result));
               }, paymentTransactionInProgress: () {
                 CircularProgressBarDialog.showAsDialog(context);
               });

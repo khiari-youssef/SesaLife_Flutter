@@ -14,6 +14,8 @@ import 'package:core/exports.dart' as _i17;
 import 'package:shared_dependencies/shared_dependencies.dart' as _i15;
 import 'package:users_management_feature/domain/entities/student_subscription_record.dart'
     as _i18;
+import 'package:users_management_feature/domain/entities/subscription_payment_result.dart'
+    as _i19;
 import 'package:users_management_feature/ui/enrollment/EnrollmentScreen.dart'
     as _i2;
 import 'package:users_management_feature/ui/guest_space/GuestSpace.dart' as _i3;
@@ -36,7 +38,7 @@ import 'package:users_management_feature/ui/subscription/screens/subscription_pa
     as _i11;
 import 'package:users_management_feature/ui/subscription/screens/subscription_payment_method.dart'
     as _i12;
-import 'package:users_management_feature/ui/subscription/screens/subscription_payment_result.dart'
+import 'package:users_management_feature/ui/subscription/screens/subscription_payment_result_screen.dart'
     as _i13;
 
 abstract class $UsersNavigationConfiguration extends _i14.RootStackRouter {
@@ -136,7 +138,7 @@ abstract class $UsersNavigationConfiguration extends _i14.RootStackRouter {
         child: _i13.SubscriptionPaymentResultScreen(
           key: args.key,
           paymentMethod: args.paymentMethod,
-          isPaymentSuccessful: args.isPaymentSuccessful,
+          paymentTransactionResult: args.paymentTransactionResult,
         ),
       );
     },
@@ -398,14 +400,14 @@ class SubscriptionPaymentResultRoute
   SubscriptionPaymentResultRoute({
     _i15.Key? key,
     required _i12.PaymentMethod paymentMethod,
-    required bool isPaymentSuccessful,
+    required _i19.SubscriptionPaymentResult? paymentTransactionResult,
     List<_i14.PageRouteInfo>? children,
   }) : super(
           SubscriptionPaymentResultRoute.name,
           args: SubscriptionPaymentResultRouteArgs(
             key: key,
             paymentMethod: paymentMethod,
-            isPaymentSuccessful: isPaymentSuccessful,
+            paymentTransactionResult: paymentTransactionResult,
           ),
           initialChildren: children,
         );
@@ -420,17 +422,17 @@ class SubscriptionPaymentResultRouteArgs {
   const SubscriptionPaymentResultRouteArgs({
     this.key,
     required this.paymentMethod,
-    required this.isPaymentSuccessful,
+    required this.paymentTransactionResult,
   });
 
   final _i15.Key? key;
 
   final _i12.PaymentMethod paymentMethod;
 
-  final bool isPaymentSuccessful;
+  final _i19.SubscriptionPaymentResult? paymentTransactionResult;
 
   @override
   String toString() {
-    return 'SubscriptionPaymentResultRouteArgs{key: $key, paymentMethod: $paymentMethod, isPaymentSuccessful: $isPaymentSuccessful}';
+    return 'SubscriptionPaymentResultRouteArgs{key: $key, paymentMethod: $paymentMethod, paymentTransactionResult: $paymentTransactionResult}';
   }
 }
