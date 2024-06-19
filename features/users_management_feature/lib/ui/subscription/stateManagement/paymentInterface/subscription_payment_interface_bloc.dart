@@ -1,7 +1,12 @@
 import 'package:core/core_data/localStorage/credit_card_secure_local_storage_interface.dart';
+import 'package:core/core_domain/DomainErrorType.dart';
+import 'package:core/core_domain/DomainUseCaseProtocol.dart';
 import 'package:core/core_utils/Logger.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
+import 'package:users_management_feature/ui/navigation/users_navigation_configuration.gr.dart';
+import 'package:users_management_feature/ui/subscription/screens/subscription_payment_result.dart';
 
+import '../../../../domain/entities/SubscriptionPaymentResult.dart';
 import '../../../../domain/services/credit_card_input_validation_service.dart';
 
 part 'subscription_payment_interface_bloc.freezed.dart';
@@ -13,6 +18,8 @@ class SubscriptionPaymentInterfaceBloc extends Bloc<
   CreditCardInputValidationService ccValidationService = GetIt.instance.get();
   CreditCardSecureLocalStorageInterface ccSecureStorage =
       GetIt.instance.get(instanceName: "CreditCardSecureStorageImpl");
+  DomainUseCaseProtocol<CreditCardDetails, Future<SubscriptionPaymentResult>>
+      useCase = GetIt.instance.get(instanceName: "CreditCardPaymentUseCase");
 
   SubscriptionPaymentInterfaceBloc()
       : super(const SubscriptionPaymentInterfaceBlocState(
@@ -20,6 +27,8 @@ class SubscriptionPaymentInterfaceBloc extends Bloc<
             ccHolderNameState: CreditCardInputState(data: ""),
             ccExpiryDateState: CreditCardInputState(data: ""),
             ccCVVState: CreditCardInputState(data: ""),
+            transactionState:
+                PaymentTransactionState.paymentTransactionNotStarted(),
             hasSavedCCdata: false)) {
     on<_checkCreditCardNumberFormat>((event, emit) async {
       emit(state.copyWith(
@@ -78,6 +87,21 @@ class SubscriptionPaymentInterfaceBloc extends Bloc<
     on<_checkExistingCCdata>((event, emit) async {
       bool hasCCdata = await ccSecureStorage.hasSavedCreditCardDetails();
       emit(state.copyWith(hasSavedCCdata: hasCCdata));
+    });
+    on<_makePayment>((event, emit) async {
+      emit(state.copyWith(
+          transactionState:
+              const PaymentTransactionState.paymentTransactionInProgress()));
+      SubscriptionPaymentResult result =
+          await useCase.execute(CreditCardDetails(
+        ccHolderName: state.ccHolderNameState.data,
+        ccNumber: state.ccNumberState.data,
+        cvv: state.ccCVVState.data,
+        ccExpiryDate: state.ccExpiryDateState.data,
+      ));
+      emit(state.copyWith(
+          transactionState: PaymentTransactionState.paymentTransactionResult(
+              result: result)));
     });
   }
 

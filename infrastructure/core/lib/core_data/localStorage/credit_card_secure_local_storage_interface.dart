@@ -13,7 +13,7 @@ class CreditCardDetails {
       required this.ccNumber,
       required this.cvv,
       required this.ccExpiryDate,
-      required this.ccEmail});
+      this.ccEmail});
 }
 
 abstract interface class CreditCardSecureLocalStorageInterface {

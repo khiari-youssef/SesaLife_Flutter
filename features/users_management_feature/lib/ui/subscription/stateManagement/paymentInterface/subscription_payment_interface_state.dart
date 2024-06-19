@@ -15,9 +15,23 @@ class CreditCardInputState<DataType> {
 sealed class SubscriptionPaymentInterfaceBlocState
     with _$SubscriptionPaymentInterfaceBlocState {
   const factory SubscriptionPaymentInterfaceBlocState(
-      {required CreditCardInputState ccNumberState,
-      required CreditCardInputState ccHolderNameState,
-      required CreditCardInputState ccExpiryDateState,
-      required CreditCardInputState ccCVVState,
-      required bool hasSavedCCdata}) = _SubscriptionPaymentInterfaceBlocState;
+          {required CreditCardInputState ccNumberState,
+          required CreditCardInputState ccHolderNameState,
+          required CreditCardInputState ccExpiryDateState,
+          required CreditCardInputState ccCVVState,
+          required bool hasSavedCCdata,
+          required PaymentTransactionState transactionState}) =
+      _SubscriptionPaymentInterfaceBlocState;
+}
+
+@freezed
+class PaymentTransactionState with _$PaymentTransactionState {
+  const factory PaymentTransactionState.paymentTransactionResult(
+      {required SubscriptionPaymentResult result}) = _paymentTransactionResult;
+  const factory PaymentTransactionState.paymentTransactionFailed(
+      DomainErrorType errorType) = _paymentTransactionFailed;
+  const factory PaymentTransactionState.paymentTransactionInProgress() =
+      _paymentTransactionInProgress;
+  const factory PaymentTransactionState.paymentTransactionNotStarted() =
+      _paymentTransactionNotStarted;
 }

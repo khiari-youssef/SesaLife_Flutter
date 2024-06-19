@@ -45,6 +45,18 @@ class SubscriptionPaymentInterfaceState
             listener: (context, state) {
               SubscriptionPaymentInterfaceBloc localBloc =
                   context.read<SubscriptionPaymentInterfaceBloc>();
+              state.transactionState.whenOrNull(
+                  paymentTransactionFailed: (type) {
+                AutoRouter.of(context).push(SubscriptionPaymentResultRoute(
+                    paymentMethod: widget.paymentMethod,
+                    isPaymentSuccessful: false));
+              }, paymentTransactionResult: (result) {
+                AutoRouter.of(context).push(SubscriptionPaymentResultRoute(
+                    paymentMethod: widget.paymentMethod,
+                    isPaymentSuccessful: true));
+              }, paymentTransactionInProgress: () {
+                CircularProgressBarDialog.showAsDialog(context);
+              });
               if (state.hasSavedCCdata) {
                 showModalBottomSheet<void>(
                     context: context,
@@ -250,6 +262,7 @@ class SubscriptionPaymentInterfaceState
                                         authManager.requireAuthenticationAsync(
                                             context, onActionAuthorized: () {
                                           showModalBottomSheet<void>(
+                                              isDismissible: false,
                                               context: context,
                                               shape: RoundedRectangleBorder(
                                                   borderRadius:
@@ -270,19 +283,18 @@ class SubscriptionPaymentInterfaceState
                                                     localBloc.add(
                                                         const SubscriptionPaymentInterfaceEvent
                                                             .saveCCdataToSecureStorage());
+                                                    localBloc.add(
+                                                        const SubscriptionPaymentInterfaceEvent
+                                                            .makePayment());
                                                   },
                                                   onNegativeButtonPressed: () {
                                                     Navigator.pop(context);
+                                                    localBloc.add(
+                                                        const SubscriptionPaymentInterfaceEvent
+                                                            .makePayment());
                                                   },
                                                 );
                                               });
-                                          /*
-                                          AutoRouter.of(context).push(
-                                              SubscriptionPaymentResultRoute(
-                                                  paymentMethod:
-                                                      widget.paymentMethod,
-                                                  isPaymentSuccessful: true));
-                                           */
                                         });
                                       }),
                                   16.verticalSpace

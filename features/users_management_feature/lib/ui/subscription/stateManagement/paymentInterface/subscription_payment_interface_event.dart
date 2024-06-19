@@ -19,4 +19,5 @@ sealed class SubscriptionPaymentInterfaceEvent
       _loadCCdataFromSecureStorage;
   const factory SubscriptionPaymentInterfaceEvent.checkExistingCCdata() =
       _checkExistingCCdata;
+  const factory SubscriptionPaymentInterfaceEvent.makePayment() = _makePayment;
 }

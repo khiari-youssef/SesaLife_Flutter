@@ -25,6 +25,7 @@ mixin _$SubscriptionPaymentInterfaceEvent {
     required TResult Function() saveCCdataToSecureStorage,
     required TResult Function() loadCCdataFromSecureStorage,
     required TResult Function() checkExistingCCdata,
+    required TResult Function() makePayment,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -36,6 +37,7 @@ mixin _$SubscriptionPaymentInterfaceEvent {
     TResult? Function()? saveCCdataToSecureStorage,
     TResult? Function()? loadCCdataFromSecureStorage,
     TResult? Function()? checkExistingCCdata,
+    TResult? Function()? makePayment,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -47,6 +49,7 @@ mixin _$SubscriptionPaymentInterfaceEvent {
     TResult Function()? saveCCdataToSecureStorage,
     TResult Function()? loadCCdataFromSecureStorage,
     TResult Function()? checkExistingCCdata,
+    TResult Function()? makePayment,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -65,6 +68,7 @@ mixin _$SubscriptionPaymentInterfaceEvent {
     required TResult Function(_loadCCdataFromSecureStorage value)
         loadCCdataFromSecureStorage,
     required TResult Function(_checkExistingCCdata value) checkExistingCCdata,
+    required TResult Function(_makePayment value) makePayment,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -82,6 +86,7 @@ mixin _$SubscriptionPaymentInterfaceEvent {
     TResult? Function(_loadCCdataFromSecureStorage value)?
         loadCCdataFromSecureStorage,
     TResult? Function(_checkExistingCCdata value)? checkExistingCCdata,
+    TResult? Function(_makePayment value)? makePayment,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -98,6 +103,7 @@ mixin _$SubscriptionPaymentInterfaceEvent {
     TResult Function(_loadCCdataFromSecureStorage value)?
         loadCCdataFromSecureStorage,
     TResult Function(_checkExistingCCdata value)? checkExistingCCdata,
+    TResult Function(_makePayment value)? makePayment,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -201,6 +207,7 @@ class _$checkCreditCardNumberFormatImpl
     required TResult Function() saveCCdataToSecureStorage,
     required TResult Function() loadCCdataFromSecureStorage,
     required TResult Function() checkExistingCCdata,
+    required TResult Function() makePayment,
   }) {
     return checkCreditCardNumberFormat(ccNumber);
   }
@@ -215,6 +222,7 @@ class _$checkCreditCardNumberFormatImpl
     TResult? Function()? saveCCdataToSecureStorage,
     TResult? Function()? loadCCdataFromSecureStorage,
     TResult? Function()? checkExistingCCdata,
+    TResult? Function()? makePayment,
   }) {
     return checkCreditCardNumberFormat?.call(ccNumber);
   }
@@ -229,6 +237,7 @@ class _$checkCreditCardNumberFormatImpl
     TResult Function()? saveCCdataToSecureStorage,
     TResult Function()? loadCCdataFromSecureStorage,
     TResult Function()? checkExistingCCdata,
+    TResult Function()? makePayment,
     required TResult orElse(),
   }) {
     if (checkCreditCardNumberFormat != null) {
@@ -253,6 +262,7 @@ class _$checkCreditCardNumberFormatImpl
     required TResult Function(_loadCCdataFromSecureStorage value)
         loadCCdataFromSecureStorage,
     required TResult Function(_checkExistingCCdata value) checkExistingCCdata,
+    required TResult Function(_makePayment value) makePayment,
   }) {
     return checkCreditCardNumberFormat(this);
   }
@@ -273,6 +283,7 @@ class _$checkCreditCardNumberFormatImpl
     TResult? Function(_loadCCdataFromSecureStorage value)?
         loadCCdataFromSecureStorage,
     TResult? Function(_checkExistingCCdata value)? checkExistingCCdata,
+    TResult? Function(_makePayment value)? makePayment,
   }) {
     return checkCreditCardNumberFormat?.call(this);
   }
@@ -292,6 +303,7 @@ class _$checkCreditCardNumberFormatImpl
     TResult Function(_loadCCdataFromSecureStorage value)?
         loadCCdataFromSecureStorage,
     TResult Function(_checkExistingCCdata value)? checkExistingCCdata,
+    TResult Function(_makePayment value)? makePayment,
     required TResult orElse(),
   }) {
     if (checkCreditCardNumberFormat != null) {
@@ -389,6 +401,7 @@ class _$checkCreditCardHolderNameFormatImpl
     required TResult Function() saveCCdataToSecureStorage,
     required TResult Function() loadCCdataFromSecureStorage,
     required TResult Function() checkExistingCCdata,
+    required TResult Function() makePayment,
   }) {
     return checkCreditCardHolderNameFormat(name);
   }
@@ -403,6 +416,7 @@ class _$checkCreditCardHolderNameFormatImpl
     TResult? Function()? saveCCdataToSecureStorage,
     TResult? Function()? loadCCdataFromSecureStorage,
     TResult? Function()? checkExistingCCdata,
+    TResult? Function()? makePayment,
   }) {
     return checkCreditCardHolderNameFormat?.call(name);
   }
@@ -417,6 +431,7 @@ class _$checkCreditCardHolderNameFormatImpl
     TResult Function()? saveCCdataToSecureStorage,
     TResult Function()? loadCCdataFromSecureStorage,
     TResult Function()? checkExistingCCdata,
+    TResult Function()? makePayment,
     required TResult orElse(),
   }) {
     if (checkCreditCardHolderNameFormat != null) {
@@ -441,6 +456,7 @@ class _$checkCreditCardHolderNameFormatImpl
     required TResult Function(_loadCCdataFromSecureStorage value)
         loadCCdataFromSecureStorage,
     required TResult Function(_checkExistingCCdata value) checkExistingCCdata,
+    required TResult Function(_makePayment value) makePayment,
   }) {
     return checkCreditCardHolderNameFormat(this);
   }
@@ -461,6 +477,7 @@ class _$checkCreditCardHolderNameFormatImpl
     TResult? Function(_loadCCdataFromSecureStorage value)?
         loadCCdataFromSecureStorage,
     TResult? Function(_checkExistingCCdata value)? checkExistingCCdata,
+    TResult? Function(_makePayment value)? makePayment,
   }) {
     return checkCreditCardHolderNameFormat?.call(this);
   }
@@ -480,6 +497,7 @@ class _$checkCreditCardHolderNameFormatImpl
     TResult Function(_loadCCdataFromSecureStorage value)?
         loadCCdataFromSecureStorage,
     TResult Function(_checkExistingCCdata value)? checkExistingCCdata,
+    TResult Function(_makePayment value)? makePayment,
     required TResult orElse(),
   }) {
     if (checkCreditCardHolderNameFormat != null) {
@@ -576,6 +594,7 @@ class _$checkCreditCardCVVFormatImpl implements _checkCreditCardCVVFormat {
     required TResult Function() saveCCdataToSecureStorage,
     required TResult Function() loadCCdataFromSecureStorage,
     required TResult Function() checkExistingCCdata,
+    required TResult Function() makePayment,
   }) {
     return checkCreditCardCVVFormat(cvv);
   }
@@ -590,6 +609,7 @@ class _$checkCreditCardCVVFormatImpl implements _checkCreditCardCVVFormat {
     TResult? Function()? saveCCdataToSecureStorage,
     TResult? Function()? loadCCdataFromSecureStorage,
     TResult? Function()? checkExistingCCdata,
+    TResult? Function()? makePayment,
   }) {
     return checkCreditCardCVVFormat?.call(cvv);
   }
@@ -604,6 +624,7 @@ class _$checkCreditCardCVVFormatImpl implements _checkCreditCardCVVFormat {
     TResult Function()? saveCCdataToSecureStorage,
     TResult Function()? loadCCdataFromSecureStorage,
     TResult Function()? checkExistingCCdata,
+    TResult Function()? makePayment,
     required TResult orElse(),
   }) {
     if (checkCreditCardCVVFormat != null) {
@@ -628,6 +649,7 @@ class _$checkCreditCardCVVFormatImpl implements _checkCreditCardCVVFormat {
     required TResult Function(_loadCCdataFromSecureStorage value)
         loadCCdataFromSecureStorage,
     required TResult Function(_checkExistingCCdata value) checkExistingCCdata,
+    required TResult Function(_makePayment value) makePayment,
   }) {
     return checkCreditCardCVVFormat(this);
   }
@@ -648,6 +670,7 @@ class _$checkCreditCardCVVFormatImpl implements _checkCreditCardCVVFormat {
     TResult? Function(_loadCCdataFromSecureStorage value)?
         loadCCdataFromSecureStorage,
     TResult? Function(_checkExistingCCdata value)? checkExistingCCdata,
+    TResult? Function(_makePayment value)? makePayment,
   }) {
     return checkCreditCardCVVFormat?.call(this);
   }
@@ -667,6 +690,7 @@ class _$checkCreditCardCVVFormatImpl implements _checkCreditCardCVVFormat {
     TResult Function(_loadCCdataFromSecureStorage value)?
         loadCCdataFromSecureStorage,
     TResult Function(_checkExistingCCdata value)? checkExistingCCdata,
+    TResult Function(_makePayment value)? makePayment,
     required TResult orElse(),
   }) {
     if (checkCreditCardCVVFormat != null) {
@@ -764,6 +788,7 @@ class _$checkCreditCardExpiryDateFormatImpl
     required TResult Function() saveCCdataToSecureStorage,
     required TResult Function() loadCCdataFromSecureStorage,
     required TResult Function() checkExistingCCdata,
+    required TResult Function() makePayment,
   }) {
     return checkCreditCardExpiryDateFormat(date);
   }
@@ -778,6 +803,7 @@ class _$checkCreditCardExpiryDateFormatImpl
     TResult? Function()? saveCCdataToSecureStorage,
     TResult? Function()? loadCCdataFromSecureStorage,
     TResult? Function()? checkExistingCCdata,
+    TResult? Function()? makePayment,
   }) {
     return checkCreditCardExpiryDateFormat?.call(date);
   }
@@ -792,6 +818,7 @@ class _$checkCreditCardExpiryDateFormatImpl
     TResult Function()? saveCCdataToSecureStorage,
     TResult Function()? loadCCdataFromSecureStorage,
     TResult Function()? checkExistingCCdata,
+    TResult Function()? makePayment,
     required TResult orElse(),
   }) {
     if (checkCreditCardExpiryDateFormat != null) {
@@ -816,6 +843,7 @@ class _$checkCreditCardExpiryDateFormatImpl
     required TResult Function(_loadCCdataFromSecureStorage value)
         loadCCdataFromSecureStorage,
     required TResult Function(_checkExistingCCdata value) checkExistingCCdata,
+    required TResult Function(_makePayment value) makePayment,
   }) {
     return checkCreditCardExpiryDateFormat(this);
   }
@@ -836,6 +864,7 @@ class _$checkCreditCardExpiryDateFormatImpl
     TResult? Function(_loadCCdataFromSecureStorage value)?
         loadCCdataFromSecureStorage,
     TResult? Function(_checkExistingCCdata value)? checkExistingCCdata,
+    TResult? Function(_makePayment value)? makePayment,
   }) {
     return checkCreditCardExpiryDateFormat?.call(this);
   }
@@ -855,6 +884,7 @@ class _$checkCreditCardExpiryDateFormatImpl
     TResult Function(_loadCCdataFromSecureStorage value)?
         loadCCdataFromSecureStorage,
     TResult Function(_checkExistingCCdata value)? checkExistingCCdata,
+    TResult Function(_makePayment value)? makePayment,
     required TResult orElse(),
   }) {
     if (checkCreditCardExpiryDateFormat != null) {
@@ -925,6 +955,7 @@ class _$saveCCdataToSecureStorageImpl implements _saveCCdataToSecureStorage {
     required TResult Function() saveCCdataToSecureStorage,
     required TResult Function() loadCCdataFromSecureStorage,
     required TResult Function() checkExistingCCdata,
+    required TResult Function() makePayment,
   }) {
     return saveCCdataToSecureStorage();
   }
@@ -939,6 +970,7 @@ class _$saveCCdataToSecureStorageImpl implements _saveCCdataToSecureStorage {
     TResult? Function()? saveCCdataToSecureStorage,
     TResult? Function()? loadCCdataFromSecureStorage,
     TResult? Function()? checkExistingCCdata,
+    TResult? Function()? makePayment,
   }) {
     return saveCCdataToSecureStorage?.call();
   }
@@ -953,6 +985,7 @@ class _$saveCCdataToSecureStorageImpl implements _saveCCdataToSecureStorage {
     TResult Function()? saveCCdataToSecureStorage,
     TResult Function()? loadCCdataFromSecureStorage,
     TResult Function()? checkExistingCCdata,
+    TResult Function()? makePayment,
     required TResult orElse(),
   }) {
     if (saveCCdataToSecureStorage != null) {
@@ -977,6 +1010,7 @@ class _$saveCCdataToSecureStorageImpl implements _saveCCdataToSecureStorage {
     required TResult Function(_loadCCdataFromSecureStorage value)
         loadCCdataFromSecureStorage,
     required TResult Function(_checkExistingCCdata value) checkExistingCCdata,
+    required TResult Function(_makePayment value) makePayment,
   }) {
     return saveCCdataToSecureStorage(this);
   }
@@ -997,6 +1031,7 @@ class _$saveCCdataToSecureStorageImpl implements _saveCCdataToSecureStorage {
     TResult? Function(_loadCCdataFromSecureStorage value)?
         loadCCdataFromSecureStorage,
     TResult? Function(_checkExistingCCdata value)? checkExistingCCdata,
+    TResult? Function(_makePayment value)? makePayment,
   }) {
     return saveCCdataToSecureStorage?.call(this);
   }
@@ -1016,6 +1051,7 @@ class _$saveCCdataToSecureStorageImpl implements _saveCCdataToSecureStorage {
     TResult Function(_loadCCdataFromSecureStorage value)?
         loadCCdataFromSecureStorage,
     TResult Function(_checkExistingCCdata value)? checkExistingCCdata,
+    TResult Function(_makePayment value)? makePayment,
     required TResult orElse(),
   }) {
     if (saveCCdataToSecureStorage != null) {
@@ -1080,6 +1116,7 @@ class _$loadCCdataFromSecureStorageImpl
     required TResult Function() saveCCdataToSecureStorage,
     required TResult Function() loadCCdataFromSecureStorage,
     required TResult Function() checkExistingCCdata,
+    required TResult Function() makePayment,
   }) {
     return loadCCdataFromSecureStorage();
   }
@@ -1094,6 +1131,7 @@ class _$loadCCdataFromSecureStorageImpl
     TResult? Function()? saveCCdataToSecureStorage,
     TResult? Function()? loadCCdataFromSecureStorage,
     TResult? Function()? checkExistingCCdata,
+    TResult? Function()? makePayment,
   }) {
     return loadCCdataFromSecureStorage?.call();
   }
@@ -1108,6 +1146,7 @@ class _$loadCCdataFromSecureStorageImpl
     TResult Function()? saveCCdataToSecureStorage,
     TResult Function()? loadCCdataFromSecureStorage,
     TResult Function()? checkExistingCCdata,
+    TResult Function()? makePayment,
     required TResult orElse(),
   }) {
     if (loadCCdataFromSecureStorage != null) {
@@ -1132,6 +1171,7 @@ class _$loadCCdataFromSecureStorageImpl
     required TResult Function(_loadCCdataFromSecureStorage value)
         loadCCdataFromSecureStorage,
     required TResult Function(_checkExistingCCdata value) checkExistingCCdata,
+    required TResult Function(_makePayment value) makePayment,
   }) {
     return loadCCdataFromSecureStorage(this);
   }
@@ -1152,6 +1192,7 @@ class _$loadCCdataFromSecureStorageImpl
     TResult? Function(_loadCCdataFromSecureStorage value)?
         loadCCdataFromSecureStorage,
     TResult? Function(_checkExistingCCdata value)? checkExistingCCdata,
+    TResult? Function(_makePayment value)? makePayment,
   }) {
     return loadCCdataFromSecureStorage?.call(this);
   }
@@ -1171,6 +1212,7 @@ class _$loadCCdataFromSecureStorageImpl
     TResult Function(_loadCCdataFromSecureStorage value)?
         loadCCdataFromSecureStorage,
     TResult Function(_checkExistingCCdata value)? checkExistingCCdata,
+    TResult Function(_makePayment value)? makePayment,
     required TResult orElse(),
   }) {
     if (loadCCdataFromSecureStorage != null) {
@@ -1233,6 +1275,7 @@ class _$checkExistingCCdataImpl implements _checkExistingCCdata {
     required TResult Function() saveCCdataToSecureStorage,
     required TResult Function() loadCCdataFromSecureStorage,
     required TResult Function() checkExistingCCdata,
+    required TResult Function() makePayment,
   }) {
     return checkExistingCCdata();
   }
@@ -1247,6 +1290,7 @@ class _$checkExistingCCdataImpl implements _checkExistingCCdata {
     TResult? Function()? saveCCdataToSecureStorage,
     TResult? Function()? loadCCdataFromSecureStorage,
     TResult? Function()? checkExistingCCdata,
+    TResult? Function()? makePayment,
   }) {
     return checkExistingCCdata?.call();
   }
@@ -1261,6 +1305,7 @@ class _$checkExistingCCdataImpl implements _checkExistingCCdata {
     TResult Function()? saveCCdataToSecureStorage,
     TResult Function()? loadCCdataFromSecureStorage,
     TResult Function()? checkExistingCCdata,
+    TResult Function()? makePayment,
     required TResult orElse(),
   }) {
     if (checkExistingCCdata != null) {
@@ -1285,6 +1330,7 @@ class _$checkExistingCCdataImpl implements _checkExistingCCdata {
     required TResult Function(_loadCCdataFromSecureStorage value)
         loadCCdataFromSecureStorage,
     required TResult Function(_checkExistingCCdata value) checkExistingCCdata,
+    required TResult Function(_makePayment value) makePayment,
   }) {
     return checkExistingCCdata(this);
   }
@@ -1305,6 +1351,7 @@ class _$checkExistingCCdataImpl implements _checkExistingCCdata {
     TResult? Function(_loadCCdataFromSecureStorage value)?
         loadCCdataFromSecureStorage,
     TResult? Function(_checkExistingCCdata value)? checkExistingCCdata,
+    TResult? Function(_makePayment value)? makePayment,
   }) {
     return checkExistingCCdata?.call(this);
   }
@@ -1324,6 +1371,7 @@ class _$checkExistingCCdataImpl implements _checkExistingCCdata {
     TResult Function(_loadCCdataFromSecureStorage value)?
         loadCCdataFromSecureStorage,
     TResult Function(_checkExistingCCdata value)? checkExistingCCdata,
+    TResult Function(_makePayment value)? makePayment,
     required TResult orElse(),
   }) {
     if (checkExistingCCdata != null) {
@@ -1339,6 +1387,161 @@ abstract class _checkExistingCCdata
 }
 
 /// @nodoc
+abstract class _$$makePaymentImplCopyWith<$Res> {
+  factory _$$makePaymentImplCopyWith(
+          _$makePaymentImpl value, $Res Function(_$makePaymentImpl) then) =
+      __$$makePaymentImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$makePaymentImplCopyWithImpl<$Res>
+    extends _$SubscriptionPaymentInterfaceEventCopyWithImpl<$Res,
+        _$makePaymentImpl> implements _$$makePaymentImplCopyWith<$Res> {
+  __$$makePaymentImplCopyWithImpl(
+      _$makePaymentImpl _value, $Res Function(_$makePaymentImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$makePaymentImpl implements _makePayment {
+  const _$makePaymentImpl();
+
+  @override
+  String toString() {
+    return 'SubscriptionPaymentInterfaceEvent.makePayment()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$makePaymentImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String ccNumber) checkCreditCardNumberFormat,
+    required TResult Function(String name) checkCreditCardHolderNameFormat,
+    required TResult Function(String cvv) checkCreditCardCVVFormat,
+    required TResult Function(String date) checkCreditCardExpiryDateFormat,
+    required TResult Function() saveCCdataToSecureStorage,
+    required TResult Function() loadCCdataFromSecureStorage,
+    required TResult Function() checkExistingCCdata,
+    required TResult Function() makePayment,
+  }) {
+    return makePayment();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String ccNumber)? checkCreditCardNumberFormat,
+    TResult? Function(String name)? checkCreditCardHolderNameFormat,
+    TResult? Function(String cvv)? checkCreditCardCVVFormat,
+    TResult? Function(String date)? checkCreditCardExpiryDateFormat,
+    TResult? Function()? saveCCdataToSecureStorage,
+    TResult? Function()? loadCCdataFromSecureStorage,
+    TResult? Function()? checkExistingCCdata,
+    TResult? Function()? makePayment,
+  }) {
+    return makePayment?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String ccNumber)? checkCreditCardNumberFormat,
+    TResult Function(String name)? checkCreditCardHolderNameFormat,
+    TResult Function(String cvv)? checkCreditCardCVVFormat,
+    TResult Function(String date)? checkCreditCardExpiryDateFormat,
+    TResult Function()? saveCCdataToSecureStorage,
+    TResult Function()? loadCCdataFromSecureStorage,
+    TResult Function()? checkExistingCCdata,
+    TResult Function()? makePayment,
+    required TResult orElse(),
+  }) {
+    if (makePayment != null) {
+      return makePayment();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_checkCreditCardNumberFormat value)
+        checkCreditCardNumberFormat,
+    required TResult Function(_checkCreditCardHolderNameFormat value)
+        checkCreditCardHolderNameFormat,
+    required TResult Function(_checkCreditCardCVVFormat value)
+        checkCreditCardCVVFormat,
+    required TResult Function(_checkCreditCardExpiryDateFormat value)
+        checkCreditCardExpiryDateFormat,
+    required TResult Function(_saveCCdataToSecureStorage value)
+        saveCCdataToSecureStorage,
+    required TResult Function(_loadCCdataFromSecureStorage value)
+        loadCCdataFromSecureStorage,
+    required TResult Function(_checkExistingCCdata value) checkExistingCCdata,
+    required TResult Function(_makePayment value) makePayment,
+  }) {
+    return makePayment(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_checkCreditCardNumberFormat value)?
+        checkCreditCardNumberFormat,
+    TResult? Function(_checkCreditCardHolderNameFormat value)?
+        checkCreditCardHolderNameFormat,
+    TResult? Function(_checkCreditCardCVVFormat value)?
+        checkCreditCardCVVFormat,
+    TResult? Function(_checkCreditCardExpiryDateFormat value)?
+        checkCreditCardExpiryDateFormat,
+    TResult? Function(_saveCCdataToSecureStorage value)?
+        saveCCdataToSecureStorage,
+    TResult? Function(_loadCCdataFromSecureStorage value)?
+        loadCCdataFromSecureStorage,
+    TResult? Function(_checkExistingCCdata value)? checkExistingCCdata,
+    TResult? Function(_makePayment value)? makePayment,
+  }) {
+    return makePayment?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_checkCreditCardNumberFormat value)?
+        checkCreditCardNumberFormat,
+    TResult Function(_checkCreditCardHolderNameFormat value)?
+        checkCreditCardHolderNameFormat,
+    TResult Function(_checkCreditCardCVVFormat value)? checkCreditCardCVVFormat,
+    TResult Function(_checkCreditCardExpiryDateFormat value)?
+        checkCreditCardExpiryDateFormat,
+    TResult Function(_saveCCdataToSecureStorage value)?
+        saveCCdataToSecureStorage,
+    TResult Function(_loadCCdataFromSecureStorage value)?
+        loadCCdataFromSecureStorage,
+    TResult Function(_checkExistingCCdata value)? checkExistingCCdata,
+    TResult Function(_makePayment value)? makePayment,
+    required TResult orElse(),
+  }) {
+    if (makePayment != null) {
+      return makePayment(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _makePayment implements SubscriptionPaymentInterfaceEvent {
+  const factory _makePayment() = _$makePaymentImpl;
+}
+
+/// @nodoc
 mixin _$SubscriptionPaymentInterfaceBlocState {
   CreditCardInputState<dynamic> get ccNumberState =>
       throw _privateConstructorUsedError;
@@ -1349,6 +1552,8 @@ mixin _$SubscriptionPaymentInterfaceBlocState {
   CreditCardInputState<dynamic> get ccCVVState =>
       throw _privateConstructorUsedError;
   bool get hasSavedCCdata => throw _privateConstructorUsedError;
+  PaymentTransactionState get transactionState =>
+      throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $SubscriptionPaymentInterfaceBlocStateCopyWith<
@@ -1369,7 +1574,10 @@ abstract class $SubscriptionPaymentInterfaceBlocStateCopyWith<$Res> {
       CreditCardInputState<dynamic> ccHolderNameState,
       CreditCardInputState<dynamic> ccExpiryDateState,
       CreditCardInputState<dynamic> ccCVVState,
-      bool hasSavedCCdata});
+      bool hasSavedCCdata,
+      PaymentTransactionState transactionState});
+
+  $PaymentTransactionStateCopyWith<$Res> get transactionState;
 }
 
 /// @nodoc
@@ -1391,6 +1599,7 @@ class _$SubscriptionPaymentInterfaceBlocStateCopyWithImpl<$Res,
     Object? ccExpiryDateState = null,
     Object? ccCVVState = null,
     Object? hasSavedCCdata = null,
+    Object? transactionState = null,
   }) {
     return _then(_value.copyWith(
       ccNumberState: null == ccNumberState
@@ -1413,7 +1622,20 @@ class _$SubscriptionPaymentInterfaceBlocStateCopyWithImpl<$Res,
           ? _value.hasSavedCCdata
           : hasSavedCCdata // ignore: cast_nullable_to_non_nullable
               as bool,
+      transactionState: null == transactionState
+          ? _value.transactionState
+          : transactionState // ignore: cast_nullable_to_non_nullable
+              as PaymentTransactionState,
     ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $PaymentTransactionStateCopyWith<$Res> get transactionState {
+    return $PaymentTransactionStateCopyWith<$Res>(_value.transactionState,
+        (value) {
+      return _then(_value.copyWith(transactionState: value) as $Val);
+    });
   }
 }
 
@@ -1431,7 +1653,11 @@ abstract class _$$SubscriptionPaymentInterfaceBlocStateImplCopyWith<$Res>
       CreditCardInputState<dynamic> ccHolderNameState,
       CreditCardInputState<dynamic> ccExpiryDateState,
       CreditCardInputState<dynamic> ccCVVState,
-      bool hasSavedCCdata});
+      bool hasSavedCCdata,
+      PaymentTransactionState transactionState});
+
+  @override
+  $PaymentTransactionStateCopyWith<$Res> get transactionState;
 }
 
 /// @nodoc
@@ -1452,6 +1678,7 @@ class __$$SubscriptionPaymentInterfaceBlocStateImplCopyWithImpl<$Res>
     Object? ccExpiryDateState = null,
     Object? ccCVVState = null,
     Object? hasSavedCCdata = null,
+    Object? transactionState = null,
   }) {
     return _then(_$SubscriptionPaymentInterfaceBlocStateImpl(
       ccNumberState: null == ccNumberState
@@ -1474,6 +1701,10 @@ class __$$SubscriptionPaymentInterfaceBlocStateImplCopyWithImpl<$Res>
           ? _value.hasSavedCCdata
           : hasSavedCCdata // ignore: cast_nullable_to_non_nullable
               as bool,
+      transactionState: null == transactionState
+          ? _value.transactionState
+          : transactionState // ignore: cast_nullable_to_non_nullable
+              as PaymentTransactionState,
     ));
   }
 }
@@ -1487,7 +1718,8 @@ class _$SubscriptionPaymentInterfaceBlocStateImpl
       required this.ccHolderNameState,
       required this.ccExpiryDateState,
       required this.ccCVVState,
-      required this.hasSavedCCdata});
+      required this.hasSavedCCdata,
+      required this.transactionState});
 
   @override
   final CreditCardInputState<dynamic> ccNumberState;
@@ -1499,10 +1731,12 @@ class _$SubscriptionPaymentInterfaceBlocStateImpl
   final CreditCardInputState<dynamic> ccCVVState;
   @override
   final bool hasSavedCCdata;
+  @override
+  final PaymentTransactionState transactionState;
 
   @override
   String toString() {
-    return 'SubscriptionPaymentInterfaceBlocState(ccNumberState: $ccNumberState, ccHolderNameState: $ccHolderNameState, ccExpiryDateState: $ccExpiryDateState, ccCVVState: $ccCVVState, hasSavedCCdata: $hasSavedCCdata)';
+    return 'SubscriptionPaymentInterfaceBlocState(ccNumberState: $ccNumberState, ccHolderNameState: $ccHolderNameState, ccExpiryDateState: $ccExpiryDateState, ccCVVState: $ccCVVState, hasSavedCCdata: $hasSavedCCdata, transactionState: $transactionState)';
   }
 
   @override
@@ -1519,12 +1753,14 @@ class _$SubscriptionPaymentInterfaceBlocStateImpl
             (identical(other.ccCVVState, ccCVVState) ||
                 other.ccCVVState == ccCVVState) &&
             (identical(other.hasSavedCCdata, hasSavedCCdata) ||
-                other.hasSavedCCdata == hasSavedCCdata));
+                other.hasSavedCCdata == hasSavedCCdata) &&
+            (identical(other.transactionState, transactionState) ||
+                other.transactionState == transactionState));
   }
 
   @override
   int get hashCode => Object.hash(runtimeType, ccNumberState, ccHolderNameState,
-      ccExpiryDateState, ccCVVState, hasSavedCCdata);
+      ccExpiryDateState, ccCVVState, hasSavedCCdata, transactionState);
 
   @JsonKey(ignore: true)
   @override
@@ -1542,7 +1778,8 @@ abstract class _SubscriptionPaymentInterfaceBlocState
           required final CreditCardInputState<dynamic> ccHolderNameState,
           required final CreditCardInputState<dynamic> ccExpiryDateState,
           required final CreditCardInputState<dynamic> ccCVVState,
-          required final bool hasSavedCCdata}) =
+          required final bool hasSavedCCdata,
+          required final PaymentTransactionState transactionState}) =
       _$SubscriptionPaymentInterfaceBlocStateImpl;
 
   @override
@@ -1556,8 +1793,697 @@ abstract class _SubscriptionPaymentInterfaceBlocState
   @override
   bool get hasSavedCCdata;
   @override
+  PaymentTransactionState get transactionState;
+  @override
   @JsonKey(ignore: true)
   _$$SubscriptionPaymentInterfaceBlocStateImplCopyWith<
           _$SubscriptionPaymentInterfaceBlocStateImpl>
       get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+mixin _$PaymentTransactionState {
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(SubscriptionPaymentResult result)
+        paymentTransactionResult,
+    required TResult Function(DomainErrorType errorType)
+        paymentTransactionFailed,
+    required TResult Function() paymentTransactionInProgress,
+    required TResult Function() paymentTransactionNotStarted,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(SubscriptionPaymentResult result)?
+        paymentTransactionResult,
+    TResult? Function(DomainErrorType errorType)? paymentTransactionFailed,
+    TResult? Function()? paymentTransactionInProgress,
+    TResult? Function()? paymentTransactionNotStarted,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(SubscriptionPaymentResult result)?
+        paymentTransactionResult,
+    TResult Function(DomainErrorType errorType)? paymentTransactionFailed,
+    TResult Function()? paymentTransactionInProgress,
+    TResult Function()? paymentTransactionNotStarted,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_paymentTransactionResult value)
+        paymentTransactionResult,
+    required TResult Function(_paymentTransactionFailed value)
+        paymentTransactionFailed,
+    required TResult Function(_paymentTransactionInProgress value)
+        paymentTransactionInProgress,
+    required TResult Function(_paymentTransactionNotStarted value)
+        paymentTransactionNotStarted,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_paymentTransactionResult value)?
+        paymentTransactionResult,
+    TResult? Function(_paymentTransactionFailed value)?
+        paymentTransactionFailed,
+    TResult? Function(_paymentTransactionInProgress value)?
+        paymentTransactionInProgress,
+    TResult? Function(_paymentTransactionNotStarted value)?
+        paymentTransactionNotStarted,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_paymentTransactionResult value)? paymentTransactionResult,
+    TResult Function(_paymentTransactionFailed value)? paymentTransactionFailed,
+    TResult Function(_paymentTransactionInProgress value)?
+        paymentTransactionInProgress,
+    TResult Function(_paymentTransactionNotStarted value)?
+        paymentTransactionNotStarted,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $PaymentTransactionStateCopyWith<$Res> {
+  factory $PaymentTransactionStateCopyWith(PaymentTransactionState value,
+          $Res Function(PaymentTransactionState) then) =
+      _$PaymentTransactionStateCopyWithImpl<$Res, PaymentTransactionState>;
+}
+
+/// @nodoc
+class _$PaymentTransactionStateCopyWithImpl<$Res,
+        $Val extends PaymentTransactionState>
+    implements $PaymentTransactionStateCopyWith<$Res> {
+  _$PaymentTransactionStateCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+}
+
+/// @nodoc
+abstract class _$$paymentTransactionResultImplCopyWith<$Res> {
+  factory _$$paymentTransactionResultImplCopyWith(
+          _$paymentTransactionResultImpl value,
+          $Res Function(_$paymentTransactionResultImpl) then) =
+      __$$paymentTransactionResultImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({SubscriptionPaymentResult result});
+}
+
+/// @nodoc
+class __$$paymentTransactionResultImplCopyWithImpl<$Res>
+    extends _$PaymentTransactionStateCopyWithImpl<$Res,
+        _$paymentTransactionResultImpl>
+    implements _$$paymentTransactionResultImplCopyWith<$Res> {
+  __$$paymentTransactionResultImplCopyWithImpl(
+      _$paymentTransactionResultImpl _value,
+      $Res Function(_$paymentTransactionResultImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? result = null,
+  }) {
+    return _then(_$paymentTransactionResultImpl(
+      result: null == result
+          ? _value.result
+          : result // ignore: cast_nullable_to_non_nullable
+              as SubscriptionPaymentResult,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$paymentTransactionResultImpl implements _paymentTransactionResult {
+  const _$paymentTransactionResultImpl({required this.result});
+
+  @override
+  final SubscriptionPaymentResult result;
+
+  @override
+  String toString() {
+    return 'PaymentTransactionState.paymentTransactionResult(result: $result)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$paymentTransactionResultImpl &&
+            (identical(other.result, result) || other.result == result));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, result);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$paymentTransactionResultImplCopyWith<_$paymentTransactionResultImpl>
+      get copyWith => __$$paymentTransactionResultImplCopyWithImpl<
+          _$paymentTransactionResultImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(SubscriptionPaymentResult result)
+        paymentTransactionResult,
+    required TResult Function(DomainErrorType errorType)
+        paymentTransactionFailed,
+    required TResult Function() paymentTransactionInProgress,
+    required TResult Function() paymentTransactionNotStarted,
+  }) {
+    return paymentTransactionResult(result);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(SubscriptionPaymentResult result)?
+        paymentTransactionResult,
+    TResult? Function(DomainErrorType errorType)? paymentTransactionFailed,
+    TResult? Function()? paymentTransactionInProgress,
+    TResult? Function()? paymentTransactionNotStarted,
+  }) {
+    return paymentTransactionResult?.call(result);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(SubscriptionPaymentResult result)?
+        paymentTransactionResult,
+    TResult Function(DomainErrorType errorType)? paymentTransactionFailed,
+    TResult Function()? paymentTransactionInProgress,
+    TResult Function()? paymentTransactionNotStarted,
+    required TResult orElse(),
+  }) {
+    if (paymentTransactionResult != null) {
+      return paymentTransactionResult(result);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_paymentTransactionResult value)
+        paymentTransactionResult,
+    required TResult Function(_paymentTransactionFailed value)
+        paymentTransactionFailed,
+    required TResult Function(_paymentTransactionInProgress value)
+        paymentTransactionInProgress,
+    required TResult Function(_paymentTransactionNotStarted value)
+        paymentTransactionNotStarted,
+  }) {
+    return paymentTransactionResult(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_paymentTransactionResult value)?
+        paymentTransactionResult,
+    TResult? Function(_paymentTransactionFailed value)?
+        paymentTransactionFailed,
+    TResult? Function(_paymentTransactionInProgress value)?
+        paymentTransactionInProgress,
+    TResult? Function(_paymentTransactionNotStarted value)?
+        paymentTransactionNotStarted,
+  }) {
+    return paymentTransactionResult?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_paymentTransactionResult value)? paymentTransactionResult,
+    TResult Function(_paymentTransactionFailed value)? paymentTransactionFailed,
+    TResult Function(_paymentTransactionInProgress value)?
+        paymentTransactionInProgress,
+    TResult Function(_paymentTransactionNotStarted value)?
+        paymentTransactionNotStarted,
+    required TResult orElse(),
+  }) {
+    if (paymentTransactionResult != null) {
+      return paymentTransactionResult(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _paymentTransactionResult implements PaymentTransactionState {
+  const factory _paymentTransactionResult(
+          {required final SubscriptionPaymentResult result}) =
+      _$paymentTransactionResultImpl;
+
+  SubscriptionPaymentResult get result;
+  @JsonKey(ignore: true)
+  _$$paymentTransactionResultImplCopyWith<_$paymentTransactionResultImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$paymentTransactionFailedImplCopyWith<$Res> {
+  factory _$$paymentTransactionFailedImplCopyWith(
+          _$paymentTransactionFailedImpl value,
+          $Res Function(_$paymentTransactionFailedImpl) then) =
+      __$$paymentTransactionFailedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({DomainErrorType errorType});
+}
+
+/// @nodoc
+class __$$paymentTransactionFailedImplCopyWithImpl<$Res>
+    extends _$PaymentTransactionStateCopyWithImpl<$Res,
+        _$paymentTransactionFailedImpl>
+    implements _$$paymentTransactionFailedImplCopyWith<$Res> {
+  __$$paymentTransactionFailedImplCopyWithImpl(
+      _$paymentTransactionFailedImpl _value,
+      $Res Function(_$paymentTransactionFailedImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? errorType = null,
+  }) {
+    return _then(_$paymentTransactionFailedImpl(
+      null == errorType
+          ? _value.errorType
+          : errorType // ignore: cast_nullable_to_non_nullable
+              as DomainErrorType,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$paymentTransactionFailedImpl implements _paymentTransactionFailed {
+  const _$paymentTransactionFailedImpl(this.errorType);
+
+  @override
+  final DomainErrorType errorType;
+
+  @override
+  String toString() {
+    return 'PaymentTransactionState.paymentTransactionFailed(errorType: $errorType)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$paymentTransactionFailedImpl &&
+            (identical(other.errorType, errorType) ||
+                other.errorType == errorType));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, errorType);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$paymentTransactionFailedImplCopyWith<_$paymentTransactionFailedImpl>
+      get copyWith => __$$paymentTransactionFailedImplCopyWithImpl<
+          _$paymentTransactionFailedImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(SubscriptionPaymentResult result)
+        paymentTransactionResult,
+    required TResult Function(DomainErrorType errorType)
+        paymentTransactionFailed,
+    required TResult Function() paymentTransactionInProgress,
+    required TResult Function() paymentTransactionNotStarted,
+  }) {
+    return paymentTransactionFailed(errorType);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(SubscriptionPaymentResult result)?
+        paymentTransactionResult,
+    TResult? Function(DomainErrorType errorType)? paymentTransactionFailed,
+    TResult? Function()? paymentTransactionInProgress,
+    TResult? Function()? paymentTransactionNotStarted,
+  }) {
+    return paymentTransactionFailed?.call(errorType);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(SubscriptionPaymentResult result)?
+        paymentTransactionResult,
+    TResult Function(DomainErrorType errorType)? paymentTransactionFailed,
+    TResult Function()? paymentTransactionInProgress,
+    TResult Function()? paymentTransactionNotStarted,
+    required TResult orElse(),
+  }) {
+    if (paymentTransactionFailed != null) {
+      return paymentTransactionFailed(errorType);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_paymentTransactionResult value)
+        paymentTransactionResult,
+    required TResult Function(_paymentTransactionFailed value)
+        paymentTransactionFailed,
+    required TResult Function(_paymentTransactionInProgress value)
+        paymentTransactionInProgress,
+    required TResult Function(_paymentTransactionNotStarted value)
+        paymentTransactionNotStarted,
+  }) {
+    return paymentTransactionFailed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_paymentTransactionResult value)?
+        paymentTransactionResult,
+    TResult? Function(_paymentTransactionFailed value)?
+        paymentTransactionFailed,
+    TResult? Function(_paymentTransactionInProgress value)?
+        paymentTransactionInProgress,
+    TResult? Function(_paymentTransactionNotStarted value)?
+        paymentTransactionNotStarted,
+  }) {
+    return paymentTransactionFailed?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_paymentTransactionResult value)? paymentTransactionResult,
+    TResult Function(_paymentTransactionFailed value)? paymentTransactionFailed,
+    TResult Function(_paymentTransactionInProgress value)?
+        paymentTransactionInProgress,
+    TResult Function(_paymentTransactionNotStarted value)?
+        paymentTransactionNotStarted,
+    required TResult orElse(),
+  }) {
+    if (paymentTransactionFailed != null) {
+      return paymentTransactionFailed(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _paymentTransactionFailed implements PaymentTransactionState {
+  const factory _paymentTransactionFailed(final DomainErrorType errorType) =
+      _$paymentTransactionFailedImpl;
+
+  DomainErrorType get errorType;
+  @JsonKey(ignore: true)
+  _$$paymentTransactionFailedImplCopyWith<_$paymentTransactionFailedImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$paymentTransactionInProgressImplCopyWith<$Res> {
+  factory _$$paymentTransactionInProgressImplCopyWith(
+          _$paymentTransactionInProgressImpl value,
+          $Res Function(_$paymentTransactionInProgressImpl) then) =
+      __$$paymentTransactionInProgressImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$paymentTransactionInProgressImplCopyWithImpl<$Res>
+    extends _$PaymentTransactionStateCopyWithImpl<$Res,
+        _$paymentTransactionInProgressImpl>
+    implements _$$paymentTransactionInProgressImplCopyWith<$Res> {
+  __$$paymentTransactionInProgressImplCopyWithImpl(
+      _$paymentTransactionInProgressImpl _value,
+      $Res Function(_$paymentTransactionInProgressImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$paymentTransactionInProgressImpl
+    implements _paymentTransactionInProgress {
+  const _$paymentTransactionInProgressImpl();
+
+  @override
+  String toString() {
+    return 'PaymentTransactionState.paymentTransactionInProgress()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$paymentTransactionInProgressImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(SubscriptionPaymentResult result)
+        paymentTransactionResult,
+    required TResult Function(DomainErrorType errorType)
+        paymentTransactionFailed,
+    required TResult Function() paymentTransactionInProgress,
+    required TResult Function() paymentTransactionNotStarted,
+  }) {
+    return paymentTransactionInProgress();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(SubscriptionPaymentResult result)?
+        paymentTransactionResult,
+    TResult? Function(DomainErrorType errorType)? paymentTransactionFailed,
+    TResult? Function()? paymentTransactionInProgress,
+    TResult? Function()? paymentTransactionNotStarted,
+  }) {
+    return paymentTransactionInProgress?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(SubscriptionPaymentResult result)?
+        paymentTransactionResult,
+    TResult Function(DomainErrorType errorType)? paymentTransactionFailed,
+    TResult Function()? paymentTransactionInProgress,
+    TResult Function()? paymentTransactionNotStarted,
+    required TResult orElse(),
+  }) {
+    if (paymentTransactionInProgress != null) {
+      return paymentTransactionInProgress();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_paymentTransactionResult value)
+        paymentTransactionResult,
+    required TResult Function(_paymentTransactionFailed value)
+        paymentTransactionFailed,
+    required TResult Function(_paymentTransactionInProgress value)
+        paymentTransactionInProgress,
+    required TResult Function(_paymentTransactionNotStarted value)
+        paymentTransactionNotStarted,
+  }) {
+    return paymentTransactionInProgress(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_paymentTransactionResult value)?
+        paymentTransactionResult,
+    TResult? Function(_paymentTransactionFailed value)?
+        paymentTransactionFailed,
+    TResult? Function(_paymentTransactionInProgress value)?
+        paymentTransactionInProgress,
+    TResult? Function(_paymentTransactionNotStarted value)?
+        paymentTransactionNotStarted,
+  }) {
+    return paymentTransactionInProgress?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_paymentTransactionResult value)? paymentTransactionResult,
+    TResult Function(_paymentTransactionFailed value)? paymentTransactionFailed,
+    TResult Function(_paymentTransactionInProgress value)?
+        paymentTransactionInProgress,
+    TResult Function(_paymentTransactionNotStarted value)?
+        paymentTransactionNotStarted,
+    required TResult orElse(),
+  }) {
+    if (paymentTransactionInProgress != null) {
+      return paymentTransactionInProgress(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _paymentTransactionInProgress
+    implements PaymentTransactionState {
+  const factory _paymentTransactionInProgress() =
+      _$paymentTransactionInProgressImpl;
+}
+
+/// @nodoc
+abstract class _$$paymentTransactionNotStartedImplCopyWith<$Res> {
+  factory _$$paymentTransactionNotStartedImplCopyWith(
+          _$paymentTransactionNotStartedImpl value,
+          $Res Function(_$paymentTransactionNotStartedImpl) then) =
+      __$$paymentTransactionNotStartedImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$paymentTransactionNotStartedImplCopyWithImpl<$Res>
+    extends _$PaymentTransactionStateCopyWithImpl<$Res,
+        _$paymentTransactionNotStartedImpl>
+    implements _$$paymentTransactionNotStartedImplCopyWith<$Res> {
+  __$$paymentTransactionNotStartedImplCopyWithImpl(
+      _$paymentTransactionNotStartedImpl _value,
+      $Res Function(_$paymentTransactionNotStartedImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$paymentTransactionNotStartedImpl
+    implements _paymentTransactionNotStarted {
+  const _$paymentTransactionNotStartedImpl();
+
+  @override
+  String toString() {
+    return 'PaymentTransactionState.paymentTransactionNotStarted()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$paymentTransactionNotStartedImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(SubscriptionPaymentResult result)
+        paymentTransactionResult,
+    required TResult Function(DomainErrorType errorType)
+        paymentTransactionFailed,
+    required TResult Function() paymentTransactionInProgress,
+    required TResult Function() paymentTransactionNotStarted,
+  }) {
+    return paymentTransactionNotStarted();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(SubscriptionPaymentResult result)?
+        paymentTransactionResult,
+    TResult? Function(DomainErrorType errorType)? paymentTransactionFailed,
+    TResult? Function()? paymentTransactionInProgress,
+    TResult? Function()? paymentTransactionNotStarted,
+  }) {
+    return paymentTransactionNotStarted?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(SubscriptionPaymentResult result)?
+        paymentTransactionResult,
+    TResult Function(DomainErrorType errorType)? paymentTransactionFailed,
+    TResult Function()? paymentTransactionInProgress,
+    TResult Function()? paymentTransactionNotStarted,
+    required TResult orElse(),
+  }) {
+    if (paymentTransactionNotStarted != null) {
+      return paymentTransactionNotStarted();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_paymentTransactionResult value)
+        paymentTransactionResult,
+    required TResult Function(_paymentTransactionFailed value)
+        paymentTransactionFailed,
+    required TResult Function(_paymentTransactionInProgress value)
+        paymentTransactionInProgress,
+    required TResult Function(_paymentTransactionNotStarted value)
+        paymentTransactionNotStarted,
+  }) {
+    return paymentTransactionNotStarted(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_paymentTransactionResult value)?
+        paymentTransactionResult,
+    TResult? Function(_paymentTransactionFailed value)?
+        paymentTransactionFailed,
+    TResult? Function(_paymentTransactionInProgress value)?
+        paymentTransactionInProgress,
+    TResult? Function(_paymentTransactionNotStarted value)?
+        paymentTransactionNotStarted,
+  }) {
+    return paymentTransactionNotStarted?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_paymentTransactionResult value)? paymentTransactionResult,
+    TResult Function(_paymentTransactionFailed value)? paymentTransactionFailed,
+    TResult Function(_paymentTransactionInProgress value)?
+        paymentTransactionInProgress,
+    TResult Function(_paymentTransactionNotStarted value)?
+        paymentTransactionNotStarted,
+    required TResult orElse(),
+  }) {
+    if (paymentTransactionNotStarted != null) {
+      return paymentTransactionNotStarted(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _paymentTransactionNotStarted
+    implements PaymentTransactionState {
+  const factory _paymentTransactionNotStarted() =
+      _$paymentTransactionNotStartedImpl;
 }
