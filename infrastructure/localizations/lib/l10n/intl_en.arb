@@ -4,6 +4,7 @@
   "welcome_logo_description" : "Student Life",
   "login" : "Login",
   "logout" : "Logout",
+   "go_back": "Go back",
    "device_auth_unsupported" : "Your device either does not have strong biometric authentication or you did not yet enroll one !",
   "device_auth_action" : "This action requires authentication",
   "guest_space" : "Guest space",
@@ -106,5 +107,7 @@
   "payment_cc_holder_name_input_invalid" : "invalid credit card holder name!",
   "payment_cashOrCheck_result_message" : "You will need to go to the university financial service office to validate your payment !",
   "payment_credit_card_result_message_success" : "Payment completed ! your payment receipt will be ready as soon as possible !",
-  "payment_credit_card_result_message_error" : "Payment failed ! check your credit card informations or contact your bank for more details !"
+  "payment_credit_card_result_message_error" : "Payment failed ! check your credit card informations or contact your bank for more details !",
+  "payment_credit_card_save_data_request" : "Would you like to securely save or update your credit card details in your device ?",
+  "payment_credit_card_load_data_request" : "Would you like to securely load your credit card details from your device ?"
 }

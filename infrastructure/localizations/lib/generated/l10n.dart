@@ -1,7 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-
 import 'intl/messages_all.dart';
 
 // **************************************************************************
@@ -86,6 +85,16 @@ class S {
     return Intl.message(
       'Logout',
       name: 'logout',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Go back`
+  String get go_back {
+    return Intl.message(
+      'Go back',
+      name: 'go_back',
       desc: '',
       args: [],
     );
@@ -1116,6 +1125,26 @@ class S {
     return Intl.message(
       'Payment failed ! check your credit card informations or contact your bank for more details !',
       name: 'payment_credit_card_result_message_error',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Would you like to securely save or update your credit card details in your device ?`
+  String get payment_credit_card_save_data_request {
+    return Intl.message(
+      'Would you like to securely save or update your credit card details in your device ?',
+      name: 'payment_credit_card_save_data_request',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Would you like to securely load your credit card details from your device ?`
+  String get payment_credit_card_load_data_request {
+    return Intl.message(
+      'Would you like to securely load your credit card details from your device ?',
+      name: 'payment_credit_card_load_data_request',
       desc: '',
       args: [],
     );

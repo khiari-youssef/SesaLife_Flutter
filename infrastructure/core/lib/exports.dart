@@ -16,3 +16,4 @@ export 'core_domain/utilities.dart';
 export 'core_utils/BioUtils.dart';
 export 'core_utils/Logger.dart';
 export 'core_utils/QrCode.dart';
+export 'core_data/localStorage/credit_card_secure_local_storage_interface.dart';

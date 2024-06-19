@@ -22,6 +22,9 @@ mixin _$SubscriptionPaymentInterfaceEvent {
     required TResult Function(String name) checkCreditCardHolderNameFormat,
     required TResult Function(String cvv) checkCreditCardCVVFormat,
     required TResult Function(String date) checkCreditCardExpiryDateFormat,
+    required TResult Function() saveCCdataToSecureStorage,
+    required TResult Function() loadCCdataFromSecureStorage,
+    required TResult Function() checkExistingCCdata,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +33,9 @@ mixin _$SubscriptionPaymentInterfaceEvent {
     TResult? Function(String name)? checkCreditCardHolderNameFormat,
     TResult? Function(String cvv)? checkCreditCardCVVFormat,
     TResult? Function(String date)? checkCreditCardExpiryDateFormat,
+    TResult? Function()? saveCCdataToSecureStorage,
+    TResult? Function()? loadCCdataFromSecureStorage,
+    TResult? Function()? checkExistingCCdata,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,12 +44,15 @@ mixin _$SubscriptionPaymentInterfaceEvent {
     TResult Function(String name)? checkCreditCardHolderNameFormat,
     TResult Function(String cvv)? checkCreditCardCVVFormat,
     TResult Function(String date)? checkCreditCardExpiryDateFormat,
+    TResult Function()? saveCCdataToSecureStorage,
+    TResult Function()? loadCCdataFromSecureStorage,
+    TResult Function()? checkExistingCCdata,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_SubscriptionPaymentInterfaceEvent value)
+    required TResult Function(_checkCreditCardNumberFormat value)
         checkCreditCardNumberFormat,
     required TResult Function(_checkCreditCardHolderNameFormat value)
         checkCreditCardHolderNameFormat,
@@ -51,11 +60,16 @@ mixin _$SubscriptionPaymentInterfaceEvent {
         checkCreditCardCVVFormat,
     required TResult Function(_checkCreditCardExpiryDateFormat value)
         checkCreditCardExpiryDateFormat,
+    required TResult Function(_saveCCdataToSecureStorage value)
+        saveCCdataToSecureStorage,
+    required TResult Function(_loadCCdataFromSecureStorage value)
+        loadCCdataFromSecureStorage,
+    required TResult Function(_checkExistingCCdata value) checkExistingCCdata,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_SubscriptionPaymentInterfaceEvent value)?
+    TResult? Function(_checkCreditCardNumberFormat value)?
         checkCreditCardNumberFormat,
     TResult? Function(_checkCreditCardHolderNameFormat value)?
         checkCreditCardHolderNameFormat,
@@ -63,17 +77,27 @@ mixin _$SubscriptionPaymentInterfaceEvent {
         checkCreditCardCVVFormat,
     TResult? Function(_checkCreditCardExpiryDateFormat value)?
         checkCreditCardExpiryDateFormat,
+    TResult? Function(_saveCCdataToSecureStorage value)?
+        saveCCdataToSecureStorage,
+    TResult? Function(_loadCCdataFromSecureStorage value)?
+        loadCCdataFromSecureStorage,
+    TResult? Function(_checkExistingCCdata value)? checkExistingCCdata,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_SubscriptionPaymentInterfaceEvent value)?
+    TResult Function(_checkCreditCardNumberFormat value)?
         checkCreditCardNumberFormat,
     TResult Function(_checkCreditCardHolderNameFormat value)?
         checkCreditCardHolderNameFormat,
     TResult Function(_checkCreditCardCVVFormat value)? checkCreditCardCVVFormat,
     TResult Function(_checkCreditCardExpiryDateFormat value)?
         checkCreditCardExpiryDateFormat,
+    TResult Function(_saveCCdataToSecureStorage value)?
+        saveCCdataToSecureStorage,
+    TResult Function(_loadCCdataFromSecureStorage value)?
+        loadCCdataFromSecureStorage,
+    TResult Function(_checkExistingCCdata value)? checkExistingCCdata,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -101,23 +125,23 @@ class _$SubscriptionPaymentInterfaceEventCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$SubscriptionPaymentInterfaceEventImplCopyWith<$Res> {
-  factory _$$SubscriptionPaymentInterfaceEventImplCopyWith(
-          _$SubscriptionPaymentInterfaceEventImpl value,
-          $Res Function(_$SubscriptionPaymentInterfaceEventImpl) then) =
-      __$$SubscriptionPaymentInterfaceEventImplCopyWithImpl<$Res>;
+abstract class _$$checkCreditCardNumberFormatImplCopyWith<$Res> {
+  factory _$$checkCreditCardNumberFormatImplCopyWith(
+          _$checkCreditCardNumberFormatImpl value,
+          $Res Function(_$checkCreditCardNumberFormatImpl) then) =
+      __$$checkCreditCardNumberFormatImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String ccNumber});
 }
 
 /// @nodoc
-class __$$SubscriptionPaymentInterfaceEventImplCopyWithImpl<$Res>
+class __$$checkCreditCardNumberFormatImplCopyWithImpl<$Res>
     extends _$SubscriptionPaymentInterfaceEventCopyWithImpl<$Res,
-        _$SubscriptionPaymentInterfaceEventImpl>
-    implements _$$SubscriptionPaymentInterfaceEventImplCopyWith<$Res> {
-  __$$SubscriptionPaymentInterfaceEventImplCopyWithImpl(
-      _$SubscriptionPaymentInterfaceEventImpl _value,
-      $Res Function(_$SubscriptionPaymentInterfaceEventImpl) _then)
+        _$checkCreditCardNumberFormatImpl>
+    implements _$$checkCreditCardNumberFormatImplCopyWith<$Res> {
+  __$$checkCreditCardNumberFormatImplCopyWithImpl(
+      _$checkCreditCardNumberFormatImpl _value,
+      $Res Function(_$checkCreditCardNumberFormatImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -125,7 +149,7 @@ class __$$SubscriptionPaymentInterfaceEventImplCopyWithImpl<$Res>
   $Res call({
     Object? ccNumber = null,
   }) {
-    return _then(_$SubscriptionPaymentInterfaceEventImpl(
+    return _then(_$checkCreditCardNumberFormatImpl(
       null == ccNumber
           ? _value.ccNumber
           : ccNumber // ignore: cast_nullable_to_non_nullable
@@ -136,9 +160,9 @@ class __$$SubscriptionPaymentInterfaceEventImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$SubscriptionPaymentInterfaceEventImpl
-    implements _SubscriptionPaymentInterfaceEvent {
-  const _$SubscriptionPaymentInterfaceEventImpl(this.ccNumber);
+class _$checkCreditCardNumberFormatImpl
+    implements _checkCreditCardNumberFormat {
+  const _$checkCreditCardNumberFormatImpl(this.ccNumber);
 
   @override
   final String ccNumber;
@@ -152,7 +176,7 @@ class _$SubscriptionPaymentInterfaceEventImpl
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SubscriptionPaymentInterfaceEventImpl &&
+            other is _$checkCreditCardNumberFormatImpl &&
             (identical(other.ccNumber, ccNumber) ||
                 other.ccNumber == ccNumber));
   }
@@ -163,10 +187,9 @@ class _$SubscriptionPaymentInterfaceEventImpl
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$SubscriptionPaymentInterfaceEventImplCopyWith<
-          _$SubscriptionPaymentInterfaceEventImpl>
-      get copyWith => __$$SubscriptionPaymentInterfaceEventImplCopyWithImpl<
-          _$SubscriptionPaymentInterfaceEventImpl>(this, _$identity);
+  _$$checkCreditCardNumberFormatImplCopyWith<_$checkCreditCardNumberFormatImpl>
+      get copyWith => __$$checkCreditCardNumberFormatImplCopyWithImpl<
+          _$checkCreditCardNumberFormatImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -175,6 +198,9 @@ class _$SubscriptionPaymentInterfaceEventImpl
     required TResult Function(String name) checkCreditCardHolderNameFormat,
     required TResult Function(String cvv) checkCreditCardCVVFormat,
     required TResult Function(String date) checkCreditCardExpiryDateFormat,
+    required TResult Function() saveCCdataToSecureStorage,
+    required TResult Function() loadCCdataFromSecureStorage,
+    required TResult Function() checkExistingCCdata,
   }) {
     return checkCreditCardNumberFormat(ccNumber);
   }
@@ -186,6 +212,9 @@ class _$SubscriptionPaymentInterfaceEventImpl
     TResult? Function(String name)? checkCreditCardHolderNameFormat,
     TResult? Function(String cvv)? checkCreditCardCVVFormat,
     TResult? Function(String date)? checkCreditCardExpiryDateFormat,
+    TResult? Function()? saveCCdataToSecureStorage,
+    TResult? Function()? loadCCdataFromSecureStorage,
+    TResult? Function()? checkExistingCCdata,
   }) {
     return checkCreditCardNumberFormat?.call(ccNumber);
   }
@@ -197,6 +226,9 @@ class _$SubscriptionPaymentInterfaceEventImpl
     TResult Function(String name)? checkCreditCardHolderNameFormat,
     TResult Function(String cvv)? checkCreditCardCVVFormat,
     TResult Function(String date)? checkCreditCardExpiryDateFormat,
+    TResult Function()? saveCCdataToSecureStorage,
+    TResult Function()? loadCCdataFromSecureStorage,
+    TResult Function()? checkExistingCCdata,
     required TResult orElse(),
   }) {
     if (checkCreditCardNumberFormat != null) {
@@ -208,7 +240,7 @@ class _$SubscriptionPaymentInterfaceEventImpl
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_SubscriptionPaymentInterfaceEvent value)
+    required TResult Function(_checkCreditCardNumberFormat value)
         checkCreditCardNumberFormat,
     required TResult Function(_checkCreditCardHolderNameFormat value)
         checkCreditCardHolderNameFormat,
@@ -216,6 +248,11 @@ class _$SubscriptionPaymentInterfaceEventImpl
         checkCreditCardCVVFormat,
     required TResult Function(_checkCreditCardExpiryDateFormat value)
         checkCreditCardExpiryDateFormat,
+    required TResult Function(_saveCCdataToSecureStorage value)
+        saveCCdataToSecureStorage,
+    required TResult Function(_loadCCdataFromSecureStorage value)
+        loadCCdataFromSecureStorage,
+    required TResult Function(_checkExistingCCdata value) checkExistingCCdata,
   }) {
     return checkCreditCardNumberFormat(this);
   }
@@ -223,7 +260,7 @@ class _$SubscriptionPaymentInterfaceEventImpl
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_SubscriptionPaymentInterfaceEvent value)?
+    TResult? Function(_checkCreditCardNumberFormat value)?
         checkCreditCardNumberFormat,
     TResult? Function(_checkCreditCardHolderNameFormat value)?
         checkCreditCardHolderNameFormat,
@@ -231,6 +268,11 @@ class _$SubscriptionPaymentInterfaceEventImpl
         checkCreditCardCVVFormat,
     TResult? Function(_checkCreditCardExpiryDateFormat value)?
         checkCreditCardExpiryDateFormat,
+    TResult? Function(_saveCCdataToSecureStorage value)?
+        saveCCdataToSecureStorage,
+    TResult? Function(_loadCCdataFromSecureStorage value)?
+        loadCCdataFromSecureStorage,
+    TResult? Function(_checkExistingCCdata value)? checkExistingCCdata,
   }) {
     return checkCreditCardNumberFormat?.call(this);
   }
@@ -238,13 +280,18 @@ class _$SubscriptionPaymentInterfaceEventImpl
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_SubscriptionPaymentInterfaceEvent value)?
+    TResult Function(_checkCreditCardNumberFormat value)?
         checkCreditCardNumberFormat,
     TResult Function(_checkCreditCardHolderNameFormat value)?
         checkCreditCardHolderNameFormat,
     TResult Function(_checkCreditCardCVVFormat value)? checkCreditCardCVVFormat,
     TResult Function(_checkCreditCardExpiryDateFormat value)?
         checkCreditCardExpiryDateFormat,
+    TResult Function(_saveCCdataToSecureStorage value)?
+        saveCCdataToSecureStorage,
+    TResult Function(_loadCCdataFromSecureStorage value)?
+        loadCCdataFromSecureStorage,
+    TResult Function(_checkExistingCCdata value)? checkExistingCCdata,
     required TResult orElse(),
   }) {
     if (checkCreditCardNumberFormat != null) {
@@ -254,15 +301,14 @@ class _$SubscriptionPaymentInterfaceEventImpl
   }
 }
 
-abstract class _SubscriptionPaymentInterfaceEvent
+abstract class _checkCreditCardNumberFormat
     implements SubscriptionPaymentInterfaceEvent {
-  const factory _SubscriptionPaymentInterfaceEvent(final String ccNumber) =
-      _$SubscriptionPaymentInterfaceEventImpl;
+  const factory _checkCreditCardNumberFormat(final String ccNumber) =
+      _$checkCreditCardNumberFormatImpl;
 
   String get ccNumber;
   @JsonKey(ignore: true)
-  _$$SubscriptionPaymentInterfaceEventImplCopyWith<
-          _$SubscriptionPaymentInterfaceEventImpl>
+  _$$checkCreditCardNumberFormatImplCopyWith<_$checkCreditCardNumberFormatImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -340,6 +386,9 @@ class _$checkCreditCardHolderNameFormatImpl
     required TResult Function(String name) checkCreditCardHolderNameFormat,
     required TResult Function(String cvv) checkCreditCardCVVFormat,
     required TResult Function(String date) checkCreditCardExpiryDateFormat,
+    required TResult Function() saveCCdataToSecureStorage,
+    required TResult Function() loadCCdataFromSecureStorage,
+    required TResult Function() checkExistingCCdata,
   }) {
     return checkCreditCardHolderNameFormat(name);
   }
@@ -351,6 +400,9 @@ class _$checkCreditCardHolderNameFormatImpl
     TResult? Function(String name)? checkCreditCardHolderNameFormat,
     TResult? Function(String cvv)? checkCreditCardCVVFormat,
     TResult? Function(String date)? checkCreditCardExpiryDateFormat,
+    TResult? Function()? saveCCdataToSecureStorage,
+    TResult? Function()? loadCCdataFromSecureStorage,
+    TResult? Function()? checkExistingCCdata,
   }) {
     return checkCreditCardHolderNameFormat?.call(name);
   }
@@ -362,6 +414,9 @@ class _$checkCreditCardHolderNameFormatImpl
     TResult Function(String name)? checkCreditCardHolderNameFormat,
     TResult Function(String cvv)? checkCreditCardCVVFormat,
     TResult Function(String date)? checkCreditCardExpiryDateFormat,
+    TResult Function()? saveCCdataToSecureStorage,
+    TResult Function()? loadCCdataFromSecureStorage,
+    TResult Function()? checkExistingCCdata,
     required TResult orElse(),
   }) {
     if (checkCreditCardHolderNameFormat != null) {
@@ -373,7 +428,7 @@ class _$checkCreditCardHolderNameFormatImpl
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_SubscriptionPaymentInterfaceEvent value)
+    required TResult Function(_checkCreditCardNumberFormat value)
         checkCreditCardNumberFormat,
     required TResult Function(_checkCreditCardHolderNameFormat value)
         checkCreditCardHolderNameFormat,
@@ -381,6 +436,11 @@ class _$checkCreditCardHolderNameFormatImpl
         checkCreditCardCVVFormat,
     required TResult Function(_checkCreditCardExpiryDateFormat value)
         checkCreditCardExpiryDateFormat,
+    required TResult Function(_saveCCdataToSecureStorage value)
+        saveCCdataToSecureStorage,
+    required TResult Function(_loadCCdataFromSecureStorage value)
+        loadCCdataFromSecureStorage,
+    required TResult Function(_checkExistingCCdata value) checkExistingCCdata,
   }) {
     return checkCreditCardHolderNameFormat(this);
   }
@@ -388,7 +448,7 @@ class _$checkCreditCardHolderNameFormatImpl
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_SubscriptionPaymentInterfaceEvent value)?
+    TResult? Function(_checkCreditCardNumberFormat value)?
         checkCreditCardNumberFormat,
     TResult? Function(_checkCreditCardHolderNameFormat value)?
         checkCreditCardHolderNameFormat,
@@ -396,6 +456,11 @@ class _$checkCreditCardHolderNameFormatImpl
         checkCreditCardCVVFormat,
     TResult? Function(_checkCreditCardExpiryDateFormat value)?
         checkCreditCardExpiryDateFormat,
+    TResult? Function(_saveCCdataToSecureStorage value)?
+        saveCCdataToSecureStorage,
+    TResult? Function(_loadCCdataFromSecureStorage value)?
+        loadCCdataFromSecureStorage,
+    TResult? Function(_checkExistingCCdata value)? checkExistingCCdata,
   }) {
     return checkCreditCardHolderNameFormat?.call(this);
   }
@@ -403,13 +468,18 @@ class _$checkCreditCardHolderNameFormatImpl
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_SubscriptionPaymentInterfaceEvent value)?
+    TResult Function(_checkCreditCardNumberFormat value)?
         checkCreditCardNumberFormat,
     TResult Function(_checkCreditCardHolderNameFormat value)?
         checkCreditCardHolderNameFormat,
     TResult Function(_checkCreditCardCVVFormat value)? checkCreditCardCVVFormat,
     TResult Function(_checkCreditCardExpiryDateFormat value)?
         checkCreditCardExpiryDateFormat,
+    TResult Function(_saveCCdataToSecureStorage value)?
+        saveCCdataToSecureStorage,
+    TResult Function(_loadCCdataFromSecureStorage value)?
+        loadCCdataFromSecureStorage,
+    TResult Function(_checkExistingCCdata value)? checkExistingCCdata,
     required TResult orElse(),
   }) {
     if (checkCreditCardHolderNameFormat != null) {
@@ -503,6 +573,9 @@ class _$checkCreditCardCVVFormatImpl implements _checkCreditCardCVVFormat {
     required TResult Function(String name) checkCreditCardHolderNameFormat,
     required TResult Function(String cvv) checkCreditCardCVVFormat,
     required TResult Function(String date) checkCreditCardExpiryDateFormat,
+    required TResult Function() saveCCdataToSecureStorage,
+    required TResult Function() loadCCdataFromSecureStorage,
+    required TResult Function() checkExistingCCdata,
   }) {
     return checkCreditCardCVVFormat(cvv);
   }
@@ -514,6 +587,9 @@ class _$checkCreditCardCVVFormatImpl implements _checkCreditCardCVVFormat {
     TResult? Function(String name)? checkCreditCardHolderNameFormat,
     TResult? Function(String cvv)? checkCreditCardCVVFormat,
     TResult? Function(String date)? checkCreditCardExpiryDateFormat,
+    TResult? Function()? saveCCdataToSecureStorage,
+    TResult? Function()? loadCCdataFromSecureStorage,
+    TResult? Function()? checkExistingCCdata,
   }) {
     return checkCreditCardCVVFormat?.call(cvv);
   }
@@ -525,6 +601,9 @@ class _$checkCreditCardCVVFormatImpl implements _checkCreditCardCVVFormat {
     TResult Function(String name)? checkCreditCardHolderNameFormat,
     TResult Function(String cvv)? checkCreditCardCVVFormat,
     TResult Function(String date)? checkCreditCardExpiryDateFormat,
+    TResult Function()? saveCCdataToSecureStorage,
+    TResult Function()? loadCCdataFromSecureStorage,
+    TResult Function()? checkExistingCCdata,
     required TResult orElse(),
   }) {
     if (checkCreditCardCVVFormat != null) {
@@ -536,7 +615,7 @@ class _$checkCreditCardCVVFormatImpl implements _checkCreditCardCVVFormat {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_SubscriptionPaymentInterfaceEvent value)
+    required TResult Function(_checkCreditCardNumberFormat value)
         checkCreditCardNumberFormat,
     required TResult Function(_checkCreditCardHolderNameFormat value)
         checkCreditCardHolderNameFormat,
@@ -544,6 +623,11 @@ class _$checkCreditCardCVVFormatImpl implements _checkCreditCardCVVFormat {
         checkCreditCardCVVFormat,
     required TResult Function(_checkCreditCardExpiryDateFormat value)
         checkCreditCardExpiryDateFormat,
+    required TResult Function(_saveCCdataToSecureStorage value)
+        saveCCdataToSecureStorage,
+    required TResult Function(_loadCCdataFromSecureStorage value)
+        loadCCdataFromSecureStorage,
+    required TResult Function(_checkExistingCCdata value) checkExistingCCdata,
   }) {
     return checkCreditCardCVVFormat(this);
   }
@@ -551,7 +635,7 @@ class _$checkCreditCardCVVFormatImpl implements _checkCreditCardCVVFormat {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_SubscriptionPaymentInterfaceEvent value)?
+    TResult? Function(_checkCreditCardNumberFormat value)?
         checkCreditCardNumberFormat,
     TResult? Function(_checkCreditCardHolderNameFormat value)?
         checkCreditCardHolderNameFormat,
@@ -559,6 +643,11 @@ class _$checkCreditCardCVVFormatImpl implements _checkCreditCardCVVFormat {
         checkCreditCardCVVFormat,
     TResult? Function(_checkCreditCardExpiryDateFormat value)?
         checkCreditCardExpiryDateFormat,
+    TResult? Function(_saveCCdataToSecureStorage value)?
+        saveCCdataToSecureStorage,
+    TResult? Function(_loadCCdataFromSecureStorage value)?
+        loadCCdataFromSecureStorage,
+    TResult? Function(_checkExistingCCdata value)? checkExistingCCdata,
   }) {
     return checkCreditCardCVVFormat?.call(this);
   }
@@ -566,13 +655,18 @@ class _$checkCreditCardCVVFormatImpl implements _checkCreditCardCVVFormat {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_SubscriptionPaymentInterfaceEvent value)?
+    TResult Function(_checkCreditCardNumberFormat value)?
         checkCreditCardNumberFormat,
     TResult Function(_checkCreditCardHolderNameFormat value)?
         checkCreditCardHolderNameFormat,
     TResult Function(_checkCreditCardCVVFormat value)? checkCreditCardCVVFormat,
     TResult Function(_checkCreditCardExpiryDateFormat value)?
         checkCreditCardExpiryDateFormat,
+    TResult Function(_saveCCdataToSecureStorage value)?
+        saveCCdataToSecureStorage,
+    TResult Function(_loadCCdataFromSecureStorage value)?
+        loadCCdataFromSecureStorage,
+    TResult Function(_checkExistingCCdata value)? checkExistingCCdata,
     required TResult orElse(),
   }) {
     if (checkCreditCardCVVFormat != null) {
@@ -667,6 +761,9 @@ class _$checkCreditCardExpiryDateFormatImpl
     required TResult Function(String name) checkCreditCardHolderNameFormat,
     required TResult Function(String cvv) checkCreditCardCVVFormat,
     required TResult Function(String date) checkCreditCardExpiryDateFormat,
+    required TResult Function() saveCCdataToSecureStorage,
+    required TResult Function() loadCCdataFromSecureStorage,
+    required TResult Function() checkExistingCCdata,
   }) {
     return checkCreditCardExpiryDateFormat(date);
   }
@@ -678,6 +775,9 @@ class _$checkCreditCardExpiryDateFormatImpl
     TResult? Function(String name)? checkCreditCardHolderNameFormat,
     TResult? Function(String cvv)? checkCreditCardCVVFormat,
     TResult? Function(String date)? checkCreditCardExpiryDateFormat,
+    TResult? Function()? saveCCdataToSecureStorage,
+    TResult? Function()? loadCCdataFromSecureStorage,
+    TResult? Function()? checkExistingCCdata,
   }) {
     return checkCreditCardExpiryDateFormat?.call(date);
   }
@@ -689,6 +789,9 @@ class _$checkCreditCardExpiryDateFormatImpl
     TResult Function(String name)? checkCreditCardHolderNameFormat,
     TResult Function(String cvv)? checkCreditCardCVVFormat,
     TResult Function(String date)? checkCreditCardExpiryDateFormat,
+    TResult Function()? saveCCdataToSecureStorage,
+    TResult Function()? loadCCdataFromSecureStorage,
+    TResult Function()? checkExistingCCdata,
     required TResult orElse(),
   }) {
     if (checkCreditCardExpiryDateFormat != null) {
@@ -700,7 +803,7 @@ class _$checkCreditCardExpiryDateFormatImpl
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_SubscriptionPaymentInterfaceEvent value)
+    required TResult Function(_checkCreditCardNumberFormat value)
         checkCreditCardNumberFormat,
     required TResult Function(_checkCreditCardHolderNameFormat value)
         checkCreditCardHolderNameFormat,
@@ -708,6 +811,11 @@ class _$checkCreditCardExpiryDateFormatImpl
         checkCreditCardCVVFormat,
     required TResult Function(_checkCreditCardExpiryDateFormat value)
         checkCreditCardExpiryDateFormat,
+    required TResult Function(_saveCCdataToSecureStorage value)
+        saveCCdataToSecureStorage,
+    required TResult Function(_loadCCdataFromSecureStorage value)
+        loadCCdataFromSecureStorage,
+    required TResult Function(_checkExistingCCdata value) checkExistingCCdata,
   }) {
     return checkCreditCardExpiryDateFormat(this);
   }
@@ -715,7 +823,7 @@ class _$checkCreditCardExpiryDateFormatImpl
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_SubscriptionPaymentInterfaceEvent value)?
+    TResult? Function(_checkCreditCardNumberFormat value)?
         checkCreditCardNumberFormat,
     TResult? Function(_checkCreditCardHolderNameFormat value)?
         checkCreditCardHolderNameFormat,
@@ -723,6 +831,11 @@ class _$checkCreditCardExpiryDateFormatImpl
         checkCreditCardCVVFormat,
     TResult? Function(_checkCreditCardExpiryDateFormat value)?
         checkCreditCardExpiryDateFormat,
+    TResult? Function(_saveCCdataToSecureStorage value)?
+        saveCCdataToSecureStorage,
+    TResult? Function(_loadCCdataFromSecureStorage value)?
+        loadCCdataFromSecureStorage,
+    TResult? Function(_checkExistingCCdata value)? checkExistingCCdata,
   }) {
     return checkCreditCardExpiryDateFormat?.call(this);
   }
@@ -730,13 +843,18 @@ class _$checkCreditCardExpiryDateFormatImpl
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_SubscriptionPaymentInterfaceEvent value)?
+    TResult Function(_checkCreditCardNumberFormat value)?
         checkCreditCardNumberFormat,
     TResult Function(_checkCreditCardHolderNameFormat value)?
         checkCreditCardHolderNameFormat,
     TResult Function(_checkCreditCardCVVFormat value)? checkCreditCardCVVFormat,
     TResult Function(_checkCreditCardExpiryDateFormat value)?
         checkCreditCardExpiryDateFormat,
+    TResult Function(_saveCCdataToSecureStorage value)?
+        saveCCdataToSecureStorage,
+    TResult Function(_loadCCdataFromSecureStorage value)?
+        loadCCdataFromSecureStorage,
+    TResult Function(_checkExistingCCdata value)? checkExistingCCdata,
     required TResult orElse(),
   }) {
     if (checkCreditCardExpiryDateFormat != null) {
@@ -759,6 +877,468 @@ abstract class _checkCreditCardExpiryDateFormat
 }
 
 /// @nodoc
+abstract class _$$saveCCdataToSecureStorageImplCopyWith<$Res> {
+  factory _$$saveCCdataToSecureStorageImplCopyWith(
+          _$saveCCdataToSecureStorageImpl value,
+          $Res Function(_$saveCCdataToSecureStorageImpl) then) =
+      __$$saveCCdataToSecureStorageImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$saveCCdataToSecureStorageImplCopyWithImpl<$Res>
+    extends _$SubscriptionPaymentInterfaceEventCopyWithImpl<$Res,
+        _$saveCCdataToSecureStorageImpl>
+    implements _$$saveCCdataToSecureStorageImplCopyWith<$Res> {
+  __$$saveCCdataToSecureStorageImplCopyWithImpl(
+      _$saveCCdataToSecureStorageImpl _value,
+      $Res Function(_$saveCCdataToSecureStorageImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$saveCCdataToSecureStorageImpl implements _saveCCdataToSecureStorage {
+  const _$saveCCdataToSecureStorageImpl();
+
+  @override
+  String toString() {
+    return 'SubscriptionPaymentInterfaceEvent.saveCCdataToSecureStorage()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$saveCCdataToSecureStorageImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String ccNumber) checkCreditCardNumberFormat,
+    required TResult Function(String name) checkCreditCardHolderNameFormat,
+    required TResult Function(String cvv) checkCreditCardCVVFormat,
+    required TResult Function(String date) checkCreditCardExpiryDateFormat,
+    required TResult Function() saveCCdataToSecureStorage,
+    required TResult Function() loadCCdataFromSecureStorage,
+    required TResult Function() checkExistingCCdata,
+  }) {
+    return saveCCdataToSecureStorage();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String ccNumber)? checkCreditCardNumberFormat,
+    TResult? Function(String name)? checkCreditCardHolderNameFormat,
+    TResult? Function(String cvv)? checkCreditCardCVVFormat,
+    TResult? Function(String date)? checkCreditCardExpiryDateFormat,
+    TResult? Function()? saveCCdataToSecureStorage,
+    TResult? Function()? loadCCdataFromSecureStorage,
+    TResult? Function()? checkExistingCCdata,
+  }) {
+    return saveCCdataToSecureStorage?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String ccNumber)? checkCreditCardNumberFormat,
+    TResult Function(String name)? checkCreditCardHolderNameFormat,
+    TResult Function(String cvv)? checkCreditCardCVVFormat,
+    TResult Function(String date)? checkCreditCardExpiryDateFormat,
+    TResult Function()? saveCCdataToSecureStorage,
+    TResult Function()? loadCCdataFromSecureStorage,
+    TResult Function()? checkExistingCCdata,
+    required TResult orElse(),
+  }) {
+    if (saveCCdataToSecureStorage != null) {
+      return saveCCdataToSecureStorage();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_checkCreditCardNumberFormat value)
+        checkCreditCardNumberFormat,
+    required TResult Function(_checkCreditCardHolderNameFormat value)
+        checkCreditCardHolderNameFormat,
+    required TResult Function(_checkCreditCardCVVFormat value)
+        checkCreditCardCVVFormat,
+    required TResult Function(_checkCreditCardExpiryDateFormat value)
+        checkCreditCardExpiryDateFormat,
+    required TResult Function(_saveCCdataToSecureStorage value)
+        saveCCdataToSecureStorage,
+    required TResult Function(_loadCCdataFromSecureStorage value)
+        loadCCdataFromSecureStorage,
+    required TResult Function(_checkExistingCCdata value) checkExistingCCdata,
+  }) {
+    return saveCCdataToSecureStorage(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_checkCreditCardNumberFormat value)?
+        checkCreditCardNumberFormat,
+    TResult? Function(_checkCreditCardHolderNameFormat value)?
+        checkCreditCardHolderNameFormat,
+    TResult? Function(_checkCreditCardCVVFormat value)?
+        checkCreditCardCVVFormat,
+    TResult? Function(_checkCreditCardExpiryDateFormat value)?
+        checkCreditCardExpiryDateFormat,
+    TResult? Function(_saveCCdataToSecureStorage value)?
+        saveCCdataToSecureStorage,
+    TResult? Function(_loadCCdataFromSecureStorage value)?
+        loadCCdataFromSecureStorage,
+    TResult? Function(_checkExistingCCdata value)? checkExistingCCdata,
+  }) {
+    return saveCCdataToSecureStorage?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_checkCreditCardNumberFormat value)?
+        checkCreditCardNumberFormat,
+    TResult Function(_checkCreditCardHolderNameFormat value)?
+        checkCreditCardHolderNameFormat,
+    TResult Function(_checkCreditCardCVVFormat value)? checkCreditCardCVVFormat,
+    TResult Function(_checkCreditCardExpiryDateFormat value)?
+        checkCreditCardExpiryDateFormat,
+    TResult Function(_saveCCdataToSecureStorage value)?
+        saveCCdataToSecureStorage,
+    TResult Function(_loadCCdataFromSecureStorage value)?
+        loadCCdataFromSecureStorage,
+    TResult Function(_checkExistingCCdata value)? checkExistingCCdata,
+    required TResult orElse(),
+  }) {
+    if (saveCCdataToSecureStorage != null) {
+      return saveCCdataToSecureStorage(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _saveCCdataToSecureStorage
+    implements SubscriptionPaymentInterfaceEvent {
+  const factory _saveCCdataToSecureStorage() = _$saveCCdataToSecureStorageImpl;
+}
+
+/// @nodoc
+abstract class _$$loadCCdataFromSecureStorageImplCopyWith<$Res> {
+  factory _$$loadCCdataFromSecureStorageImplCopyWith(
+          _$loadCCdataFromSecureStorageImpl value,
+          $Res Function(_$loadCCdataFromSecureStorageImpl) then) =
+      __$$loadCCdataFromSecureStorageImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$loadCCdataFromSecureStorageImplCopyWithImpl<$Res>
+    extends _$SubscriptionPaymentInterfaceEventCopyWithImpl<$Res,
+        _$loadCCdataFromSecureStorageImpl>
+    implements _$$loadCCdataFromSecureStorageImplCopyWith<$Res> {
+  __$$loadCCdataFromSecureStorageImplCopyWithImpl(
+      _$loadCCdataFromSecureStorageImpl _value,
+      $Res Function(_$loadCCdataFromSecureStorageImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$loadCCdataFromSecureStorageImpl
+    implements _loadCCdataFromSecureStorage {
+  const _$loadCCdataFromSecureStorageImpl();
+
+  @override
+  String toString() {
+    return 'SubscriptionPaymentInterfaceEvent.loadCCdataFromSecureStorage()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$loadCCdataFromSecureStorageImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String ccNumber) checkCreditCardNumberFormat,
+    required TResult Function(String name) checkCreditCardHolderNameFormat,
+    required TResult Function(String cvv) checkCreditCardCVVFormat,
+    required TResult Function(String date) checkCreditCardExpiryDateFormat,
+    required TResult Function() saveCCdataToSecureStorage,
+    required TResult Function() loadCCdataFromSecureStorage,
+    required TResult Function() checkExistingCCdata,
+  }) {
+    return loadCCdataFromSecureStorage();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String ccNumber)? checkCreditCardNumberFormat,
+    TResult? Function(String name)? checkCreditCardHolderNameFormat,
+    TResult? Function(String cvv)? checkCreditCardCVVFormat,
+    TResult? Function(String date)? checkCreditCardExpiryDateFormat,
+    TResult? Function()? saveCCdataToSecureStorage,
+    TResult? Function()? loadCCdataFromSecureStorage,
+    TResult? Function()? checkExistingCCdata,
+  }) {
+    return loadCCdataFromSecureStorage?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String ccNumber)? checkCreditCardNumberFormat,
+    TResult Function(String name)? checkCreditCardHolderNameFormat,
+    TResult Function(String cvv)? checkCreditCardCVVFormat,
+    TResult Function(String date)? checkCreditCardExpiryDateFormat,
+    TResult Function()? saveCCdataToSecureStorage,
+    TResult Function()? loadCCdataFromSecureStorage,
+    TResult Function()? checkExistingCCdata,
+    required TResult orElse(),
+  }) {
+    if (loadCCdataFromSecureStorage != null) {
+      return loadCCdataFromSecureStorage();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_checkCreditCardNumberFormat value)
+        checkCreditCardNumberFormat,
+    required TResult Function(_checkCreditCardHolderNameFormat value)
+        checkCreditCardHolderNameFormat,
+    required TResult Function(_checkCreditCardCVVFormat value)
+        checkCreditCardCVVFormat,
+    required TResult Function(_checkCreditCardExpiryDateFormat value)
+        checkCreditCardExpiryDateFormat,
+    required TResult Function(_saveCCdataToSecureStorage value)
+        saveCCdataToSecureStorage,
+    required TResult Function(_loadCCdataFromSecureStorage value)
+        loadCCdataFromSecureStorage,
+    required TResult Function(_checkExistingCCdata value) checkExistingCCdata,
+  }) {
+    return loadCCdataFromSecureStorage(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_checkCreditCardNumberFormat value)?
+        checkCreditCardNumberFormat,
+    TResult? Function(_checkCreditCardHolderNameFormat value)?
+        checkCreditCardHolderNameFormat,
+    TResult? Function(_checkCreditCardCVVFormat value)?
+        checkCreditCardCVVFormat,
+    TResult? Function(_checkCreditCardExpiryDateFormat value)?
+        checkCreditCardExpiryDateFormat,
+    TResult? Function(_saveCCdataToSecureStorage value)?
+        saveCCdataToSecureStorage,
+    TResult? Function(_loadCCdataFromSecureStorage value)?
+        loadCCdataFromSecureStorage,
+    TResult? Function(_checkExistingCCdata value)? checkExistingCCdata,
+  }) {
+    return loadCCdataFromSecureStorage?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_checkCreditCardNumberFormat value)?
+        checkCreditCardNumberFormat,
+    TResult Function(_checkCreditCardHolderNameFormat value)?
+        checkCreditCardHolderNameFormat,
+    TResult Function(_checkCreditCardCVVFormat value)? checkCreditCardCVVFormat,
+    TResult Function(_checkCreditCardExpiryDateFormat value)?
+        checkCreditCardExpiryDateFormat,
+    TResult Function(_saveCCdataToSecureStorage value)?
+        saveCCdataToSecureStorage,
+    TResult Function(_loadCCdataFromSecureStorage value)?
+        loadCCdataFromSecureStorage,
+    TResult Function(_checkExistingCCdata value)? checkExistingCCdata,
+    required TResult orElse(),
+  }) {
+    if (loadCCdataFromSecureStorage != null) {
+      return loadCCdataFromSecureStorage(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _loadCCdataFromSecureStorage
+    implements SubscriptionPaymentInterfaceEvent {
+  const factory _loadCCdataFromSecureStorage() =
+      _$loadCCdataFromSecureStorageImpl;
+}
+
+/// @nodoc
+abstract class _$$checkExistingCCdataImplCopyWith<$Res> {
+  factory _$$checkExistingCCdataImplCopyWith(_$checkExistingCCdataImpl value,
+          $Res Function(_$checkExistingCCdataImpl) then) =
+      __$$checkExistingCCdataImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$checkExistingCCdataImplCopyWithImpl<$Res>
+    extends _$SubscriptionPaymentInterfaceEventCopyWithImpl<$Res,
+        _$checkExistingCCdataImpl>
+    implements _$$checkExistingCCdataImplCopyWith<$Res> {
+  __$$checkExistingCCdataImplCopyWithImpl(_$checkExistingCCdataImpl _value,
+      $Res Function(_$checkExistingCCdataImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$checkExistingCCdataImpl implements _checkExistingCCdata {
+  const _$checkExistingCCdataImpl();
+
+  @override
+  String toString() {
+    return 'SubscriptionPaymentInterfaceEvent.checkExistingCCdata()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$checkExistingCCdataImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String ccNumber) checkCreditCardNumberFormat,
+    required TResult Function(String name) checkCreditCardHolderNameFormat,
+    required TResult Function(String cvv) checkCreditCardCVVFormat,
+    required TResult Function(String date) checkCreditCardExpiryDateFormat,
+    required TResult Function() saveCCdataToSecureStorage,
+    required TResult Function() loadCCdataFromSecureStorage,
+    required TResult Function() checkExistingCCdata,
+  }) {
+    return checkExistingCCdata();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String ccNumber)? checkCreditCardNumberFormat,
+    TResult? Function(String name)? checkCreditCardHolderNameFormat,
+    TResult? Function(String cvv)? checkCreditCardCVVFormat,
+    TResult? Function(String date)? checkCreditCardExpiryDateFormat,
+    TResult? Function()? saveCCdataToSecureStorage,
+    TResult? Function()? loadCCdataFromSecureStorage,
+    TResult? Function()? checkExistingCCdata,
+  }) {
+    return checkExistingCCdata?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String ccNumber)? checkCreditCardNumberFormat,
+    TResult Function(String name)? checkCreditCardHolderNameFormat,
+    TResult Function(String cvv)? checkCreditCardCVVFormat,
+    TResult Function(String date)? checkCreditCardExpiryDateFormat,
+    TResult Function()? saveCCdataToSecureStorage,
+    TResult Function()? loadCCdataFromSecureStorage,
+    TResult Function()? checkExistingCCdata,
+    required TResult orElse(),
+  }) {
+    if (checkExistingCCdata != null) {
+      return checkExistingCCdata();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_checkCreditCardNumberFormat value)
+        checkCreditCardNumberFormat,
+    required TResult Function(_checkCreditCardHolderNameFormat value)
+        checkCreditCardHolderNameFormat,
+    required TResult Function(_checkCreditCardCVVFormat value)
+        checkCreditCardCVVFormat,
+    required TResult Function(_checkCreditCardExpiryDateFormat value)
+        checkCreditCardExpiryDateFormat,
+    required TResult Function(_saveCCdataToSecureStorage value)
+        saveCCdataToSecureStorage,
+    required TResult Function(_loadCCdataFromSecureStorage value)
+        loadCCdataFromSecureStorage,
+    required TResult Function(_checkExistingCCdata value) checkExistingCCdata,
+  }) {
+    return checkExistingCCdata(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_checkCreditCardNumberFormat value)?
+        checkCreditCardNumberFormat,
+    TResult? Function(_checkCreditCardHolderNameFormat value)?
+        checkCreditCardHolderNameFormat,
+    TResult? Function(_checkCreditCardCVVFormat value)?
+        checkCreditCardCVVFormat,
+    TResult? Function(_checkCreditCardExpiryDateFormat value)?
+        checkCreditCardExpiryDateFormat,
+    TResult? Function(_saveCCdataToSecureStorage value)?
+        saveCCdataToSecureStorage,
+    TResult? Function(_loadCCdataFromSecureStorage value)?
+        loadCCdataFromSecureStorage,
+    TResult? Function(_checkExistingCCdata value)? checkExistingCCdata,
+  }) {
+    return checkExistingCCdata?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_checkCreditCardNumberFormat value)?
+        checkCreditCardNumberFormat,
+    TResult Function(_checkCreditCardHolderNameFormat value)?
+        checkCreditCardHolderNameFormat,
+    TResult Function(_checkCreditCardCVVFormat value)? checkCreditCardCVVFormat,
+    TResult Function(_checkCreditCardExpiryDateFormat value)?
+        checkCreditCardExpiryDateFormat,
+    TResult Function(_saveCCdataToSecureStorage value)?
+        saveCCdataToSecureStorage,
+    TResult Function(_loadCCdataFromSecureStorage value)?
+        loadCCdataFromSecureStorage,
+    TResult Function(_checkExistingCCdata value)? checkExistingCCdata,
+    required TResult orElse(),
+  }) {
+    if (checkExistingCCdata != null) {
+      return checkExistingCCdata(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _checkExistingCCdata
+    implements SubscriptionPaymentInterfaceEvent {
+  const factory _checkExistingCCdata() = _$checkExistingCCdataImpl;
+}
+
+/// @nodoc
 mixin _$SubscriptionPaymentInterfaceBlocState {
   CreditCardInputState<dynamic> get ccNumberState =>
       throw _privateConstructorUsedError;
@@ -768,6 +1348,7 @@ mixin _$SubscriptionPaymentInterfaceBlocState {
       throw _privateConstructorUsedError;
   CreditCardInputState<dynamic> get ccCVVState =>
       throw _privateConstructorUsedError;
+  bool get hasSavedCCdata => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $SubscriptionPaymentInterfaceBlocStateCopyWith<
@@ -787,7 +1368,8 @@ abstract class $SubscriptionPaymentInterfaceBlocStateCopyWith<$Res> {
       {CreditCardInputState<dynamic> ccNumberState,
       CreditCardInputState<dynamic> ccHolderNameState,
       CreditCardInputState<dynamic> ccExpiryDateState,
-      CreditCardInputState<dynamic> ccCVVState});
+      CreditCardInputState<dynamic> ccCVVState,
+      bool hasSavedCCdata});
 }
 
 /// @nodoc
@@ -808,6 +1390,7 @@ class _$SubscriptionPaymentInterfaceBlocStateCopyWithImpl<$Res,
     Object? ccHolderNameState = null,
     Object? ccExpiryDateState = null,
     Object? ccCVVState = null,
+    Object? hasSavedCCdata = null,
   }) {
     return _then(_value.copyWith(
       ccNumberState: null == ccNumberState
@@ -826,6 +1409,10 @@ class _$SubscriptionPaymentInterfaceBlocStateCopyWithImpl<$Res,
           ? _value.ccCVVState
           : ccCVVState // ignore: cast_nullable_to_non_nullable
               as CreditCardInputState<dynamic>,
+      hasSavedCCdata: null == hasSavedCCdata
+          ? _value.hasSavedCCdata
+          : hasSavedCCdata // ignore: cast_nullable_to_non_nullable
+              as bool,
     ) as $Val);
   }
 }
@@ -843,7 +1430,8 @@ abstract class _$$SubscriptionPaymentInterfaceBlocStateImplCopyWith<$Res>
       {CreditCardInputState<dynamic> ccNumberState,
       CreditCardInputState<dynamic> ccHolderNameState,
       CreditCardInputState<dynamic> ccExpiryDateState,
-      CreditCardInputState<dynamic> ccCVVState});
+      CreditCardInputState<dynamic> ccCVVState,
+      bool hasSavedCCdata});
 }
 
 /// @nodoc
@@ -863,6 +1451,7 @@ class __$$SubscriptionPaymentInterfaceBlocStateImplCopyWithImpl<$Res>
     Object? ccHolderNameState = null,
     Object? ccExpiryDateState = null,
     Object? ccCVVState = null,
+    Object? hasSavedCCdata = null,
   }) {
     return _then(_$SubscriptionPaymentInterfaceBlocStateImpl(
       ccNumberState: null == ccNumberState
@@ -881,6 +1470,10 @@ class __$$SubscriptionPaymentInterfaceBlocStateImplCopyWithImpl<$Res>
           ? _value.ccCVVState
           : ccCVVState // ignore: cast_nullable_to_non_nullable
               as CreditCardInputState<dynamic>,
+      hasSavedCCdata: null == hasSavedCCdata
+          ? _value.hasSavedCCdata
+          : hasSavedCCdata // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -893,7 +1486,8 @@ class _$SubscriptionPaymentInterfaceBlocStateImpl
       {required this.ccNumberState,
       required this.ccHolderNameState,
       required this.ccExpiryDateState,
-      required this.ccCVVState});
+      required this.ccCVVState,
+      required this.hasSavedCCdata});
 
   @override
   final CreditCardInputState<dynamic> ccNumberState;
@@ -903,10 +1497,12 @@ class _$SubscriptionPaymentInterfaceBlocStateImpl
   final CreditCardInputState<dynamic> ccExpiryDateState;
   @override
   final CreditCardInputState<dynamic> ccCVVState;
+  @override
+  final bool hasSavedCCdata;
 
   @override
   String toString() {
-    return 'SubscriptionPaymentInterfaceBlocState(ccNumberState: $ccNumberState, ccHolderNameState: $ccHolderNameState, ccExpiryDateState: $ccExpiryDateState, ccCVVState: $ccCVVState)';
+    return 'SubscriptionPaymentInterfaceBlocState(ccNumberState: $ccNumberState, ccHolderNameState: $ccHolderNameState, ccExpiryDateState: $ccExpiryDateState, ccCVVState: $ccCVVState, hasSavedCCdata: $hasSavedCCdata)';
   }
 
   @override
@@ -921,12 +1517,14 @@ class _$SubscriptionPaymentInterfaceBlocStateImpl
             (identical(other.ccExpiryDateState, ccExpiryDateState) ||
                 other.ccExpiryDateState == ccExpiryDateState) &&
             (identical(other.ccCVVState, ccCVVState) ||
-                other.ccCVVState == ccCVVState));
+                other.ccCVVState == ccCVVState) &&
+            (identical(other.hasSavedCCdata, hasSavedCCdata) ||
+                other.hasSavedCCdata == hasSavedCCdata));
   }
 
   @override
   int get hashCode => Object.hash(runtimeType, ccNumberState, ccHolderNameState,
-      ccExpiryDateState, ccCVVState);
+      ccExpiryDateState, ccCVVState, hasSavedCCdata);
 
   @JsonKey(ignore: true)
   @override
@@ -943,7 +1541,8 @@ abstract class _SubscriptionPaymentInterfaceBlocState
           {required final CreditCardInputState<dynamic> ccNumberState,
           required final CreditCardInputState<dynamic> ccHolderNameState,
           required final CreditCardInputState<dynamic> ccExpiryDateState,
-          required final CreditCardInputState<dynamic> ccCVVState}) =
+          required final CreditCardInputState<dynamic> ccCVVState,
+          required final bool hasSavedCCdata}) =
       _$SubscriptionPaymentInterfaceBlocStateImpl;
 
   @override
@@ -954,6 +1553,8 @@ abstract class _SubscriptionPaymentInterfaceBlocState
   CreditCardInputState<dynamic> get ccExpiryDateState;
   @override
   CreditCardInputState<dynamic> get ccCVVState;
+  @override
+  bool get hasSavedCCdata;
   @override
   @JsonKey(ignore: true)
   _$$SubscriptionPaymentInterfaceBlocStateImplCopyWith<

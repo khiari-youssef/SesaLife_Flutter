@@ -78,6 +78,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Invalid phone format"),
         "form_error_message_required_field":
             MessageLookupByLibrary.simpleMessage("This field is required"),
+        "go_back": MessageLookupByLibrary.simpleMessage("Go back"),
         "guest_space": MessageLookupByLibrary.simpleMessage("Guest space"),
         "identity_verification":
             MessageLookupByLibrary.simpleMessage("Identity verification"),
@@ -125,12 +126,18 @@ class MessageLookup extends MessageLookupByLibrary {
             "invalid credit card number !"),
         "payment_credit_card_label":
             MessageLookupByLibrary.simpleMessage("Credit card"),
+        "payment_credit_card_load_data_request":
+            MessageLookupByLibrary.simpleMessage(
+                "Would you like to securely load your credit card details from your device ?"),
         "payment_credit_card_result_message_error":
             MessageLookupByLibrary.simpleMessage(
                 "Payment failed ! check your credit card informations or contact your bank for more details !"),
         "payment_credit_card_result_message_success":
             MessageLookupByLibrary.simpleMessage(
                 "Payment completed ! your payment receipt will be ready as soon as possible !"),
+        "payment_credit_card_save_data_request":
+            MessageLookupByLibrary.simpleMessage(
+                "Would you like to securely save or update your credit card details in your device ?"),
         "payment_fee": MessageLookupByLibrary.simpleMessage("Fee :"),
         "payment_method_cachOrBank":
             MessageLookupByLibrary.simpleMessage("Cach / Bank check"),

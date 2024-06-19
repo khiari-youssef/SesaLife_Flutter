@@ -78,6 +78,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Numéro de téléphone invalide !"),
         "form_error_message_required_field":
             MessageLookupByLibrary.simpleMessage("Ce champ est obligatoire !"),
+        "go_back": MessageLookupByLibrary.simpleMessage("Retourner"),
         "guest_space": MessageLookupByLibrary.simpleMessage("Espace visiteur"),
         "identity_verification":
             MessageLookupByLibrary.simpleMessage("Vérification d\'identitée"),
@@ -123,12 +124,18 @@ class MessageLookup extends MessageLookupByLibrary {
             "ce numéro de carte de crédit est invalide !"),
         "payment_credit_card_label":
             MessageLookupByLibrary.simpleMessage("Carte bancaire"),
+        "payment_credit_card_load_data_request":
+            MessageLookupByLibrary.simpleMessage(
+                "Voulez-vous utiliser les données existantes de votre carte bancaire en toute securité ?"),
         "payment_credit_card_result_message_error":
             MessageLookupByLibrary.simpleMessage(
                 "Payment echoué ! vérifier les détails de votre carte de paiment ou bien contacter votre banque  !"),
         "payment_credit_card_result_message_success":
             MessageLookupByLibrary.simpleMessage(
                 "Payment effecuté ! vous pouvez récupérer le reçu de paiement dés qu\'il sera  prêt !"),
+        "payment_credit_card_save_data_request":
+            MessageLookupByLibrary.simpleMessage(
+                "Voulez-vous sauvegarder les données de votre carte bancaire localement en toute securité ?"),
         "payment_fee": MessageLookupByLibrary.simpleMessage("Frais :"),
         "payment_method_cachOrBank":
             MessageLookupByLibrary.simpleMessage("Espèce / Chèque bancaire"),

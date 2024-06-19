@@ -1,3 +1,4 @@
+import 'package:core/core_data/localStorage/credit_card_secure_local_storage_interface.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 import 'package:users_management_feature/infrastructure/dataSources/UsersSettingsLocalDataSource.dart';
 
@@ -9,5 +10,8 @@ extension DataSourcesModule on GetIt {
     registerSingleton(UsersLocalDataSource());
     registerSingleton(UsersRemoteDataSource());
     registerSingleton(UsersSettingsLocalDataSource());
+    registerFactory<CreditCardSecureLocalStorageInterface>(
+        () => CreditCardSecureStorageImpl(),
+        instanceName: "CreditCardSecureStorageImpl");
   }
 }

@@ -17,22 +17,49 @@ class SubscriptionPaymentResultScreen extends StatelessWidget {
         null,
         PopScope(
           child: Center(
-              child: BodyLarge(
-                  text: switch (paymentMethod) {
-                    PaymentMethod.clickToPay => isPaymentSuccessful
-                        ? S
-                            .of(context)
-                            .payment_credit_card_result_message_success
-                        : S
-                            .of(context)
-                            .payment_credit_card_result_message_error,
-                    PaymentMethod.cashOrCheck =>
-                      S.of(context).payment_cashOrCheck_result_message
-                  },
-                  textAlign: TextAlign.center)),
+              child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                CustomAssetImage(
+                    height: 100.h,
+                    width: 100.w,
+                    assetImagePath:
+                        "raster/screen_${isPaymentSuccessful ? "success" : "error"}.png"),
+                16.verticalSpace,
+                BodyLarge(
+                    text: switch (paymentMethod) {
+                      PaymentMethod.clickToPay => isPaymentSuccessful
+                          ? S
+                              .of(context)
+                              .payment_credit_card_result_message_success
+                          : S
+                              .of(context)
+                              .payment_credit_card_result_message_error,
+                      PaymentMethod.cashOrCheck =>
+                        S.of(context).payment_cashOrCheck_result_message
+                    },
+                    textAlign: TextAlign.center),
+                24.verticalSpace,
+                SesameCustomButton(
+                    buttonText: S.of(context).go_back,
+                    onPressed: () {
+                      if (paymentMethod == PaymentMethod.clickToPay &&
+                          !isPaymentSuccessful) {
+                        AutoRouter.of(context).back();
+                      } else {
+                        // AutoRouter.of(context).popUntilRoot();
+                      }
+                    })
+              ])),
           onPopInvoked: (canPop) {
-            AutoRouter.of(context).popUntil(
-                (route) => route.settings.name == "MySubscriptionRoute");
+            if (paymentMethod == PaymentMethod.clickToPay &&
+                !isPaymentSuccessful) {
+              AutoRouter.of(context).back();
+            } else {
+              // AutoRouter.of(context).popUntilRoot();
+            }
           },
         ));
   }

@@ -27,8 +27,9 @@ class SubscriptionPaymentMethodState extends State<SubscriptionPaymentMethod> {
                           record: widget.paymentRecord),
                       16.verticalSpace,
                       HeadlineLarge(
-                          text:
-                              "  ${S.of(context).payment_method_choice_title}"),
+                        text: "  ${S.of(context).payment_method_choice_title}",
+                        textAlign: TextAlign.start,
+                      ),
                       16.verticalSpace,
                       Column(
                         children: [

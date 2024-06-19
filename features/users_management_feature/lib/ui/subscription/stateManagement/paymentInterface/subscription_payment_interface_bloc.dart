@@ -1,3 +1,5 @@
+import 'package:core/core_data/localStorage/credit_card_secure_local_storage_interface.dart';
+import 'package:core/core_utils/Logger.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 
 import '../../../../domain/services/credit_card_input_validation_service.dart';
@@ -8,59 +10,106 @@ part 'subscription_payment_interface_state.dart';
 
 class SubscriptionPaymentInterfaceBloc extends Bloc<
     SubscriptionPaymentInterfaceEvent, SubscriptionPaymentInterfaceBlocState> {
+  CreditCardInputValidationService ccValidationService = GetIt.instance.get();
+  CreditCardSecureLocalStorageInterface ccSecureStorage =
+      GetIt.instance.get(instanceName: "CreditCardSecureStorageImpl");
+
   SubscriptionPaymentInterfaceBloc()
       : super(const SubscriptionPaymentInterfaceBlocState(
             ccNumberState: CreditCardInputState(data: ""),
             ccHolderNameState: CreditCardInputState(data: ""),
             ccExpiryDateState: CreditCardInputState(data: ""),
-            ccCVVState: CreditCardInputState(data: ""))) {
-    CreditCardInputValidationService ccValidationService = GetIt.instance.get();
-
-    on<SubscriptionPaymentInterfaceEvent>((event, emit) {
-      event.when(checkCreditCardNumberFormat: (data) {
-        CreditCardInputError? brokenConstraint = data.isEmpty
-            ? CreditCardInputError.required
-            : (ccValidationService.isCreditCardNumberValid(data)
-                ? CreditCardInputError.none
-                : CreditCardInputError.invalid);
-        emit(state.copyWith(
-            ccNumberState: CreditCardInputState(
-                data: data, brokenConstraint: brokenConstraint)));
-      }, checkCreditCardHolderNameFormat: (data) {
-        CreditCardInputError? brokenConstraint = data.isEmpty
-            ? CreditCardInputError.required
-            : (ccValidationService.isCCHolderNameDValid(data)
-                ? CreditCardInputError.none
-                : CreditCardInputError.invalid);
-        emit(state.copyWith(
-            ccHolderNameState: CreditCardInputState(
-                data: data, brokenConstraint: brokenConstraint)));
-      }, checkCreditCardCVVFormat: (data) {
-        CreditCardInputError? brokenConstraint = data.isEmpty
-            ? CreditCardInputError.required
-            : (ccValidationService.isCVValid(data)
-                ? CreditCardInputError.none
-                : CreditCardInputError.invalid);
-        emit(state.copyWith(
-            ccCVVState: CreditCardInputState(
-                data: data, brokenConstraint: brokenConstraint)));
-      }, checkCreditCardExpiryDateFormat: (data) {
-        CreditCardInputError? brokenConstraint = data.isEmpty
-            ? CreditCardInputError.required
-            : (ccValidationService.isCCExpiryDateValid(data)
-                ? CreditCardInputError.none
-                : CreditCardInputError.invalid);
-        emit(state.copyWith(
-            ccExpiryDateState: CreditCardInputState(
-                data: data, brokenConstraint: brokenConstraint)));
-      });
+            ccCVVState: CreditCardInputState(data: ""),
+            hasSavedCCdata: false)) {
+    on<_checkCreditCardNumberFormat>((event, emit) async {
+      emit(state.copyWith(
+          ccNumberState: CreditCardInputState(
+              data: event.ccNumber,
+              brokenConstraint: checkCCNumberError(event.ccNumber)),
+          hasSavedCCdata: false));
+    });
+    on<_checkCreditCardHolderNameFormat>((event, emit) async {
+      emit(state.copyWith(
+          ccHolderNameState: CreditCardInputState(
+              data: event.name,
+              brokenConstraint: checkCCNameHolderError(event.name)),
+          hasSavedCCdata: false));
+    });
+    on<_checkCreditCardCVVFormat>((event, emit) async {
+      emit(state.copyWith(
+          ccCVVState: CreditCardInputState(
+              data: event.cvv, brokenConstraint: checkCVVError(event.cvv)),
+          hasSavedCCdata: false));
+    });
+    on<_checkCreditCardExpiryDateFormat>((event, emit) async {
+      emit(state.copyWith(
+          ccExpiryDateState: CreditCardInputState(
+              data: event.date,
+              brokenConstraint: checkCCExpiryDateError(event.date)),
+          hasSavedCCdata: false));
+    });
+    on<_saveCCdataToSecureStorage>((event, emit) async {
+      ccSecureStorage.saveCreditCardData(CreditCardDetails(
+          ccHolderName: state.ccHolderNameState.data,
+          ccNumber: state.ccNumberState.data,
+          cvv: state.ccCVVState.data,
+          ccExpiryDate: state.ccExpiryDateState.data,
+          ccEmail: ""));
+    });
+    on<_loadCCdataFromSecureStorage>((event, emit) async {
+      CreditCardDetails data = await ccSecureStorage.readCreditCardData();
+      emit(state.copyWith(
+          ccNumberState: CreditCardInputState(
+              data: data.ccNumber ?? "",
+              brokenConstraint: checkCCNumberError(data.ccNumber ?? "")),
+          ccCVVState: CreditCardInputState(
+              data: data.cvv ?? "",
+              brokenConstraint: checkCVVError(data.cvv ?? "")),
+          ccExpiryDateState: CreditCardInputState(
+              data: data.ccExpiryDate ?? "",
+              brokenConstraint:
+                  checkCCExpiryDateError(data.ccExpiryDate ?? "")),
+          ccHolderNameState: CreditCardInputState(
+              data: data.ccHolderName ?? "",
+              brokenConstraint:
+                  checkCCNameHolderError(data.ccHolderName ?? "")),
+          hasSavedCCdata: false));
+    });
+    on<_checkExistingCCdata>((event, emit) async {
+      bool hasCCdata = await ccSecureStorage.hasSavedCreditCardDetails();
+      emit(state.copyWith(hasSavedCCdata: hasCCdata));
     });
   }
 
-  bool areAllCreditCardInputStatesValid() {
-    return state.ccHolderNameState.isNotValid() &&
-        state.ccNumberState.isNotValid() &&
-        state.ccCVVState.isNotValid() &&
-        state.ccExpiryDateState.isNotValid();
+  CreditCardInputError? checkCCExpiryDateError(String date) {
+    return date.isEmpty
+        ? CreditCardInputError.required
+        : (ccValidationService.isCCExpiryDateValid(date)
+            ? CreditCardInputError.none
+            : CreditCardInputError.invalid);
+  }
+
+  CreditCardInputError? checkCVVError(String cvv) {
+    return cvv.isEmpty
+        ? CreditCardInputError.required
+        : (ccValidationService.isCVValid(cvv)
+            ? CreditCardInputError.none
+            : CreditCardInputError.invalid);
+  }
+
+  CreditCardInputError? checkCCNumberError(String ccNumber) {
+    return ccNumber.isEmpty
+        ? CreditCardInputError.required
+        : (ccValidationService.isCreditCardNumberValid(ccNumber)
+            ? CreditCardInputError.none
+            : CreditCardInputError.invalid);
+  }
+
+  CreditCardInputError? checkCCNameHolderError(String ccHolderName) {
+    return ccHolderName.isEmpty
+        ? CreditCardInputError.required
+        : (ccValidationService.isCCHolderNameDValid(ccHolderName)
+            ? CreditCardInputError.none
+            : CreditCardInputError.invalid);
   }
 }

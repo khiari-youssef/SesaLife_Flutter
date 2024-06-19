@@ -4,6 +4,7 @@
   "welcome_logo_description" : "Student Life",
   "login" : "Se connecter",
   "logout" : "Se déconnecter",
+  "go_back": "Retourner",
   "device_auth_unsupported" : "Votre appareil ne supporte pas une forte authentification biometrique ! ou bien vous ne l'avez pas encore enregistré",
   "device_auth_action" : "Cette action nécessite votre authentification",
   "guest_space" : "Espace visiteur",
@@ -104,5 +105,7 @@
   "payment_cc_holder_name_input_invalid" : "Nom invalide !",
   "payment_cashOrCheck_result_message" : "Vous devez vous rendre au service financière pour valider le paiement !",
   "payment_credit_card_result_message_success" : "Payment effecuté ! vous pouvez récupérer le reçu de paiement dés qu'il sera  prêt !",
-  "payment_credit_card_result_message_error" : "Payment echoué ! vérifier les détails de votre carte de paiment ou bien contacter votre banque  !"
+  "payment_credit_card_result_message_error" : "Payment echoué ! vérifier les détails de votre carte de paiment ou bien contacter votre banque  !",
+  "payment_credit_card_save_data_request" : "Voulez-vous sauvegarder les données de votre carte bancaire localement en toute securité ?",
+  "payment_credit_card_load_data_request" : "Voulez-vous utiliser les données existantes de votre carte bancaire en toute securité ?"
 }
