@@ -12,8 +12,8 @@ class UsersNavigationConfiguration extends $UsersNavigationConfiguration {
           page: EnrollmentRoute.page,
         ),
         AutoRoute(
-            path: "/SesamePrivacyAndSecurityPolicyRoute",
-            page: SesamePrivacyAndSecurityPolicyRoute.page),
+            path: "/SesamePolicyAndTermsRoute",
+            page: SesamePolicyAndTermsRoute.page),
         AutoRoute(path: "/MySettingsRoute", page: MySettingsRoute.page),
         AutoRoute(
           path: "/SubscriptionPaymentMethodRoute",

@@ -6,7 +6,8 @@ import 'LoginStateBloc.dart';
 
 class LoginScreenState extends State<LoginScreen> {
   bool canLogin = false;
-  TextEditingController emailController = TextEditingController(text: "test");
+  TextEditingController emailController =
+      TextEditingController(text: "khiari.youssef98@gmail.com");
   TextEditingController passwordController =
       TextEditingController(text: "test");
 

@@ -7,9 +7,12 @@ import 'SesameBadgeDTO.dart';
 
 part 'SesameTeacherDTO.g.dart';
 
+@HiveType(typeId: 3)
 @JsonSerializable()
 class SesameTeacherDTO extends SesameUserDTO {
+  @HiveField(11)
   final String profBackground;
+  @HiveField(12)
   final List<SesameClassDTO> assignedClasses;
 
   SesameTeacherDTO(

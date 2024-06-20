@@ -1,12 +1,10 @@
-import 'dart:isolate';
-
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
 class CreditCardDetails {
-  final String? ccHolderName;
-  final String? ccNumber;
-  final String? cvv;
-  final String? ccExpiryDate;
+  final String ccHolderName;
+  final String ccNumber;
+  final String cvv;
+  final String ccExpiryDate;
   final String? ccEmail;
   CreditCardDetails(
       {required this.ccHolderName,
@@ -14,12 +12,18 @@ class CreditCardDetails {
       required this.cvv,
       required this.ccExpiryDate,
       this.ccEmail});
+  CreditCardDetails withEmail(String email) => CreditCardDetails(
+      ccHolderName: ccHolderName,
+      ccNumber: ccNumber,
+      ccExpiryDate: ccExpiryDate,
+      cvv: cvv,
+      ccEmail: email);
 }
 
 abstract interface class CreditCardSecureLocalStorageInterface {
   Future<void> saveCreditCardData(CreditCardDetails data);
 
-  Future<CreditCardDetails> readCreditCardData();
+  Future<CreditCardDetails?> readCreditCardData();
 
   Future<bool> hasSavedCreditCardDetails();
 }
@@ -41,7 +45,7 @@ class CreditCardSecureStorageImpl
   }
 
   @override
-  Future<CreditCardDetails> readCreditCardData() async {
+  Future<CreditCardDetails?> readCreditCardData() async {
     Map<String, String> data =
         await fsStorage.readAll(aOptions: fsStorage.aOptions);
     String? ccHolderName = data["ccHolderName"];
@@ -49,12 +53,16 @@ class CreditCardSecureStorageImpl
     String? cvv = data["cvv"];
     String? ccExpiryDate = data["ccExpiryDate"];
     String? ccEmail = data["ccEmail"];
-    return CreditCardDetails(
-        ccHolderName: ccHolderName,
-        ccNumber: ccNumber,
-        cvv: cvv,
-        ccExpiryDate: ccExpiryDate,
-        ccEmail: ccEmail);
+    try {
+      return CreditCardDetails(
+          ccHolderName: ccHolderName!,
+          ccNumber: ccNumber!,
+          cvv: cvv!,
+          ccExpiryDate: ccExpiryDate!,
+          ccEmail: ccEmail);
+    } catch (e) {
+      return null;
+    }
   }
 
   @override

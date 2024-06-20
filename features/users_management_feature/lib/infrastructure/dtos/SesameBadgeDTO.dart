@@ -2,10 +2,14 @@ import 'package:shared_dependencies/shared_dependencies.dart';
 
 part 'SesameBadgeDTO.g.dart';
 
+@HiveType(typeId: 7)
 @JsonSerializable()
 class SesameBadgeDTO {
+  @HiveField(0)
   final String creationDate;
+  @HiveField(1)
   final String expirationDate;
+  @HiveField(2)
   final String signature;
   SesameBadgeDTO(
       {required this.creationDate,

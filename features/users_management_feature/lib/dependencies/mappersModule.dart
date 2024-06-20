@@ -11,6 +11,7 @@ import 'package:users_management_feature/infrastructure/ports/mappers/UserDomain
 import '../domain/entities/SesameTeacher.dart';
 import '../domain/entities/SesameUser.dart';
 import '../infrastructure/dtos/SesameTeacherDTO.dart';
+import '../infrastructure/dtos/sesame_professional_student_dto.dart';
 
 extension Mappersmodule on GetIt {
   void loadMappersModule() {

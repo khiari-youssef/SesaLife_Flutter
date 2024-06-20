@@ -2,11 +2,16 @@ import 'package:shared_dependencies/shared_dependencies.dart';
 
 part 'sesame_class_dto.g.dart';
 
+@HiveType(typeId: 6)
 @JsonSerializable()
 class SesameClassDTO extends HiveObject {
+  @HiveField(0)
   final String id;
+  @HiveField(1)
   final String name;
+  @HiveField(2)
   final String level;
+  @HiveField(3)
   final String group;
 
   SesameClassDTO(

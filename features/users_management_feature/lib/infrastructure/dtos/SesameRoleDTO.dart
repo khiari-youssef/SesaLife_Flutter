@@ -2,10 +2,14 @@ import 'package:shared_dependencies/shared_dependencies.dart';
 
 part 'SesameRoleDTO.g.dart';
 
+@HiveType(typeId: 4)
 @JsonSerializable()
 class SesamePermissionDTO extends HiveObject {
+  @HiveField(0)
   final String id;
+  @HiveField(1)
   final String label;
+  @HiveField(2)
   final String state;
   SesamePermissionDTO(
       {required this.id, required this.label, required this.state});
@@ -17,9 +21,12 @@ class SesamePermissionDTO extends HiveObject {
   Map<String, dynamic> toJson() => _$SesamePermissionDTOToJson(this);
 }
 
+@HiveType(typeId: 5)
 @JsonSerializable()
 class SesameRoleDTO extends HiveObject {
+  @HiveField(3)
   final String id;
+  @HiveField(4)
   final List<SesamePermissionDTO> permissions;
   SesameRoleDTO({required this.id, required this.permissions});
 

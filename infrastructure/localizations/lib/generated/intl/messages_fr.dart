@@ -161,7 +161,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "privacy_policy_desc": MessageLookupByLibrary.simpleMessage(
             "Savoir plus sur la sécurité et l\'usage de mes données personnelles collectés par l\'application."),
         "privacy_policy_label": MessageLookupByLibrary.simpleMessage(
-            "Régles & Politique de securité"),
+            "Politique de securité & confidentialité"),
         "profile_badge":
             MessageLookupByLibrary.simpleMessage("Mon badge Sesame"),
         "profile_classes": MessageLookupByLibrary.simpleMessage("Mes classes"),
@@ -196,6 +196,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Je veux rester connecté"),
         "sex_female": MessageLookupByLibrary.simpleMessage("Femme"),
         "sex_male": MessageLookupByLibrary.simpleMessage("Homme"),
+        "terms_of_service_label":
+            MessageLookupByLibrary.simpleMessage("Termes d\'utilisation"),
         "welcome_logo_description":
             MessageLookupByLibrary.simpleMessage("Student Life"),
         "welcome_logo_sesame_name":

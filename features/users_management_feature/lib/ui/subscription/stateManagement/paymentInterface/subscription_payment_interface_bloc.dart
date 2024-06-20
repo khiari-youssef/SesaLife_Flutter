@@ -66,22 +66,22 @@ class SubscriptionPaymentInterfaceBloc extends Bloc<
           ccEmail: ""));
     });
     on<_loadCCdataFromSecureStorage>((event, emit) async {
-      CreditCardDetails data = await ccSecureStorage.readCreditCardData();
+      CreditCardDetails? data = await ccSecureStorage.readCreditCardData();
       emit(state.copyWith(
           ccNumberState: CreditCardInputState(
-              data: data.ccNumber ?? "",
-              brokenConstraint: checkCCNumberError(data.ccNumber ?? "")),
+              data: data?.ccNumber ?? "",
+              brokenConstraint: checkCCNumberError(data?.ccNumber ?? "")),
           ccCVVState: CreditCardInputState(
-              data: data.cvv ?? "",
-              brokenConstraint: checkCVVError(data.cvv ?? "")),
+              data: data?.cvv ?? "",
+              brokenConstraint: checkCVVError(data?.cvv ?? "")),
           ccExpiryDateState: CreditCardInputState(
-              data: data.ccExpiryDate ?? "",
+              data: data?.ccExpiryDate ?? "",
               brokenConstraint:
-                  checkCCExpiryDateError(data.ccExpiryDate ?? "")),
+                  checkCCExpiryDateError(data?.ccExpiryDate ?? "")),
           ccHolderNameState: CreditCardInputState(
-              data: data.ccHolderName ?? "",
+              data: data?.ccHolderName ?? "",
               brokenConstraint:
-                  checkCCNameHolderError(data.ccHolderName ?? "")),
+                  checkCCNameHolderError(data?.ccHolderName ?? "")),
           hasSavedCCdata: false));
     });
     on<_checkExistingCCdata>((event, emit) async {

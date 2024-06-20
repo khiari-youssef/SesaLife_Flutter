@@ -7,9 +7,12 @@ import 'SesameBadgeDTO.dart';
 
 part 'SesameStudentDTO.g.dart';
 
+@HiveType(typeId: 1)
 @JsonSerializable()
 class SesameStudentDTO extends SesameUserDTO {
+  @HiveField(11)
   final SesameClassDTO sesameClass;
+  @HiveField(12)
   final String? portfolioId;
 
   SesameStudentDTO(
@@ -29,35 +32,6 @@ class SesameStudentDTO extends SesameUserDTO {
 
   factory SesameStudentDTO.fromJson(Map<String, dynamic> json) =>
       _$SesameStudentDTOFromJson(json);
-
-  @override
-  Map<String, dynamic> toJson() => _$SesameStudentDTOToJson(this);
-}
-
-@JsonSerializable()
-class SesameProfessionalStudentDTO extends SesameStudentDTO {
-  final String jobPosition;
-  final String company;
-  final String contractType;
-  SesameProfessionalStudentDTO(
-      {required super.sesameClass,
-      super.portfolioId,
-      required super.registrationID,
-      required super.candidatureID,
-      required super.firstName,
-      required super.lastName,
-      required super.email,
-      required super.sex,
-      required super.birthdate,
-      required super.profilePictureUrl,
-      required super.role,
-      required super.badge,
-      required this.jobPosition,
-      required this.company,
-      required this.contractType,
-      required super.registrationDate});
-  factory SesameProfessionalStudentDTO.fromJson(Map<String, dynamic> json) =>
-      _$SesameProfessionalStudentDTOFromJson(json);
 
   @override
   Map<String, dynamic> toJson() => _$SesameStudentDTOToJson(this);

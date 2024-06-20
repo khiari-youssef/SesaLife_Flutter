@@ -10,6 +10,7 @@ import '../../../domain/entities/SesameUser.dart';
 import '../../dtos/SesameBadgeDTO.dart';
 import '../../dtos/SesameRoleDTO.dart';
 import '../../dtos/SesameStudentDTO.dart';
+import '../../dtos/sesame_professional_student_dto.dart';
 
 class ProfStudentDomainToExternalEntityMapper
     implements
@@ -25,7 +26,7 @@ class ProfStudentDomainToExternalEntityMapper
         lastName: externalData.lastName,
         registrationDate: DateTime(2021, 1, 1),
         email: externalData.email,
-        sex: externalData.sex.toLowerCase() == "h"
+        sex: externalData.sex.toLowerCase() == "m"
             ? UserSex.male
             : (externalData.sex.toLowerCase() == "f" ? UserSex.female : null)!,
         birthdate: externalData.birthdate.parseIsoDateTime()!,
@@ -70,7 +71,7 @@ class ProfStudentDomainToExternalEntityMapper
         registrationDate: domainData.registrationDate.toIso8601String(),
         email: domainData.email,
         sex: switch (domainData.sex) {
-          UserSex.male => "h",
+          UserSex.male => "m",
           UserSex.female => "f"
         },
         birthdate: domainData.birthdate.toIso8601String(),

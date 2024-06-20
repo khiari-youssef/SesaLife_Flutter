@@ -7,6 +7,7 @@ import 'package:users_management_feature/infrastructure/dtos/SesameTeacherDTO.da
 import 'package:users_management_feature/infrastructure/dtos/SesameUserDTO.dart';
 
 import '../../../domain/entities/SesameStudent.dart';
+import '../../dtos/sesame_professional_student_dto.dart';
 
 class UserDomainToExternalEntityMapper
     implements AbstractDomainToExternalEntityMapper<SesameUser, SesameUserDTO> {

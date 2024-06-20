@@ -4,7 +4,7 @@ class CreditCardInputValidationService {
 
   bool isCreditCardNumberValid(String ccNumber) {
     return ccNumber.startsWith(RegExp("[4-5]")) &&
-        ccNumber.length == 16 &&
+        ccNumber.replaceAll(' ', '').length == 16 &&
         onlyNumbersRegExp.hasMatch(ccNumber);
   }
 

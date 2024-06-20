@@ -42,8 +42,12 @@ class MyProfileMenu extends StatelessWidget {
           },
           SesameMenuItem(
               data: ProfileMenuItem(
+                  S.of(context).terms_of_service_label, "ic_rules_policy.svg",
+                  destinationPath: "/SesamePolicyAndTermsRoute")),
+          SesameMenuItem(
+              data: ProfileMenuItem(
                   S.of(context).privacy_policy_label, "ic_rules_policy.svg",
-                  destinationPath: "/SesamePrivacyAndSecurityPolicyRoute")),
+                  destinationPath: "/SesamePolicyAndTermsRoute")),
           SesameMenuItem(
               data: ProfileMenuItem(S.of(context).settings, "ic_settings.svg",
                   destinationPath: "/MySettingsRoute"))

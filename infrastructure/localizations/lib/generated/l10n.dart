@@ -320,11 +320,21 @@ class S {
     );
   }
 
-  /// `Rules & Security policy`
+  /// `Privacy & Security policy`
   String get privacy_policy_label {
     return Intl.message(
-      'Rules & Security policy',
+      'Privacy & Security policy',
       name: 'privacy_policy_label',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Terms of service`
+  String get terms_of_service_label {
+    return Intl.message(
+      'Terms of service',
+      name: 'terms_of_service_label',
       desc: '',
       args: [],
     );

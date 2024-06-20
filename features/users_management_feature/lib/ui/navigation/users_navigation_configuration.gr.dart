@@ -28,9 +28,9 @@ import 'package:users_management_feature/ui/myprofile/MySettingsScreen.dart'
     as _i6;
 import 'package:users_management_feature/ui/myprofile/MyUserProfileScreen.dart'
     as _i8;
-import 'package:users_management_feature/ui/program_privacy/SesamePrivacyAndSecurityPolicy.dart'
+import 'package:users_management_feature/ui/program_privacy/sesame_policy_and_terms.dart'
     as _i9;
-import 'package:users_management_feature/ui/program_privacy/SesameProgramsCatalog.dart'
+import 'package:users_management_feature/ui/program_privacy/sesame_programs_catalog.dart'
     as _i10;
 import 'package:users_management_feature/ui/subscription/screens/my_subscription_screen.dart'
     as _i7;
@@ -98,10 +98,10 @@ abstract class $UsersNavigationConfiguration extends _i14.RootStackRouter {
         child: const _i8.MyUserProfileScreen(),
       );
     },
-    SesamePrivacyAndSecurityPolicyRoute.name: (routeData) {
+    SesamePolicyAndTermsRoute.name: (routeData) {
       return _i14.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i9.SesamePrivacyAndSecurityPolicy(),
+        child: const _i9.SesamePolicyAndTermsScreen(),
       );
     },
     SesameProgramsCatalog.name: (routeData) {
@@ -282,16 +282,15 @@ class MyUserProfileRoute extends _i14.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i9.SesamePrivacyAndSecurityPolicy]
-class SesamePrivacyAndSecurityPolicyRoute extends _i14.PageRouteInfo<void> {
-  const SesamePrivacyAndSecurityPolicyRoute(
-      {List<_i14.PageRouteInfo>? children})
+/// [_i9.SesamePolicyAndTermsScreen]
+class SesamePolicyAndTermsRoute extends _i14.PageRouteInfo<void> {
+  const SesamePolicyAndTermsRoute({List<_i14.PageRouteInfo>? children})
       : super(
-          SesamePrivacyAndSecurityPolicyRoute.name,
+          SesamePolicyAndTermsRoute.name,
           initialChildren: children,
         );
 
-  static const String name = 'SesamePrivacyAndSecurityPolicyRoute';
+  static const String name = 'SesamePolicyAndTermsRoute';
 
   static const _i14.PageInfo<void> page = _i14.PageInfo<void>(name);
 }
@@ -398,7 +397,7 @@ class SubscriptionPaymentMethodRouteArgs {
 class SubscriptionPaymentResultRoute
     extends _i14.PageRouteInfo<SubscriptionPaymentResultRouteArgs> {
   SubscriptionPaymentResultRoute({
-    _i15.Key? key,
+    _i17.Key? key,
     required _i12.PaymentMethod paymentMethod,
     required _i19.SubscriptionPaymentResult? paymentTransactionResult,
     List<_i14.PageRouteInfo>? children,
@@ -425,7 +424,7 @@ class SubscriptionPaymentResultRouteArgs {
     required this.paymentTransactionResult,
   });
 
-  final _i15.Key? key;
+  final _i17.Key? key;
 
   final _i12.PaymentMethod paymentMethod;
 

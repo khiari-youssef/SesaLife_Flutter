@@ -1,10 +1,10 @@
 import 'package:core/core_domain/entities/AppPolicySection.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 
-import 'SesamePrivacyAndSecurityPolicyCubitStateManager.dart';
+import 'sesame_policy_and_terms_cubit_state_manager.dart';
 
-class SesamePrivacyAndSecurityPolicyState
-    extends State<SesamePrivacyAndSecurityPolicy> {
+class SesamePolicyAndTermsScreenState
+    extends State<SesamePolicyAndTermsScreen> {
   late SesamePrivacyAndSecurityPolicyCubitStateManager stateManager;
 
   @override
@@ -28,9 +28,9 @@ class SesamePrivacyAndSecurityPolicyState
               }));
 }
 
-@RoutePage(name: "SesamePrivacyAndSecurityPolicyRoute")
-class SesamePrivacyAndSecurityPolicy extends StatefulWidget {
-  const SesamePrivacyAndSecurityPolicy({super.key});
+@RoutePage(name: "SesamePolicyAndTermsRoute")
+class SesamePolicyAndTermsScreen extends StatefulWidget {
+  const SesamePolicyAndTermsScreen({super.key});
 
   Widget buildItemSection(BuildContext context, AppPolicySection section) {
     return Column(
@@ -67,5 +67,5 @@ class SesamePrivacyAndSecurityPolicy extends StatefulWidget {
   }
 
   @override
-  State<StatefulWidget> createState() => SesamePrivacyAndSecurityPolicyState();
+  State<StatefulWidget> createState() => SesamePolicyAndTermsScreenState();
 }

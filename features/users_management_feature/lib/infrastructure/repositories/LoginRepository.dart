@@ -1,7 +1,9 @@
 import 'package:core/core_domain/AbstractDomainToExternalEntityMapper.dart';
 import 'package:core/core_domain/entities/SesameBadge.dart';
 import 'package:core/core_domain/entities/SesameClass.dart';
+import 'package:core/core_utils/Logger.dart';
 import 'package:users_management_feature/domain/entities/SesameStudent.dart';
+import 'package:users_management_feature/domain/entities/SesameTeacher.dart';
 
 import '../../domain/entities/SesameRole.dart';
 import '../../domain/entities/SesameUser.dart';
@@ -15,11 +17,9 @@ class LoginRepository implements LoginRepositoryContract {
   final UsersRemoteDataSource remoteDataSource;
   final AbstractDomainToExternalEntityMapper<SesameUser, SesameUserDTO> mapper;
   LoginRepository(this.localDataSource, this.remoteDataSource, this.mapper);
-  @override
-  Future<SesameUser> authenticateUserWithCredentials(
-      String email, String password) async {
-    await Future.delayed(const Duration(seconds: 2));
-    SesameUser user = SesameStudent(
+
+  List<SesameUser> users = [
+    SesameStudent(
         registrationID: "random",
         candidatureID: "randomcaid",
         firstName: "Youssef",
@@ -27,7 +27,7 @@ class LoginRepository implements LoginRepositoryContract {
         lastName: "Khiari",
         email: "khiari.youssef98@gmail.com",
         sex: UserSex.male,
-        birthdate: DateTime.now(),
+        birthdate: DateTime(1998, 4, 18),
         profilePictureUrl: "",
         role: SesameRole.defaultRole,
         badge: SesameBadge(
@@ -35,10 +35,39 @@ class LoginRepository implements LoginRepositoryContract {
             expirationDate: DateTime(2024, 12, 1),
             signature: "aegdsgsd"),
         sesameClass:
-            SesameClass(id: 'ingta4c', name: "ingta", group: "C", level: "4"));
-    Future<void> result =
-        localDataSource.saveUserProfile(mapper.toExternal(user));
-    return user;
+            SesameClass(id: 'ingta4c', name: "ingta", group: "C", level: "4")),
+    SesameTeacher(
+        registrationID: 'random-#',
+        candidatureID: 'randomcaid-',
+        firstName: 'Ahmed',
+        lastName: 'Prof',
+        email: 'ahmed.prof@sesame.com.tn',
+        sex: UserSex.male,
+        registrationDate: DateTime(2021, 1, 1),
+        birthdate: DateTime(1998, 4, 18),
+        profilePictureUrl: '',
+        assignedClasses: [
+          SesameClass(id: 'ingta4c', name: "ingta", group: "C", level: "4"),
+          SesameClass(id: 'ingta4a', name: "ingta", group: "A", level: "4")
+        ],
+        role: SesameRole.defaultRole,
+        badge: SesameBadge(
+            creationDate: DateTime(2024, 1, 1),
+            expirationDate: DateTime(2024, 12, 1),
+            signature: "aegdsgsd"),
+        profBackground: 'R&D professor in Artificial intelligence')
+  ];
+
+  @override
+  Future<SesameUser> authenticateUserWithCredentials(
+      String email, String password) async {
+    await Future.delayed(const Duration(seconds: 2));
+    SesameUserDTO userdata = await remoteDataSource
+        .loginWithCredentials(email, password)
+        .asStream()
+        .first;
+    localDataSource.saveUserProfile(userdata);
+    return mapper.toDomain(userdata);
   }
 
   @override

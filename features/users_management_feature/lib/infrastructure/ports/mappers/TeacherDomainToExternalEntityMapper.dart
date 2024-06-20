@@ -23,7 +23,7 @@ class TeacherDomainToExternalEntityMapper
         lastName: externalData.lastName,
         email: externalData.email,
         registrationDate: externalData.registrationDate.parseIsoDateTime()!,
-        sex: externalData.sex.toLowerCase() == "h"
+        sex: externalData.sex.toLowerCase() == "m"
             ? UserSex.male
             : (externalData.sex.toLowerCase() == "f" ? UserSex.female : null)!,
         birthdate: externalData.birthdate.parseIsoDateTime()!,
@@ -66,7 +66,7 @@ class TeacherDomainToExternalEntityMapper
         email: domainData.email,
         registrationDate: domainData.registrationDate.toIso8601String(),
         sex: switch (domainData.sex) {
-          UserSex.male => "h",
+          UserSex.male => "m",
           UserSex.female => "f"
         },
         birthdate: domainData.birthdate.toIso8601String(),
