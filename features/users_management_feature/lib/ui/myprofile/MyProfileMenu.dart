@@ -21,21 +21,21 @@ class MyProfileMenu extends StatelessWidget {
             SesameStudent() => [
                 SesameMenuItem(
                     data: ProfileMenuItem(
-                        S.of(context).profile_projects, "ic_rules_policy.svg",
+                        S.of(context).profile_projects, "ic_folder.svg",
                         destinationPath: "/MyProjectsRoute")),
                 SesameMenuItem(
-                    data: ProfileMenuItem(S.of(context).profile_subscription,
-                        "ic_rules_policy.svg",
+                    data: ProfileMenuItem(
+                        S.of(context).profile_subscription, "ic_money.svg",
                         destinationPath: "/MySubscriptionRoute")),
                 SesameMenuItem(
                     data: ProfileMenuItem(
-                        S.of(context).profile_grades, "ic_rules_policy.svg",
+                        S.of(context).profile_grades, "ic_grades.svg",
                         destinationPath: "/MyGradesRoute"))
               ],
             SesameTeacher() => [
                 SesameMenuItem(
                     data: ProfileMenuItem(
-                        S.of(context).profile_classes, "ic_rules_policy.svg",
+                        S.of(context).profile_classes, "ic_folder.svg",
                         destinationPath: "/MyClassesRoute"))
               ],
             _ => []
