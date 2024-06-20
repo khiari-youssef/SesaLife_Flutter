@@ -1110,10 +1110,10 @@ class S {
     );
   }
 
-  /// `You will need to go to the university financial service office to validate your payment !`
+  /// `Payment status updated ! You will need to go to the university financial service office to validate your payment !`
   String get payment_cashOrCheck_result_message {
     return Intl.message(
-      'You will need to go to the university financial service office to validate your payment !',
+      'Payment status updated ! You will need to go to the university financial service office to validate your payment !',
       name: 'payment_cashOrCheck_result_message',
       desc: '',
       args: [],

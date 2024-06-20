@@ -112,7 +112,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "payment_card_number_placeholder":
             MessageLookupByLibrary.simpleMessage("Ex : XXXX XXXX XXXX XXXX"),
         "payment_cashOrCheck_result_message": MessageLookupByLibrary.simpleMessage(
-            "You will need to go to the university financial service office to validate your payment !"),
+            "Payment status updated ! You will need to go to the university financial service office to validate your payment !"),
         "payment_cc_cvv_input_invalid":
             MessageLookupByLibrary.simpleMessage("invalid credit card CVV !"),
         "payment_cc_expiry_input_invalid": MessageLookupByLibrary.simpleMessage(

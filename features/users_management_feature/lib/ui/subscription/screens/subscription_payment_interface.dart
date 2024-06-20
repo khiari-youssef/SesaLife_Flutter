@@ -133,7 +133,7 @@ class SubscriptionPaymentInterfaceState
                                 label: S.of(context).payment_card_holder_name),
                             8.verticalSpace,
                             SesamePasswordTextField(
-                                maxLength: 16,
+                                maxLength: 19,
                                 isVisible: shouldShowCCNumber,
                                 keyboardType: TextInputType.number,
                                 controller: cardNumberController,
