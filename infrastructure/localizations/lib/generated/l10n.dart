@@ -1159,6 +1159,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Transaction ID : {transid}`
+  String payment_cashOrCheck_result_trans_id(Object transid) {
+    return Intl.message(
+      'Transaction ID : $transid',
+      name: 'payment_cashOrCheck_result_trans_id',
+      desc: '',
+      args: [transid],
+    );
+  }
+
+  /// `Transaction occured on {data} at {time}`
+  String payment_cashOrCheck_result_datetime(Object data, Object time) {
+    return Intl.message(
+      'Transaction occured on $data at $time',
+      name: 'payment_cashOrCheck_result_datetime',
+      desc: '',
+      args: [data, time],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

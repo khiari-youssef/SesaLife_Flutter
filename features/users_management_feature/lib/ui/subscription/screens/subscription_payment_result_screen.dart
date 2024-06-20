@@ -26,56 +26,75 @@ class SubscriptionPaymentResultScreen extends StatelessWidget {
             null,
             Center(
               child: Padding(
-                padding: EdgeInsets.symmetric(vertical: 8.h, horizontal: 16.h),
+                padding: EdgeInsets.symmetric(vertical: 32.h, horizontal: 16.h),
                 child: Column(
                     mainAxisSize: MainAxisSize.min,
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      CustomAssetImage(
-                          height: 100.h,
-                          width: 100.w,
-                          assetImagePath:
-                              "raster/screen_${paymentTransactionResult != null ? "success" : "error"}.png"),
-                      16.verticalSpace,
-                      BodyLarge(
-                          text: switch (paymentMethod) {
-                            PaymentMethod.clickToPay =>
-                              paymentTransactionResult != null
-                                  ? S
+                      ...(paymentMethod == PaymentMethod.cashOrCheck)
+                          ? [
+                              TitleMedium(
+                                  text: S
                                       .of(context)
-                                      .payment_credit_card_result_message_success
-                                  : S
-                                      .of(context)
-                                      .payment_credit_card_result_message_error,
-                            PaymentMethod.cashOrCheck =>
-                              S.of(context).payment_cashOrCheck_result_message
-                          },
-                          textAlign: TextAlign.center),
+                                      .payment_cashOrCheck_result_message,
+                                  textAlign: TextAlign.center)
+                            ]
+                          : [
+                              CustomAssetImage(
+                                  height: 100.h,
+                                  width: 100.w,
+                                  assetImagePath:
+                                      "raster/screen_${paymentTransactionResult != null ? "success" : "error"}.png"),
+                              24.verticalSpace,
+                              TitleMedium(
+                                  text: paymentTransactionResult != null
+                                      ? S
+                                          .of(context)
+                                          .payment_credit_card_result_message_success
+                                      : S
+                                          .of(context)
+                                          .payment_credit_card_result_message_error,
+                                  textAlign: TextAlign.center),
+                              24.verticalSpace,
+                              buildWhenNullSafe(paymentTransactionResult,
+                                  (result) {
+                                return LabelLarge(
+                                    text: S
+                                        .of(context)
+                                        .payment_cashOrCheck_result_trans_id(
+                                            result.recordID),
+                                    color: const Color(0xFF5F5F5F));
+                              }),
+                              12.verticalSpace,
+                              buildWhenNullSafe(paymentTransactionResult,
+                                  (result) {
+                                return LabelMedium(
+                                    text: S
+                                        .of(context)
+                                        .payment_cashOrCheck_result_datetime(
+                                            result.paymentDate.toDisplayDate(),
+                                            result.paymentDate.toDisplayTime()),
+                                    color: const Color(0xFF5F5F5F));
+                              })
+                            ],
                       24.verticalSpace,
-                      buildWhenNullSafe(paymentTransactionResult, (result) {
-                        return LabelMedium(
-                            text: "Transaction ID : ${result.recordID}");
-                      }),
-                      8.verticalSpace,
-                      buildWhenNullSafe(paymentTransactionResult, (result) {
-                        return LabelMedium(
-                            text:
-                                "Transaction occured on ${result.paymentDate.toDisplayDate()} at ${result.paymentDate.toDisplayTime()}");
-                      }),
-                      24.verticalSpace,
-                      SesameCustomButton(
-                          buttonText: S.of(context).go_back,
-                          onPressed: () {
-                            if (paymentMethod == PaymentMethod.clickToPay &&
-                                paymentTransactionResult == null) {
-                              autoRouter.back();
-                            } else {
-                              autoRouter.popUntilRouteWithName(
-                                  "MySubscriptionRoute",
-                                  scoped: true);
-                            }
-                          })
+                      Expanded(
+                          child: Align(
+                              alignment: Alignment.bottomCenter,
+                              child: SesameCustomButton(
+                                  buttonText: S.of(context).go_back,
+                                  onPressed: () {
+                                    if (paymentMethod ==
+                                            PaymentMethod.clickToPay &&
+                                        paymentTransactionResult == null) {
+                                      autoRouter.back();
+                                    } else {
+                                      autoRouter.popUntilRouteWithName(
+                                          "MySubscriptionRoute",
+                                          scoped: true);
+                                    }
+                                  })))
                     ]),
               ),
             )));

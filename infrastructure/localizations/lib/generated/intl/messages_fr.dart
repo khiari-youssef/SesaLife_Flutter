@@ -25,9 +25,14 @@ class MessageLookup extends MessageLookupByLibrary {
   static String m1(email) =>
       "Un code OTP sera envoyé à ${email} et sera expiré dans 10 minutes";
 
-  static String m2(date) => "Paiement effectué le ${date}";
+  static String m2(data, time) =>
+      "La transaction a eu lieu le ${data} à ${time}";
 
-  static String m3(date) => "Paiement prévu avant le ${date}";
+  static String m3(transid) => "Numéro de transaction : ${transid}";
+
+  static String m4(date) => "Paiement effectué le ${date}";
+
+  static String m5(date) => "Paiement prévu avant le ${date}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -110,8 +115,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Numéro de carte"),
         "payment_card_number_placeholder":
             MessageLookupByLibrary.simpleMessage("Ex : XXXX XXXX XXXX XXXX"),
+        "payment_cashOrCheck_result_datetime": m2,
         "payment_cashOrCheck_result_message": MessageLookupByLibrary.simpleMessage(
             "Vous devez vous rendre au service financière pour valider le paiement !"),
+        "payment_cashOrCheck_result_trans_id": m3,
         "payment_cc_cvv_input_invalid":
             MessageLookupByLibrary.simpleMessage("ce code CVV est invalide !"),
         "payment_cc_expiry_input_invalid": MessageLookupByLibrary.simpleMessage(
@@ -151,8 +158,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Télécharger le récu de paiement"),
         "payment_receipt_view":
             MessageLookupByLibrary.simpleMessage("Voir le reçu de paiement"),
-        "payment_subscription_completion_date": m2,
-        "payment_subscription_expected_date": m3,
+        "payment_subscription_completion_date": m4,
+        "payment_subscription_expected_date": m5,
         "payment_subscription_overdue":
             MessageLookupByLibrary.simpleMessage("Paiement en retard !"),
         "payment_subscription_period":

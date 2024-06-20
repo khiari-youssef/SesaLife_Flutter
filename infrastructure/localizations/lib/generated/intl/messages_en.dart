@@ -25,9 +25,13 @@ class MessageLookup extends MessageLookupByLibrary {
   static String m1(email) =>
       "An OTP code is sent via email to ${email} And will expire in 10 minutes";
 
-  static String m2(date) => "Payment completed on ${date}";
+  static String m2(data, time) => "Transaction occured on ${data} at ${time}";
 
-  static String m3(date) => "Payment expected before ${date}";
+  static String m3(transid) => "Transaction ID : ${transid}";
+
+  static String m4(date) => "Payment completed on ${date}";
+
+  static String m5(date) => "Payment expected before ${date}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -111,8 +115,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Card number"),
         "payment_card_number_placeholder":
             MessageLookupByLibrary.simpleMessage("Ex : XXXX XXXX XXXX XXXX"),
+        "payment_cashOrCheck_result_datetime": m2,
         "payment_cashOrCheck_result_message": MessageLookupByLibrary.simpleMessage(
             "Payment status updated ! You will need to go to the university financial service office to validate your payment !"),
+        "payment_cashOrCheck_result_trans_id": m3,
         "payment_cc_cvv_input_invalid":
             MessageLookupByLibrary.simpleMessage("invalid credit card CVV !"),
         "payment_cc_expiry_input_invalid": MessageLookupByLibrary.simpleMessage(
@@ -155,8 +161,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Download payment receipt"),
         "payment_receipt_view":
             MessageLookupByLibrary.simpleMessage("View payment receipt"),
-        "payment_subscription_completion_date": m2,
-        "payment_subscription_expected_date": m3,
+        "payment_subscription_completion_date": m4,
+        "payment_subscription_expected_date": m5,
         "payment_subscription_overdue":
             MessageLookupByLibrary.simpleMessage("Payment overdue !"),
         "payment_subscription_period":
