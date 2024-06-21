@@ -1,10 +1,6 @@
 import 'package:core/core_domain/AbstractDomainToExternalEntityMapper.dart';
-import 'package:core/core_domain/entities/SesameBadge.dart';
-import 'package:core/core_domain/entities/SesameClass.dart';
 import 'package:users_management_feature/domain/entities/SesameUser.dart';
 
-import '../../domain/entities/SesameRole.dart';
-import '../../domain/entities/SesameStudent.dart';
 import '../dataSources/UsersLocalDataSource.dart';
 import '../dtos/SesameUserDTO.dart';
 import '../ports/repositoryContracts/UserDataRepositoryContract.dart';

@@ -1,7 +1,6 @@
 import 'package:flutter/services.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
-import 'package:users_management_feature/infrastructure/dtos/SesameUserDTO.dart';
 import 'package:users_management_feature/infrastructure/dtos/hive_adapters_register.dart';
 
 import 'AppNavigationConfiguration.dart';

@@ -1,4 +1,3 @@
-import 'package:core/core_utils/Logger.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 
 import '../../domain/entities/my_settings_data.dart';

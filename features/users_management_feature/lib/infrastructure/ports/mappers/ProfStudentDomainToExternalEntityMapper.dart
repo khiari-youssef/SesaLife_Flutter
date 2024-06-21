@@ -9,7 +9,6 @@ import '../../../domain/entities/SesameStudent.dart';
 import '../../../domain/entities/SesameUser.dart';
 import '../../dtos/SesameBadgeDTO.dart';
 import '../../dtos/SesameRoleDTO.dart';
-import '../../dtos/SesameStudentDTO.dart';
 import '../../dtos/sesame_professional_student_dto.dart';
 
 class ProfStudentDomainToExternalEntityMapper
