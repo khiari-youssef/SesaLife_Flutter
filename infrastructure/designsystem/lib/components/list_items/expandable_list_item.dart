@@ -1,6 +1,6 @@
-import '../../exports.dart';
+import '../../designsystem_exports.dart';
 
-class ExpandablePreviewListItemState extends State<ExpandablePreviewListItem> {
+class ExpandableListItemState extends State<ExpandableListItem> {
   late bool isExpanded;
 
   @override
@@ -14,8 +14,9 @@ class ExpandablePreviewListItemState extends State<ExpandablePreviewListItem> {
     return AnimatedContainer(
         duration: const Duration(milliseconds: 600),
         curve: Curves.linear,
-        child: ProfilePreviewCard(
-          profilePreview: widget.profilePreview,
+        child: SimpleListItem(
+          title: widget.title,
+          subtitle: widget.subTitle,
           onClicked: () {
             setState(() {
               isExpanded = !isExpanded;
@@ -34,17 +35,19 @@ class ExpandablePreviewListItemState extends State<ExpandablePreviewListItem> {
   }
 }
 
-class ExpandablePreviewListItem extends StatefulWidget {
-  final UserProfilePreview profilePreview;
+class ExpandableListItem extends StatefulWidget {
+  final String title;
+  final String? subTitle;
   final bool isExpanded;
   final Widget Function() expandedStateWidgetBuilder;
   final Function(bool isExpanded) onExpandStateChanged;
-  const ExpandablePreviewListItem(
+  const ExpandableListItem(
       {super.key,
-      required this.profilePreview,
       required this.onExpandStateChanged,
       this.isExpanded = false,
-      required this.expandedStateWidgetBuilder});
+      required this.expandedStateWidgetBuilder,
+      required this.title,
+      this.subTitle});
   @override
-  State<StatefulWidget> createState() => ExpandablePreviewListItemState();
+  State<StatefulWidget> createState() => ExpandableListItemState();
 }

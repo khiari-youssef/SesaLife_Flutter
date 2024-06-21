@@ -18,5 +18,5 @@ export 'core_utils/BioUtils.dart';
 export 'core_utils/Logger.dart';
 export 'core_utils/QrCode.dart';
 export 'coreUI/user_profile_cards/profile_preview_list_item.dart';
-export 'coreUI/user_profile_cards/profile_preview_card_variants_factory.dart';
+export 'coreUI/user_profile_cards/profile_preview_card_with_redirect_action.dart';
 export 'coreUI/user_profile_cards/expandable_preview_list_item.dart';

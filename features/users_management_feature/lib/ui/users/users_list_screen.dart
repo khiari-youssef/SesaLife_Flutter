@@ -1,5 +1,5 @@
 import 'package:core/coreUI/user_profile_cards/expandable_preview_list_item.dart';
-import 'package:core/coreUI/user_profile_cards/profile_preview_card_variants_factory.dart';
+import 'package:core/coreUI/user_profile_cards/profile_preview_card_with_redirect_action.dart';
 import 'package:core/core_domain/entities/entities.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 
@@ -41,7 +41,7 @@ class UsersListScreenState extends State<UsersListScreen> {
                   8.verticalSpace,
                   Expanded(
                       child: ListView.builder(
-                          itemCount: 6,
+                          itemCount: 10,
                           itemBuilder: (context, index) {
                             return Padding(
                                 padding: EdgeInsets.all(8.r),
@@ -55,27 +55,45 @@ class UsersListScreenState extends State<UsersListScreen> {
                                             email: "email$index@gmail.com",
                                             id: "$index"),
                                         onClicked: () {})
-                                    : ExpandablePreviewListItem(
-                                        profilePreview: UserProfilePreview(
-                                            firstName: "FirstName $index",
-                                            lastName: "LastName",
-                                            profilePicture: "",
-                                            sex: UserSex.male,
-                                            email: "email$index@gmail.com",
-                                            id: "$index"),
-                                        onExpandStateChanged: (isExpanded) {},
-                                        expandedStateWidgetBuilder: () {
-                                          return SizedBox(
-                                            height: 80.h,
-                                            child: Center(
-                                              child: LabelMedium(
-                                                text:
-                                                    "email : email$index@gmail.com",
-                                              ),
-                                            ),
-                                          );
-                                        },
-                                      ));
+                                    : index < 7
+                                        ? ExpandablePreviewListItem(
+                                            profilePreview: UserProfilePreview(
+                                                firstName: "FirstName $index",
+                                                lastName: "LastName",
+                                                profilePicture: "",
+                                                sex: UserSex.male,
+                                                email: "email$index@gmail.com",
+                                                id: "$index"),
+                                            onExpandStateChanged:
+                                                (isExpanded) {},
+                                            expandedStateWidgetBuilder: () {
+                                              return SizedBox(
+                                                height: 80.h,
+                                                child: Center(
+                                                  child: LabelMedium(
+                                                    text:
+                                                        "email : email$index@gmail.com",
+                                                  ),
+                                                ),
+                                              );
+                                            },
+                                          )
+                                        : ExpandableListItem(
+                                            title: "item $index",
+                                            onExpandStateChanged:
+                                                (bool isExpanded) {},
+                                            expandedStateWidgetBuilder: () {
+                                              return SizedBox(
+                                                height: 80.h,
+                                                child: Center(
+                                                  child: LabelMedium(
+                                                    text:
+                                                        "email : email$index@gmail.com",
+                                                  ),
+                                                ),
+                                              );
+                                            },
+                                          ));
                           }))
                 ]))));
   }
