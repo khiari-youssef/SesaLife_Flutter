@@ -8,7 +8,6 @@ import 'package:users_management_feature/domain/entities/SesameTeacher.dart';
 import 'package:users_management_feature/infrastructure/dtos/SesameTeacherDTO.dart';
 
 import '../../../domain/entities/SesameRole.dart';
-import '../../../domain/entities/SesameUser.dart';
 import '../../dtos/SesameBadgeDTO.dart';
 import '../../dtos/SesameRoleDTO.dart';
 
