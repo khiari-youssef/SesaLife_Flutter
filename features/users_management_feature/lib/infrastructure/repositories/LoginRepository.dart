@@ -66,8 +66,12 @@ class LoginRepository implements LoginRepositoryContract {
         .loginWithCredentials(email, password)
         .asStream()
         .first;
-    localDataSource.saveUserProfile(userdata);
-    return mapper.toDomain(userdata);
+    return localDataSource.saveUserProfile(userdata, true).then((value) {
+      return mapper.toDomain(userdata);
+    }, onError: (error) {
+      logger.e(error);
+      return null;
+    });
   }
 
   @override
@@ -80,5 +84,10 @@ class LoginRepository implements LoginRepositoryContract {
     } else {
       throw Error();
     }
+  }
+
+  @override
+  Future<void> clearAllUserData() {
+    return localDataSource.deleteUserData();
   }
 }

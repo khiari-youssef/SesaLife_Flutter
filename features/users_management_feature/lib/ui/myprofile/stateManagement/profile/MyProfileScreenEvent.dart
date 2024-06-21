@@ -4,6 +4,6 @@ part 'MyProfileScreenEvent.freezed.dart';
 
 @freezed
 class MyProfileScreenEvent with _$MyProfileScreenEvent {
-  const factory MyProfileScreenEvent.loadMyProfileData() = _$loadMyProfileData;
-  const factory MyProfileScreenEvent.logout() = _$logout;
+  const factory MyProfileScreenEvent.loadMyProfileData() = _loadMyProfileData;
+  const factory MyProfileScreenEvent.logout() = _logout;
 }

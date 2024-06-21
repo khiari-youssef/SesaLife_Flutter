@@ -16,9 +16,12 @@ extension RepositoriesModule on GetIt {
         () => LoginRepository(get(), get(),
             get(instanceName: "UserDomainToExternalEntityMapper")),
         instanceName: "LoginRepository");
-    registerFactory<UserdataRepositoryContract>(() => UserDataRepository(),
+    registerFactory<UserdataRepositoryContract>(
+        () => UserDataRepository(
+            get(), get(instanceName: "UserDomainToExternalEntityMapper")),
         instanceName: "UserDataRepository");
-    registerFactory<UserSettingsRepository>(
-        () => UserSettingsRepository(get()));
+    registerFactory<UserSettingsRepositoryContract>(
+        () => UserSettingsRepository(get()),
+        instanceName: "UserSettingsRepository");
   }
 }

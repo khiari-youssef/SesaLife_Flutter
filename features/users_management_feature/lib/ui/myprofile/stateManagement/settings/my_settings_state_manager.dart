@@ -6,7 +6,8 @@ import '../../../../domain/entities/my_settings_data.dart';
 import '../../../../infrastructure/repositories/UserSettingsRepository.dart';
 
 class MySettingsStateManager extends Bloc<MySettingsEvent, MySettingsState> {
-  UserSettingsRepository repository = GetIt.instance.get();
+  UserSettingsRepositoryContract repository =
+      GetIt.instance.get(instanceName: "UserSettingsRepository");
 
   MySettingsStateManager(super.initialState) {
     on((MySettingsEvent event, emit) async {

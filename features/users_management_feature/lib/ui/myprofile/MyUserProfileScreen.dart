@@ -11,6 +11,7 @@ import '../navigation/users_navigation_configuration.gr.dart';
 
 class MyUserProfileState extends State<MyUserProfileScreen> {
   SesameDeviceAuthManager authManager = GetIt.instance.get();
+
   @override
   Widget build(BuildContext context) => basicScreenBuilder(
       context,
@@ -22,6 +23,11 @@ class MyUserProfileState extends State<MyUserProfileScreen> {
           child: BlocConsumer<MyProfileBlocStateManager,
               MyProfileScreenGlobalState>(
             listener: (context, state) {
+              if (state.isLoggedOut) {
+                AutoRouter.of(context).replaceNamed("/LoginRoute");
+              }
+              MyProfileBlocStateManager bloc =
+                  context.read<MyProfileBlocStateManager>();
               state.profileDataState.whenOrNull(error: (error) {
                 showDialog(
                     context: context,
@@ -34,14 +40,14 @@ class MyUserProfileState extends State<MyUserProfileScreen> {
                               .of(context)
                               .error_profile_data_not_available_message,
                           onClosed: () {
-                            context
-                                .read<MyProfileBlocStateManager>()
-                                .add(const MyProfileScreenEvent.logout());
+                            bloc.add(const MyProfileScreenEvent.logout());
                           });
                     });
               });
             },
             builder: (context, state) {
+              MyProfileBlocStateManager bloc =
+                  context.read<MyProfileBlocStateManager>();
               return state.profileDataState.when(
                   success: (SesameUser userData) {
                     return Padding(
@@ -98,8 +104,8 @@ class MyUserProfileState extends State<MyUserProfileScreen> {
                                               .requireAuthenticationAsync(
                                                   context,
                                                   onActionAuthorized: () {
-                                            AutoRouter.of(context)
-                                                .replaceNamed("/LoginRoute");
+                                            bloc.add(const MyProfileScreenEvent
+                                                .logout());
                                           });
                                         })))
                           ],

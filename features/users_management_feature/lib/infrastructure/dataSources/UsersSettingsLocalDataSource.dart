@@ -5,7 +5,6 @@ import '../../domain/entities/my_settings_data.dart';
 
 class UsersSettingsLocalDataSource {
   final String settingsBoxName = "MySettingsDataBox";
-
   final String toggleStayLoggedInOptionKey = "toggleStayLoggedInOption";
   final String toggleHideMyWorkDataOptionKey = "toggleHideMyWorkDataOption";
   final String toggleNotifyMeOptionKey = "toggleStayLoggedInOption";
@@ -22,8 +21,12 @@ class UsersSettingsLocalDataSource {
 
   Future<void> toggleNotifyMeOption(bool isEnabled) async {
     Box settingsBox = await Hive.openBox(settingsBoxName);
-    logger.i("toggleNotifyMeOptionKey updated");
     return await settingsBox.put(toggleNotifyMeOptionKey, isEnabled);
+  }
+
+  Future<void> clearSettings() async {
+    Box settingsBox = await Hive.openBox(settingsBoxName);
+    settingsBox.clear();
   }
 
   Future<MySettingsData> loadSettingsData() async {

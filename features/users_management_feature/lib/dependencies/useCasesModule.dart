@@ -8,6 +8,7 @@ import '../domain/entities/subscription_payment_result.dart';
 import '../domain/usecases/credit_card_payment_use_case.dart';
 import '../domain/usecases/get_my_profile_data_use_case.dart';
 import '../domain/usecases/user_login_use_case.dart';
+import '../domain/usecases/user_logout_usecase.dart';
 
 extension UseCasesModule on GetIt {
   void loadUseCasesModule() {
@@ -24,5 +25,9 @@ extension UseCasesModule on GetIt {
                 Future<SubscriptionPaymentResult>>>(
         () => CreditCardPaymentUseCase(),
         instanceName: "CreditCardPaymentUseCase");
+    registerFactory<NoInputDomainUseCaseProtocol<Future<List<void>>>>(
+        () => UserLogoutUseCase(get(instanceName: "LoginRepository"),
+            get(instanceName: "UserSettingsRepository")),
+        instanceName: "UserLogoutUseCase");
   }
 }

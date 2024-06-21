@@ -10,22 +10,23 @@ import 'MyProfileScreenGlobalState.dart';
 class MyProfileBlocStateManager
     extends Bloc<MyProfileScreenEvent, MyProfileScreenGlobalState> {
   final NoInputDomainUseCaseProtocol<Future<SesameUser>> getUserProfileUsecase;
-  MyProfileBlocStateManager(super.initialState, this.getUserProfileUsecase) {
-    on((event, emit) async {
-      if (event is MyProfileScreenEvent) {
-        event.when(
-            loadMyProfileData: () {
-              getUserProfileUsecase.execute().then((result) {
-                emit(state.copyWith(
-                    profileDataState: MyProfileDataState.success(result)));
-              }, onError: (error) {
-                emit(state.copyWith(
-                    profileDataState: const MyProfileDataState.error(
-                        DomainErrorType.NotFound)));
-              });
-            },
-            logout: () {});
-      }
+  final NoInputDomainUseCaseProtocol<Future<List<void>>> userLogoutUseCase;
+  MyProfileBlocStateManager(
+      super.initialState, this.getUserProfileUsecase, this.userLogoutUseCase) {
+    on<MyProfileScreenEvent>((MyProfileScreenEvent event, emit) async {
+      await event.when(loadMyProfileData: () async {
+        await getUserProfileUsecase.execute().then((result) {
+          emit(state.copyWith(
+              profileDataState: MyProfileDataState.success(result)));
+        }, onError: (error) {
+          emit(state.copyWith(
+              profileDataState:
+                  const MyProfileDataState.error(DomainErrorType.NotFound)));
+        });
+      }, logout: () async {
+        await userLogoutUseCase.execute();
+        emit(state.copyWith(isLoggedOut: true));
+      });
     });
   }
 }

@@ -17,7 +17,8 @@ extension UIModule on GetIt {
     registerFactory(() => MyProfileBlocStateManager(
         const MyProfileScreenGlobalState(
             profileDataState: MyProfileDataState.loading(), isLoggedOut: false),
-        GetIt.instance.get(instanceName: "GetMyProfileDataUseCase")));
+        GetIt.instance.get(instanceName: "GetMyProfileDataUseCase"),
+        get(instanceName: "UserLogoutUseCase")));
 
     registerFactory<RouteTransitionsBuilder>(
         () => (BuildContext context, Animation<double> anim1,

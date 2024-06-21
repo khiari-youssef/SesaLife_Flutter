@@ -37,20 +37,20 @@ mixin _$MyProfileScreenEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_$loadMyProfileData value) loadMyProfileData,
-    required TResult Function(_$logout value) logout,
+    required TResult Function(_loadMyProfileData value) loadMyProfileData,
+    required TResult Function(_logout value) logout,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_$loadMyProfileData value)? loadMyProfileData,
-    TResult? Function(_$logout value)? logout,
+    TResult? Function(_loadMyProfileData value)? loadMyProfileData,
+    TResult? Function(_logout value)? logout,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_$loadMyProfileData value)? loadMyProfileData,
-    TResult Function(_$logout value)? logout,
+    TResult Function(_loadMyProfileData value)? loadMyProfileData,
+    TResult Function(_logout value)? logout,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -76,25 +76,25 @@ class _$MyProfileScreenEventCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$$loadMyProfileDataImplCopyWith<$Res> {
-  factory _$$$loadMyProfileDataImplCopyWith(_$$loadMyProfileDataImpl value,
-          $Res Function(_$$loadMyProfileDataImpl) then) =
-      __$$$loadMyProfileDataImplCopyWithImpl<$Res>;
+abstract class _$$loadMyProfileDataImplCopyWith<$Res> {
+  factory _$$loadMyProfileDataImplCopyWith(_$loadMyProfileDataImpl value,
+          $Res Function(_$loadMyProfileDataImpl) then) =
+      __$$loadMyProfileDataImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$$loadMyProfileDataImplCopyWithImpl<$Res>
-    extends _$MyProfileScreenEventCopyWithImpl<$Res, _$$loadMyProfileDataImpl>
-    implements _$$$loadMyProfileDataImplCopyWith<$Res> {
-  __$$$loadMyProfileDataImplCopyWithImpl(_$$loadMyProfileDataImpl _value,
-      $Res Function(_$$loadMyProfileDataImpl) _then)
+class __$$loadMyProfileDataImplCopyWithImpl<$Res>
+    extends _$MyProfileScreenEventCopyWithImpl<$Res, _$loadMyProfileDataImpl>
+    implements _$$loadMyProfileDataImplCopyWith<$Res> {
+  __$$loadMyProfileDataImplCopyWithImpl(_$loadMyProfileDataImpl _value,
+      $Res Function(_$loadMyProfileDataImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$$loadMyProfileDataImpl implements _$loadMyProfileData {
-  const _$$loadMyProfileDataImpl();
+class _$loadMyProfileDataImpl implements _loadMyProfileData {
+  const _$loadMyProfileDataImpl();
 
   @override
   String toString() {
@@ -104,7 +104,7 @@ class _$$loadMyProfileDataImpl implements _$loadMyProfileData {
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$$loadMyProfileDataImpl);
+        (other.runtimeType == runtimeType && other is _$loadMyProfileDataImpl);
   }
 
   @override
@@ -144,8 +144,8 @@ class _$$loadMyProfileDataImpl implements _$loadMyProfileData {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_$loadMyProfileData value) loadMyProfileData,
-    required TResult Function(_$logout value) logout,
+    required TResult Function(_loadMyProfileData value) loadMyProfileData,
+    required TResult Function(_logout value) logout,
   }) {
     return loadMyProfileData(this);
   }
@@ -153,8 +153,8 @@ class _$$loadMyProfileDataImpl implements _$loadMyProfileData {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_$loadMyProfileData value)? loadMyProfileData,
-    TResult? Function(_$logout value)? logout,
+    TResult? Function(_loadMyProfileData value)? loadMyProfileData,
+    TResult? Function(_logout value)? logout,
   }) {
     return loadMyProfileData?.call(this);
   }
@@ -162,8 +162,8 @@ class _$$loadMyProfileDataImpl implements _$loadMyProfileData {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_$loadMyProfileData value)? loadMyProfileData,
-    TResult Function(_$logout value)? logout,
+    TResult Function(_loadMyProfileData value)? loadMyProfileData,
+    TResult Function(_logout value)? logout,
     required TResult orElse(),
   }) {
     if (loadMyProfileData != null) {
@@ -173,30 +173,30 @@ class _$$loadMyProfileDataImpl implements _$loadMyProfileData {
   }
 }
 
-abstract class _$loadMyProfileData implements MyProfileScreenEvent {
-  const factory _$loadMyProfileData() = _$$loadMyProfileDataImpl;
+abstract class _loadMyProfileData implements MyProfileScreenEvent {
+  const factory _loadMyProfileData() = _$loadMyProfileDataImpl;
 }
 
 /// @nodoc
-abstract class _$$$logoutImplCopyWith<$Res> {
-  factory _$$$logoutImplCopyWith(
-          _$$logoutImpl value, $Res Function(_$$logoutImpl) then) =
-      __$$$logoutImplCopyWithImpl<$Res>;
+abstract class _$$logoutImplCopyWith<$Res> {
+  factory _$$logoutImplCopyWith(
+          _$logoutImpl value, $Res Function(_$logoutImpl) then) =
+      __$$logoutImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$$logoutImplCopyWithImpl<$Res>
-    extends _$MyProfileScreenEventCopyWithImpl<$Res, _$$logoutImpl>
-    implements _$$$logoutImplCopyWith<$Res> {
-  __$$$logoutImplCopyWithImpl(
-      _$$logoutImpl _value, $Res Function(_$$logoutImpl) _then)
+class __$$logoutImplCopyWithImpl<$Res>
+    extends _$MyProfileScreenEventCopyWithImpl<$Res, _$logoutImpl>
+    implements _$$logoutImplCopyWith<$Res> {
+  __$$logoutImplCopyWithImpl(
+      _$logoutImpl _value, $Res Function(_$logoutImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$$logoutImpl implements _$logout {
-  const _$$logoutImpl();
+class _$logoutImpl implements _logout {
+  const _$logoutImpl();
 
   @override
   String toString() {
@@ -206,7 +206,7 @@ class _$$logoutImpl implements _$logout {
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$$logoutImpl);
+        (other.runtimeType == runtimeType && other is _$logoutImpl);
   }
 
   @override
@@ -246,8 +246,8 @@ class _$$logoutImpl implements _$logout {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_$loadMyProfileData value) loadMyProfileData,
-    required TResult Function(_$logout value) logout,
+    required TResult Function(_loadMyProfileData value) loadMyProfileData,
+    required TResult Function(_logout value) logout,
   }) {
     return logout(this);
   }
@@ -255,8 +255,8 @@ class _$$logoutImpl implements _$logout {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_$loadMyProfileData value)? loadMyProfileData,
-    TResult? Function(_$logout value)? logout,
+    TResult? Function(_loadMyProfileData value)? loadMyProfileData,
+    TResult? Function(_logout value)? logout,
   }) {
     return logout?.call(this);
   }
@@ -264,8 +264,8 @@ class _$$logoutImpl implements _$logout {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_$loadMyProfileData value)? loadMyProfileData,
-    TResult Function(_$logout value)? logout,
+    TResult Function(_loadMyProfileData value)? loadMyProfileData,
+    TResult Function(_logout value)? logout,
     required TResult orElse(),
   }) {
     if (logout != null) {
@@ -275,6 +275,6 @@ class _$$logoutImpl implements _$logout {
   }
 }
 
-abstract class _$logout implements MyProfileScreenEvent {
-  const factory _$logout() = _$$logoutImpl;
+abstract class _logout implements MyProfileScreenEvent {
+  const factory _logout() = _$logoutImpl;
 }

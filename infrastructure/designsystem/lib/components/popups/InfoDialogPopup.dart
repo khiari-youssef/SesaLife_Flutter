@@ -19,17 +19,9 @@ class InfoDialogPopup extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisSize: MainAxisSize.min,
             children: [
-              Text(
-                "title",
-                style: Theme.of(context).typography.black.displayMedium,
-                textAlign: TextAlign.center,
-              ),
+              TitleMedium(text: title ?? ""),
               SizedBox(height: 16.h),
-              Text(
-                "message",
-                style: Theme.of(context).typography.black.bodyMedium,
-                textAlign: TextAlign.center,
-              ),
+              BodyMedium(text: message),
               SizedBox(height: 16.h),
               SesameCustomButton(
                   buttonText: S.of(context).ok, onPressed: onClosed)
