@@ -17,7 +17,7 @@ class SubscriptionPaymentMethodState extends State<SubscriptionPaymentMethod> {
     },
         Material(
             child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 8.h),
+                padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 16.h),
                 child: Column(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -26,9 +26,13 @@ class SubscriptionPaymentMethodState extends State<SubscriptionPaymentMethod> {
                       StudentSubscriptionRecordCard(
                           record: widget.paymentRecord),
                       16.verticalSpace,
-                      HeadlineLarge(
-                        text: "  ${S.of(context).payment_method_choice_title}",
-                        textAlign: TextAlign.start,
+                      Align(
+                        alignment: Alignment.centerLeft,
+                        child: HeadlineLarge(
+                          text:
+                              "  ${S.of(context).payment_method_choice_title}",
+                          textAlign: TextAlign.start,
+                        ),
                       ),
                       16.verticalSpace,
                       Column(
@@ -55,39 +59,41 @@ class SubscriptionPaymentMethodState extends State<SubscriptionPaymentMethod> {
                         ],
                       ),
                       Expanded(
-                          child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              mainAxisSize: MainAxisSize.max,
-                              children: [
-                            SesameTermsAndPolicyCheckBox(
-                                selectedState: hasReadTheTermsAndPolicy,
-                                onChecked: (isChecked) {
-                                  setState(() {
-                                    hasReadTheTermsAndPolicy = isChecked;
-                                  });
-                                }),
-                            16.verticalSpace,
-                            SesameCustomButton(
-                                buttonText: S.of(context).confirm,
-                                isEnabled: hasReadTheTermsAndPolicy &&
-                                    (paymentMethod != null),
-                                onPressed: () {
-                                  if (paymentMethod ==
-                                      PaymentMethod.cashOrCheck) {
-                                    AutoRouter.of(context).push(
-                                        SubscriptionPaymentResultRoute(
-                                            paymentMethod: paymentMethod!,
-                                            paymentTransactionResult: null));
-                                  } else {
-                                    AutoRouter.of(context).push(
-                                        SubscriptionPaymentInterfaceRoute(
-                                            paymentRecord: widget.paymentRecord,
-                                            paymentMethod: paymentMethod!));
-                                  }
-                                }),
-                            16.verticalSpace
-                          ]))
+                        child: Column(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisSize: MainAxisSize.max,
+                            children: [
+                              SesameTermsAndPolicyCheckBox(
+                                  selectedState: hasReadTheTermsAndPolicy,
+                                  onChecked: (isChecked) {
+                                    setState(() {
+                                      hasReadTheTermsAndPolicy = isChecked;
+                                    });
+                                  }),
+                              16.verticalSpace,
+                              SesameCustomButton(
+                                  buttonText: S.of(context).confirm,
+                                  isEnabled: hasReadTheTermsAndPolicy &&
+                                      (paymentMethod != null),
+                                  onPressed: () {
+                                    if (paymentMethod ==
+                                        PaymentMethod.cashOrCheck) {
+                                      AutoRouter.of(context).push(
+                                          SubscriptionPaymentResultRoute(
+                                              paymentMethod: paymentMethod!,
+                                              paymentTransactionResult: null));
+                                    } else {
+                                      AutoRouter.of(context).push(
+                                          SubscriptionPaymentInterfaceRoute(
+                                              paymentRecord:
+                                                  widget.paymentRecord,
+                                              paymentMethod: paymentMethod!));
+                                    }
+                                  }),
+                              16.verticalSpace
+                            ]),
+                      )
                     ]))));
   }
 }

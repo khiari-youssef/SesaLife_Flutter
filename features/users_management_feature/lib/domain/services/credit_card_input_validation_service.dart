@@ -1,11 +1,11 @@
 class CreditCardInputValidationService {
   final RegExp onlyNumbersRegExp = RegExp(r"[0-9]*");
   final RegExp ccNumbersRegExp =
-      RegExp(r"[0-9]{4}\s[0-9]{4}\s[0-9]{4}\s[0-9]{4}");
+      RegExp(r"[0-9]{4}\s[0-9]{4}\s[0-9]{4}\s[0-9]{4}(\s*)");
   final RegExp ccNameRegExp = RegExp(r"^[a-zA-Z]+$");
 
   bool isCreditCardNumberValid(String ccNumber) {
-    return ccNumber.startsWith(RegExp("[4-5]")) &&
+    return ccNumber.replaceAll(' ', '').startsWith(RegExp("[4-5]")) &&
         ccNumbersRegExp.hasMatch(ccNumber);
   }
 

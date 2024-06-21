@@ -26,6 +26,8 @@ abstract interface class CreditCardSecureLocalStorageInterface {
   Future<CreditCardDetails?> readCreditCardData();
 
   Future<bool> hasSavedCreditCardDetails();
+
+  Future<void> clearAllCCdata();
 }
 
 class CreditCardSecureStorageImpl
@@ -71,5 +73,10 @@ class CreditCardSecureStorageImpl
         await fsStorage.containsKey(key: "ccHolderName") ||
         await fsStorage.containsKey(key: "cvv") ||
         await fsStorage.containsKey(key: "ccExpiryDate");
+  }
+
+  @override
+  Future<void> clearAllCCdata() async {
+    return fsStorage.deleteAll();
   }
 }

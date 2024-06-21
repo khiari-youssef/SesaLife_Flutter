@@ -1,6 +1,7 @@
 import 'package:core/core_data/localStorage/credit_card_secure_local_storage_interface.dart';
 import 'package:core/core_domain/DomainErrorType.dart';
 import 'package:core/core_domain/DomainUseCaseProtocol.dart';
+import 'package:core/core_utils/Logger.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 
 import '../../../../domain/entities/subscription_payment_result.dart';
@@ -64,6 +65,7 @@ class SubscriptionPaymentInterfaceBloc extends Bloc<
     });
     on<_loadCCdataFromSecureStorage>((event, emit) async {
       CreditCardDetails? data = await ccSecureStorage.readCreditCardData();
+      logger.i(data?.ccNumber);
       emit(state.copyWith(
           ccNumberState: CreditCardInputState(
               data: data?.ccNumber ?? "",
