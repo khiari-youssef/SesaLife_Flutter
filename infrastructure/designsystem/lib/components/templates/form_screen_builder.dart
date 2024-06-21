@@ -1,4 +1,4 @@
-import 'package:designsystem/components/buttons/FormStepButton.dart';
+import 'package:designsystem/components/buttons/form_step_button.dart';
 import 'package:designsystem/components/images/CustomIcon.dart';
 import 'package:designsystem/components/textViews/titles/FormStepTitle.dart';
 import 'package:designsystem/designsystem_exports.dart';

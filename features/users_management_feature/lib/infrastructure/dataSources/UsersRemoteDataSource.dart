@@ -71,7 +71,8 @@ class UsersRemoteDataSource {
       Map<String, dynamic> payload = jsonDecode(response.data.toString());
       return SesameUserDTO.fromJson(payload);
       */
-      return users.firstWhere((user) => user.email == email);
+      return users.firstWhere((user) =>
+          user.email.replaceAll(' ', '') == email.replaceAll(' ', ''));
     });
   }
 

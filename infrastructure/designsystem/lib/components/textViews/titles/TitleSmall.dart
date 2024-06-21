@@ -13,8 +13,10 @@ class TitleSmall extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Text(
         text,
-        style: Theme.of(context).typography.black.titleSmall?.copyWith(
-            color: color ?? Theme.of(context).colorScheme.onBackground),
+        style: Theme.of(context)
+            .textTheme
+            .titleSmall
+            ?.copyWith(color: color ?? Theme.of(context).colorScheme.onSurface),
         textAlign: textAlign,
       );
 }

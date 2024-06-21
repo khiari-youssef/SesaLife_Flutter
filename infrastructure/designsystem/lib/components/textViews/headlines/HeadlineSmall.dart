@@ -13,8 +13,10 @@ class HeadlineSmall extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Text(
         text,
-        style: Theme.of(context).typography.black.headlineSmall?.copyWith(
-            color: color ?? Theme.of(context).colorScheme.onBackground),
+        style: Theme.of(context)
+            .textTheme
+            .headlineSmall
+            ?.copyWith(color: color ?? Theme.of(context).colorScheme.onSurface),
         textAlign: textAlign,
       );
 }

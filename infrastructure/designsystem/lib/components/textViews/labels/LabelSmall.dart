@@ -13,7 +13,7 @@ class LabelSmall extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Text(
         text,
-        style: Theme.of(context).typography.black.labelSmall?.copyWith(
+        style: Theme.of(context).textTheme.labelSmall?.copyWith(
             color: color ?? Theme.of(context).colorScheme.onBackground),
         textAlign: textAlign,
       );

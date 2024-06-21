@@ -1,6 +1,6 @@
 library designsystem;
 
-export 'package:designsystem/components/buttons/SesameCustomButton.dart';
+export 'package:designsystem/components/buttons/sesame_custom_button.dart';
 export 'package:designsystem/components/datetime/SesameDatePicker.dart';
 export 'package:designsystem/components/images/SesameLogo.dart';
 export 'package:designsystem/components/input/SesamePasswordTextField.dart';
@@ -19,8 +19,8 @@ export 'package:localizations/localizations.dart';
 export 'package:lottie/lottie.dart';
 export 'package:shimmer/shimmer.dart';
 
-export 'components/checkables/SesameCheckbox.dart';
-export 'components/checkables/SesameRadioButton.dart';
+export 'components/checkables/sesame_checkbox.dart';
+export 'components/checkables/sesame_radio_button.dart';
 export 'components/checkables/sesame_terms_and_policy_check_box.dart';
 export 'components/images/CustomAssetImage.dart';
 export 'components/images/SesameAvatar.dart';
@@ -43,3 +43,4 @@ export 'components/textViews/labels/LabelSmall.dart';
 export 'components/textViews/titles/TitleLarge.dart';
 export 'components/textViews/titles/TitleMedium.dart';
 export 'components/textViews/titles/TitleSmall.dart';
+export 'components/list_items/profile_preview_list_item.dart';

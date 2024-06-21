@@ -16,8 +16,7 @@ class BodyLarge extends StatelessWidget {
   Widget build(BuildContext context) => Text(
         text,
         style: Theme.of(context)
-            .typography
-            .black
+            .textTheme
             .bodyLarge
             ?.copyWith(color: color ?? Theme.of(context).colorScheme.onSurface),
         textAlign: textAlign,

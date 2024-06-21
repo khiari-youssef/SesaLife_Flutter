@@ -61,9 +61,13 @@ class LoginRepository implements LoginRepositoryContract {
   @override
   Future<SesameUser> authenticateUserWithCredentials(
       String email, String password) async {
-    await Future.delayed(const Duration(seconds: 2));
-    SesameUserDTO userdata = await remoteDataSource
+    await Future.delayed(const Duration(seconds: 1));
+    SesameUserDTO? userdata = await remoteDataSource
         .loginWithCredentials(email, password)
+        .catchError((error) {
+          logger.e("user with email $email does not exist");
+          throw Exception();
+        })
         .asStream()
         .first;
     return localDataSource.saveUserProfile(userdata, true).then((value) {

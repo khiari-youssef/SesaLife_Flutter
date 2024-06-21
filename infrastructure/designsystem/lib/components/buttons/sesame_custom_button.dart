@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../images/CustomIcon.dart';
 
-export 'package:designsystem/components/buttons/SesameCustomButton.dart';
+export 'package:designsystem/components/buttons/sesame_custom_button.dart';
 export 'package:designsystem/components/input/SesameCustomTextField.dart';
 
 enum SesameButtonVariant { soft, hard, tertiary, neutral, warning, positif }

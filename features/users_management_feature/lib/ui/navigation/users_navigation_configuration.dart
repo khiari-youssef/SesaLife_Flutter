@@ -25,6 +25,7 @@ class UsersNavigationConfiguration extends $UsersNavigationConfiguration {
         AutoRoute(
             path: "/SubscriptionPaymentResultRoute",
             page: SubscriptionPaymentResultRoute.page),
+        AutoRoute(path: "/UsersListRoute", page: UsersListRoute.page),
         AutoRoute(path: "/MySubscriptionRoute", page: MySubscriptionRoute.page),
         AutoRoute(
             path: "/SesameProgramsCatalog", page: SesameProgramsCatalog.page),
