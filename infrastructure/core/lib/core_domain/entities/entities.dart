@@ -5,4 +5,5 @@ export 'SesameClass.dart';
 export 'SesameModule.dart';
 export 'SesameSubject.dart';
 export 'SesameUploadRepository.dart';
-export 'UserProfilePreview.dart';
+export 'user_profile_preview.dart';
+export 'user_sex.dart';

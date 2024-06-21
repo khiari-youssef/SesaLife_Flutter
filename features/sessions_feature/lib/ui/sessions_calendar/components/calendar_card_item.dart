@@ -1,3 +1,4 @@
+import 'package:core/core_domain/entities/user_sex.dart';
 import 'package:designsystem/designsystem_exports.dart';
 import 'package:designsystem/extensions.dart';
 import 'package:sessions_feature/domain/entities/sesame_course_session.dart';
@@ -74,7 +75,15 @@ class CalendarSessionCard extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
-                    SesameAvatar(width: 24.w, height: 24.h, url: ''),
+                    SesameAvatar(
+                      width: 24.w,
+                      height: 24.h,
+                      url: '',
+                      placeholder: switch (data.teacher.sex) {
+                        UserSex.male => "user_male.svg",
+                        UserSex.female => "user_female.svg"
+                      },
+                    ),
                     SizedBox(width: 12.w),
                     Text("${data.teacher.firstName} ${data.teacher.lastName}",
                         textAlign: TextAlign.start,

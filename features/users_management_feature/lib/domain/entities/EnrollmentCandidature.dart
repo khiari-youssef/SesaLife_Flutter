@@ -1,4 +1,4 @@
-import 'package:users_management_feature/domain/entities/SesameUser.dart';
+import 'package:core/core_domain/entities/user_sex.dart';
 
 class EnrollmentCandidature {
   final String personalEmail;

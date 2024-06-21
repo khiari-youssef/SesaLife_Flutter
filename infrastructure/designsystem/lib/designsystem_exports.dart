@@ -43,4 +43,3 @@ export 'components/textViews/labels/LabelSmall.dart';
 export 'components/textViews/titles/TitleLarge.dart';
 export 'components/textViews/titles/TitleMedium.dart';
 export 'components/textViews/titles/TitleSmall.dart';
-export 'components/list_items/profile_preview_list_item.dart';

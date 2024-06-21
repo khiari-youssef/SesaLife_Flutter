@@ -18,7 +18,7 @@ class SesamePolicyAndTermsScreenState
   @override
   Widget build(BuildContext context) =>
       titleScreenBuilder(context, S.of(context).privacy_policy_label, null, () {
-        AutoRouter.of(context).popUntilRouteWithName("GuestSpaceRoute");
+        AutoRouter.of(context).back();
       },
           ListView.builder(
               itemCount: stateManager.state.length,

@@ -1,8 +1,6 @@
 import 'package:core/exports.dart';
 import 'package:users_management_feature/domain/entities/SesameRole.dart';
 
-enum UserSex { male, female }
-
 abstract class SesameUser {
   final String registrationID;
   final String candidatureID;

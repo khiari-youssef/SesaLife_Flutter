@@ -22,6 +22,7 @@ class HomeSessionsBloc extends Bloc<HomeCalendarEvent, HomeSessionsState> {
             id: "teacher-id",
             firstName: "Teacher",
             lastName: "",
+            sex: UserSex.male,
             email: "teacher@sesame.com.tn",
             profilePicture: ""),
         startDateTime: DateTime(2024, 06, index + 1, 8, 30),
