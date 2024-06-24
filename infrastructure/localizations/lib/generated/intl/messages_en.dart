@@ -174,7 +174,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Privacy & Security policy"),
         "profile_badge":
             MessageLookupByLibrary.simpleMessage("My Sesame badge"),
-        "profile_classes": MessageLookupByLibrary.simpleMessage("My class"),
+        "profile_classes": MessageLookupByLibrary.simpleMessage("My classes"),
         "profile_grades": MessageLookupByLibrary.simpleMessage("My grades"),
         "profile_professional_student":
             MessageLookupByLibrary.simpleMessage("Student"),
@@ -210,6 +210,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "sex_male": MessageLookupByLibrary.simpleMessage("Male"),
         "terms_of_service_label":
             MessageLookupByLibrary.simpleMessage("Terms of service"),
+        "users_search_no_result":
+            MessageLookupByLibrary.simpleMessage("No search result !"),
+        "users_search_placeholder":
+            MessageLookupByLibrary.simpleMessage("Search profiles by name ..."),
         "welcome_logo_description":
             MessageLookupByLibrary.simpleMessage("Student Life"),
         "welcome_logo_sesame_name":

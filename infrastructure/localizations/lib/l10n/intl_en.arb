@@ -76,7 +76,7 @@
     "profile_subscription" : "My subscription",
     "profile_projects" : "My projects",
     "profile_grades" : "My grades",
-    "profile_classes" : "My class",
+    "profile_classes" : "My classes",
     "payment_subscription_expected_date" : "Payment expected before {date}",
     "payment_subscription_overdue" : "Payment overdue !",
     "payment_subscription_completion_date" : "Payment completed on {date}",
@@ -112,5 +112,7 @@
   "payment_credit_card_save_data_request" : "Would you like to securely save or update your credit card details in your device ?",
   "payment_credit_card_load_data_request" : "Would you like to securely load your credit card details from your device ?",
    "payment_cashOrCheck_result_trans_id" : "Transaction ID : {transid}",
-  "payment_cashOrCheck_result_datetime" : "Transaction occured on {data} at {time}"
+  "payment_cashOrCheck_result_datetime" : "Transaction occured on {data} at {time}",
+  "users_search_placeholder" : "Search profiles by name ...",
+  "users_search_no_result" : "No search result !"
 }

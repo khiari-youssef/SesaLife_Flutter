@@ -1,4 +1,4 @@
-enum SesamePermissionState { denied, granted, requ_auth }
+enum SesamePermissionState { denied, granted, reqAuth }
 
 class SesamePermission {
   final String id;

@@ -18,13 +18,15 @@ class HomeSessionsBloc extends Bloc<HomeCalendarEvent, HomeSessionsState> {
             sesameClass: SesameClass(
                 id: "ingta-4c", group: "C", level: "4", name: "ingta"),
             coefficient: 1.0),
-        teacher: UserProfilePreview(
+        teacher: StudentProfilePreview(
             id: "teacher-id",
             firstName: "Teacher",
             lastName: "",
             sex: UserSex.male,
             email: "teacher@sesame.com.tn",
-            profilePicture: ""),
+            profilePicture: "",
+            sesameClass: SesameClass(
+                id: "ingta4-c", name: "ingta", level: "4", group: "C")),
         startDateTime: DateTime(2024, 06, index + 1, 8, 30),
         toleratedDelayInMinutes: 15,
         roomID: "206",

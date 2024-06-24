@@ -110,5 +110,7 @@
   "payment_credit_card_save_data_request" : "Voulez-vous sauvegarder les données de votre carte bancaire localement en toute securité ?",
   "payment_credit_card_load_data_request" : "Voulez-vous utiliser les données existantes de votre carte bancaire en toute securité ?",
   "payment_cashOrCheck_result_trans_id" : "Numéro de transaction : {transid}",
-  "payment_cashOrCheck_result_datetime" : "La transaction a eu lieu le {data} à {time}"
+  "payment_cashOrCheck_result_datetime" : "La transaction a eu lieu le {data} à {time}",
+  "users_search_placeholder" : "Rechercher des profiles par nom ...",
+  "users_search_no_result" : "Pas de résultat !"
 }

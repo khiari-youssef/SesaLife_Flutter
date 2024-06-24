@@ -7,6 +7,7 @@ import '../infrastructure/ports/repositoryContracts/UserDataRepositoryContract.d
 import '../infrastructure/repositories/LoginRepository.dart';
 import '../infrastructure/repositories/UserDataRepository.dart';
 import '../infrastructure/repositories/UserSettingsRepository.dart';
+import '../infrastructure/repositories/UsersSearchRepository.dart';
 
 extension RepositoriesModule on GetIt {
   void loadRepositoryModule() {
@@ -23,5 +24,8 @@ extension RepositoriesModule on GetIt {
     registerFactory<UserSettingsRepositoryContract>(
         () => UserSettingsRepository(get()),
         instanceName: "UserSettingsRepository");
+    registerFactory<UsersSearchRepositoryContract>(
+        () => UsersSearchRepository(),
+        instanceName: "UsersSearchRepository");
   }
 }

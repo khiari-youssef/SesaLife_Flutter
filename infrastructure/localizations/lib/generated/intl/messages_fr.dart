@@ -205,6 +205,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "sex_male": MessageLookupByLibrary.simpleMessage("Homme"),
         "terms_of_service_label":
             MessageLookupByLibrary.simpleMessage("Termes d\'utilisation"),
+        "users_search_no_result":
+            MessageLookupByLibrary.simpleMessage("Pas de résultat !"),
+        "users_search_placeholder": MessageLookupByLibrary.simpleMessage(
+            "Rechercher des profiles par nom ..."),
         "welcome_logo_description":
             MessageLookupByLibrary.simpleMessage("Student Life"),
         "welcome_logo_sesame_name":

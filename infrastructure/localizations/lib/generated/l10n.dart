@@ -1,7 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-
 import 'intl/messages_all.dart';
 
 // **************************************************************************
@@ -811,10 +810,10 @@ class S {
     );
   }
 
-  /// `My class`
+  /// `My classes`
   String get profile_classes {
     return Intl.message(
-      'My class',
+      'My classes',
       name: 'profile_classes',
       desc: '',
       args: [],
@@ -1178,6 +1177,26 @@ class S {
       name: 'payment_cashOrCheck_result_datetime',
       desc: '',
       args: [data, time],
+    );
+  }
+
+  /// `Search profiles by name ...`
+  String get users_search_placeholder {
+    return Intl.message(
+      'Search profiles by name ...',
+      name: 'users_search_placeholder',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No search result !`
+  String get users_search_no_result {
+    return Intl.message(
+      'No search result !',
+      name: 'users_search_no_result',
+      desc: '',
+      args: [],
     );
   }
 }

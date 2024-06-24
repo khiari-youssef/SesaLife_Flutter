@@ -37,7 +37,7 @@ class TeacherDomainToExternalEntityMapper
                     switch (dto.state) {
                       "denied" => SesamePermissionState.denied,
                       "granted" => SesamePermissionState.granted,
-                      "req_auth" => SesamePermissionState.requ_auth,
+                      "req_auth" => SesamePermissionState.reqAuth,
                       _ => null
                     }!))
                 .toList()),
@@ -80,7 +80,7 @@ class TeacherDomainToExternalEntityMapper
                     state: switch (permission.state) {
                       SesamePermissionState.denied => "denied",
                       SesamePermissionState.granted => "granted",
-                      SesamePermissionState.requ_auth => "req_auth",
+                      SesamePermissionState.reqAuth => "req_auth",
                     }))
                 .toList()),
         badge: SesameBadgeDTO(
