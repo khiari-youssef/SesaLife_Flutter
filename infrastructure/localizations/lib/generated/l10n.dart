@@ -210,6 +210,46 @@ class S {
     );
   }
 
+  /// `role`
+  String get job_role {
+    return Intl.message(
+      'role',
+      name: 'job_role',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Assigned classes`
+  String get assigned_classes {
+    return Intl.message(
+      'Assigned classes',
+      name: 'assigned_classes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `class`
+  String get student_class {
+    return Intl.message(
+      'class',
+      name: 'student_class',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `company`
+  String get company {
+    return Intl.message(
+      'company',
+      name: 'company',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Choose your diploma :`
   String get diploma_choice_title {
     return Intl.message(

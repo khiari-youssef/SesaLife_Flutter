@@ -36,6 +36,8 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "assigned_classes":
+            MessageLookupByLibrary.simpleMessage("Classes assignés"),
         "badge_click_to_scan":
             MessageLookupByLibrary.simpleMessage("Cliquer pour scanner"),
         "badge_expired": MessageLookupByLibrary.simpleMessage("Expiré"),
@@ -48,6 +50,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "birthdate": MessageLookupByLibrary.simpleMessage("Date de naissance"),
         "calendar_title": m0,
         "cancel": MessageLookupByLibrary.simpleMessage("Annuler"),
+        "company": MessageLookupByLibrary.simpleMessage("entreprise"),
         "confirm": MessageLookupByLibrary.simpleMessage("Confirmer"),
         "device_auth_action": MessageLookupByLibrary.simpleMessage(
             "Cette action nécessite votre authentification"),
@@ -87,6 +90,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "guest_space": MessageLookupByLibrary.simpleMessage("Espace visiteur"),
         "identity_verification":
             MessageLookupByLibrary.simpleMessage("Vérification d\'identitée"),
+        "job_role": MessageLookupByLibrary.simpleMessage("role"),
         "lastName": MessageLookupByLibrary.simpleMessage("Nom"),
         "login": MessageLookupByLibrary.simpleMessage("Se connecter"),
         "logout": MessageLookupByLibrary.simpleMessage("Se déconnecter"),
@@ -203,6 +207,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Je veux rester connecté"),
         "sex_female": MessageLookupByLibrary.simpleMessage("Femme"),
         "sex_male": MessageLookupByLibrary.simpleMessage("Homme"),
+        "student_class": MessageLookupByLibrary.simpleMessage("classe"),
         "terms_of_service_label":
             MessageLookupByLibrary.simpleMessage("Termes d\'utilisation"),
         "users_search_no_result":

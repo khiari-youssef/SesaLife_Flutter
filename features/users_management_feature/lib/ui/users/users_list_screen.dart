@@ -99,14 +99,31 @@ class UsersListScreenState extends State<UsersListScreen> {
                               profilePreview: profile,
                               onExpandStateChanged: (isExpanded) {},
                               expandedStateWidgetBuilder: () {
-                                return SizedBox(
-                                  height: 80.h,
-                                  child: Center(
-                                    child: LabelMedium(
-                                      text: "email : email$index@gmail.com",
-                                    ),
-                                  ),
-                                );
+                                Map<String, String?> data = {
+                                  S.of(context).email: profile.email,
+                                  S.of(context).phone: profile.phone
+                                };
+                                if (profile is StudentProfilePreview) {
+                                  data.addAll({
+                                    S.of(context).job_role: profile.jobPosition,
+                                    S.of(context).company: profile.company,
+                                    S.of(context).student_class:
+                                        profile.sesameClass.toString()
+                                  });
+                                }
+                                if (profile is TeacherProfilePreview) {
+                                  data.addAll({
+                                    S.of(context).job_role: profile.background,
+                                    S.of(context).assigned_classes:
+                                        profile.assignedClasses.join(" , ")
+                                  });
+                                }
+                                if (profile is AdminProfilePreview) {
+                                  data.addAll({
+                                    S.of(context).job_role: profile.position
+                                  });
+                                }
+                                return CardExpandedStateMenu(details: data);
                               },
                             )
                           : ProfilePreviewCardWithRedirectAction(

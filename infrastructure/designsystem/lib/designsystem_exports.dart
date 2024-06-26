@@ -47,3 +47,4 @@ export 'components/textViews/titles/TitleMedium.dart';
 export 'components/textViews/titles/TitleSmall.dart';
 export 'components/input/sesame_search_bar.dart';
 export 'components/templates/no_data_found_template.dart';
+export 'components/menus/card_expanded_state_menu.dart';

@@ -12,7 +12,7 @@ class NoDataFoundTemplate extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           16.verticalSpace,
-          TitleLarge(text: message),
+          TitleLarge(text: message, color: const Color(0xFF696969)),
           24.verticalSpace,
           CustomAssetImage(
             assetImagePath: "raster/no_data_found.png",

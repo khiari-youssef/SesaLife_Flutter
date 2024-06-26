@@ -35,6 +35,8 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "assigned_classes":
+            MessageLookupByLibrary.simpleMessage("Assigned classes"),
         "badge_click_to_scan":
             MessageLookupByLibrary.simpleMessage("Click to scan"),
         "badge_expired": MessageLookupByLibrary.simpleMessage("Expired"),
@@ -47,6 +49,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "birthdate": MessageLookupByLibrary.simpleMessage("Birthdate"),
         "calendar_title": m0,
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
+        "company": MessageLookupByLibrary.simpleMessage("company"),
         "confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
         "device_auth_action": MessageLookupByLibrary.simpleMessage(
             "This action requires authentication"),
@@ -86,6 +89,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "guest_space": MessageLookupByLibrary.simpleMessage("Guest space"),
         "identity_verification":
             MessageLookupByLibrary.simpleMessage("Identity verification"),
+        "job_role": MessageLookupByLibrary.simpleMessage("role"),
         "lastName": MessageLookupByLibrary.simpleMessage("LastName"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "logout": MessageLookupByLibrary.simpleMessage("Logout"),
@@ -208,6 +212,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Stay logged in"),
         "sex_female": MessageLookupByLibrary.simpleMessage("Female"),
         "sex_male": MessageLookupByLibrary.simpleMessage("Male"),
+        "student_class": MessageLookupByLibrary.simpleMessage("class"),
         "terms_of_service_label":
             MessageLookupByLibrary.simpleMessage("Terms of service"),
         "users_search_no_result":
