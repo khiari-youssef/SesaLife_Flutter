@@ -1,5 +1,7 @@
 import 'package:core/core_data/localStorage/credit_card_secure_local_storage_interface.dart';
 import 'package:core/core_domain/DomainUseCaseProtocol.dart';
+import 'package:core/core_domain/entities/SesameClass.dart';
+import 'package:core/core_domain/entities/user_profile_preview.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 
 import '../domain/entities/LoginMethod.dart';
@@ -7,6 +9,7 @@ import '../domain/entities/SesameUser.dart';
 import '../domain/entities/subscription_payment_result.dart';
 import '../domain/usecases/credit_card_payment_use_case.dart';
 import '../domain/usecases/get_my_profile_data_use_case.dart';
+import '../domain/usecases/sesame_classes_search_usecase.dart';
 import '../domain/usecases/user_login_use_case.dart';
 import '../domain/usecases/user_logout_usecase.dart';
 import '../domain/usecases/user_search_usecase.dart';
@@ -32,8 +35,14 @@ extension UseCasesModule on GetIt {
             get(instanceName: "UserSettingsRepository"),
             get(instanceName: "CreditCardSecureStorageImpl")),
         instanceName: "UserLogoutUseCase");
-    registerFactory<DomainUseCaseProtocol<UserSearchQuery, List<SesameUser>>>(
-        () => UserSearchUseCase(),
+    registerFactory<
+            DomainUseCaseProtocol<UserSearchQuery,
+                Future<List<UserProfilePreview>>>>(
+        () => UserSearchUseCase(get(instanceName: "UsersSearchRepository")),
         instanceName: "UserSearchUseCase");
+    registerFactory<
+            DomainUseCaseProtocol<SesameClassesSearchQuery, List<SesameClass>>>(
+        () => SesameClassesSearchUseCase(),
+        instanceName: "SesameClassesSearchUseCase");
   }
 }

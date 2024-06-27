@@ -1,25 +1,33 @@
 import 'package:core/core_domain/DomainUseCaseProtocol.dart';
+import 'package:core/core_domain/entities/user_profile_preview.dart';
 import 'package:users_management_feature/domain/entities/SesameUser.dart';
+
+import '../../infrastructure/repositories/UsersSearchRepository.dart';
 
 enum UserRoleSearchFilter { student, teacher, admin, all }
 
 class UserSearchQuery {
-  final String queryInput;
+  final String? queryInput;
   final bool? queryByEmail;
   final bool? queryByName;
   final UserRoleSearchFilter roleSearchFilter;
   UserSearchQuery(
-      {required this.queryInput,
+      {this.queryInput,
       this.queryByEmail,
       this.queryByName,
       required this.roleSearchFilter});
 }
 
 class UserSearchUseCase
-    implements DomainUseCaseProtocol<UserSearchQuery, List<SesameUser>> {
+    implements
+        DomainUseCaseProtocol<UserSearchQuery,
+            Future<List<UserProfilePreview>>> {
+  final UsersSearchRepositoryContract repositoryContract;
+  UserSearchUseCase(this.repositoryContract);
+
   @override
-  List<SesameUser> execute(UserSearchQuery input) {
-    // TODO: implement execute
-    throw UnimplementedError();
+  Future<List<UserProfilePreview>> execute(UserSearchQuery input) async {
+    await Future.delayed(const Duration(seconds: 1));
+    return repositoryContract.queryUsersByName(input.queryInput ?? "");
   }
 }

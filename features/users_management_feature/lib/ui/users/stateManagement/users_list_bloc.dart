@@ -1,8 +1,10 @@
 import 'package:core/core_domain/DomainErrorType.dart';
+import 'package:core/core_domain/DomainUseCaseProtocol.dart';
 import 'package:core/core_domain/entities/entities.dart';
 import 'package:core/core_domain/entities/user_profile_preview.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 
+import '../../../domain/entities/SesameUser.dart';
 import '../../../domain/usecases/user_search_usecase.dart';
 import '../../../infrastructure/repositories/UsersSearchRepository.dart';
 
@@ -11,17 +13,20 @@ part 'users_list_event.dart';
 part 'users_list_state.dart';
 
 class UsersListBloc extends Bloc<UsersListEvent, UsersListState> {
-  UsersSearchRepositoryContract repositoryContract =
-      GetIt.instance.get(instanceName: "UsersSearchRepository");
-  UsersListBloc(UsersListState initialState) : super(initialState) {
+  DomainUseCaseProtocol<UserSearchQuery, Future<List<UserProfilePreview>>>
+      useCaseProtocol = GetIt.instance.get(instanceName: "UserSearchUseCase");
+  UsersListBloc(super.initialState) {
     on<UsersListEvent>(_handleUserSearchEvent);
   }
 
   void _handleUserSearchEvent(
       UsersListEvent event, Emitter<UsersListState> emit) async {
     emit(const UsersListState.loading());
-    List<UserProfilePreview> result =
-        await repositoryContract.queryUsersByName(event.nameQuery ?? "");
+    List<UserProfilePreview> result = await useCaseProtocol.execute(
+        UserSearchQuery(
+            queryInput: event.nameQuery,
+            roleSearchFilter:
+                event.userRoleSearchFilter ?? UserRoleSearchFilter.all));
     emit(UsersListState.success(result));
   }
 }

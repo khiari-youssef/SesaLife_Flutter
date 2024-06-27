@@ -86,54 +86,51 @@ class UsersListScreenState extends State<UsersListScreen> {
 
   Widget buildUsersList(BuildContext context, List<UserProfilePreview>? data) {
     return AnimatedContainer(
-        duration: const Duration(milliseconds: 400),
-        curve: Curves.bounceIn,
-        child: (data?.isNotEmpty == true)
-            ? ListView.builder(
-                itemCount: data!.length,
-                itemBuilder: (context, index) {
-                  UserProfilePreview profile = data[index];
-                  return Padding(
-                      padding: EdgeInsets.all(8.r),
-                      child: profile.canDisplayExtraData()
-                          ? ExpandablePreviewListItem(
-                              profilePreview: profile,
-                              onExpandStateChanged: (isExpanded) {},
-                              expandedStateWidgetBuilder: () {
-                                Map<String, String?> data = {
-                                  S.of(context).email: profile.email,
-                                  S.of(context).phone: profile.phone
-                                };
-                                if (profile is StudentProfilePreview) {
-                                  data.addAll({
-                                    S.of(context).job_role: profile.jobPosition,
-                                    S.of(context).company: profile.company,
-                                    S.of(context).student_class:
-                                        profile.sesameClass.toString()
-                                  });
-                                }
-                                if (profile is TeacherProfilePreview) {
-                                  data.addAll({
-                                    S.of(context).job_role: profile.background,
-                                    S.of(context).assigned_classes:
-                                        profile.assignedClasses.join(" , ")
-                                  });
-                                }
-                                if (profile is AdminProfilePreview) {
-                                  data.addAll({
-                                    S.of(context).job_role: profile.position
-                                  });
-                                }
-                                return CardExpandedStateMenu(details: data);
-                              },
-                            )
-                          : ProfilePreviewCardWithRedirectAction(
-                              profilePreview: profile, onClicked: () {}));
-                })
-            : Expanded(
-                child: NoDataFoundTemplate(
-                    message: S.of(context).users_search_no_result),
-              ));
+      duration: const Duration(milliseconds: 400),
+      curve: Curves.bounceIn,
+      child: (data?.isNotEmpty == true)
+          ? ListView.builder(
+              itemCount: data!.length,
+              itemBuilder: (context, index) {
+                UserProfilePreview profile = data[index];
+                return Padding(
+                    padding: EdgeInsets.all(8.r),
+                    child: profile.canDisplayExtraData()
+                        ? ExpandablePreviewListItem(
+                            profilePreview: profile,
+                            onExpandStateChanged: (isExpanded) {},
+                            expandedStateWidgetBuilder: () {
+                              Map<String, String?> data = {
+                                S.of(context).email: profile.email,
+                                S.of(context).phone: profile.phone
+                              };
+                              if (profile is StudentProfilePreview) {
+                                data.addAll({
+                                  S.of(context).job_role: profile.jobPosition,
+                                  S.of(context).company: profile.company,
+                                  S.of(context).student_class:
+                                      profile.sesameClass.toString()
+                                });
+                              }
+                              if (profile is TeacherProfilePreview) {
+                                data.addAll({
+                                  S.of(context).job_role: profile.background,
+                                  S.of(context).assigned_classes:
+                                      profile.assignedClasses.join(" , ")
+                                });
+                              }
+                              if (profile is AdminProfilePreview) {
+                                data.addAll(
+                                    {S.of(context).job_role: profile.position});
+                              }
+                              return CardExpandedStateMenu(details: data);
+                            },
+                          )
+                        : ProfilePreviewCardWithRedirectAction(
+                            profilePreview: profile, onClicked: () {}));
+              })
+          : NoDataFoundTemplate(message: S.of(context).users_search_no_result),
+    );
   }
 }
 
