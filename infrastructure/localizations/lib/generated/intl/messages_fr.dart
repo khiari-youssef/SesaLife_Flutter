@@ -210,6 +210,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "student_class": MessageLookupByLibrary.simpleMessage("classe"),
         "terms_of_service_label":
             MessageLookupByLibrary.simpleMessage("Termes d\'utilisation"),
+        "user_profiles":
+            MessageLookupByLibrary.simpleMessage("Profiles utilisateurs"),
         "users_search_no_result":
             MessageLookupByLibrary.simpleMessage("Pas de résultat !"),
         "users_search_placeholder": MessageLookupByLibrary.simpleMessage(

@@ -40,17 +40,17 @@ mixin _$SesameClassesEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) loadSesameClasses,
+    required TResult Function(_loadSesameClasses value) loadSesameClasses,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? loadSesameClasses,
+    TResult? Function(_loadSesameClasses value)? loadSesameClasses,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? loadSesameClasses,
+    TResult Function(_loadSesameClasses value)? loadSesameClasses,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -99,22 +99,22 @@ class _$SesameClassesEventCopyWithImpl<$Res, $Val extends SesameClassesEvent>
 }
 
 /// @nodoc
-abstract class _$$StartedImplCopyWith<$Res>
+abstract class _$$loadSesameClassesImplCopyWith<$Res>
     implements $SesameClassesEventCopyWith<$Res> {
-  factory _$$StartedImplCopyWith(
-          _$StartedImpl value, $Res Function(_$StartedImpl) then) =
-      __$$StartedImplCopyWithImpl<$Res>;
+  factory _$$loadSesameClassesImplCopyWith(_$loadSesameClassesImpl value,
+          $Res Function(_$loadSesameClassesImpl) then) =
+      __$$loadSesameClassesImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String? searchQuery, SesameClassSearchFilter? filter});
 }
 
 /// @nodoc
-class __$$StartedImplCopyWithImpl<$Res>
-    extends _$SesameClassesEventCopyWithImpl<$Res, _$StartedImpl>
-    implements _$$StartedImplCopyWith<$Res> {
-  __$$StartedImplCopyWithImpl(
-      _$StartedImpl _value, $Res Function(_$StartedImpl) _then)
+class __$$loadSesameClassesImplCopyWithImpl<$Res>
+    extends _$SesameClassesEventCopyWithImpl<$Res, _$loadSesameClassesImpl>
+    implements _$$loadSesameClassesImplCopyWith<$Res> {
+  __$$loadSesameClassesImplCopyWithImpl(_$loadSesameClassesImpl _value,
+      $Res Function(_$loadSesameClassesImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -123,7 +123,7 @@ class __$$StartedImplCopyWithImpl<$Res>
     Object? searchQuery = freezed,
     Object? filter = freezed,
   }) {
-    return _then(_$StartedImpl(
+    return _then(_$loadSesameClassesImpl(
       searchQuery: freezed == searchQuery
           ? _value.searchQuery
           : searchQuery // ignore: cast_nullable_to_non_nullable
@@ -138,8 +138,8 @@ class __$$StartedImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$StartedImpl implements _Started {
-  const _$StartedImpl({this.searchQuery, this.filter});
+class _$loadSesameClassesImpl implements _loadSesameClasses {
+  const _$loadSesameClassesImpl({this.searchQuery, this.filter});
 
   @override
   final String? searchQuery;
@@ -155,7 +155,7 @@ class _$StartedImpl implements _Started {
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$StartedImpl &&
+            other is _$loadSesameClassesImpl &&
             (identical(other.searchQuery, searchQuery) ||
                 other.searchQuery == searchQuery) &&
             (identical(other.filter, filter) || other.filter == filter));
@@ -167,8 +167,9 @@ class _$StartedImpl implements _Started {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$StartedImplCopyWith<_$StartedImpl> get copyWith =>
-      __$$StartedImplCopyWithImpl<_$StartedImpl>(this, _$identity);
+  _$$loadSesameClassesImplCopyWith<_$loadSesameClassesImpl> get copyWith =>
+      __$$loadSesameClassesImplCopyWithImpl<_$loadSesameClassesImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -205,7 +206,7 @@ class _$StartedImpl implements _Started {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) loadSesameClasses,
+    required TResult Function(_loadSesameClasses value) loadSesameClasses,
   }) {
     return loadSesameClasses(this);
   }
@@ -213,7 +214,7 @@ class _$StartedImpl implements _Started {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? loadSesameClasses,
+    TResult? Function(_loadSesameClasses value)? loadSesameClasses,
   }) {
     return loadSesameClasses?.call(this);
   }
@@ -221,7 +222,7 @@ class _$StartedImpl implements _Started {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? loadSesameClasses,
+    TResult Function(_loadSesameClasses value)? loadSesameClasses,
     required TResult orElse(),
   }) {
     if (loadSesameClasses != null) {
@@ -231,10 +232,10 @@ class _$StartedImpl implements _Started {
   }
 }
 
-abstract class _Started implements SesameClassesEvent {
-  const factory _Started(
+abstract class _loadSesameClasses implements SesameClassesEvent {
+  const factory _loadSesameClasses(
       {final String? searchQuery,
-      final SesameClassSearchFilter? filter}) = _$StartedImpl;
+      final SesameClassSearchFilter? filter}) = _$loadSesameClassesImpl;
 
   @override
   String? get searchQuery;
@@ -242,7 +243,7 @@ abstract class _Started implements SesameClassesEvent {
   SesameClassSearchFilter? get filter;
   @override
   @JsonKey(ignore: true)
-  _$$StartedImplCopyWith<_$StartedImpl> get copyWith =>
+  _$$loadSesameClassesImplCopyWith<_$loadSesameClassesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 

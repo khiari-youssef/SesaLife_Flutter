@@ -1,3 +1,4 @@
+import 'package:core/core_domain/entities/entities.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 import 'package:users_management_feature/ui/sesameClasses/stateManagement/sesame_classes_bloc.dart';
 
@@ -8,7 +9,8 @@ class SesameClassesScreenState extends State<SesameClassesScreen> {
         AutoRouter.of(context).back();
       },
           BlocProvider<SesameClassesBloc>(
-              create: (context) => SesameClassesBloc(),
+              create: (context) => SesameClassesBloc(
+                  SesameClassesState.initial(initialData: widget.initialData)),
               child: BlocConsumer<SesameClassesBloc, SesameClassesState>(
                 listener: (context, state) {},
                 builder: (context, state) {
@@ -19,7 +21,8 @@ class SesameClassesScreenState extends State<SesameClassesScreen> {
 
 @RoutePage(name: "SesameClassesRoute")
 class SesameClassesScreen extends StatefulWidget {
-  const SesameClassesScreen({super.key});
+  final List<SesameClass>? initialData;
+  const SesameClassesScreen({super.key, this.initialData});
 
   @override
   State<StatefulWidget> createState() => SesameClassesScreenState();

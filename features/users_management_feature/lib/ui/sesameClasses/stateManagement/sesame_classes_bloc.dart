@@ -12,12 +12,12 @@ part 'sesame_classes_state.dart';
 part 'sesame_classes_bloc.freezed.dart';
 
 class SesameClassesBloc extends Bloc<SesameClassesEvent, SesameClassesState> {
-  DomainUseCaseProtocol<SesameClassesSearchQuery, List<SesameClass>>
+  DomainUseCaseProtocol<SesameClassesSearchQuery, Future<List<SesameClass>>>
       useCaseProtocol =
       GetIt.instance.get(instanceName: "SesameClassesSearchUseCase");
-  SesameClassesBloc() : super(const SesameClassesState.initial()) {
-    on<SesameClassesEvent>((event, emit) {
-      // TODO: implement event handler
-    });
+  SesameClassesBloc(SesameClassesState initialState) : super(initialState) {
+    on<_loadSesameClasses>(_handleSesameClassesSearch);
   }
+  void _handleSesameClassesSearch(
+      _loadSesameClasses event, Emitter<SesameClassesState> emit) async {}
 }

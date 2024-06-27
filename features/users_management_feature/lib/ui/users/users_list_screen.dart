@@ -11,9 +11,9 @@ class UsersListScreenState extends State<UsersListScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return basicScreenBuilder(
-        context,
-        null,
+    return titleScreenBuilder(context, S.of(context).user_profiles, null, () {
+      AutoRouter.of(context).back();
+    },
         BlocProvider<UsersListBloc>(
           create: (context) => widget.initialData?.isNotEmpty == true
               ? UsersListBloc(

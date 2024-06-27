@@ -3,7 +3,7 @@ import 'package:users_management_feature/ui/myprofile/stateManagement/settings/m
 import 'package:users_management_feature/ui/myprofile/stateManagement/settings/my_settings_state.dart';
 
 import '../../../../domain/entities/my_settings_data.dart';
-import '../../../../infrastructure/repositories/UserSettingsRepository.dart';
+import '../../../../infrastructure/repositories/user_settings_repository.dart';
 
 class MySettingsStateManager extends Bloc<MySettingsEvent, MySettingsState> {
   UserSettingsRepositoryContract repository =

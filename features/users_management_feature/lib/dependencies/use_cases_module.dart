@@ -41,8 +41,10 @@ extension UseCasesModule on GetIt {
         () => UserSearchUseCase(get(instanceName: "UsersSearchRepository")),
         instanceName: "UserSearchUseCase");
     registerFactory<
-            DomainUseCaseProtocol<SesameClassesSearchQuery, List<SesameClass>>>(
-        () => SesameClassesSearchUseCase(),
+            DomainUseCaseProtocol<SesameClassesSearchQuery,
+                Future<List<SesameClass>>>>(
+        () => SesameClassesSearchUseCase(
+            get(instanceName: "SesameClassesRepository")),
         instanceName: "SesameClassesSearchUseCase");
   }
 }

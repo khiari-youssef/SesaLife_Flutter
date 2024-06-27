@@ -1,6 +1,8 @@
 import 'package:core/core_domain/DomainUseCaseProtocol.dart';
 import 'package:core/core_domain/entities/entities.dart';
 
+import '../../infrastructure/repositories/sesame_classes_repository.dart';
+
 enum SesameClassSearchFilter { name, level, group, all }
 
 class SesameClassesSearchQuery {
@@ -13,9 +15,22 @@ class SesameClassesSearchQuery {
 
 class SesameClassesSearchUseCase
     implements
-        DomainUseCaseProtocol<SesameClassesSearchQuery, List<SesameClass>> {
+        DomainUseCaseProtocol<SesameClassesSearchQuery,
+            Future<List<SesameClass>>> {
+  final SesameClassesRepositoryContract sesameClassesRepositoryContract;
+  SesameClassesSearchUseCase(this.sesameClassesRepositoryContract);
+
   @override
-  List<SesameClass> execute(SesameClassesSearchQuery input) {
-    return [];
+  Future<List<SesameClass>> execute(SesameClassesSearchQuery input) {
+    return sesameClassesRepositoryContract.querySesameClasses(
+        name: input.sesameClassSearchFilter == SesameClassSearchFilter.name
+            ? input.textQuery
+            : null,
+        level: input.sesameClassSearchFilter == SesameClassSearchFilter.level
+            ? input.textQuery
+            : null,
+        group: input.sesameClassSearchFilter == SesameClassSearchFilter.group
+            ? input.textQuery
+            : null);
   }
 }

@@ -250,6 +250,16 @@ class S {
     );
   }
 
+  /// `User profiles`
+  String get user_profiles {
+    return Intl.message(
+      'User profiles',
+      name: 'user_profiles',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Choose your diploma :`
   String get diploma_choice_title {
     return Intl.message(
