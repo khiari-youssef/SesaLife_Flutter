@@ -1,5 +1,3 @@
-import 'package:flutter/cupertino.dart';
-
 import '../../designsystem_exports.dart';
 
 class SesameSearchBarState extends State<SesameSearchBar> {

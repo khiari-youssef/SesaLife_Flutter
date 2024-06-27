@@ -1,13 +1,13 @@
-import 'package:core/coreUI/user_profile_cards/expandable_preview_list_item.dart';
-import 'package:core/coreUI/user_profile_cards/profile_preview_card_with_redirect_action.dart';
-import 'package:core/core_domain/entities/entities.dart';
-import 'package:designsystem/extensions.dart';
 import 'package:core/exports.dart';
+import 'package:designsystem/extensions.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 import 'package:users_management_feature/ui/users/stateManagement/users_list_bloc.dart';
 
+import '../../domain/usecases/user_search_usecase.dart';
+
 class UsersListScreenState extends State<UsersListScreen> {
   TextEditingController searchController = TextEditingController();
+  UsersListEvent loadUsersList = const UsersListEvent.loadUsersList();
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,8 @@ class UsersListScreenState extends State<UsersListScreen> {
               ? UsersListBloc(
                   UsersListState.initial(initialData: widget.initialData))
               : UsersListBloc(const UsersListState.loading())
-            ..add(const UsersListEvent.loadUsersList()),
+            ..add(loadUsersList.copyWith(
+                userRoleSearchFilter: widget.userRoleSearchFilter)),
           child: BlocConsumer<UsersListBloc, UsersListState>(
             listener: (context, state) {},
             builder: (context, state) {
@@ -44,7 +45,7 @@ class UsersListScreenState extends State<UsersListScreen> {
                                       state.whenOrNull(loading: () => true) ??
                                           false;
                                   if (!isLoading) {
-                                    localBloc.add(UsersListEvent.loadUsersList(
+                                    localBloc.add(loadUsersList.copyWith(
                                         nameQuery: query));
                                   }
                                 },
@@ -139,7 +140,11 @@ class UsersListScreenState extends State<UsersListScreen> {
 @RoutePage(name: "UsersListRoute")
 class UsersListScreen extends StatefulWidget {
   final List<UserProfilePreview>? initialData;
-  const UsersListScreen({super.key, this.initialData});
+  final UserRoleSearchFilter userRoleSearchFilter;
+  const UsersListScreen(
+      {super.key,
+      this.initialData,
+      this.userRoleSearchFilter = UserRoleSearchFilter.all});
 
   @override
   State<StatefulWidget> createState() => UsersListScreenState();

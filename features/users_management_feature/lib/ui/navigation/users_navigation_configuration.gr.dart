@@ -10,6 +10,7 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i15;
 import 'package:core/core_domain/entities/SesameBadge.dart' as _i17;
+import 'package:core/core_domain/entities/entities.dart' as _i21;
 import 'package:core/exports.dart' as _i18;
 import 'package:shared_dependencies/shared_dependencies.dart' as _i16;
 import 'package:users_management_feature/domain/entities/student_subscription_record.dart'
@@ -145,9 +146,14 @@ abstract class $UsersNavigationConfiguration extends _i15.RootStackRouter {
       );
     },
     UsersListRoute.name: (routeData) {
+      final args = routeData.argsAs<UsersListRouteArgs>(
+          orElse: () => const UsersListRouteArgs());
       return _i15.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i14.UsersListScreen(),
+        child: _i14.UsersListScreen(
+          key: args.key,
+          initialData: args.initialData,
+        ),
       );
     },
   };
@@ -446,14 +452,38 @@ class SubscriptionPaymentResultRouteArgs {
 
 /// generated route for
 /// [_i14.UsersListScreen]
-class UsersListRoute extends _i15.PageRouteInfo<void> {
-  const UsersListRoute({List<_i15.PageRouteInfo>? children})
-      : super(
+class UsersListRoute extends _i15.PageRouteInfo<UsersListRouteArgs> {
+  UsersListRoute({
+    _i18.Key? key,
+    List<_i21.UserProfilePreview>? initialData,
+    List<_i15.PageRouteInfo>? children,
+  }) : super(
           UsersListRoute.name,
+          args: UsersListRouteArgs(
+            key: key,
+            initialData: initialData,
+          ),
           initialChildren: children,
         );
 
   static const String name = 'UsersListRoute';
 
-  static const _i15.PageInfo<void> page = _i15.PageInfo<void>(name);
+  static const _i15.PageInfo<UsersListRouteArgs> page =
+      _i15.PageInfo<UsersListRouteArgs>(name);
+}
+
+class UsersListRouteArgs {
+  const UsersListRouteArgs({
+    this.key,
+    this.initialData,
+  });
+
+  final _i18.Key? key;
+
+  final List<_i21.UserProfilePreview>? initialData;
+
+  @override
+  String toString() {
+    return 'UsersListRouteArgs{key: $key, initialData: $initialData}';
+  }
 }

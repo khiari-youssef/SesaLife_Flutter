@@ -18,20 +18,27 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$UsersListEvent {
   String? get nameQuery => throw _privateConstructorUsedError;
   bool? get withMoreDetails => throw _privateConstructorUsedError;
+  UserRoleSearchFilter? get userRoleSearchFilter =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String? nameQuery, bool? withMoreDetails)
+    required TResult Function(String? nameQuery, bool? withMoreDetails,
+            UserRoleSearchFilter? userRoleSearchFilter)
         loadUsersList,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String? nameQuery, bool? withMoreDetails)? loadUsersList,
+    TResult? Function(String? nameQuery, bool? withMoreDetails,
+            UserRoleSearchFilter? userRoleSearchFilter)?
+        loadUsersList,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String? nameQuery, bool? withMoreDetails)? loadUsersList,
+    TResult Function(String? nameQuery, bool? withMoreDetails,
+            UserRoleSearchFilter? userRoleSearchFilter)?
+        loadUsersList,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -63,7 +70,10 @@ abstract class $UsersListEventCopyWith<$Res> {
           UsersListEvent value, $Res Function(UsersListEvent) then) =
       _$UsersListEventCopyWithImpl<$Res, UsersListEvent>;
   @useResult
-  $Res call({String? nameQuery, bool? withMoreDetails});
+  $Res call(
+      {String? nameQuery,
+      bool? withMoreDetails,
+      UserRoleSearchFilter? userRoleSearchFilter});
 }
 
 /// @nodoc
@@ -81,6 +91,7 @@ class _$UsersListEventCopyWithImpl<$Res, $Val extends UsersListEvent>
   $Res call({
     Object? nameQuery = freezed,
     Object? withMoreDetails = freezed,
+    Object? userRoleSearchFilter = freezed,
   }) {
     return _then(_value.copyWith(
       nameQuery: freezed == nameQuery
@@ -91,6 +102,10 @@ class _$UsersListEventCopyWithImpl<$Res, $Val extends UsersListEvent>
           ? _value.withMoreDetails
           : withMoreDetails // ignore: cast_nullable_to_non_nullable
               as bool?,
+      userRoleSearchFilter: freezed == userRoleSearchFilter
+          ? _value.userRoleSearchFilter
+          : userRoleSearchFilter // ignore: cast_nullable_to_non_nullable
+              as UserRoleSearchFilter?,
     ) as $Val);
   }
 }
@@ -103,7 +118,10 @@ abstract class _$$loadUsersListImplCopyWith<$Res>
       __$$loadUsersListImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String? nameQuery, bool? withMoreDetails});
+  $Res call(
+      {String? nameQuery,
+      bool? withMoreDetails,
+      UserRoleSearchFilter? userRoleSearchFilter});
 }
 
 /// @nodoc
@@ -119,6 +137,7 @@ class __$$loadUsersListImplCopyWithImpl<$Res>
   $Res call({
     Object? nameQuery = freezed,
     Object? withMoreDetails = freezed,
+    Object? userRoleSearchFilter = freezed,
   }) {
     return _then(_$loadUsersListImpl(
       nameQuery: freezed == nameQuery
@@ -129,6 +148,10 @@ class __$$loadUsersListImplCopyWithImpl<$Res>
           ? _value.withMoreDetails
           : withMoreDetails // ignore: cast_nullable_to_non_nullable
               as bool?,
+      userRoleSearchFilter: freezed == userRoleSearchFilter
+          ? _value.userRoleSearchFilter
+          : userRoleSearchFilter // ignore: cast_nullable_to_non_nullable
+              as UserRoleSearchFilter?,
     ));
   }
 }
@@ -136,16 +159,19 @@ class __$$loadUsersListImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$loadUsersListImpl implements _loadUsersList {
-  const _$loadUsersListImpl({this.nameQuery, this.withMoreDetails});
+  const _$loadUsersListImpl(
+      {this.nameQuery, this.withMoreDetails, this.userRoleSearchFilter});
 
   @override
   final String? nameQuery;
   @override
   final bool? withMoreDetails;
+  @override
+  final UserRoleSearchFilter? userRoleSearchFilter;
 
   @override
   String toString() {
-    return 'UsersListEvent.loadUsersList(nameQuery: $nameQuery, withMoreDetails: $withMoreDetails)';
+    return 'UsersListEvent.loadUsersList(nameQuery: $nameQuery, withMoreDetails: $withMoreDetails, userRoleSearchFilter: $userRoleSearchFilter)';
   }
 
   @override
@@ -156,11 +182,14 @@ class _$loadUsersListImpl implements _loadUsersList {
             (identical(other.nameQuery, nameQuery) ||
                 other.nameQuery == nameQuery) &&
             (identical(other.withMoreDetails, withMoreDetails) ||
-                other.withMoreDetails == withMoreDetails));
+                other.withMoreDetails == withMoreDetails) &&
+            (identical(other.userRoleSearchFilter, userRoleSearchFilter) ||
+                other.userRoleSearchFilter == userRoleSearchFilter));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, nameQuery, withMoreDetails);
+  int get hashCode => Object.hash(
+      runtimeType, nameQuery, withMoreDetails, userRoleSearchFilter);
 
   @JsonKey(ignore: true)
   @override
@@ -171,28 +200,34 @@ class _$loadUsersListImpl implements _loadUsersList {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String? nameQuery, bool? withMoreDetails)
+    required TResult Function(String? nameQuery, bool? withMoreDetails,
+            UserRoleSearchFilter? userRoleSearchFilter)
         loadUsersList,
   }) {
-    return loadUsersList(nameQuery, withMoreDetails);
+    return loadUsersList(nameQuery, withMoreDetails, userRoleSearchFilter);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String? nameQuery, bool? withMoreDetails)? loadUsersList,
+    TResult? Function(String? nameQuery, bool? withMoreDetails,
+            UserRoleSearchFilter? userRoleSearchFilter)?
+        loadUsersList,
   }) {
-    return loadUsersList?.call(nameQuery, withMoreDetails);
+    return loadUsersList?.call(
+        nameQuery, withMoreDetails, userRoleSearchFilter);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String? nameQuery, bool? withMoreDetails)? loadUsersList,
+    TResult Function(String? nameQuery, bool? withMoreDetails,
+            UserRoleSearchFilter? userRoleSearchFilter)?
+        loadUsersList,
     required TResult orElse(),
   }) {
     if (loadUsersList != null) {
-      return loadUsersList(nameQuery, withMoreDetails);
+      return loadUsersList(nameQuery, withMoreDetails, userRoleSearchFilter);
     }
     return orElse();
   }
@@ -229,12 +264,15 @@ class _$loadUsersListImpl implements _loadUsersList {
 abstract class _loadUsersList implements UsersListEvent {
   const factory _loadUsersList(
       {final String? nameQuery,
-      final bool? withMoreDetails}) = _$loadUsersListImpl;
+      final bool? withMoreDetails,
+      final UserRoleSearchFilter? userRoleSearchFilter}) = _$loadUsersListImpl;
 
   @override
   String? get nameQuery;
   @override
   bool? get withMoreDetails;
+  @override
+  UserRoleSearchFilter? get userRoleSearchFilter;
   @override
   @JsonKey(ignore: true)
   _$$loadUsersListImplCopyWith<_$loadUsersListImpl> get copyWith =>

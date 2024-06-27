@@ -1,16 +1,14 @@
-import 'package:bloc/bloc.dart';
 import 'package:core/core_domain/DomainErrorType.dart';
 import 'package:core/core_domain/entities/entities.dart';
 import 'package:core/core_domain/entities/user_profile_preview.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
-import 'package:users_management_feature/domain/entities/SesameUser.dart';
 
+import '../../../domain/usecases/user_search_usecase.dart';
 import '../../../infrastructure/repositories/UsersSearchRepository.dart';
 
+part 'users_list_bloc.freezed.dart';
 part 'users_list_event.dart';
 part 'users_list_state.dart';
-part 'users_list_bloc.freezed.dart';
 
 class UsersListBloc extends Bloc<UsersListEvent, UsersListState> {
   UsersSearchRepositoryContract repositoryContract =
