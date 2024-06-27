@@ -36,7 +36,7 @@ class MyProfileMenu extends StatelessWidget {
                 SesameMenuItem(
                     data: ProfileMenuItem(
                         S.of(context).profile_classes, "ic_folder.svg",
-                        destinationPath: "/UsersListRoute"))
+                        destinationPath: "/SesameClassesRoute"))
               ],
             _ => []
           },

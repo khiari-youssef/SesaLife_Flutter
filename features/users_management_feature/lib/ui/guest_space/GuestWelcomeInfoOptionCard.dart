@@ -16,7 +16,7 @@ class GuestWelcomeInfoOptionCard extends StatelessWidget {
       onTap: onClicked,
       child: Card(
         elevation: 0.sp,
-        color: localTheme.colorScheme.surfaceContainerHighest,
+        color: localTheme.colorScheme.surfaceContainerLow,
         child: Padding(
           padding: EdgeInsets.all(12.r),
           child: Column(

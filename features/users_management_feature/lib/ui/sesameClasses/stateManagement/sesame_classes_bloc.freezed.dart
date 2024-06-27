@@ -251,26 +251,26 @@ abstract class _loadSesameClasses implements SesameClassesEvent {
 mixin _$SesameClassesState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(List<SesameClass>? initialData) initial,
+    required TResult Function(List<SesameClassGroups>? initialData) initial,
     required TResult Function() loading,
     required TResult Function(DomainErrorType errorType) error,
-    required TResult Function(List<SesameClass> data) success,
+    required TResult Function(List<SesameClassGroups> data) success,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(List<SesameClass>? initialData)? initial,
+    TResult? Function(List<SesameClassGroups>? initialData)? initial,
     TResult? Function()? loading,
     TResult? Function(DomainErrorType errorType)? error,
-    TResult? Function(List<SesameClass> data)? success,
+    TResult? Function(List<SesameClassGroups> data)? success,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(List<SesameClass>? initialData)? initial,
+    TResult Function(List<SesameClassGroups>? initialData)? initial,
     TResult Function()? loading,
     TResult Function(DomainErrorType errorType)? error,
-    TResult Function(List<SesameClass> data)? success,
+    TResult Function(List<SesameClassGroups> data)? success,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -325,7 +325,7 @@ abstract class _$$initialImplCopyWith<$Res> {
           _$initialImpl value, $Res Function(_$initialImpl) then) =
       __$$initialImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({List<SesameClass>? initialData});
+  $Res call({List<SesameClassGroups>? initialData});
 }
 
 /// @nodoc
@@ -345,7 +345,7 @@ class __$$initialImplCopyWithImpl<$Res>
       initialData: freezed == initialData
           ? _value._initialData
           : initialData // ignore: cast_nullable_to_non_nullable
-              as List<SesameClass>?,
+              as List<SesameClassGroups>?,
     ));
   }
 }
@@ -353,12 +353,12 @@ class __$$initialImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$initialImpl implements _initial {
-  const _$initialImpl({final List<SesameClass>? initialData})
+  const _$initialImpl({final List<SesameClassGroups>? initialData})
       : _initialData = initialData;
 
-  final List<SesameClass>? _initialData;
+  final List<SesameClassGroups>? _initialData;
   @override
-  List<SesameClass>? get initialData {
+  List<SesameClassGroups>? get initialData {
     final value = _initialData;
     if (value == null) return null;
     if (_initialData is EqualUnmodifiableListView) return _initialData;
@@ -393,10 +393,10 @@ class _$initialImpl implements _initial {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(List<SesameClass>? initialData) initial,
+    required TResult Function(List<SesameClassGroups>? initialData) initial,
     required TResult Function() loading,
     required TResult Function(DomainErrorType errorType) error,
-    required TResult Function(List<SesameClass> data) success,
+    required TResult Function(List<SesameClassGroups> data) success,
   }) {
     return initial(initialData);
   }
@@ -404,10 +404,10 @@ class _$initialImpl implements _initial {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(List<SesameClass>? initialData)? initial,
+    TResult? Function(List<SesameClassGroups>? initialData)? initial,
     TResult? Function()? loading,
     TResult? Function(DomainErrorType errorType)? error,
-    TResult? Function(List<SesameClass> data)? success,
+    TResult? Function(List<SesameClassGroups> data)? success,
   }) {
     return initial?.call(initialData);
   }
@@ -415,10 +415,10 @@ class _$initialImpl implements _initial {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(List<SesameClass>? initialData)? initial,
+    TResult Function(List<SesameClassGroups>? initialData)? initial,
     TResult Function()? loading,
     TResult Function(DomainErrorType errorType)? error,
-    TResult Function(List<SesameClass> data)? success,
+    TResult Function(List<SesameClassGroups> data)? success,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -466,10 +466,10 @@ class _$initialImpl implements _initial {
 }
 
 abstract class _initial implements SesameClassesState {
-  const factory _initial({final List<SesameClass>? initialData}) =
+  const factory _initial({final List<SesameClassGroups>? initialData}) =
       _$initialImpl;
 
-  List<SesameClass>? get initialData;
+  List<SesameClassGroups>? get initialData;
   @JsonKey(ignore: true)
   _$$initialImplCopyWith<_$initialImpl> get copyWith =>
       throw _privateConstructorUsedError;
@@ -513,10 +513,10 @@ class _$loadingImpl implements _loading {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(List<SesameClass>? initialData) initial,
+    required TResult Function(List<SesameClassGroups>? initialData) initial,
     required TResult Function() loading,
     required TResult Function(DomainErrorType errorType) error,
-    required TResult Function(List<SesameClass> data) success,
+    required TResult Function(List<SesameClassGroups> data) success,
   }) {
     return loading();
   }
@@ -524,10 +524,10 @@ class _$loadingImpl implements _loading {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(List<SesameClass>? initialData)? initial,
+    TResult? Function(List<SesameClassGroups>? initialData)? initial,
     TResult? Function()? loading,
     TResult? Function(DomainErrorType errorType)? error,
-    TResult? Function(List<SesameClass> data)? success,
+    TResult? Function(List<SesameClassGroups> data)? success,
   }) {
     return loading?.call();
   }
@@ -535,10 +535,10 @@ class _$loadingImpl implements _loading {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(List<SesameClass>? initialData)? initial,
+    TResult Function(List<SesameClassGroups>? initialData)? initial,
     TResult Function()? loading,
     TResult Function(DomainErrorType errorType)? error,
-    TResult Function(List<SesameClass> data)? success,
+    TResult Function(List<SesameClassGroups> data)? success,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -654,10 +654,10 @@ class _$errorImpl implements _error {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(List<SesameClass>? initialData) initial,
+    required TResult Function(List<SesameClassGroups>? initialData) initial,
     required TResult Function() loading,
     required TResult Function(DomainErrorType errorType) error,
-    required TResult Function(List<SesameClass> data) success,
+    required TResult Function(List<SesameClassGroups> data) success,
   }) {
     return error(errorType);
   }
@@ -665,10 +665,10 @@ class _$errorImpl implements _error {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(List<SesameClass>? initialData)? initial,
+    TResult? Function(List<SesameClassGroups>? initialData)? initial,
     TResult? Function()? loading,
     TResult? Function(DomainErrorType errorType)? error,
-    TResult? Function(List<SesameClass> data)? success,
+    TResult? Function(List<SesameClassGroups> data)? success,
   }) {
     return error?.call(errorType);
   }
@@ -676,10 +676,10 @@ class _$errorImpl implements _error {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(List<SesameClass>? initialData)? initial,
+    TResult Function(List<SesameClassGroups>? initialData)? initial,
     TResult Function()? loading,
     TResult Function(DomainErrorType errorType)? error,
-    TResult Function(List<SesameClass> data)? success,
+    TResult Function(List<SesameClassGroups> data)? success,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -741,7 +741,7 @@ abstract class _$$successImplCopyWith<$Res> {
           _$successImpl value, $Res Function(_$successImpl) then) =
       __$$successImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({List<SesameClass> data});
+  $Res call({List<SesameClassGroups> data});
 }
 
 /// @nodoc
@@ -761,7 +761,7 @@ class __$$successImplCopyWithImpl<$Res>
       null == data
           ? _value._data
           : data // ignore: cast_nullable_to_non_nullable
-              as List<SesameClass>,
+              as List<SesameClassGroups>,
     ));
   }
 }
@@ -769,11 +769,11 @@ class __$$successImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$successImpl implements _success {
-  const _$successImpl(final List<SesameClass> data) : _data = data;
+  const _$successImpl(final List<SesameClassGroups> data) : _data = data;
 
-  final List<SesameClass> _data;
+  final List<SesameClassGroups> _data;
   @override
-  List<SesameClass> get data {
+  List<SesameClassGroups> get data {
     if (_data is EqualUnmodifiableListView) return _data;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_data);
@@ -805,10 +805,10 @@ class _$successImpl implements _success {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(List<SesameClass>? initialData) initial,
+    required TResult Function(List<SesameClassGroups>? initialData) initial,
     required TResult Function() loading,
     required TResult Function(DomainErrorType errorType) error,
-    required TResult Function(List<SesameClass> data) success,
+    required TResult Function(List<SesameClassGroups> data) success,
   }) {
     return success(data);
   }
@@ -816,10 +816,10 @@ class _$successImpl implements _success {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(List<SesameClass>? initialData)? initial,
+    TResult? Function(List<SesameClassGroups>? initialData)? initial,
     TResult? Function()? loading,
     TResult? Function(DomainErrorType errorType)? error,
-    TResult? Function(List<SesameClass> data)? success,
+    TResult? Function(List<SesameClassGroups> data)? success,
   }) {
     return success?.call(data);
   }
@@ -827,10 +827,10 @@ class _$successImpl implements _success {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(List<SesameClass>? initialData)? initial,
+    TResult Function(List<SesameClassGroups>? initialData)? initial,
     TResult Function()? loading,
     TResult Function(DomainErrorType errorType)? error,
-    TResult Function(List<SesameClass> data)? success,
+    TResult Function(List<SesameClassGroups> data)? success,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -878,9 +878,9 @@ class _$successImpl implements _success {
 }
 
 abstract class _success implements SesameClassesState {
-  const factory _success(final List<SesameClass> data) = _$successImpl;
+  const factory _success(final List<SesameClassGroups> data) = _$successImpl;
 
-  List<SesameClass> get data;
+  List<SesameClassGroups> get data;
   @JsonKey(ignore: true)
   _$$successImplCopyWith<_$successImpl> get copyWith =>
       throw _privateConstructorUsedError;

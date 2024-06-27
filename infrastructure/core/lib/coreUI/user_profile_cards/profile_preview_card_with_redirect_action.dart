@@ -13,7 +13,7 @@ class ProfilePreviewCardWithRedirectAction extends StatelessWidget {
       onClicked: onClicked,
       actionIconAssetName: "ic_arrow_right_dir.svg",
       borderRadius: BorderRadius.circular(8.r),
-      backgroundColor: Theme.of(context).colorScheme.surfaceContainerHigh,
+      backgroundColor: Theme.of(context).colorScheme.surfaceContainerLow,
     );
   }
 }

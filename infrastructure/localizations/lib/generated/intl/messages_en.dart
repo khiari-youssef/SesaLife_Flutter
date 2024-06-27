@@ -199,6 +199,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "registration_label":
             MessageLookupByLibrary.simpleMessage("Registration"),
         "required": MessageLookupByLibrary.simpleMessage("required"),
+        "sesame_classes_groups": MessageLookupByLibrary.simpleMessage("Groups"),
+        "sesame_classes_search_placeholder":
+            MessageLookupByLibrary.simpleMessage("Search classes by name ..."),
         "sessions_all": MessageLookupByLibrary.simpleMessage("All"),
         "sessions_any": MessageLookupByLibrary.simpleMessage("Session"),
         "sessions_course": MessageLookupByLibrary.simpleMessage("Course"),

@@ -1240,11 +1240,31 @@ class S {
     );
   }
 
+  /// `Search classes by name ...`
+  String get sesame_classes_search_placeholder {
+    return Intl.message(
+      'Search classes by name ...',
+      name: 'sesame_classes_search_placeholder',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `No search result !`
   String get users_search_no_result {
     return Intl.message(
       'No search result !',
       name: 'users_search_no_result',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Groups`
+  String get sesame_classes_groups {
+    return Intl.message(
+      'Groups',
+      name: 'sesame_classes_groups',
       desc: '',
       args: [],
     );

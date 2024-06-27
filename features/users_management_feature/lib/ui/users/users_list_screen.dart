@@ -7,11 +7,15 @@ import '../../domain/usecases/user_search_usecase.dart';
 
 class UsersListScreenState extends State<UsersListScreen> {
   TextEditingController searchController = TextEditingController();
-  UsersListEvent loadUsersList = const UsersListEvent.loadUsersList();
 
   @override
   Widget build(BuildContext context) {
-    return titleScreenBuilder(context, S.of(context).user_profiles, null, () {
+    return titleScreenBuilder(
+        context,
+        widget.title?.isNotEmpty == true
+            ? widget.title!
+            : S.of(context).user_profiles,
+        null, () {
       AutoRouter.of(context).back();
     },
         BlocProvider<UsersListBloc>(
@@ -19,7 +23,7 @@ class UsersListScreenState extends State<UsersListScreen> {
               ? UsersListBloc(
                   UsersListState.initial(initialData: widget.initialData))
               : UsersListBloc(const UsersListState.loading())
-            ..add(loadUsersList.copyWith(
+            ..add(UsersListEvent.loadUsersList(
                 userRoleSearchFilter: widget.userRoleSearchFilter)),
           child: BlocConsumer<UsersListBloc, UsersListState>(
             listener: (context, state) {},
@@ -45,7 +49,7 @@ class UsersListScreenState extends State<UsersListScreen> {
                                       state.whenOrNull(loading: () => true) ??
                                           false;
                                   if (!isLoading) {
-                                    localBloc.add(loadUsersList.copyWith(
+                                    localBloc.add(UsersListEvent.loadUsersList(
                                         nameQuery: query));
                                   }
                                 },
@@ -138,10 +142,12 @@ class UsersListScreenState extends State<UsersListScreen> {
 class UsersListScreen extends StatefulWidget {
   final List<UserProfilePreview>? initialData;
   final UserRoleSearchFilter userRoleSearchFilter;
+  final String? title;
   const UsersListScreen(
       {super.key,
       this.initialData,
-      this.userRoleSearchFilter = UserRoleSearchFilter.all});
+      this.userRoleSearchFilter = UserRoleSearchFilter.all,
+      this.title});
 
   @override
   State<StatefulWidget> createState() => UsersListScreenState();

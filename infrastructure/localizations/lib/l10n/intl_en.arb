@@ -119,5 +119,7 @@
    "payment_cashOrCheck_result_trans_id" : "Transaction ID : {transid}",
   "payment_cashOrCheck_result_datetime" : "Transaction occured on {data} at {time}",
   "users_search_placeholder" : "Search profiles by name ...",
-  "users_search_no_result" : "No search result !"
+  "sesame_classes_search_placeholder" : "Search classes by name ...",
+  "users_search_no_result" : "No search result !",
+  "sesame_classes_groups": "Groups"
 }

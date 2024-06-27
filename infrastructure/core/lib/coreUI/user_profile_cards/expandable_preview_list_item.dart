@@ -1,6 +1,6 @@
 import '../../exports.dart';
 
-class ExpandablePreviewListItemState extends State<ExpandablePreviewListItem> {
+class _ExpandablePreviewListItemState extends State<ExpandablePreviewListItem> {
   late bool isExpanded;
 
   @override
@@ -24,7 +24,7 @@ class ExpandablePreviewListItemState extends State<ExpandablePreviewListItem> {
           },
           actionIconAssetName: "ic_arrow_${isExpanded ? "up" : "down"}_dir.svg",
           borderRadius: BorderRadius.circular(8.r),
-          backgroundColor: Theme.of(context).colorScheme.surfaceContainerHigh,
+          backgroundColor: Theme.of(context).colorScheme.surfaceContainerLow,
           cardDetailsBuilder: isExpanded
               ? (context) {
                   return widget.expandedStateWidgetBuilder();
@@ -46,5 +46,5 @@ class ExpandablePreviewListItem extends StatefulWidget {
       this.isExpanded = false,
       required this.expandedStateWidgetBuilder});
   @override
-  State<StatefulWidget> createState() => ExpandablePreviewListItemState();
+  State<StatefulWidget> createState() => _ExpandablePreviewListItemState();
 }

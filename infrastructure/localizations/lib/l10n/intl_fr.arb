@@ -117,5 +117,7 @@
   "payment_cashOrCheck_result_trans_id" : "Numéro de transaction : {transid}",
   "payment_cashOrCheck_result_datetime" : "La transaction a eu lieu le {data} à {time}",
   "users_search_placeholder" : "Rechercher des profiles par nom ...",
-  "users_search_no_result" : "Pas de résultat !"
+  "sesame_classes_search_placeholder" : "Rechercher des classes par nom ...",
+  "users_search_no_result" : "Pas de résultat !",
+  "sesame_classes_groups": "Groupes"
 }

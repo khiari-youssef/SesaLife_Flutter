@@ -7,7 +7,7 @@ class SesameSearchBarState extends State<SesameSearchBar> {
       shape: WidgetStatePropertyAll(
           RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.r))),
       backgroundColor: WidgetStatePropertyAll(
-          Theme.of(context).colorScheme.surfaceContainerHigh),
+          Theme.of(context).colorScheme.surfaceContainerLow),
       controller: widget.searchController,
       textStyle: WidgetStatePropertyAll(Theme.of(context)
           .textTheme

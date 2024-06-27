@@ -14,7 +14,7 @@ class StudentSubscriptionRecordCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-        color: Theme.of(context).colorScheme.surfaceContainerHighest,
+        color: Theme.of(context).colorScheme.surfaceContainerLow,
         child: Padding(
           padding: EdgeInsets.all(8.r),
           child: Column(
