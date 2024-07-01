@@ -25,6 +25,7 @@ class UsersListBloc extends Bloc<UsersListEvent, UsersListState> {
     List<UserProfilePreview> result = await useCaseProtocol.execute(
         UserSearchQuery(
             queryInput: event.nameQuery,
+            classGroupID: event.classGroupID,
             roleSearchFilter:
                 event.userRoleSearchFilter ?? UserRoleSearchFilter.all));
     emit(UsersListState.success(result));

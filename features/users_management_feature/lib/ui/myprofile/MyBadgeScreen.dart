@@ -41,28 +41,7 @@ class MyBadgeScreen extends StatelessWidget {
                                   .textTheme
                                   .bodyLarge
                                   ?.copyWith(color: Colors.black, height: 1.4)),
-                        ])),
-                        GestureDetector(
-                          onTap: () {
-                            AutoRouter.of(context)
-                                .pushNamed("/BadgeUsageGuidelineRoute");
-                          },
-                          child: Padding(
-                            padding: EdgeInsets.all(8.r),
-                            child: Text(
-                              S.of(context).badge_usage_learn_more,
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .bodyLarge
-                                  ?.copyWith(
-                                      color: Theme.of(context)
-                                          .colorScheme
-                                          .tertiary,
-                                      decoration: TextDecoration.underline),
-                              textAlign: TextAlign.start,
-                            ),
-                          ),
-                        )
+                        ]))
                       ])
                 ])));
   }

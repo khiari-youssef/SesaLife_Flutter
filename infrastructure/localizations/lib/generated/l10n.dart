@@ -730,21 +730,11 @@ class S {
     );
   }
 
-  /// `for security reasons, When you reveal your badge, it will only be visible for 5s.`
+  /// `This badge carries your identiy informations, for security reasons, When you reveal your badge, it will only be visible for 10s`
   String get badge_usage_notice {
     return Intl.message(
-      'for security reasons, When you reveal your badge, it will only be visible for 5s.',
+      'This badge carries your identiy informations, for security reasons, When you reveal your badge, it will only be visible for 10s',
       name: 'badge_usage_notice',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Learn more about badge usage`
-  String get badge_usage_learn_more {
-    return Intl.message(
-      'Learn more about badge usage',
-      name: 'badge_usage_learn_more',
       desc: '',
       args: [],
     );

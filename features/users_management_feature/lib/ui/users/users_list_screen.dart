@@ -24,7 +24,8 @@ class UsersListScreenState extends State<UsersListScreen> {
                   UsersListState.initial(initialData: widget.initialData))
               : UsersListBloc(const UsersListState.loading())
             ..add(UsersListEvent.loadUsersList(
-                userRoleSearchFilter: widget.userRoleSearchFilter)),
+                userRoleSearchFilter: widget.userRoleSearchFilter,
+                classGroupID: widget.classGroupID)),
           child: BlocConsumer<UsersListBloc, UsersListState>(
             listener: (context, state) {},
             builder: (context, state) {
@@ -141,13 +142,15 @@ class UsersListScreenState extends State<UsersListScreen> {
 @RoutePage(name: "UsersListRoute")
 class UsersListScreen extends StatefulWidget {
   final List<UserProfilePreview>? initialData;
+  final String? classGroupID;
   final UserRoleSearchFilter userRoleSearchFilter;
   final String? title;
   const UsersListScreen(
       {super.key,
       this.initialData,
       this.userRoleSearchFilter = UserRoleSearchFilter.all,
-      this.title});
+      this.title,
+      this.classGroupID});
 
   @override
   State<StatefulWidget> createState() => UsersListScreenState();

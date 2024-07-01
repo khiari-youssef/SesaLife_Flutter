@@ -43,10 +43,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "badge_expired": MessageLookupByLibrary.simpleMessage("Expiré"),
         "badge_guideline_question": MessageLookupByLibrary.simpleMessage(
             "Pourquoi utiliser le badge ?"),
-        "badge_usage_learn_more": MessageLookupByLibrary.simpleMessage(
-            "En savoir plus sur l\'usage de votre badge"),
         "badge_usage_notice": MessageLookupByLibrary.simpleMessage(
-            "Pour des raisons de sécurité, votre badge n\'est visible que pour 5s."),
+            "Ce badge représente votre identité, pour des raisons de sécurité, votre badge n\'est visible que pour 5s."),
         "birthdate": MessageLookupByLibrary.simpleMessage("Date de naissance"),
         "calendar_title": m0,
         "cancel": MessageLookupByLibrary.simpleMessage("Annuler"),

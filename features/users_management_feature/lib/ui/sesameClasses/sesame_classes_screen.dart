@@ -4,6 +4,8 @@ import 'package:shared_dependencies/shared_dependencies.dart';
 import 'package:users_management_feature/ui/sesameClasses/stateManagement/sesame_classes_bloc.dart';
 
 import '../../domain/entities/sesame_class_groups.dart';
+import '../../domain/usecases/user_search_usecase.dart';
+import '../navigation/users_navigation_configuration.gr.dart';
 
 class SesameClassesScreenState extends State<SesameClassesScreen> {
   TextEditingController searchController = TextEditingController();
@@ -102,34 +104,60 @@ class SesameClassesScreenState extends State<SesameClassesScreen> {
                                   "${S.of(context).sesame_classes_groups} : ${sesameClass.groups.length}",
                               onExpandStateChanged: (isExpanded) {},
                               expandedStateWidgetBuilder: () {
-                                return ListView.separated(
-                                    itemBuilder: (context, index) {
-                                      SesameClass group =
-                                          sesameClass.groups[index];
-                                      return Card(
-                                        color: Theme.of(context)
-                                            .colorScheme
-                                            .surfaceContainerLow,
-                                        child: Padding(
-                                            padding: EdgeInsets.symmetric(
-                                                horizontal: 8.w),
-                                            child: Column(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.center,
-                                                mainAxisSize: MainAxisSize.min,
-                                                children: [
-                                                  LabelSmall(text: group.id),
-                                                ])),
-                                      );
-                                    },
-                                    separatorBuilder: (context, index) {
-                                      return const Divider(
-                                        color: Color(0xFFD9D9D9),
-                                      );
-                                    },
-                                    itemCount: sesameClass.groups.length);
+                                return DecoratedBox(
+                                  decoration: BoxDecoration(
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .surfaceContainerLow),
+                                  child: LimitedBox(
+                                      maxHeight: 100.h,
+                                      child: Padding(
+                                          padding: EdgeInsets.symmetric(
+                                              horizontal: 12.w, vertical: 8.h),
+                                          child: ListView.separated(
+                                              itemCount:
+                                                  sesameClass.groups.length,
+                                              itemBuilder: (context, index) {
+                                                SesameClass group =
+                                                    sesameClass.groups[index];
+                                                return GestureDetector(
+                                                    onTap: () {
+                                                      AutoRouter.of(context)
+                                                          .push(UsersListRoute(
+                                                              userRoleSearchFilter:
+                                                                  UserRoleSearchFilter
+                                                                      .student,
+                                                              title: group.id,
+                                                              classGroupID:
+                                                                  group.id));
+                                                    },
+                                                    child: Column(
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .center,
+                                                      crossAxisAlignment:
+                                                          CrossAxisAlignment
+                                                              .start,
+                                                      mainAxisSize:
+                                                          MainAxisSize.min,
+                                                      children: [
+                                                        Padding(
+                                                            padding: EdgeInsets
+                                                                .symmetric(
+                                                                    vertical:
+                                                                        4.h),
+                                                            child: LabelMedium(
+                                                                text: group.id))
+                                                      ],
+                                                    ));
+                                              },
+                                              separatorBuilder:
+                                                  (context, index) {
+                                                return const Divider(
+                                                  color: Color(0xFFD9D9D9),
+                                                );
+                                              }))),
+                                );
                               },
                             ));
                 })

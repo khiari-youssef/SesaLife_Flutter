@@ -3,7 +3,8 @@ import 'package:core/core_domain/entities/user_profile_preview.dart';
 import 'package:core/core_domain/entities/user_sex.dart';
 
 abstract interface class UsersSearchRepositoryContract {
-  Future<List<UserProfilePreview>> queryUsersByName(String nameQuery);
+  Future<List<UserProfilePreview>> queryUsersByParams(
+      {String? nameQuery, String? classGroupID});
 }
 
 class UsersSearchRepository implements UsersSearchRepositoryContract {
@@ -37,13 +38,13 @@ class UsersSearchRepository implements UsersSearchRepositoryContract {
               background: "background-$index"));
 
   @override
-  Future<List<UserProfilePreview>> queryUsersByName(String nameQuery) async {
+  Future<List<UserProfilePreview>> queryUsersByParams(
+      {String? nameQuery, String? classGroupID}) async {
     await Future.delayed(const Duration(seconds: 1));
-    return nameQuery.isNotEmpty
+    return nameQuery?.isNotEmpty == true
         ? data
-            .where((profile) =>
-                profile.firstName.contains(nameQuery) ||
-                profile.lastName.contains(nameQuery))
+            .where((profile) => ((profile.firstName.contains(nameQuery!) ||
+                profile.lastName.contains(nameQuery))))
             .toList()
         : data;
   }

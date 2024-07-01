@@ -10,11 +10,13 @@ class UserSearchQuery {
   final String? queryInput;
   final bool? queryByEmail;
   final bool? queryByName;
+  final String? classGroupID;
   final UserRoleSearchFilter roleSearchFilter;
   UserSearchQuery(
       {this.queryInput,
       this.queryByEmail,
       this.queryByName,
+      this.classGroupID,
       required this.roleSearchFilter});
 }
 
@@ -28,6 +30,7 @@ class UserSearchUseCase
   @override
   Future<List<UserProfilePreview>> execute(UserSearchQuery input) async {
     await Future.delayed(const Duration(seconds: 1));
-    return repositoryContract.queryUsersByName(input.queryInput ?? "");
+    return repositoryContract.queryUsersByParams(
+        nameQuery: input.queryInput ?? "", classGroupID: input.classGroupID);
   }
 }
