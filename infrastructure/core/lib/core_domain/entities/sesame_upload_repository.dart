@@ -1,6 +1,6 @@
 import 'package:shared_dependencies/shared_dependencies.dart';
 
-part 'SesameUploadRepository.freezed.dart';
+part 'sesame_upload_repository.freezed.dart';
 
 @freezed
 class SesameUploadRepository with _$SesameUploadRepository {

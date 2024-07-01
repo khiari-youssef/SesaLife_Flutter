@@ -1,5 +1,5 @@
 import 'package:core/coreUI/sesame_badge_widget.dart';
-import 'package:core/core_domain/entities/SesameBadge.dart';
+import 'package:core/core_domain/entities/sesame_badge.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 
 @RoutePage(name: "MyBadgeRoute")

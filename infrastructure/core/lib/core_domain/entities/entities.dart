@@ -1,9 +1,10 @@
-export 'AppPolicySection.dart';
-export 'SesameAttachment.dart';
-export 'SesameBadge.dart';
-export 'SesameClass.dart';
-export 'SesameModule.dart';
-export 'SesameSubject.dart';
-export 'SesameUploadRepository.dart';
+export 'app_policy_section.dart';
+export 'sesame_attachment.dart';
+export 'sesame_badge.dart';
+export 'sesame_class.dart';
+export 'sesame_module.dart';
+export 'sesame_subject.dart';
+export 'sesame_upload_repository.dart';
 export 'user_profile_preview.dart';
 export 'user_sex.dart';
+export 'sesame_privacy_policy_document.dart';

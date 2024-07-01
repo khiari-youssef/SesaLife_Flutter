@@ -1,0 +1,138 @@
+{
+  "local" : "en_US",
+  "last_time_updated" : "2024-05-24T11:53:09Z",
+  "description" : "This Privacy Policy describes our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.",
+   "summary" : [
+     "Personal information we collect",
+     "How we use the information we collect",
+     "Sharing and disclosure",
+     "Third-Party Partners and Integrations",
+     "Security",
+     "Changes to This Privacy Policy"
+   ],
+  "sections" : [
+    {
+      "section_name" : "Personal information we collect",
+      "sub_sections" : [
+        {
+          "subsection_name" : "Candidate data protection",
+          "content" : [
+            "We will need the candidate's email,phone(optional),sex,birthdate,first name and last name in order to identify the candidate to proceed to the  next registration step. ",
+            "The above user details will be removed once the candidature is rejected ",
+            "When the candidate is selected, his/her data will be kept for tracking candidature history and profile creation."
+          ]
+        },
+        {
+          "subsection_name" : "User data protection",
+          "content" : [
+            "",
+            "Article 2",
+            "Article 3"
+          ]
+        },
+        {
+          "subsection_name" : "User financial data protection",
+          "content" : [
+            "Article 1",
+            "Article 2",
+            "Article 3"
+          ]
+        },
+        {
+          "subsection_name" : "User academic data protection",
+          "content" : [
+            "Article 1",
+            "Article 2",
+            "Article 3"
+          ]
+        }
+      ]
+    },
+    {
+      "section_name" : "How we use the information we collect",
+      "sub_sections" : [
+        {
+          "subsection_name" : "Camera access",
+          "content" : [
+            "Article 1",
+            "Article 2",
+            "Article 3"
+          ]
+        },
+        {
+          "subsection_name" : "Location access",
+          "content" : [
+            "Article 1",
+            "Article 2",
+            "Article 3"
+          ]
+        },
+        {
+          "subsection_name" : "Alarm access",
+          "content" : [
+            "Article 1",
+            "Article 2",
+            "Article 3"
+          ]
+        },
+        {
+          "subsection_name" : "Media & documents access",
+          "content" : [
+            "Article 1",
+            "Article 2",
+            "Article 3"
+          ]
+        }
+
+      ]
+    },
+    {
+      "section_name" : "Sharing and disclosure",
+      "sub_sections" : [
+        {
+          "subsection_name" : "Compliance",
+          "content" : [
+            "The app's security complies with the OWASP mobile apps security verification standard",
+            "Sesame university will take action against users with attempts to cheat while using the app"
+          ]
+        }
+      ]
+    },
+    {
+      "section_name" : "Third-Party Partners and Integrations",
+      "sub_sections" : [
+        {
+          "subsection_name" : "Compliance",
+          "content" : [
+            "The app's security complies with the OWASP mobile apps security verification standard",
+            "Sesame university will take action against users with attempts to cheat while using the app"
+          ]
+        }
+      ]
+    },
+    {
+      "section_name" : "Security",
+      "sub_sections" : [
+        {
+          "subsection_name" : "Compliance",
+          "content" : [
+            "The app's security complies with the OWASP mobile apps security verification standard",
+            "Sesame university will take action against users with attempts to cheat while using the app"
+          ]
+        }
+      ]
+    },
+    {
+      "section_name" : "Changes to This Privacy Policy",
+      "sub_sections" : [
+        {
+          "subsection_name" : "Compliance",
+          "content" : [
+            "The app's security complies with the OWASP mobile apps security verification standard",
+            "Sesame university will take action against users with attempts to cheat while using the app"
+          ]
+        }
+      ]
+    }
+  ]
+}

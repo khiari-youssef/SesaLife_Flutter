@@ -1,4 +1,4 @@
-import 'package:core/core_domain/ApplicationMetaInfoFacade.dart';
+import 'package:core/core_domain/application_meta_info_facade.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 
 import '../ui/login/LoginState.dart';
@@ -33,7 +33,5 @@ extension UIModule on GetIt {
               );
             },
         instanceName: "SlideTransitionBuilder");
-
-    registerSingleton<ApplicationMetaInfoFacade>(ApplicationMetaInfoFacade());
   }
 }

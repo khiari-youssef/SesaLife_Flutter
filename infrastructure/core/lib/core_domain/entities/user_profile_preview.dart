@@ -1,6 +1,6 @@
 import 'package:core/core_domain/entities/user_sex.dart';
 
-import 'SesameClass.dart';
+import 'sesame_class.dart';
 
 abstract class UserProfilePreview {
   final String id;

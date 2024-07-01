@@ -11,7 +11,7 @@ export 'core_data/data_access_config.dart';
 export 'core_data/dtos/dtos.dart';
 export 'core_data/localStorage/credit_card_secure_local_storage_interface.dart';
 export 'core_domain/AbstractDomainToExternalEntityMapper.dart';
-export 'core_domain/ApplicationMetaInfoFacade.dart';
+export 'core_domain/application_meta_info_facade.dart';
 export 'core_domain/DomainErrorType.dart';
 export 'core_domain/DomainUseCaseProtocol.dart';
 export 'core_domain/FormTextValidationState.dart';

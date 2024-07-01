@@ -380,6 +380,16 @@ class S {
     );
   }
 
+  /// `Content`
+  String get content {
+    return Intl.message(
+      'Content',
+      name: 'content',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Terms of service`
   String get terms_of_service_label {
     return Intl.message(

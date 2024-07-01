@@ -1,4 +1,4 @@
-import 'SesameSubject.dart';
+import 'sesame_subject.dart';
 
 class SesameModule {
   final String id;

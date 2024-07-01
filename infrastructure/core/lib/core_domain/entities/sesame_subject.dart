@@ -1,7 +1,7 @@
-import 'package:core/core_domain/entities/SesameClass.dart';
+import 'package:core/core_domain/entities/sesame_class.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 
-part 'SesameSubject.freezed.dart';
+part 'sesame_subject.freezed.dart';
 
 @freezed
 class SesameSubject with _$SesameSubject {

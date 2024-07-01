@@ -50,6 +50,6 @@ class UsersLocalDataSource {
   Future<SesameUserDTO?> getUserProfileByEmail(String email) async {
     LazyBox<SesameUserDTO> usersBox =
         await Hive.openLazyBox<SesameUserDTO>(_UsersBoxName);
-    return usersBox.get("profile:${email}");
+    return usersBox.get("profile:$email");
   }
 }

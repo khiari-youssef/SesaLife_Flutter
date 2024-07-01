@@ -1,4 +1,4 @@
-import 'package:core/core_domain/entities/SesameClass.dart';
+import 'package:core/core_domain/entities/sesame_class.dart';
 import 'package:users_management_feature/domain/entities/SesameUser.dart';
 
 class SesameTeacher extends SesameUser {

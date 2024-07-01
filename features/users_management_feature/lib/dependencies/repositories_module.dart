@@ -1,3 +1,4 @@
+import 'package:core/core_domain/application_meta_info_facade.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 import 'package:users_management_feature/dependencies/dataSources_module.dart';
 import 'package:users_management_feature/dependencies/mappers_module.dart';
@@ -31,5 +32,8 @@ extension RepositoriesModule on GetIt {
     registerFactory<SesameClassesRepositoryContract>(
         () => SesameClassesRepository(),
         instanceName: "SesameClassesRepository");
+    registerSingleton<ApplicationMetaInfoFacade>(ApplicationMetaInfoFacade(
+        DefaultAssetBundle.of(get(instanceName: "ApplicationContext")),
+        get(instanceName: "AppRulesDomainToExternalEntityMapper")));
   }
 }

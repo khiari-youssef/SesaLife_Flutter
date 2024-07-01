@@ -1,4 +1,4 @@
-import 'package:core/core_domain/entities/SesameClass.dart';
+import 'package:core/core_domain/entities/sesame_class.dart';
 import 'package:core/core_domain/entities/user_profile_preview.dart';
 import 'package:core/core_domain/entities/user_sex.dart';
 

@@ -1,6 +1,6 @@
 import 'package:core/core_domain/AbstractDomainToExternalEntityMapper.dart';
-import 'package:core/core_domain/entities/SesameBadge.dart';
-import 'package:core/core_domain/entities/SesameClass.dart';
+import 'package:core/core_domain/entities/sesame_badge.dart';
+import 'package:core/core_domain/entities/sesame_class.dart';
 import 'package:core/core_domain/entities/user_sex.dart';
 import 'package:core/core_utils/Logger.dart';
 import 'package:users_management_feature/domain/entities/SesameStudent.dart';

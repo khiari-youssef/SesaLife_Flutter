@@ -1,18 +1,16 @@
-import 'package:core/core_domain/entities/AppPolicySection.dart';
+import 'package:core/core_domain/entities/app_policy_section.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
-
-import 'sesame_policy_and_terms_cubit_state_manager.dart';
+import 'package:users_management_feature/ui/program_privacy/stateManagement/sesame_policy_and_terms_bloc.dart';
 
 class SesamePolicyAndTermsScreenState
     extends State<SesamePolicyAndTermsScreen> {
-  late SesamePrivacyAndSecurityPolicyCubitStateManager stateManager;
+  late SesamePolicyAndTermsBloc bloc;
 
   @override
   void didChangeDependencies() {
-    // TODO: implement didChangeDependencies
     super.didChangeDependencies();
-    stateManager = SesamePrivacyAndSecurityPolicyCubitStateManager(
-        [], Localizations.localeOf(context), GetIt.instance.get());
+    bloc = SesamePolicyAndTermsBloc(
+        Localizations.localeOf(context), GetIt.instance.get());
   }
 
   @override
@@ -20,23 +18,83 @@ class SesamePolicyAndTermsScreenState
       titleScreenBuilder(context, S.of(context).privacy_policy_label, null, () {
         AutoRouter.of(context).back();
       },
-          ListView.builder(
-              itemCount: stateManager.state.length,
-              itemBuilder: (context, index) {
-                return widget.buildItemSection(
-                    context, stateManager.state[index]);
-              }));
+          BlocProvider<SesamePolicyAndTermsBloc>(
+            create: (context) =>
+                bloc..add(const SesamePolicyAndTermsEvent.loadRulesData()),
+            child: BlocConsumer<SesamePolicyAndTermsBloc,
+                SesamePolicyAndTermsState>(
+              listener: (context, state) {},
+              builder: (context, state) {
+                SesamePolicyAndTermsBloc localBloc =
+                    context.read<SesamePolicyAndTermsBloc>();
+                return localBloc.state.when(loading: () {
+                  return const SizedBox.shrink();
+                }, error: (error) {
+                  return const SizedBox.shrink();
+                }, success: (data) {
+                  return Padding(
+                      padding: EdgeInsets.symmetric(
+                          vertical: 12.h, horizontal: 16.w),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          BodyMedium(
+                            text: data.description,
+                            textAlign: TextAlign.start,
+                          ),
+                          16.verticalSpace,
+                          TitleMedium(
+                            text: S.of(context).content,
+                            textAlign: TextAlign.start,
+                            color: Theme.of(context).colorScheme.primary,
+                          ),
+                          16.verticalSpace,
+                          Wrap(
+                            direction: Axis.vertical,
+                            alignment: WrapAlignment.start,
+                            spacing: 8.h,
+                            runSpacing: 12.w,
+                            children: data.summary.indexed.map((title) {
+                              return Expanded(
+                                  child: GestureDetector(
+                                      onTap: () {},
+                                      child: TitleSmall(
+                                        text: "${(title.$1 + 1)}. ${title.$2}",
+                                        decoration: TextDecoration.underline,
+                                        textAlign: TextAlign.start,
+                                        color: Theme.of(context)
+                                            .colorScheme
+                                            .onSurface,
+                                      )));
+                            }).toList(),
+                          ),
+                          20.verticalSpace,
+                          Expanded(
+                              child: ListView.builder(
+                                  itemCount: data.sections.length,
+                                  itemBuilder: (context, index) {
+                                    return widget.buildItemSection(
+                                        context, data.sections[index]);
+                                  }))
+                        ],
+                      ));
+                });
+              },
+            ),
+          ));
 }
 
 @RoutePage(name: "SesamePolicyAndTermsRoute")
 class SesamePolicyAndTermsScreen extends StatefulWidget {
   const SesamePolicyAndTermsScreen({super.key});
 
-  Widget buildItemSection(BuildContext context, AppPolicySection section) {
+  Widget buildItemSection(BuildContext context, AppRulesSection section) {
     return Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisSize: MainAxisSize.max,
+        mainAxisSize: MainAxisSize.min,
         children: [
           HeadlineLarge(
               text: section.name,
@@ -46,7 +104,7 @@ class SesamePolicyAndTermsScreen extends StatefulWidget {
           ...section.subSections.map((subsection) => Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisSize: MainAxisSize.max,
+                mainAxisSize: MainAxisSize.min,
                 children: [
                   HeadlineMedium(
                       text: subsection.name,
@@ -57,8 +115,11 @@ class SesamePolicyAndTermsScreen extends StatefulWidget {
                     alignment: WrapAlignment.start,
                     direction: Axis.vertical,
                     children: [
-                      ...subsection.content.map((content) =>
-                          BodyMedium(text: "• $content", maxLines: 5))
+                      ...subsection.content.map((content) => BodyMedium(
+                            text: "• $content",
+                            maxLines: 5,
+                            color: Theme.of(context).colorScheme.onSurface,
+                          ))
                     ],
                   )
                 ],

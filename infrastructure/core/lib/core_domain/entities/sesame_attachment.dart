@@ -1,6 +1,6 @@
 import 'package:shared_dependencies/shared_dependencies.dart';
 
-part 'SesameAttachment.freezed.dart';
+part 'sesame_attachment.freezed.dart';
 
 enum SesameAttachmentType { pdf, word, text, image, any }
 

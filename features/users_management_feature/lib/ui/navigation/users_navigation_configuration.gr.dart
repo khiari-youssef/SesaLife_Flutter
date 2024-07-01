@@ -9,7 +9,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i14;
-import 'package:core/core_domain/entities/SesameBadge.dart' as _i16;
+import 'package:core/core_domain/entities/sesame_badge.dart' as _i16;
 import 'package:core/exports.dart' as _i18;
 import 'package:shared_dependencies/shared_dependencies.dart' as _i15;
 import 'package:users_management_feature/domain/entities/sesame_class_groups.dart'
