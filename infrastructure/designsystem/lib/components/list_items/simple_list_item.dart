@@ -27,58 +27,58 @@ class SimpleListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DecoratedBox(
-        decoration: BoxDecoration(
-            color: backgroundColor,
-            shape: BoxShape.rectangle,
-            border: border,
-            borderRadius: borderRadius),
-        child: Padding(
-          padding: EdgeInsets.all(8.r),
-          child: cardDetailsBuilder == null
-              ? buildRootCardElement(context)
-              : Column(
-                  mainAxisSize: MainAxisSize.min,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    buildRootCardElement(context),
-                    8.verticalSpace,
-                    cardDetailsBuilder!(context)
-                  ],
-                ),
-        ));
+      decoration: BoxDecoration(
+          color: backgroundColor,
+          shape: BoxShape.rectangle,
+          border: border,
+          borderRadius: borderRadius),
+      child: cardDetailsBuilder == null
+          ? buildRootCardElement(context)
+          : Column(
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                buildRootCardElement(context),
+                8.verticalSpace,
+                cardDetailsBuilder!(context)
+              ],
+            ),
+    );
     ;
   }
 
   Widget buildRootCardElement(BuildContext context) {
     return GestureDetector(
         onTap: onClicked,
-        child: Row(
-            mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    LabelLarge(text: title, textAlign: TextAlign.start),
-                    4.verticalSpace,
-                    LabelMedium(
-                        text: title,
-                        textAlign: TextAlign.start,
-                        color: const Color(0xFF49454F)),
-                  ]),
-              (actionIconAssetName?.isNotEmpty == true)
-                  ? Expanded(
-                      child: Align(
-                          alignment: Alignment.centerRight,
-                          child: CustomIcon(
-                            iconSVGname: actionIconAssetName!,
-                            color: Theme.of(context).primaryColor,
-                          )))
-                  : const SizedBox.shrink()
-            ]));
+        child: Padding(
+            padding: EdgeInsets.all(8.r),
+            child: Row(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        LabelLarge(text: title, textAlign: TextAlign.start),
+                        4.verticalSpace,
+                        LabelMedium(
+                            text: title,
+                            textAlign: TextAlign.start,
+                            color: const Color(0xFF49454F)),
+                      ]),
+                  (actionIconAssetName?.isNotEmpty == true)
+                      ? Expanded(
+                          child: Align(
+                              alignment: Alignment.centerRight,
+                              child: CustomIcon(
+                                iconSVGname: actionIconAssetName!,
+                                color: Theme.of(context).primaryColor,
+                              )))
+                      : const SizedBox.shrink()
+                ])));
   }
 }
