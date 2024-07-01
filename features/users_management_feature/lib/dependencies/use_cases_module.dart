@@ -1,6 +1,5 @@
 import 'package:core/core_data/localStorage/credit_card_secure_local_storage_interface.dart';
 import 'package:core/core_domain/DomainUseCaseProtocol.dart';
-import 'package:core/core_domain/entities/SesameClass.dart';
 import 'package:core/core_domain/entities/user_profile_preview.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 

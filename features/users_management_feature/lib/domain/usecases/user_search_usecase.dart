@@ -1,6 +1,5 @@
 import 'package:core/core_domain/DomainUseCaseProtocol.dart';
 import 'package:core/core_domain/entities/user_profile_preview.dart';
-import 'package:users_management_feature/domain/entities/SesameUser.dart';
 
 import '../../infrastructure/repositories/users_search_repository.dart';
 

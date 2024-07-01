@@ -4,9 +4,7 @@ import 'package:core/core_domain/entities/entities.dart';
 import 'package:core/core_domain/entities/user_profile_preview.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 
-import '../../../domain/entities/SesameUser.dart';
 import '../../../domain/usecases/user_search_usecase.dart';
-import '../../../infrastructure/repositories/users_search_repository.dart';
 
 part 'users_list_bloc.freezed.dart';
 part 'users_list_event.dart';
