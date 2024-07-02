@@ -1,7 +1,7 @@
 import 'package:designsystem/extensions.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 
-import '../../domain/entities/GuestWelcomeInfoOption.dart';
+import '../../domain/entities/guest_welcome_info_option.dart';
 import 'GuestWelcomeInfoOptionCard.dart';
 
 @RoutePage(name: "GuestSpaceRoute")

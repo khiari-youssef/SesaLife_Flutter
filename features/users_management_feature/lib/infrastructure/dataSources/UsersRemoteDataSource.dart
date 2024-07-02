@@ -10,6 +10,7 @@ import 'package:users_management_feature/infrastructure/dtos/SesameTeacherDTO.da
 import 'package:users_management_feature/infrastructure/dtos/SesameUserDTO.dart';
 
 import '../dtos/SesameStudentDTO.dart';
+import '../dtos/login_response_dto.dart';
 
 class UsersRemoteDataSource {
   final Dio dio = GetIt.instance.get();
@@ -54,6 +55,11 @@ class UsersRemoteDataSource {
         profBackground: 'R&D professor in Artificial intelligence')
   ];
 
+  Map<String, String> tokens = {
+    "khiari.youssef98@gmail.com": "token1",
+    "ahmed.prof@sesame.com.tn": "token2"
+  };
+
   Future<bool> submitCandidatureRequest(
       EnrollmentCandidatureDTO candidatureForm) async {
     return await Isolate.run(() async {
@@ -63,7 +69,7 @@ class UsersRemoteDataSource {
     });
   }
 
-  Future<SesameUserDTO> loginWithCredentials(
+  Future<LoginResponseDTO> loginWithCredentials(
       String email, String password) async {
     return await Isolate.run(() async {
       /*
@@ -71,16 +77,25 @@ class UsersRemoteDataSource {
       Map<String, dynamic> payload = jsonDecode(response.data.toString());
       return SesameUserDTO.fromJson(payload);
       */
-      return users.firstWhere((user) =>
+      SesameUserDTO user = users.firstWhere((user) =>
           user.email.replaceAll(' ', '') == email.replaceAll(' ', ''));
+      return LoginResponseDTO(token: tokens[email], user: user);
     });
   }
 
-  Future<SesameUserDTO> loginWithToken(String token) async {
+  Future<LoginResponseDTO> loginWithToken(String token) async {
+    String email =
+        tokens.entries.firstWhere((entry) => entry.value == token).key;
+    SesameUserDTO user = users.firstWhere(
+        (user) => user.email.replaceAll(' ', '') == email.replaceAll(' ', ''));
+    return LoginResponseDTO(token: tokens[email], user: user);
+    /*
     return await Isolate.run(() async {
       Response<dynamic> response = await dio.get("");
       Map<String, dynamic> payload = jsonDecode(response.data.toString());
-      return SesameUserDTO.fromJson(payload);
+      return LoginResponseDTO(
+          user: SesameUserDTO.fromJson(payload), token: "${token}v2");
     });
+     */
   }
 }

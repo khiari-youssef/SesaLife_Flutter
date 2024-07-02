@@ -7,7 +7,7 @@ import '../infrastructure/dataSources/UsersRemoteDataSource.dart';
 
 extension DataSourcesModule on GetIt {
   void loadDataSourcesModule() {
-    registerSingleton(UsersLocalDataSource());
+    registerSingleton(UsersLocalDataSource()..init());
     registerSingleton(UsersRemoteDataSource());
     registerSingleton(UsersSettingsLocalDataSource());
     registerFactory<CreditCardSecureLocalStorageInterface>(

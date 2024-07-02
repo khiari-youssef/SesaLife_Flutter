@@ -1,55 +1,64 @@
 import 'dart:isolate';
 
+import 'package:core/core_utils/Logger.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 import 'package:users_management_feature/infrastructure/dtos/SesameUserDTO.dart';
 
 class UsersLocalDataSource {
-  final String _UserTokenBoxName = "tokenBox";
-  final String _UsersBoxName = "usersBox";
-  final String _LoggedInUserKey = "LoggedInUserKey";
+  final String _userTokenBoxName = "tokenBox";
+  final String _usersBoxName = "usersBox";
+  final String _loggedInUserKey = "LoggedInUserKey";
+
+  void init() async {
+    await Hive.openBox<String>(_userTokenBoxName);
+    await Hive.openBox<SesameUserDTO>(_usersBoxName);
+  }
 
   Future<void> saveUserToken(String email, String token) async {
-    LazyBox usersBox = await Hive.openLazyBox(_UserTokenBoxName);
-    return usersBox.put("token:$email", token);
+    Box usersBox = Hive.box<String>(_userTokenBoxName);
+    usersBox.put("token:$email", token);
   }
 
   Future<String?> getUserToken(String email) async {
-    LazyBox<String> usersBox = await Hive.openLazyBox(_UserTokenBoxName);
-    return usersBox.get("token:$email");
+    Box<String> usersBox = Hive.box<String>(_userTokenBoxName);
+    String? token = usersBox.get("token:$email");
+    return token;
   }
 
   Future<String?> getUserExistingUserToken() async {
-    return await Isolate.run(() async {
-      LazyBox<String> usersBox = await Hive.openLazyBox(_UserTokenBoxName);
-      return usersBox.getAt(0);
-    });
+    Box<String> usersBox = Hive.box<String>(_userTokenBoxName);
+    try {
+      String? token = usersBox.getAt(0);
+      return token;
+    } catch (e) {
+      return null;
+    }
   }
 
   Future<void> saveUserProfile(SesameUserDTO user, bool isLoggedIn) async {
-    LazyBox<SesameUserDTO> usersBox = await Hive.openLazyBox(_UsersBoxName);
+    Box<SesameUserDTO> usersBox = Hive.box<SesameUserDTO>(_usersBoxName);
     if (isLoggedIn) {
-      return usersBox.put(_LoggedInUserKey, user);
+      usersBox.put(_loggedInUserKey, user);
     } else {
-      return usersBox.put("profile:${user.email}", user);
+      usersBox.put("profile:${user.email}", user);
     }
   }
 
   Future<void> deleteUserData() async {
-    LazyBox<SesameUserDTO> usersBox = await Hive.openLazyBox(_UsersBoxName);
-    LazyBox<String> usersTokenBox = await Hive.openLazyBox(_UserTokenBoxName);
-    await Future.wait(
-        [usersBox.delete(_LoggedInUserKey), usersTokenBox.clear()]);
+    Box<SesameUserDTO> usersBox = Hive.box<SesameUserDTO>(_usersBoxName);
+    Box<String> usersTokenBox = Hive.box<String>(_userTokenBoxName);
+    await Future.wait([usersBox.clear(), usersTokenBox.clear()]);
   }
 
   Future<SesameUserDTO?> getLoggedInUserProfile() async {
-    LazyBox<SesameUserDTO> usersBox =
-        await Hive.openLazyBox<SesameUserDTO>(_UsersBoxName);
-    return usersBox.get(_LoggedInUserKey);
+    Box<SesameUserDTO> usersBox = Hive.box<SesameUserDTO>(_usersBoxName);
+    SesameUserDTO? user = usersBox.get(_loggedInUserKey);
+    return user;
   }
 
   Future<SesameUserDTO?> getUserProfileByEmail(String email) async {
-    LazyBox<SesameUserDTO> usersBox =
-        await Hive.openLazyBox<SesameUserDTO>(_UsersBoxName);
-    return usersBox.get("profile:$email");
+    Box<SesameUserDTO> usersBox = Hive.box<SesameUserDTO>(_usersBoxName);
+    SesameUserDTO? user = usersBox.get("profile:$email");
+    return user;
   }
 }

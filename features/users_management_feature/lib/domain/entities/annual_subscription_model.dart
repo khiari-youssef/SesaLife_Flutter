@@ -1,7 +1,7 @@
 import 'package:shared_dependencies/shared_dependencies.dart';
 import 'package:users_management_feature/domain/entities/student_subscription_record.dart';
 
-part 'AnnualSubscriptionModel.freezed.dart';
+part 'annual_subscription_model.freezed.dart';
 
 @freezed
 class AnnualSubscriptionModel with _$AnnualSubscriptionModel {

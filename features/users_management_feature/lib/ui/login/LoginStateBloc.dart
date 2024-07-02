@@ -1,8 +1,9 @@
 import 'package:core/core_domain/DomainErrorType.dart';
 import 'package:core/core_domain/DomainUseCaseProtocol.dart';
+import 'package:core/core_utils/Logger.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 
-import '../../domain/entities/LoginMethod.dart';
+import '../../domain/entities/login_method.dart';
 import '../../domain/entities/SesameUser.dart';
 import 'LoginState.dart';
 
@@ -18,6 +19,7 @@ class LoginStateBloc extends Bloc<LoginEvent, LoginState> {
               .then((value) {
             emit(const LoginState.success());
           }, onError: (error) {
+            logger.e(error);
             emit(const LoginState.error(DomainErrorType.UnknownError));
           });
         }, updateEmail: (email) {

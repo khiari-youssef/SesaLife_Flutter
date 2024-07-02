@@ -1,6 +1,6 @@
 import 'package:shared_dependencies/shared_dependencies.dart';
 
-part 'GuestWelcomeInfoOption.freezed.dart';
+part 'guest_welcome_info_option.freezed.dart';
 
 @freezed
 class GuestWelcomeInfoOption with _$GuestWelcomeInfoOption {

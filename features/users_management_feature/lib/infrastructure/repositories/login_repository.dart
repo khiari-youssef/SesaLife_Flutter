@@ -5,7 +5,9 @@ import 'package:core/core_domain/entities/user_sex.dart';
 import 'package:core/core_utils/Logger.dart';
 import 'package:users_management_feature/domain/entities/SesameStudent.dart';
 import 'package:users_management_feature/domain/entities/SesameTeacher.dart';
+import 'package:users_management_feature/infrastructure/dtos/login_response_dto.dart';
 
+import '../../domain/entities/login_result.dart';
 import '../../domain/entities/SesameRole.dart';
 import '../../domain/entities/SesameUser.dart';
 import '../dataSources/UsersLocalDataSource.dart';
@@ -60,10 +62,10 @@ class LoginRepository implements LoginRepositoryContract {
   ];
 
   @override
-  Future<SesameUser> authenticateUserWithCredentials(
+  Future<LoginResult> authenticateUserWithCredentials(
       String email, String password) async {
     await Future.delayed(const Duration(seconds: 1));
-    SesameUserDTO? userdata = await remoteDataSource
+    LoginResponseDTO? userdata = await remoteDataSource
         .loginWithCredentials(email, password)
         .catchError((error) {
           logger.e("user with email $email does not exist");
@@ -71,20 +73,26 @@ class LoginRepository implements LoginRepositoryContract {
         })
         .asStream()
         .first;
-    return localDataSource.saveUserProfile(userdata, true).then((value) {
-      return mapper.toDomain(userdata);
-    }, onError: (error) {
-      logger.e(error);
-      return null;
+    return Future.wait([
+      localDataSource.saveUserProfile(userdata.user!, true),
+      localDataSource.saveUserToken(email, userdata.token!)
+    ]).then((value) {
+      return LoginResult(
+          token: userdata.token!, user: mapper.toDomain(userdata.user!));
     });
   }
 
   @override
-  Future<SesameUser> authenticateUserWithExistingUserToken() async {
+  Future<LoginResult> authenticateUserWithExistingUserToken() async {
     String? token = await localDataSource.getUserExistingUserToken();
     if (token != null) {
-      return remoteDataSource.loginWithToken(token).then((value) {
-        return mapper.toDomain(value);
+      LoginResponseDTO response = await remoteDataSource.loginWithToken(token);
+      return Future.wait([
+        localDataSource.saveUserProfile(response.user!, true),
+        localDataSource.saveUserToken(response.user!.email, response.token!)
+      ]).then((value) {
+        return LoginResult(
+            user: mapper.toDomain(response.user!), token: response.token!);
       });
     } else {
       throw Error();

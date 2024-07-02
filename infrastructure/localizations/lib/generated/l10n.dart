@@ -390,6 +390,16 @@ class S {
     );
   }
 
+  /// `Data not available !`
+  String get data_not_available {
+    return Intl.message(
+      'Data not available !',
+      name: 'data_not_available',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Terms of service`
   String get terms_of_service_label {
     return Intl.message(

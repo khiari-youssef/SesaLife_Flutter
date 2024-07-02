@@ -17,7 +17,10 @@ class AppNavigationConfiguration extends $AppNavigationConfiguration {
     CustomRoute(
         page: SesameUnauthorizedDeviceRoute.page,
         initial: true,
-        guards: [AuthGuard()]),
+        guards: [
+          AuthGuard(GetIt.instance.get(instanceName: "UserLoginUseCase"),
+              GetIt.instance.get(instanceName: "UserSettingsRepository"))
+        ]),
     ...UsersNavigationConfiguration().routes,
     ...HomeNavigationConfiguration().routes,
     AutoRoute(path: "/MyGuestSpaceRoute", page: GuestSpaceRoute.page)

@@ -6,7 +6,7 @@ class UsersSettingsLocalDataSource {
   final String settingsBoxName = "MySettingsDataBox";
   final String toggleStayLoggedInOptionKey = "toggleStayLoggedInOption";
   final String toggleHideMyWorkDataOptionKey = "toggleHideMyWorkDataOption";
-  final String toggleNotifyMeOptionKey = "toggleStayLoggedInOption";
+  final String toggleNotifyMeOptionKey = "toggleNotifyMeOptionKey";
 
   Future<void> toggleStayLoggedInOption(bool isEnabled) async {
     Box settingsBox = await Hive.openBox(settingsBoxName);

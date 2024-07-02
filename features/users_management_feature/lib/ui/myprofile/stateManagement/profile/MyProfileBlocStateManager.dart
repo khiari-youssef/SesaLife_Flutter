@@ -1,5 +1,6 @@
 import 'package:core/core_domain/DomainErrorType.dart';
 import 'package:core/core_domain/DomainUseCaseProtocol.dart';
+import 'package:core/core_utils/Logger.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 import 'package:users_management_feature/ui/myprofile/stateManagement/profile/MyProfileScreenEvent.dart';
 
@@ -15,14 +16,14 @@ class MyProfileBlocStateManager
       super.initialState, this.getUserProfileUsecase, this.userLogoutUseCase) {
     on<MyProfileScreenEvent>((MyProfileScreenEvent event, emit) async {
       await event.when(loadMyProfileData: () async {
-        await getUserProfileUsecase.execute().then((result) {
-          emit(state.copyWith(
-              profileDataState: MyProfileDataState.success(result)));
+        MyProfileDataState resultState =
+            await getUserProfileUsecase.execute().then((result) {
+          return MyProfileDataState.success(result);
         }, onError: (error) {
-          emit(state.copyWith(
-              profileDataState:
-                  const MyProfileDataState.error(DomainErrorType.NotFound)));
+          logger.e(error);
+          const MyProfileDataState.error(DomainErrorType.NotFound);
         });
+        emit(state.copyWith(profileDataState: resultState));
       }, logout: () async {
         await userLogoutUseCase.execute();
         emit(state.copyWith(isLoggedOut: true));

@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'LoginMethod.dart';
+part of 'login_method.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -19,19 +19,19 @@ mixin _$LoginMethod {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String email, String password) credentialLogin,
-    required TResult Function(String token) tokenLogin,
+    required TResult Function() tokenLogin,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String email, String password)? credentialLogin,
-    TResult? Function(String token)? tokenLogin,
+    TResult? Function()? tokenLogin,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String email, String password)? credentialLogin,
-    TResult Function(String token)? tokenLogin,
+    TResult Function()? tokenLogin,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -149,7 +149,7 @@ class _$credentialLoginImpl implements _credentialLogin {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String email, String password) credentialLogin,
-    required TResult Function(String token) tokenLogin,
+    required TResult Function() tokenLogin,
   }) {
     return credentialLogin(email, password);
   }
@@ -158,7 +158,7 @@ class _$credentialLoginImpl implements _credentialLogin {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String email, String password)? credentialLogin,
-    TResult? Function(String token)? tokenLogin,
+    TResult? Function()? tokenLogin,
   }) {
     return credentialLogin?.call(email, password);
   }
@@ -167,7 +167,7 @@ class _$credentialLoginImpl implements _credentialLogin {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String email, String password)? credentialLogin,
-    TResult Function(String token)? tokenLogin,
+    TResult Function()? tokenLogin,
     required TResult orElse(),
   }) {
     if (credentialLogin != null) {
@@ -224,8 +224,6 @@ abstract class _$$tokenLoginImplCopyWith<$Res> {
   factory _$$tokenLoginImplCopyWith(
           _$tokenLoginImpl value, $Res Function(_$tokenLoginImpl) then) =
       __$$tokenLoginImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({String token});
 }
 
 /// @nodoc
@@ -235,78 +233,54 @@ class __$$tokenLoginImplCopyWithImpl<$Res>
   __$$tokenLoginImplCopyWithImpl(
       _$tokenLoginImpl _value, $Res Function(_$tokenLoginImpl) _then)
       : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? token = null,
-  }) {
-    return _then(_$tokenLoginImpl(
-      null == token
-          ? _value.token
-          : token // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
 }
 
 /// @nodoc
 
 class _$tokenLoginImpl implements _tokenLogin {
-  const _$tokenLoginImpl(this.token);
-
-  @override
-  final String token;
+  const _$tokenLoginImpl();
 
   @override
   String toString() {
-    return 'LoginMethod.tokenLogin(token: $token)';
+    return 'LoginMethod.tokenLogin()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$tokenLoginImpl &&
-            (identical(other.token, token) || other.token == token));
+        (other.runtimeType == runtimeType && other is _$tokenLoginImpl);
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, token);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$tokenLoginImplCopyWith<_$tokenLoginImpl> get copyWith =>
-      __$$tokenLoginImplCopyWithImpl<_$tokenLoginImpl>(this, _$identity);
+  int get hashCode => runtimeType.hashCode;
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String email, String password) credentialLogin,
-    required TResult Function(String token) tokenLogin,
+    required TResult Function() tokenLogin,
   }) {
-    return tokenLogin(token);
+    return tokenLogin();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String email, String password)? credentialLogin,
-    TResult? Function(String token)? tokenLogin,
+    TResult? Function()? tokenLogin,
   }) {
-    return tokenLogin?.call(token);
+    return tokenLogin?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String email, String password)? credentialLogin,
-    TResult Function(String token)? tokenLogin,
+    TResult Function()? tokenLogin,
     required TResult orElse(),
   }) {
     if (tokenLogin != null) {
-      return tokenLogin(token);
+      return tokenLogin();
     }
     return orElse();
   }
@@ -344,10 +318,5 @@ class _$tokenLoginImpl implements _tokenLogin {
 }
 
 abstract class _tokenLogin implements LoginMethod {
-  const factory _tokenLogin(final String token) = _$tokenLoginImpl;
-
-  String get token;
-  @JsonKey(ignore: true)
-  _$$tokenLoginImplCopyWith<_$tokenLoginImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  const factory _tokenLogin() = _$tokenLoginImpl;
 }

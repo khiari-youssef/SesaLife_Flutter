@@ -50,6 +50,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "company": MessageLookupByLibrary.simpleMessage("company"),
         "confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
         "content": MessageLookupByLibrary.simpleMessage("Content"),
+        "data_not_available":
+            MessageLookupByLibrary.simpleMessage("Data not available !"),
         "device_auth_action": MessageLookupByLibrary.simpleMessage(
             "This action requires authentication"),
         "device_auth_unsupported": MessageLookupByLibrary.simpleMessage(

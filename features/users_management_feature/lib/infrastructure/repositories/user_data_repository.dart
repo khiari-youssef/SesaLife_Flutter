@@ -15,8 +15,9 @@ class UserDataRepository implements UserdataRepositoryContract {
 
   @override
   Future<SesameUser?> getCurrentUserProfileData() async {
-    SesameUserDTO? user = await localDataSource.getLoggedInUserProfile();
-    return mapper.toDomain(user!);
+    return localDataSource
+        .getLoggedInUserProfile()
+        .then((data) => mapper.toDomain(data!));
   }
 
   @override
