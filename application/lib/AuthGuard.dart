@@ -23,10 +23,14 @@ class AuthGuard extends AutoRouteGuard {
       try {
         MySettingsData settings =
             await userSettingsRepositoryContract.loadSettingsData();
+        logger.i(settings.isStayLoggedInOptionEnabled);
         if (settings.isStayLoggedInOptionEnabled) {
+          logger.i("Auto logging in");
           await loginUseCase.execute(const LoginMethod.tokenLogin());
+          logger.i("Logged in");
           resolver.redirect(const HomeRootRoute());
         } else {
+          logger.i("Login required");
           resolver.redirect(const LoginRoute());
         }
       } catch (e) {

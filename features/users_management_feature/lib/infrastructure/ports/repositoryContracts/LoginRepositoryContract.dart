@@ -4,6 +4,4 @@ abstract interface class LoginRepositoryContract {
   Future<LoginResult> authenticateUserWithCredentials(
       String email, String password);
   Future<LoginResult> authenticateUserWithExistingUserToken();
-
-  Future<void> clearAllUserData();
 }

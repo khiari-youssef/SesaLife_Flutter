@@ -31,7 +31,7 @@ extension UseCasesModule on GetIt {
         instanceName: "CreditCardPaymentUseCase");
     registerFactory<NoInputDomainUseCaseProtocol<Future<List<void>>>>(
         () => UserLogoutUseCase(
-            get(instanceName: "LoginRepository"),
+            get(instanceName: "UserDataRepository"),
             get(instanceName: "UserSettingsRepository"),
             get(instanceName: "CreditCardSecureStorageImpl")),
         instanceName: "UserLogoutUseCase");

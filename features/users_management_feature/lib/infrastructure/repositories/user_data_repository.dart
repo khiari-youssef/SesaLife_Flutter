@@ -1,5 +1,7 @@
+import 'package:core/core_data/localStorage/credit_card_secure_local_storage_interface.dart';
 import 'package:core/core_domain/AbstractDomainToExternalEntityMapper.dart';
 import 'package:users_management_feature/domain/entities/SesameUser.dart';
+import 'package:users_management_feature/infrastructure/repositories/user_settings_repository.dart';
 
 import '../dataSources/UsersLocalDataSource.dart';
 import '../dtos/SesameUserDTO.dart';
@@ -11,7 +13,9 @@ class UserDataRepository implements UserdataRepositoryContract {
   UserDataRepository(this.localDataSource, this.mapper);
 
   @override
-  Future<void> clearUserData() async {}
+  Future<void> clearUserData() async {
+    localDataSource.deleteUserData();
+  }
 
   @override
   Future<SesameUser?> getCurrentUserProfileData() async {

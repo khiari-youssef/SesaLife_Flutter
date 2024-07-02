@@ -98,9 +98,4 @@ class LoginRepository implements LoginRepositoryContract {
       throw Error();
     }
   }
-
-  @override
-  Future<void> clearAllUserData() {
-    return localDataSource.deleteUserData();
-  }
 }

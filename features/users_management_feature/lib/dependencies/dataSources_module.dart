@@ -9,7 +9,7 @@ extension DataSourcesModule on GetIt {
   void loadDataSourcesModule() {
     registerSingleton(UsersLocalDataSource()..init());
     registerSingleton(UsersRemoteDataSource());
-    registerSingleton(UsersSettingsLocalDataSource());
+    registerSingleton(UsersSettingsLocalDataSource()..init());
     registerFactory<CreditCardSecureLocalStorageInterface>(
         () => CreditCardSecureStorageImpl(),
         instanceName: "CreditCardSecureStorageImpl");
