@@ -1,4 +1,5 @@
 import 'package:core/core_domain/entities/app_policy_section.dart';
+import 'package:core/exports.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 import 'package:users_management_feature/ui/program_privacy/stateManagement/sesame_policy_and_terms_bloc.dart';
 
@@ -68,6 +69,31 @@ class SesamePolicyAndTermsScreenState
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
+                                        Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceAround,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.center,
+                                            children: [
+                                              Flexible(
+                                                  child: LabelSmall(
+                                                text:
+                                                    "Updated on ${data.lastTimeUpdated.toDisplayDate()} at ${data.lastTimeUpdated.toDisplayTime()}",
+                                                textAlign: TextAlign.start,
+                                                color: const Color(0xFF919191),
+                                              )),
+                                              Flexible(
+                                                  child: SesameCustomButton(
+                                                      variant:
+                                                          SesameButtonVariant
+                                                              .neutral,
+                                                      buttonText: 'refresh',
+                                                      sizeType: SesameButtonSize
+                                                          .listSize,
+                                                      onPressed: () {}))
+                                            ]),
+                                        16.verticalSpace,
                                         BodyMedium(
                                           text: data.description,
                                           textAlign: TextAlign.start,
