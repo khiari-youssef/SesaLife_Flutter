@@ -7,9 +7,9 @@ import 'package:users_management_feature/domain/entities/SesameStudent.dart';
 import 'package:users_management_feature/domain/entities/SesameTeacher.dart';
 import 'package:users_management_feature/infrastructure/dtos/login_response_dto.dart';
 
-import '../../domain/entities/login_result.dart';
 import '../../domain/entities/SesameRole.dart';
 import '../../domain/entities/SesameUser.dart';
+import '../../domain/entities/login_result.dart';
 import '../dataSources/UsersLocalDataSource.dart';
 import '../dataSources/UsersRemoteDataSource.dart';
 import '../dtos/SesameUserDTO.dart';

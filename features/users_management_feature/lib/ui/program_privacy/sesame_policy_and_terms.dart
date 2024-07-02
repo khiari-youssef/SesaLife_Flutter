@@ -1,5 +1,4 @@
 import 'package:core/core_domain/entities/app_policy_section.dart';
-import 'package:designsystem/extensions.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 import 'package:users_management_feature/ui/program_privacy/stateManagement/sesame_policy_and_terms_bloc.dart';
 

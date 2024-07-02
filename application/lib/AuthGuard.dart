@@ -6,7 +6,6 @@ import 'package:shared_dependencies/shared_dependencies.dart';
 import 'package:users_management_feature/domain/entities/SesameUser.dart';
 import 'package:users_management_feature/domain/entities/login_method.dart';
 import 'package:users_management_feature/domain/entities/my_settings_data.dart';
-import 'package:users_management_feature/domain/usecases/get_my_profile_data_use_case.dart';
 import 'package:users_management_feature/infrastructure/repositories/user_settings_repository.dart';
 import 'package:users_management_feature/ui/navigation/users_navigation_configuration.gr.dart';
 

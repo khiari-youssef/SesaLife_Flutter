@@ -1,6 +1,7 @@
 import 'dart:convert';
-import 'package:flutter/services.dart' show rootBundle;
+
 import 'package:core/exports.dart';
+import 'package:flutter/services.dart' show rootBundle;
 
 import '../core_data/dtos/sesame_privacy_policy_document_dto.dart';
 

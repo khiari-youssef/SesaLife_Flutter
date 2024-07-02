@@ -1,4 +1,3 @@
-import 'package:core/core_domain/application_meta_info_facade.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 
 import '../ui/login/LoginState.dart';

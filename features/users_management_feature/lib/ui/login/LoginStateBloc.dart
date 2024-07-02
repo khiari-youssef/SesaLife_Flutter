@@ -3,8 +3,8 @@ import 'package:core/core_domain/DomainUseCaseProtocol.dart';
 import 'package:core/core_utils/Logger.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 
-import '../../domain/entities/login_method.dart';
 import '../../domain/entities/SesameUser.dart';
+import '../../domain/entities/login_method.dart';
 import 'LoginState.dart';
 
 class LoginStateBloc extends Bloc<LoginEvent, LoginState> {
