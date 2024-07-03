@@ -1,7 +1,7 @@
 import 'package:shared_dependencies/shared_dependencies.dart';
 
-import '../ui/login/LoginState.dart';
-import '../ui/login/LoginStateBloc.dart';
+import '../ui/login/login_state.dart';
+import '../ui/login/login_state_bloc.dart';
 import '../ui/myprofile/stateManagement/profile/MyProfileBlocStateManager.dart';
 import '../ui/myprofile/stateManagement/profile/MyProfileDataState.dart';
 import '../ui/myprofile/stateManagement/profile/MyProfileScreenGlobalState.dart';

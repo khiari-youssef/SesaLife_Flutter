@@ -10,9 +10,8 @@ import 'package:users_management_feature/infrastructure/repositories/user_settin
 import 'package:users_management_feature/ui/navigation/users_navigation_configuration.gr.dart';
 
 class AuthGuard extends AutoRouteGuard {
-  final DomainUseCaseProtocol<LoginMethod, Future<SesameUser>> loginUseCase;
   final UserSettingsRepositoryContract userSettingsRepositoryContract;
-  AuthGuard(this.loginUseCase, this.userSettingsRepositoryContract);
+  AuthGuard(this.userSettingsRepositoryContract);
 
   @override
   void onNavigation(NavigationResolver resolver, StackRouter router) async {
@@ -24,9 +23,7 @@ class AuthGuard extends AutoRouteGuard {
           await userSettingsRepositoryContract.loadSettingsData();
       if (settings.isStayLoggedInOptionEnabled) {
         logger.i("Auto logging in");
-        await loginUseCase.execute(const LoginMethod.tokenLogin());
-        logger.i("Logged in");
-        resolver.redirect(const HomeRootRoute());
+        resolver.redirect(const AutoLoginLoadingRoute());
       } else {
         logger.i("Login required");
         resolver.redirect(const LoginRoute());

@@ -3,6 +3,7 @@
   "welcome_logo_sesame_name" : "SESAME",
   "welcome_logo_description" : "Student Life",
   "login" : "Se connecter",
+  "auto_login_message" : "Connection automatique en cours ...",
   "logout" : "Se déconnecter",
   "go_back": "Retourner",
   "device_auth_unsupported" : "Votre appareil ne supporte pas une forte authentification biometrique ! ou bien vous ne l'avez pas encore enregistré",

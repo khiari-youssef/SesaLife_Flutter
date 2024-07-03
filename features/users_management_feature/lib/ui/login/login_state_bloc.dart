@@ -5,7 +5,7 @@ import 'package:shared_dependencies/shared_dependencies.dart';
 
 import '../../domain/entities/SesameUser.dart';
 import '../../domain/entities/login_method.dart';
-import 'LoginState.dart';
+import 'login_state.dart';
 
 class LoginStateBloc extends Bloc<LoginEvent, LoginState> {
   final DomainUseCaseProtocol<LoginMethod, Future<SesameUser>> useCase;

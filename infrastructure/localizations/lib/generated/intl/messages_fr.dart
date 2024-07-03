@@ -38,6 +38,8 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "assigned_classes":
             MessageLookupByLibrary.simpleMessage("Classes assignés"),
+        "auto_login_message": MessageLookupByLibrary.simpleMessage(
+            "Connection automatique en cours ..."),
         "badge_click_to_scan":
             MessageLookupByLibrary.simpleMessage("Cliquer pour scanner"),
         "badge_expired": MessageLookupByLibrary.simpleMessage("Expiré"),

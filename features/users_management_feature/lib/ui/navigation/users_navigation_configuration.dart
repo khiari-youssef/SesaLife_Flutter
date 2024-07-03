@@ -8,6 +8,8 @@ class UsersNavigationConfiguration extends $UsersNavigationConfiguration {
   List<AutoRoute> get routes => [
         AutoRoute(path: "/LoginRoute", page: LoginRoute.page),
         AutoRoute(
+            path: "/AutoLoginLoadingRoute", page: AutoLoginLoadingRoute.page),
+        AutoRoute(
           path: "/EnrollmentRoute",
           page: EnrollmentRoute.page,
         ),

@@ -1,7 +1,7 @@
 import 'package:core/core_domain/DomainErrorType.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 
-part 'LoginState.freezed.dart';
+part 'login_state.freezed.dart';
 
 @freezed
 sealed class LoginState with _$LoginState {

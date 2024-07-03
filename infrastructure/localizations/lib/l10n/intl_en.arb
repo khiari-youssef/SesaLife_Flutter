@@ -3,6 +3,7 @@
   "welcome_logo_sesame_name" : "SESAME",
   "welcome_logo_description" : "Student Life",
   "login" : "Login",
+   "auto_login_message" : "Auto logging ...",
   "logout" : "Logout",
    "go_back": "Go back",
    "device_auth_unsupported" : "Your device either does not have strong biometric authentication or you did not yet enroll one !",

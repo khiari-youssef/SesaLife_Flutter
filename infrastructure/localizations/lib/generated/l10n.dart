@@ -80,6 +80,16 @@ class S {
     );
   }
 
+  /// `Auto logging ...`
+  String get auto_login_message {
+    return Intl.message(
+      'Auto logging ...',
+      name: 'auto_login_message',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Logout`
   String get logout {
     return Intl.message(

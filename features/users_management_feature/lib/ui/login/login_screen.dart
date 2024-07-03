@@ -1,8 +1,8 @@
 import 'package:designsystem/extensions.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 
-import 'LoginState.dart';
-import 'LoginStateBloc.dart';
+import 'login_state.dart';
+import 'login_state_bloc.dart';
 
 class LoginScreenState extends State<LoginScreen> {
   bool canLogin = false;

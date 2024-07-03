@@ -18,8 +18,7 @@ class AppNavigationConfiguration extends $AppNavigationConfiguration {
         page: SesameUnauthorizedDeviceRoute.page,
         initial: true,
         guards: [
-          AuthGuard(GetIt.instance.get(instanceName: "UserLoginUseCase"),
-              GetIt.instance.get(instanceName: "UserSettingsRepository"))
+          AuthGuard(GetIt.instance.get(instanceName: "UserSettingsRepository"))
         ]),
     ...UsersNavigationConfiguration().routes,
     ...HomeNavigationConfiguration().routes,
