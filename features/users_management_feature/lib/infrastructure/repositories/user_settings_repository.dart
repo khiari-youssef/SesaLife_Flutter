@@ -1,7 +1,7 @@
 import 'package:core/core_utils/Logger.dart';
 import 'package:users_management_feature/domain/entities/my_settings_data.dart';
 
-import '../dataSources/UsersSettingsLocalDataSource.dart';
+import '../dataSources/users_settings_local_data_source.dart';
 
 abstract interface class UserSettingsRepositoryContract {
   Future<void> toggleStayLoggedInOption(bool isEnabled);

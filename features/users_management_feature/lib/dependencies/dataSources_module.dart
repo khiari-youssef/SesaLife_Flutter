@@ -1,15 +1,15 @@
 import 'package:core/core_data/localStorage/credit_card_secure_local_storage_interface.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
-import 'package:users_management_feature/infrastructure/dataSources/UsersSettingsLocalDataSource.dart';
+import 'package:users_management_feature/infrastructure/dataSources/users_settings_local_data_source.dart';
 
-import '../infrastructure/dataSources/UsersLocalDataSource.dart';
-import '../infrastructure/dataSources/UsersRemoteDataSource.dart';
+import '../infrastructure/dataSources/users_local_data_source.dart';
+import '../infrastructure/dataSources/users_remote_data_source.dart';
 
 extension DataSourcesModule on GetIt {
   void loadDataSourcesModule() {
-    registerSingleton(UsersLocalDataSource()..init());
+    registerSingleton(UsersLocalDataSource());
     registerSingleton(UsersRemoteDataSource());
-    registerSingleton(UsersSettingsLocalDataSource()..init());
+    registerSingleton(UsersSettingsLocalDataSource());
     registerFactory<CreditCardSecureLocalStorageInterface>(
         () => CreditCardSecureStorageImpl(),
         instanceName: "CreditCardSecureStorageImpl");

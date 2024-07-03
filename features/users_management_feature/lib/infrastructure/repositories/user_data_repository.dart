@@ -3,7 +3,7 @@ import 'package:core/core_domain/AbstractDomainToExternalEntityMapper.dart';
 import 'package:users_management_feature/domain/entities/SesameUser.dart';
 import 'package:users_management_feature/infrastructure/repositories/user_settings_repository.dart';
 
-import '../dataSources/UsersLocalDataSource.dart';
+import '../dataSources/users_local_data_source.dart';
 import '../dtos/SesameUserDTO.dart';
 import '../ports/repositoryContracts/UserDataRepositoryContract.dart';
 

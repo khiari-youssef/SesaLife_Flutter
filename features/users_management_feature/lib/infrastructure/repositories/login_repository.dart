@@ -10,8 +10,8 @@ import 'package:users_management_feature/infrastructure/dtos/login_response_dto.
 import '../../domain/entities/SesameRole.dart';
 import '../../domain/entities/SesameUser.dart';
 import '../../domain/entities/login_result.dart';
-import '../dataSources/UsersLocalDataSource.dart';
-import '../dataSources/UsersRemoteDataSource.dart';
+import '../dataSources/users_local_data_source.dart';
+import '../dataSources/users_remote_data_source.dart';
 import '../dtos/SesameUserDTO.dart';
 import '../ports/repositoryContracts/LoginRepositoryContract.dart';
 

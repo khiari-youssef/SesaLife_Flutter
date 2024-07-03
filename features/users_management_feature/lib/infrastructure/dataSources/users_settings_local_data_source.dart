@@ -1,17 +1,13 @@
 import 'package:core/core_utils/Logger.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
+import 'package:users_management_feature/infrastructure/dataSources/users_hive_boxes_init.dart';
 
 import '../../domain/entities/my_settings_data.dart';
 
 class UsersSettingsLocalDataSource {
-  final String settingsBoxName = "MySettingsDataBox";
   final String toggleStayLoggedInOptionKey = "toggleStayLoggedInOption";
   final String toggleHideMyWorkDataOptionKey = "toggleHideMyWorkDataOption";
   final String toggleNotifyMeOptionKey = "toggleNotifyMeOptionKey";
-
-  void init() async {
-    await Hive.openLazyBox<bool>(settingsBoxName);
-  }
 
   Future<void> toggleStayLoggedInOption(bool isEnabled) async {
     LazyBox<bool> settingsBox = Hive.lazyBox<bool>(settingsBoxName);
