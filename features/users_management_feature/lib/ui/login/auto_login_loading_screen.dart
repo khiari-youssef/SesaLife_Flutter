@@ -1,6 +1,5 @@
 import 'package:core/core_domain/DomainUseCaseProtocol.dart';
 import 'package:core/core_utils/Logger.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 
 import '../../domain/entities/SesameUser.dart';

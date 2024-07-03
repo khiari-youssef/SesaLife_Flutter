@@ -1,10 +1,6 @@
-import 'package:core/core_domain/DomainUseCaseProtocol.dart';
 import 'package:core/core_utils/BioUtils.dart';
 import 'package:core/core_utils/Logger.dart';
-import 'package:home_feature/ui/navigation/HomeNavigationConfiguration.gr.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
-import 'package:users_management_feature/domain/entities/SesameUser.dart';
-import 'package:users_management_feature/domain/entities/login_method.dart';
 import 'package:users_management_feature/domain/entities/my_settings_data.dart';
 import 'package:users_management_feature/infrastructure/repositories/user_settings_repository.dart';
 import 'package:users_management_feature/ui/navigation/users_navigation_configuration.gr.dart';
