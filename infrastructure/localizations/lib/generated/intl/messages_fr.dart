@@ -34,6 +34,8 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m5(date) => "Paiement prévu avant le ${date}";
 
+  static String m6(date, time) => "Mis à jour le ${date} à ${time}";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "assigned_classes":
@@ -176,6 +178,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Savoir plus sur la sécurité et l\'usage de mes données personnelles collectés par l\'application."),
         "privacy_policy_label": MessageLookupByLibrary.simpleMessage(
             "Politique de securité & confidentialité"),
+        "privacy_policy_update": m6,
         "profile_badge":
             MessageLookupByLibrary.simpleMessage("Mon badge Sesame"),
         "profile_classes": MessageLookupByLibrary.simpleMessage("Mes classes"),

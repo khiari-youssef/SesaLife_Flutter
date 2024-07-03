@@ -34,6 +34,7 @@
   "programs_label" : "Programmes",
   "registration_label" : "Inscriptions",
   "privacy_policy_label" : "Politique de securité & confidentialité",
+  "privacy_policy_update" : "Mis à jour le {date} à {time}",
   "content" : "Contenu",
   "data_not_available" : "Données indisponibles",
   "terms_of_service_label" : "Termes d'utilisation",

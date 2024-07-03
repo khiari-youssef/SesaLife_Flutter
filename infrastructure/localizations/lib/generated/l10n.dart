@@ -1,7 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-
 import 'intl/messages_all.dart';
 
 // **************************************************************************
@@ -388,6 +387,16 @@ class S {
       name: 'privacy_policy_label',
       desc: '',
       args: [],
+    );
+  }
+
+  /// `Updated on {date} at {time}`
+  String privacy_policy_update(Object date, Object time) {
+    return Intl.message(
+      'Updated on $date at $time',
+      name: 'privacy_policy_update',
+      desc: '',
+      args: [date, time],
     );
   }
 

@@ -77,8 +77,13 @@ class SesamePolicyAndTermsScreenState
                                             children: [
                                               Flexible(
                                                   child: LabelSmall(
-                                                text:
-                                                    "Updated on ${data.lastTimeUpdated.toDisplayDate()} at ${data.lastTimeUpdated.toDisplayTime()}",
+                                                text: S
+                                                    .of(context)
+                                                    .privacy_policy_update(
+                                                        data.lastTimeUpdated
+                                                            .toDisplayDate(),
+                                                        data.lastTimeUpdated
+                                                            .toDisplayTime()),
                                                 textAlign: TextAlign.start,
                                                 color: const Color(0xFF919191),
                                               )),
@@ -88,9 +93,15 @@ class SesamePolicyAndTermsScreenState
                                                           SesameButtonVariant
                                                               .neutral,
                                                       buttonText: 'refresh',
+                                                      leftIconAssetName:
+                                                          "ic_refresh.svg",
                                                       sizeType: SesameButtonSize
                                                           .listSize,
-                                                      onPressed: () {}))
+                                                      onPressed: () {
+                                                        bloc.add(
+                                                            const SesamePolicyAndTermsEvent
+                                                                .loadRulesData());
+                                                      }))
                                             ]),
                                         16.verticalSpace,
                                         BodyMedium(
