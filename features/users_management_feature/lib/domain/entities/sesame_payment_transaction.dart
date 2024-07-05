@@ -1,9 +1,9 @@
 import 'package:core/exports.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 
-part 'student_subscription_record.freezed.dart';
+part 'sesame_payment_transaction.freezed.dart';
 
-class UnPaidStudentSubscriptionRecord {
+class SesameRequiredPaymentTransaction {
   final String id;
   final String annualSubscriptionModelID;
   final String referencedStudentID;
@@ -12,7 +12,7 @@ class UnPaidStudentSubscriptionRecord {
   final int expectedPaymentAmount;
   final String defaultCurrencyCode;
   final String signature;
-  UnPaidStudentSubscriptionRecord(
+  SesameRequiredPaymentTransaction(
       {required this.id,
       required this.annualSubscriptionModelID,
       required this.referencedStudentID,
@@ -28,13 +28,14 @@ class UnPaidStudentSubscriptionRecord {
   bool isPaymentOverdue() => DateTime.now().isAfter(periodEndDate);
 }
 
-class PaidStudentSubscriptionRecord extends UnPaidStudentSubscriptionRecord {
+class SesameCompletedPaymentTransaction
+    extends SesameRequiredPaymentTransaction {
   final int actualPaymentAmount;
   final String paymentMethod;
   final String transactionID;
   final DateTime paymentDate;
   final SesameAttachment paymentReceipt;
-  PaidStudentSubscriptionRecord(
+  SesameCompletedPaymentTransaction(
       {required this.actualPaymentAmount,
       required this.paymentMethod,
       required this.transactionID,
@@ -51,10 +52,10 @@ class PaidStudentSubscriptionRecord extends UnPaidStudentSubscriptionRecord {
 }
 
 @freezed
-class StudentSubscriptionRecord with _$StudentSubscriptionRecord {
-  const factory StudentSubscriptionRecord.unPaid(
-      {required UnPaidStudentSubscriptionRecord data}) = _UnPaid;
+class SesamePaymentTransaction with _$SesamePaymentTransaction {
+  const factory SesamePaymentTransaction.unPaid(
+      {required SesameRequiredPaymentTransaction data}) = _UnPaid;
 
-  const factory StudentSubscriptionRecord.paid(
-      {required PaidStudentSubscriptionRecord data}) = _Paid;
+  const factory SesamePaymentTransaction.paid(
+      {required SesameCompletedPaymentTransaction data}) = _Paid;
 }

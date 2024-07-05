@@ -208,6 +208,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "sesame_classes_groups": MessageLookupByLibrary.simpleMessage("Groups"),
         "sesame_classes_search_placeholder":
             MessageLookupByLibrary.simpleMessage("Search classes by name ..."),
+        "session_detail_content":
+            MessageLookupByLibrary.simpleMessage("Content"),
+        "session_detail_date_time_schedule":
+            MessageLookupByLibrary.simpleMessage("Date & time schedule"),
+        "session_detail_meeting_url":
+            MessageLookupByLibrary.simpleMessage("Online session link"),
+        "session_detail_room": MessageLookupByLibrary.simpleMessage("Room"),
+        "session_detail_room_not_designated":
+            MessageLookupByLibrary.simpleMessage("Room not designated"),
+        "session_detail_teacher_not_designated":
+            MessageLookupByLibrary.simpleMessage("Teacher not designated !"),
         "sessions_all": MessageLookupByLibrary.simpleMessage("All"),
         "sessions_any": MessageLookupByLibrary.simpleMessage("Session"),
         "sessions_course": MessageLookupByLibrary.simpleMessage("Course"),

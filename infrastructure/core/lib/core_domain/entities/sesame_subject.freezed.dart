@@ -20,7 +20,6 @@ mixin _$SesameSubject {
   String get label => throw _privateConstructorUsedError;
   String get description => throw _privateConstructorUsedError;
   String get moduleId => throw _privateConstructorUsedError;
-  SesameClass get sesameClass => throw _privateConstructorUsedError;
   double get coefficient => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -39,7 +38,6 @@ abstract class $SesameSubjectCopyWith<$Res> {
       String label,
       String description,
       String moduleId,
-      SesameClass sesameClass,
       double coefficient});
 }
 
@@ -60,7 +58,6 @@ class _$SesameSubjectCopyWithImpl<$Res, $Val extends SesameSubject>
     Object? label = null,
     Object? description = null,
     Object? moduleId = null,
-    Object? sesameClass = null,
     Object? coefficient = null,
   }) {
     return _then(_value.copyWith(
@@ -80,10 +77,6 @@ class _$SesameSubjectCopyWithImpl<$Res, $Val extends SesameSubject>
           ? _value.moduleId
           : moduleId // ignore: cast_nullable_to_non_nullable
               as String,
-      sesameClass: null == sesameClass
-          ? _value.sesameClass
-          : sesameClass // ignore: cast_nullable_to_non_nullable
-              as SesameClass,
       coefficient: null == coefficient
           ? _value.coefficient
           : coefficient // ignore: cast_nullable_to_non_nullable
@@ -105,7 +98,6 @@ abstract class _$$SesameSubjectImplCopyWith<$Res>
       String label,
       String description,
       String moduleId,
-      SesameClass sesameClass,
       double coefficient});
 }
 
@@ -124,7 +116,6 @@ class __$$SesameSubjectImplCopyWithImpl<$Res>
     Object? label = null,
     Object? description = null,
     Object? moduleId = null,
-    Object? sesameClass = null,
     Object? coefficient = null,
   }) {
     return _then(_$SesameSubjectImpl(
@@ -144,10 +135,6 @@ class __$$SesameSubjectImplCopyWithImpl<$Res>
           ? _value.moduleId
           : moduleId // ignore: cast_nullable_to_non_nullable
               as String,
-      sesameClass: null == sesameClass
-          ? _value.sesameClass
-          : sesameClass // ignore: cast_nullable_to_non_nullable
-              as SesameClass,
       coefficient: null == coefficient
           ? _value.coefficient
           : coefficient // ignore: cast_nullable_to_non_nullable
@@ -164,7 +151,6 @@ class _$SesameSubjectImpl implements _SesameSubject {
       required this.label,
       required this.description,
       required this.moduleId,
-      required this.sesameClass,
       required this.coefficient});
 
   @override
@@ -176,13 +162,11 @@ class _$SesameSubjectImpl implements _SesameSubject {
   @override
   final String moduleId;
   @override
-  final SesameClass sesameClass;
-  @override
   final double coefficient;
 
   @override
   String toString() {
-    return 'SesameSubject(id: $id, label: $label, description: $description, moduleId: $moduleId, sesameClass: $sesameClass, coefficient: $coefficient)';
+    return 'SesameSubject(id: $id, label: $label, description: $description, moduleId: $moduleId, coefficient: $coefficient)';
   }
 
   @override
@@ -196,15 +180,13 @@ class _$SesameSubjectImpl implements _SesameSubject {
                 other.description == description) &&
             (identical(other.moduleId, moduleId) ||
                 other.moduleId == moduleId) &&
-            (identical(other.sesameClass, sesameClass) ||
-                other.sesameClass == sesameClass) &&
             (identical(other.coefficient, coefficient) ||
                 other.coefficient == coefficient));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, id, label, description, moduleId, sesameClass, coefficient);
+  int get hashCode =>
+      Object.hash(runtimeType, id, label, description, moduleId, coefficient);
 
   @JsonKey(ignore: true)
   @override
@@ -219,7 +201,6 @@ abstract class _SesameSubject implements SesameSubject {
       required final String label,
       required final String description,
       required final String moduleId,
-      required final SesameClass sesameClass,
       required final double coefficient}) = _$SesameSubjectImpl;
 
   @override
@@ -230,8 +211,6 @@ abstract class _SesameSubject implements SesameSubject {
   String get description;
   @override
   String get moduleId;
-  @override
-  SesameClass get sesameClass;
   @override
   double get coefficient;
   @override

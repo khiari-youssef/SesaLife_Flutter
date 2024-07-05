@@ -18,6 +18,8 @@ class SesameCourseSession extends SesameSession {
     required super.sessionQrCode,
     required super.attachments,
     super.uploadRepository,
+    super.onlineMeetingURI,
+    super.sessionContent,
     required this.firstHalfEndDateTime,
     required this.secondHalfStartDateTime,
   });

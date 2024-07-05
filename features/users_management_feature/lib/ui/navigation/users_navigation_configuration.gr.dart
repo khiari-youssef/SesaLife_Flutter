@@ -12,17 +12,18 @@ import 'package:auto_route/auto_route.dart' as _i15;
 import 'package:core/core_domain/entities/sesame_badge.dart' as _i17;
 import 'package:core/exports.dart' as _i19;
 import 'package:shared_dependencies/shared_dependencies.dart' as _i16;
+import 'package:users_management_feature/domain/entities/payment_transaction_result.dart'
+    as _i21;
 import 'package:users_management_feature/domain/entities/sesame_class_groups.dart'
     as _i18;
-import 'package:users_management_feature/domain/entities/student_subscription_record.dart'
+import 'package:users_management_feature/domain/entities/sesame_payment_transaction.dart'
     as _i20;
-import 'package:users_management_feature/domain/entities/subscription_payment_result.dart'
-    as _i21;
 import 'package:users_management_feature/domain/usecases/user_search_usecase.dart'
     as _i22;
 import 'package:users_management_feature/ui/enrollment/EnrollmentScreen.dart'
     as _i2;
-import 'package:users_management_feature/ui/guest_space/GuestSpace.dart' as _i3;
+import 'package:users_management_feature/ui/guest_space/guest_space.dart'
+    as _i3;
 import 'package:users_management_feature/ui/login/auto_login_loading_screen.dart'
     as _i1;
 import 'package:users_management_feature/ui/login/login_screen.dart' as _i4;
@@ -397,7 +398,7 @@ class SubscriptionPaymentInterfaceRoute
     extends _i15.PageRouteInfo<SubscriptionPaymentInterfaceRouteArgs> {
   SubscriptionPaymentInterfaceRoute({
     _i19.Key? key,
-    required _i20.StudentSubscriptionRecord paymentRecord,
+    required _i20.SesamePaymentTransaction paymentRecord,
     required _i12.PaymentMethod paymentMethod,
     List<_i15.PageRouteInfo>? children,
   }) : super(
@@ -425,7 +426,7 @@ class SubscriptionPaymentInterfaceRouteArgs {
 
   final _i19.Key? key;
 
-  final _i20.StudentSubscriptionRecord paymentRecord;
+  final _i20.SesamePaymentTransaction paymentRecord;
 
   final _i12.PaymentMethod paymentMethod;
 
@@ -441,7 +442,7 @@ class SubscriptionPaymentMethodRoute
     extends _i15.PageRouteInfo<SubscriptionPaymentMethodRouteArgs> {
   SubscriptionPaymentMethodRoute({
     _i16.Key? key,
-    required _i20.StudentSubscriptionRecord paymentRecord,
+    required _i20.SesamePaymentTransaction paymentRecord,
     List<_i15.PageRouteInfo>? children,
   }) : super(
           SubscriptionPaymentMethodRoute.name,
@@ -466,7 +467,7 @@ class SubscriptionPaymentMethodRouteArgs {
 
   final _i16.Key? key;
 
-  final _i20.StudentSubscriptionRecord paymentRecord;
+  final _i20.SesamePaymentTransaction paymentRecord;
 
   @override
   String toString() {
@@ -481,7 +482,7 @@ class SubscriptionPaymentResultRoute
   SubscriptionPaymentResultRoute({
     _i19.Key? key,
     required _i12.PaymentMethod paymentMethod,
-    required _i21.SubscriptionPaymentResult? paymentTransactionResult,
+    required _i21.SesamePaymentTransactionResult? paymentTransactionResult,
     List<_i15.PageRouteInfo>? children,
   }) : super(
           SubscriptionPaymentResultRoute.name,
@@ -510,7 +511,7 @@ class SubscriptionPaymentResultRouteArgs {
 
   final _i12.PaymentMethod paymentMethod;
 
-  final _i21.SubscriptionPaymentResult? paymentTransactionResult;
+  final _i21.SesamePaymentTransactionResult? paymentTransactionResult;
 
   @override
   String toString() {

@@ -2,12 +2,12 @@ import 'package:core/exports.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 import 'package:users_management_feature/ui/subscription/screens/subscription_payment_method.dart';
 
-import '../../../domain/entities/subscription_payment_result.dart';
+import '../../../domain/entities/payment_transaction_result.dart';
 
 @RoutePage(name: "SubscriptionPaymentResultRoute")
 class SubscriptionPaymentResultScreen extends StatelessWidget {
   final PaymentMethod paymentMethod;
-  final SubscriptionPaymentResult? paymentTransactionResult;
+  final SesamePaymentTransactionResult? paymentTransactionResult;
   const SubscriptionPaymentResultScreen(
       {super.key,
       required this.paymentMethod,

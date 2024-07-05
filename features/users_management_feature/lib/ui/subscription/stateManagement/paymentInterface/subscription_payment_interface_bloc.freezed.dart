@@ -1805,7 +1805,7 @@ abstract class _SubscriptionPaymentInterfaceBlocState
 mixin _$PaymentTransactionState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(SubscriptionPaymentResult result)
+    required TResult Function(SesamePaymentTransactionResult result)
         paymentTransactionResult,
     required TResult Function(DomainErrorType errorType)
         paymentTransactionFailed,
@@ -1815,7 +1815,7 @@ mixin _$PaymentTransactionState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(SubscriptionPaymentResult result)?
+    TResult? Function(SesamePaymentTransactionResult result)?
         paymentTransactionResult,
     TResult? Function(DomainErrorType errorType)? paymentTransactionFailed,
     TResult? Function()? paymentTransactionInProgress,
@@ -1824,7 +1824,7 @@ mixin _$PaymentTransactionState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(SubscriptionPaymentResult result)?
+    TResult Function(SesamePaymentTransactionResult result)?
         paymentTransactionResult,
     TResult Function(DomainErrorType errorType)? paymentTransactionFailed,
     TResult Function()? paymentTransactionInProgress,
@@ -1895,7 +1895,7 @@ abstract class _$$paymentTransactionResultImplCopyWith<$Res> {
           $Res Function(_$paymentTransactionResultImpl) then) =
       __$$paymentTransactionResultImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({SubscriptionPaymentResult result});
+  $Res call({SesamePaymentTransactionResult result});
 }
 
 /// @nodoc
@@ -1917,7 +1917,7 @@ class __$$paymentTransactionResultImplCopyWithImpl<$Res>
       result: null == result
           ? _value.result
           : result // ignore: cast_nullable_to_non_nullable
-              as SubscriptionPaymentResult,
+              as SesamePaymentTransactionResult,
     ));
   }
 }
@@ -1928,7 +1928,7 @@ class _$paymentTransactionResultImpl implements _paymentTransactionResult {
   const _$paymentTransactionResultImpl({required this.result});
 
   @override
-  final SubscriptionPaymentResult result;
+  final SesamePaymentTransactionResult result;
 
   @override
   String toString() {
@@ -1956,7 +1956,7 @@ class _$paymentTransactionResultImpl implements _paymentTransactionResult {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(SubscriptionPaymentResult result)
+    required TResult Function(SesamePaymentTransactionResult result)
         paymentTransactionResult,
     required TResult Function(DomainErrorType errorType)
         paymentTransactionFailed,
@@ -1969,7 +1969,7 @@ class _$paymentTransactionResultImpl implements _paymentTransactionResult {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(SubscriptionPaymentResult result)?
+    TResult? Function(SesamePaymentTransactionResult result)?
         paymentTransactionResult,
     TResult? Function(DomainErrorType errorType)? paymentTransactionFailed,
     TResult? Function()? paymentTransactionInProgress,
@@ -1981,7 +1981,7 @@ class _$paymentTransactionResultImpl implements _paymentTransactionResult {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(SubscriptionPaymentResult result)?
+    TResult Function(SesamePaymentTransactionResult result)?
         paymentTransactionResult,
     TResult Function(DomainErrorType errorType)? paymentTransactionFailed,
     TResult Function()? paymentTransactionInProgress,
@@ -2044,10 +2044,10 @@ class _$paymentTransactionResultImpl implements _paymentTransactionResult {
 
 abstract class _paymentTransactionResult implements PaymentTransactionState {
   const factory _paymentTransactionResult(
-          {required final SubscriptionPaymentResult result}) =
+          {required final SesamePaymentTransactionResult result}) =
       _$paymentTransactionResultImpl;
 
-  SubscriptionPaymentResult get result;
+  SesamePaymentTransactionResult get result;
   @JsonKey(ignore: true)
   _$$paymentTransactionResultImplCopyWith<_$paymentTransactionResultImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -2122,7 +2122,7 @@ class _$paymentTransactionFailedImpl implements _paymentTransactionFailed {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(SubscriptionPaymentResult result)
+    required TResult Function(SesamePaymentTransactionResult result)
         paymentTransactionResult,
     required TResult Function(DomainErrorType errorType)
         paymentTransactionFailed,
@@ -2135,7 +2135,7 @@ class _$paymentTransactionFailedImpl implements _paymentTransactionFailed {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(SubscriptionPaymentResult result)?
+    TResult? Function(SesamePaymentTransactionResult result)?
         paymentTransactionResult,
     TResult? Function(DomainErrorType errorType)? paymentTransactionFailed,
     TResult? Function()? paymentTransactionInProgress,
@@ -2147,7 +2147,7 @@ class _$paymentTransactionFailedImpl implements _paymentTransactionFailed {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(SubscriptionPaymentResult result)?
+    TResult Function(SesamePaymentTransactionResult result)?
         paymentTransactionResult,
     TResult Function(DomainErrorType errorType)? paymentTransactionFailed,
     TResult Function()? paymentTransactionInProgress,
@@ -2261,7 +2261,7 @@ class _$paymentTransactionInProgressImpl
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(SubscriptionPaymentResult result)
+    required TResult Function(SesamePaymentTransactionResult result)
         paymentTransactionResult,
     required TResult Function(DomainErrorType errorType)
         paymentTransactionFailed,
@@ -2274,7 +2274,7 @@ class _$paymentTransactionInProgressImpl
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(SubscriptionPaymentResult result)?
+    TResult? Function(SesamePaymentTransactionResult result)?
         paymentTransactionResult,
     TResult? Function(DomainErrorType errorType)? paymentTransactionFailed,
     TResult? Function()? paymentTransactionInProgress,
@@ -2286,7 +2286,7 @@ class _$paymentTransactionInProgressImpl
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(SubscriptionPaymentResult result)?
+    TResult Function(SesamePaymentTransactionResult result)?
         paymentTransactionResult,
     TResult Function(DomainErrorType errorType)? paymentTransactionFailed,
     TResult Function()? paymentTransactionInProgress,
@@ -2396,7 +2396,7 @@ class _$paymentTransactionNotStartedImpl
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(SubscriptionPaymentResult result)
+    required TResult Function(SesamePaymentTransactionResult result)
         paymentTransactionResult,
     required TResult Function(DomainErrorType errorType)
         paymentTransactionFailed,
@@ -2409,7 +2409,7 @@ class _$paymentTransactionNotStartedImpl
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(SubscriptionPaymentResult result)?
+    TResult? Function(SesamePaymentTransactionResult result)?
         paymentTransactionResult,
     TResult? Function(DomainErrorType errorType)? paymentTransactionFailed,
     TResult? Function()? paymentTransactionInProgress,
@@ -2421,7 +2421,7 @@ class _$paymentTransactionNotStartedImpl
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(SubscriptionPaymentResult result)?
+    TResult Function(SesamePaymentTransactionResult result)?
         paymentTransactionResult,
     TResult Function(DomainErrorType errorType)? paymentTransactionFailed,
     TResult Function()? paymentTransactionInProgress,

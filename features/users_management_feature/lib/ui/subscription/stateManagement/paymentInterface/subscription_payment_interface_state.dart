@@ -27,7 +27,8 @@ sealed class SubscriptionPaymentInterfaceBlocState
 @freezed
 class PaymentTransactionState with _$PaymentTransactionState {
   const factory PaymentTransactionState.paymentTransactionResult(
-      {required SubscriptionPaymentResult result}) = _paymentTransactionResult;
+          {required SesamePaymentTransactionResult result}) =
+      _paymentTransactionResult;
   const factory PaymentTransactionState.paymentTransactionFailed(
       DomainErrorType errorType) = _paymentTransactionFailed;
   const factory PaymentTransactionState.paymentTransactionInProgress() =

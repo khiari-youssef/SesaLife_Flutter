@@ -4,7 +4,7 @@ import 'package:core/core_domain/entities/sesame_attachment.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:users_management_feature/domain/entities/annual_subscription_model.dart';
 
-import '../../../../domain/entities/student_subscription_record.dart';
+import '../../../../domain/entities/sesame_payment_transaction.dart';
 
 part 'my_subscriptions_bloc.freezed.dart';
 part 'my_subscriptions_event.dart';
@@ -19,8 +19,8 @@ class MySubscriptionsBloc
             id: 'sesameModelID',
             name: "sesameModelName",
             transactions: [
-              StudentSubscriptionRecord.unPaid(
-                  data: UnPaidStudentSubscriptionRecord(
+              SesamePaymentTransaction.unPaid(
+                  data: SesameRequiredPaymentTransaction(
                       id: 'id',
                       annualSubscriptionModelID: 'subid',
                       referencedStudentID: 'studid',
@@ -29,8 +29,8 @@ class MySubscriptionsBloc
                       expectedPaymentAmount: 200,
                       defaultCurrencyCode: "TND",
                       signature: 'signature')),
-              StudentSubscriptionRecord.unPaid(
-                  data: UnPaidStudentSubscriptionRecord(
+              SesamePaymentTransaction.unPaid(
+                  data: SesameRequiredPaymentTransaction(
                       id: 'id',
                       annualSubscriptionModelID: 'subid',
                       referencedStudentID: 'studid',
@@ -39,8 +39,8 @@ class MySubscriptionsBloc
                       expectedPaymentAmount: 1750,
                       defaultCurrencyCode: "TND",
                       signature: 'signature')),
-              StudentSubscriptionRecord.paid(
-                  data: PaidStudentSubscriptionRecord(
+              SesamePaymentTransaction.paid(
+                  data: SesameCompletedPaymentTransaction(
                       actualPaymentAmount: 1750,
                       paymentReceipt: const SesameAttachment.network(
                           url: "wwww.attachment.com/doc.pdf",
@@ -56,8 +56,8 @@ class MySubscriptionsBloc
                       expectedPaymentAmount: 1750,
                       defaultCurrencyCode: "TND",
                       signature: 'signature')),
-              StudentSubscriptionRecord.paid(
-                  data: PaidStudentSubscriptionRecord(
+              SesamePaymentTransaction.paid(
+                  data: SesameCompletedPaymentTransaction(
                       actualPaymentAmount: 2300,
                       paymentReceipt: const SesameAttachment.local(
                           uri: "attachment.pdf",

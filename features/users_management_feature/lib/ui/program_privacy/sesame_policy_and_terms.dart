@@ -1,4 +1,5 @@
 import 'package:core/exports.dart';
+import 'package:designsystem/theme/dimens.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 import 'package:users_management_feature/ui/program_privacy/stateManagement/sesame_policy_and_terms_bloc.dart';
 
@@ -107,7 +108,7 @@ class SesamePolicyAndTermsScreenState
                                                       buttonText: 'refresh',
                                                       leftIconAssetName:
                                                           "ic_refresh.svg",
-                                                      sizeType: SesameButtonSize
+                                                      sizeType: ComponentSize
                                                           .listSize,
                                                       onPressed: () {
                                                         bloc.add(

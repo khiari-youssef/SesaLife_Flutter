@@ -12,7 +12,7 @@ export 'package:designsystem/components/templates/form_screen_builder.dart';
 export 'package:designsystem/components/templates/title_screen_builder.dart';
 export 'package:designsystem/components/welcome_logo.dart';
 export 'package:designsystem/design_system_app.dart';
-export 'package:designsystem/theme/Theme.dart';
+export 'package:designsystem/theme/theme.dart';
 export 'package:flutter/material.dart';
 export 'package:flutter_screenutil/flutter_screenutil.dart';
 export 'package:localizations/localizations.dart';

@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'student_subscription_record.dart';
+part of 'sesame_payment_transaction.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,25 +15,25 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
-mixin _$StudentSubscriptionRecord {
-  UnPaidStudentSubscriptionRecord get data =>
+mixin _$SesamePaymentTransaction {
+  SesameRequiredPaymentTransaction get data =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(UnPaidStudentSubscriptionRecord data) unPaid,
-    required TResult Function(PaidStudentSubscriptionRecord data) paid,
+    required TResult Function(SesameRequiredPaymentTransaction data) unPaid,
+    required TResult Function(SesameCompletedPaymentTransaction data) paid,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(UnPaidStudentSubscriptionRecord data)? unPaid,
-    TResult? Function(PaidStudentSubscriptionRecord data)? paid,
+    TResult? Function(SesameRequiredPaymentTransaction data)? unPaid,
+    TResult? Function(SesameCompletedPaymentTransaction data)? paid,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(UnPaidStudentSubscriptionRecord data)? unPaid,
-    TResult Function(PaidStudentSubscriptionRecord data)? paid,
+    TResult Function(SesameRequiredPaymentTransaction data)? unPaid,
+    TResult Function(SesameCompletedPaymentTransaction data)? paid,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -59,17 +59,17 @@ mixin _$StudentSubscriptionRecord {
 }
 
 /// @nodoc
-abstract class $StudentSubscriptionRecordCopyWith<$Res> {
-  factory $StudentSubscriptionRecordCopyWith(StudentSubscriptionRecord value,
-          $Res Function(StudentSubscriptionRecord) then) =
-      _$StudentSubscriptionRecordCopyWithImpl<$Res, StudentSubscriptionRecord>;
+abstract class $SesamePaymentTransactionCopyWith<$Res> {
+  factory $SesamePaymentTransactionCopyWith(SesamePaymentTransaction value,
+          $Res Function(SesamePaymentTransaction) then) =
+      _$SesamePaymentTransactionCopyWithImpl<$Res, SesamePaymentTransaction>;
 }
 
 /// @nodoc
-class _$StudentSubscriptionRecordCopyWithImpl<$Res,
-        $Val extends StudentSubscriptionRecord>
-    implements $StudentSubscriptionRecordCopyWith<$Res> {
-  _$StudentSubscriptionRecordCopyWithImpl(this._value, this._then);
+class _$SesamePaymentTransactionCopyWithImpl<$Res,
+        $Val extends SesamePaymentTransaction>
+    implements $SesamePaymentTransactionCopyWith<$Res> {
+  _$SesamePaymentTransactionCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -83,12 +83,12 @@ abstract class _$$UnPaidImplCopyWith<$Res> {
           _$UnPaidImpl value, $Res Function(_$UnPaidImpl) then) =
       __$$UnPaidImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({UnPaidStudentSubscriptionRecord data});
+  $Res call({SesameRequiredPaymentTransaction data});
 }
 
 /// @nodoc
 class __$$UnPaidImplCopyWithImpl<$Res>
-    extends _$StudentSubscriptionRecordCopyWithImpl<$Res, _$UnPaidImpl>
+    extends _$SesamePaymentTransactionCopyWithImpl<$Res, _$UnPaidImpl>
     implements _$$UnPaidImplCopyWith<$Res> {
   __$$UnPaidImplCopyWithImpl(
       _$UnPaidImpl _value, $Res Function(_$UnPaidImpl) _then)
@@ -103,7 +103,7 @@ class __$$UnPaidImplCopyWithImpl<$Res>
       data: null == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
-              as UnPaidStudentSubscriptionRecord,
+              as SesameRequiredPaymentTransaction,
     ));
   }
 }
@@ -114,11 +114,11 @@ class _$UnPaidImpl implements _UnPaid {
   const _$UnPaidImpl({required this.data});
 
   @override
-  final UnPaidStudentSubscriptionRecord data;
+  final SesameRequiredPaymentTransaction data;
 
   @override
   String toString() {
-    return 'StudentSubscriptionRecord.unPaid(data: $data)';
+    return 'SesamePaymentTransaction.unPaid(data: $data)';
   }
 
   @override
@@ -141,8 +141,8 @@ class _$UnPaidImpl implements _UnPaid {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(UnPaidStudentSubscriptionRecord data) unPaid,
-    required TResult Function(PaidStudentSubscriptionRecord data) paid,
+    required TResult Function(SesameRequiredPaymentTransaction data) unPaid,
+    required TResult Function(SesameCompletedPaymentTransaction data) paid,
   }) {
     return unPaid(data);
   }
@@ -150,8 +150,8 @@ class _$UnPaidImpl implements _UnPaid {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(UnPaidStudentSubscriptionRecord data)? unPaid,
-    TResult? Function(PaidStudentSubscriptionRecord data)? paid,
+    TResult? Function(SesameRequiredPaymentTransaction data)? unPaid,
+    TResult? Function(SesameCompletedPaymentTransaction data)? paid,
   }) {
     return unPaid?.call(data);
   }
@@ -159,8 +159,8 @@ class _$UnPaidImpl implements _UnPaid {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(UnPaidStudentSubscriptionRecord data)? unPaid,
-    TResult Function(PaidStudentSubscriptionRecord data)? paid,
+    TResult Function(SesameRequiredPaymentTransaction data)? unPaid,
+    TResult Function(SesameCompletedPaymentTransaction data)? paid,
     required TResult orElse(),
   }) {
     if (unPaid != null) {
@@ -201,12 +201,12 @@ class _$UnPaidImpl implements _UnPaid {
   }
 }
 
-abstract class _UnPaid implements StudentSubscriptionRecord {
-  const factory _UnPaid({required final UnPaidStudentSubscriptionRecord data}) =
-      _$UnPaidImpl;
+abstract class _UnPaid implements SesamePaymentTransaction {
+  const factory _UnPaid(
+      {required final SesameRequiredPaymentTransaction data}) = _$UnPaidImpl;
 
   @override
-  UnPaidStudentSubscriptionRecord get data;
+  SesameRequiredPaymentTransaction get data;
   @JsonKey(ignore: true)
   _$$UnPaidImplCopyWith<_$UnPaidImpl> get copyWith =>
       throw _privateConstructorUsedError;
@@ -218,12 +218,12 @@ abstract class _$$PaidImplCopyWith<$Res> {
           _$PaidImpl value, $Res Function(_$PaidImpl) then) =
       __$$PaidImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({PaidStudentSubscriptionRecord data});
+  $Res call({SesameCompletedPaymentTransaction data});
 }
 
 /// @nodoc
 class __$$PaidImplCopyWithImpl<$Res>
-    extends _$StudentSubscriptionRecordCopyWithImpl<$Res, _$PaidImpl>
+    extends _$SesamePaymentTransactionCopyWithImpl<$Res, _$PaidImpl>
     implements _$$PaidImplCopyWith<$Res> {
   __$$PaidImplCopyWithImpl(_$PaidImpl _value, $Res Function(_$PaidImpl) _then)
       : super(_value, _then);
@@ -237,7 +237,7 @@ class __$$PaidImplCopyWithImpl<$Res>
       data: null == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
-              as PaidStudentSubscriptionRecord,
+              as SesameCompletedPaymentTransaction,
     ));
   }
 }
@@ -248,11 +248,11 @@ class _$PaidImpl implements _Paid {
   const _$PaidImpl({required this.data});
 
   @override
-  final PaidStudentSubscriptionRecord data;
+  final SesameCompletedPaymentTransaction data;
 
   @override
   String toString() {
-    return 'StudentSubscriptionRecord.paid(data: $data)';
+    return 'SesamePaymentTransaction.paid(data: $data)';
   }
 
   @override
@@ -275,8 +275,8 @@ class _$PaidImpl implements _Paid {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(UnPaidStudentSubscriptionRecord data) unPaid,
-    required TResult Function(PaidStudentSubscriptionRecord data) paid,
+    required TResult Function(SesameRequiredPaymentTransaction data) unPaid,
+    required TResult Function(SesameCompletedPaymentTransaction data) paid,
   }) {
     return paid(data);
   }
@@ -284,8 +284,8 @@ class _$PaidImpl implements _Paid {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(UnPaidStudentSubscriptionRecord data)? unPaid,
-    TResult? Function(PaidStudentSubscriptionRecord data)? paid,
+    TResult? Function(SesameRequiredPaymentTransaction data)? unPaid,
+    TResult? Function(SesameCompletedPaymentTransaction data)? paid,
   }) {
     return paid?.call(data);
   }
@@ -293,8 +293,8 @@ class _$PaidImpl implements _Paid {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(UnPaidStudentSubscriptionRecord data)? unPaid,
-    TResult Function(PaidStudentSubscriptionRecord data)? paid,
+    TResult Function(SesameRequiredPaymentTransaction data)? unPaid,
+    TResult Function(SesameCompletedPaymentTransaction data)? paid,
     required TResult orElse(),
   }) {
     if (paid != null) {
@@ -335,12 +335,12 @@ class _$PaidImpl implements _Paid {
   }
 }
 
-abstract class _Paid implements StudentSubscriptionRecord {
-  const factory _Paid({required final PaidStudentSubscriptionRecord data}) =
+abstract class _Paid implements SesamePaymentTransaction {
+  const factory _Paid({required final SesameCompletedPaymentTransaction data}) =
       _$PaidImpl;
 
   @override
-  PaidStudentSubscriptionRecord get data;
+  SesameCompletedPaymentTransaction get data;
   @JsonKey(ignore: true)
   _$$PaidImplCopyWith<_$PaidImpl> get copyWith =>
       throw _privateConstructorUsedError;

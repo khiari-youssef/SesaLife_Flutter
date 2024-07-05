@@ -124,5 +124,11 @@
   "users_search_placeholder" : "Search profiles by name ...",
   "sesame_classes_search_placeholder" : "Search classes by name ...",
   "users_search_no_result" : "No search result !",
-  "sesame_classes_groups": "Groups"
+  "sesame_classes_groups": "Groups",
+  "session_detail_teacher_not_designated" : "Teacher not designated !",
+  "session_detail_date_time_schedule" : "Date & time schedule",
+  "session_detail_room" : "Room",
+  "session_detail_room_not_designated" : "Room not designated",
+  "session_detail_content" : "Content",
+  "session_detail_meeting_url" : "Online session link"
 }

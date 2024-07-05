@@ -10,6 +10,5 @@ class SesameSubject with _$SesameSubject {
       required String label,
       required String description,
       required String moduleId,
-      required SesameClass sesameClass,
       required double coefficient}) = _SesameSubject;
 }

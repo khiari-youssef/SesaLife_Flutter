@@ -1,0 +1,1 @@
+enum ComponentSize { listSize, screenSize }

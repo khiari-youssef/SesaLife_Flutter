@@ -37,6 +37,7 @@ SesameSessionDTO _$SesameSessionDTOFromJson(Map<String, dynamic> json) =>
           : SesameUploadRepositoryDTO.fromJson(
               json['uploadRepository'] as Map<String, dynamic>),
       sessionTypeData: json['sessionTypeData'] as Map<String, dynamic>,
+      onlineMeetingURI: json['onlineMeetingURI'] as String?,
     );
 
 Map<String, dynamic> _$SesameSessionDTOToJson(SesameSessionDTO instance) =>
@@ -55,4 +56,5 @@ Map<String, dynamic> _$SesameSessionDTOToJson(SesameSessionDTO instance) =>
       'attachments': instance.attachments,
       'uploadRepository': instance.uploadRepository,
       'sessionTypeData': instance.sessionTypeData,
+      'onlineMeetingURI': instance.onlineMeetingURI,
     };

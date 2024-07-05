@@ -7,8 +7,8 @@ class ProfilePreviewCard extends StatelessWidget {
   final String? actionIconAssetName;
   final VoidCallback? onClicked;
   final VoidCallback? onActionIconClicked;
-  final BorderRadius borderRadius;
-  final Color backgroundColor;
+  final BorderRadius? borderRadius;
+  final Color? backgroundColor;
   final BoxBorder? border;
   final Widget Function(BuildContext context)? cardDetailsBuilder;
   const ProfilePreviewCard({
@@ -17,8 +17,8 @@ class ProfilePreviewCard extends StatelessWidget {
     this.onClicked,
     this.actionIconAssetName,
     this.onActionIconClicked,
-    required this.borderRadius,
-    required this.backgroundColor,
+    this.borderRadius,
+    this.backgroundColor,
     this.border,
     this.cardDetailsBuilder,
   });

@@ -14,6 +14,8 @@ abstract class SesameSession {
   final String sessionQrCode;
   final List<SesameAttachment> attachments;
   final SesameUploadRepository? uploadRepository;
+  final String? onlineMeetingURI;
+  final Map<String, String>? sessionContent;
   SesameSession(
       {required this.id,
       required this.subject,
@@ -27,7 +29,9 @@ abstract class SesameSession {
       required this.eliminatedStudents,
       required this.sessionQrCode,
       required this.attachments,
-      this.uploadRepository});
+      this.uploadRepository,
+      this.onlineMeetingURI,
+      this.sessionContent});
 
   String getDisplayStartDate() {
     return startDateTime.toDisplayDate();

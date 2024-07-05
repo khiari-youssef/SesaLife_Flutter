@@ -19,7 +19,9 @@ class SesameSessionDTO {
   final List<SesameAttachmentDTO>? attachments;
   final SesameUploadRepositoryDTO? uploadRepository;
   final Map<String, dynamic> sessionTypeData;
-  SesameSessionDTO(
+  final String? onlineMeetingURI;
+  final Map<String, String>? sessionContent;
+  SesameSessionDTO(this.sessionContent,
       {required this.id,
       required this.subject,
       required this.teacher,
@@ -33,7 +35,8 @@ class SesameSessionDTO {
       required this.sessionQrCode,
       required this.attachments,
       this.uploadRepository,
-      required this.sessionTypeData});
+      required this.sessionTypeData,
+      this.onlineMeetingURI});
 
   factory SesameSessionDTO.fromJson(Map<String, dynamic> json) =>
       _$SesameSessionDTOFromJson(json);

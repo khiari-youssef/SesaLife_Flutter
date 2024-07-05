@@ -18,7 +18,7 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$AnnualSubscriptionModel {
   String get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
-  List<StudentSubscriptionRecord> get transactions =>
+  List<SesamePaymentTransaction> get transactions =>
       throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -33,7 +33,7 @@ abstract class $AnnualSubscriptionModelCopyWith<$Res> {
       _$AnnualSubscriptionModelCopyWithImpl<$Res, AnnualSubscriptionModel>;
   @useResult
   $Res call(
-      {String id, String name, List<StudentSubscriptionRecord> transactions});
+      {String id, String name, List<SesamePaymentTransaction> transactions});
 }
 
 /// @nodoc
@@ -66,7 +66,7 @@ class _$AnnualSubscriptionModelCopyWithImpl<$Res,
       transactions: null == transactions
           ? _value.transactions
           : transactions // ignore: cast_nullable_to_non_nullable
-              as List<StudentSubscriptionRecord>,
+              as List<SesamePaymentTransaction>,
     ) as $Val);
   }
 }
@@ -81,7 +81,7 @@ abstract class _$$AnnualSubscriptionModelImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String id, String name, List<StudentSubscriptionRecord> transactions});
+      {String id, String name, List<SesamePaymentTransaction> transactions});
 }
 
 /// @nodoc
@@ -113,7 +113,7 @@ class __$$AnnualSubscriptionModelImplCopyWithImpl<$Res>
       transactions: null == transactions
           ? _value._transactions
           : transactions // ignore: cast_nullable_to_non_nullable
-              as List<StudentSubscriptionRecord>,
+              as List<SesamePaymentTransaction>,
     ));
   }
 }
@@ -124,16 +124,16 @@ class _$AnnualSubscriptionModelImpl implements _AnnualSubscriptionModel {
   const _$AnnualSubscriptionModelImpl(
       {required this.id,
       required this.name,
-      required final List<StudentSubscriptionRecord> transactions})
+      required final List<SesamePaymentTransaction> transactions})
       : _transactions = transactions;
 
   @override
   final String id;
   @override
   final String name;
-  final List<StudentSubscriptionRecord> _transactions;
+  final List<SesamePaymentTransaction> _transactions;
   @override
-  List<StudentSubscriptionRecord> get transactions {
+  List<SesamePaymentTransaction> get transactions {
     if (_transactions is EqualUnmodifiableListView) return _transactions;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_transactions);
@@ -171,7 +171,7 @@ abstract class _AnnualSubscriptionModel implements AnnualSubscriptionModel {
   const factory _AnnualSubscriptionModel(
           {required final String id,
           required final String name,
-          required final List<StudentSubscriptionRecord> transactions}) =
+          required final List<SesamePaymentTransaction> transactions}) =
       _$AnnualSubscriptionModelImpl;
 
   @override
@@ -179,7 +179,7 @@ abstract class _AnnualSubscriptionModel implements AnnualSubscriptionModel {
   @override
   String get name;
   @override
-  List<StudentSubscriptionRecord> get transactions;
+  List<SesamePaymentTransaction> get transactions;
   @override
   @JsonKey(ignore: true)
   _$$AnnualSubscriptionModelImplCopyWith<_$AnnualSubscriptionModelImpl>

@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../theme/dimens.dart';
 import '../images/CustomIcon.dart';
 
 export 'package:designsystem/components/buttons/sesame_custom_button.dart';
 export 'package:designsystem/components/input/sesame_custom_text_field.dart';
 
 enum SesameButtonVariant { soft, hard, tertiary, neutral, warning, positif }
-
-enum SesameButtonSize { listSize, screenSize }
 
 class SesameCustomButton extends StatelessWidget {
   final String buttonText;
@@ -18,7 +17,7 @@ class SesameCustomButton extends StatelessWidget {
   final bool shouldFillMaxWidth;
   final bool isLoading;
   final bool isEnabled;
-  final SesameButtonSize sizeType;
+  final ComponentSize sizeType;
   const SesameCustomButton(
       {super.key,
       required this.buttonText,
@@ -28,7 +27,7 @@ class SesameCustomButton extends StatelessWidget {
       this.shouldFillMaxWidth = false,
       this.isLoading = false,
       this.isEnabled = true,
-      this.sizeType = SesameButtonSize.screenSize});
+      this.sizeType = ComponentSize.screenSize});
 
   @override
   Widget build(BuildContext context) {
@@ -50,10 +49,10 @@ class SesameCustomButton extends StatelessWidget {
             ? theme.colorScheme.onSurface
             : Colors.white,
         letterSpacing: 0.12,
-        fontSize: sizeType == SesameButtonSize.listSize ? 12.sp : 16.sp);
+        fontSize: sizeType == ComponentSize.listSize ? 12.sp : 16.sp);
     return ConstrainedBox(
-        constraints: BoxConstraints.loose(Size.fromHeight(
-            (sizeType == SesameButtonSize.listSize ? 32 : 48).h)),
+        constraints: BoxConstraints.loose(
+            Size.fromHeight((sizeType == ComponentSize.listSize ? 32 : 48).h)),
         child: ElevatedButton(
             style: ButtonStyle(
                 elevation: const WidgetStatePropertyAll(0.0),

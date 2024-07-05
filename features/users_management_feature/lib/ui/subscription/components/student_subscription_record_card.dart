@@ -1,11 +1,12 @@
 import 'package:core/exports.dart';
 import 'package:designsystem/components/images/CustomIcon.dart';
+import 'package:designsystem/theme/dimens.dart';
 import 'package:intl/intl.dart';
 
-import '../../../domain/entities/student_subscription_record.dart';
+import '../../../domain/entities/sesame_payment_transaction.dart';
 
 class StudentSubscriptionRecordCard extends StatelessWidget {
-  final StudentSubscriptionRecord record;
+  final SesamePaymentTransaction record;
   final VoidCallback? onClicked;
 
   const StudentSubscriptionRecordCard(
@@ -93,7 +94,7 @@ class StudentSubscriptionRecordCard extends StatelessWidget {
                     alignment: Alignment.centerRight,
                     child: record.when(
                         unPaid: (data) => SesameCustomButton(
-                              sizeType: SesameButtonSize.listSize,
+                              sizeType: ComponentSize.listSize,
                               leftIconAssetName: data.isPaymentOverdue()
                                   ? null
                                   : "ic_next_arrow.svg",
@@ -106,7 +107,7 @@ class StudentSubscriptionRecordCard extends StatelessWidget {
                               onPressed: safeOnClicked,
                             ),
                         paid: (data) => SesameCustomButton(
-                              sizeType: SesameButtonSize.listSize,
+                              sizeType: ComponentSize.listSize,
                               leftIconAssetName: data.paymentReceipt.when(
                                   local: (uri, type) =>
                                       "ic_export_document.svg",

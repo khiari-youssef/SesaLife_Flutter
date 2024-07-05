@@ -1,6 +1,6 @@
 import 'package:shared_dependencies/shared_dependencies.dart';
 
-import '../../../domain/entities/student_subscription_record.dart';
+import '../../../domain/entities/sesame_payment_transaction.dart';
 import '../../navigation/users_navigation_configuration.gr.dart';
 import '../components/student_subscription_record_card.dart';
 
@@ -100,7 +100,7 @@ class SubscriptionPaymentMethodState extends State<SubscriptionPaymentMethod> {
 
 @RoutePage(name: "SubscriptionPaymentMethodRoute")
 class SubscriptionPaymentMethod extends StatefulWidget {
-  final StudentSubscriptionRecord paymentRecord;
+  final SesamePaymentTransaction paymentRecord;
   const SubscriptionPaymentMethod({super.key, required this.paymentRecord});
 
   @override

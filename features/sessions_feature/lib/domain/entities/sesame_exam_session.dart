@@ -18,5 +18,7 @@ class SesameExamSession extends SesameSession {
       required super.eliminatedStudents,
       required super.sessionQrCode,
       required super.attachments,
-      required super.uploadRepository});
+      required super.uploadRepository,
+      super.onlineMeetingURI,
+      super.sessionContent});
 }

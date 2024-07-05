@@ -15,8 +15,6 @@ class HomeSessionsBloc extends Bloc<HomeCalendarEvent, HomeSessionsState> {
             label: "subject-$index",
             description: "descrption $index",
             moduleId: "mod1",
-            sesameClass: SesameClass(
-                id: "ingta-4c", group: "C", level: "4", name: "ingta"),
             coefficient: 1.0),
         teacher: StudentProfilePreview(
             id: "teacher-id",

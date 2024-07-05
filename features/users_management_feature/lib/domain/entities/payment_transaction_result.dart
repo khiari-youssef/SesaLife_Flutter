@@ -1,6 +1,6 @@
-class SubscriptionPaymentResult {
+class SesamePaymentTransactionResult {
   final String recordID;
   final DateTime paymentDate;
-  SubscriptionPaymentResult(
+  SesamePaymentTransactionResult(
       {required this.recordID, required this.paymentDate});
 }

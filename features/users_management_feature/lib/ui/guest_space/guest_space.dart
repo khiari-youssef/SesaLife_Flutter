@@ -2,7 +2,7 @@ import 'package:designsystem/extensions.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 
 import '../../domain/entities/guest_welcome_info_option.dart';
-import 'GuestWelcomeInfoOptionCard.dart';
+import 'guest_welcome_info_option_card.dart';
 
 @RoutePage(name: "GuestSpaceRoute")
 class GuestSpace extends StatelessWidget {

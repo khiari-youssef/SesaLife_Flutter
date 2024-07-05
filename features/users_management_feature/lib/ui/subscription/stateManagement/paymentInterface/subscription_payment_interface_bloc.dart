@@ -4,7 +4,7 @@ import 'package:core/core_domain/DomainUseCaseProtocol.dart';
 import 'package:core/core_utils/Logger.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 
-import '../../../../domain/entities/subscription_payment_result.dart';
+import '../../../../domain/entities/payment_transaction_result.dart';
 import '../../../../domain/services/credit_card_input_validation_service.dart';
 
 part 'subscription_payment_interface_bloc.freezed.dart';
@@ -16,8 +16,9 @@ class SubscriptionPaymentInterfaceBloc extends Bloc<
   CreditCardInputValidationService ccValidationService = GetIt.instance.get();
   CreditCardSecureLocalStorageInterface ccSecureStorage =
       GetIt.instance.get(instanceName: "CreditCardSecureStorageImpl");
-  DomainUseCaseProtocol<CreditCardDetails, Future<SubscriptionPaymentResult>>
-      useCase = GetIt.instance.get(instanceName: "CreditCardPaymentUseCase");
+  DomainUseCaseProtocol<CreditCardDetails,
+          Future<SesamePaymentTransactionResult>> useCase =
+      GetIt.instance.get(instanceName: "CreditCardPaymentUseCase");
 
   SubscriptionPaymentInterfaceBloc()
       : super(const SubscriptionPaymentInterfaceBlocState(
@@ -91,7 +92,7 @@ class SubscriptionPaymentInterfaceBloc extends Bloc<
       emit(state.copyWith(
           transactionState:
               const PaymentTransactionState.paymentTransactionInProgress()));
-      SubscriptionPaymentResult result =
+      SesamePaymentTransactionResult result =
           await useCase.execute(CreditCardDetails(
         ccHolderName: state.ccHolderNameState.data,
         ccNumber: state.ccNumberState.data,

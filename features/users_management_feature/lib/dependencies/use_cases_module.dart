@@ -6,7 +6,7 @@ import 'package:shared_dependencies/shared_dependencies.dart';
 import '../domain/entities/SesameUser.dart';
 import '../domain/entities/login_method.dart';
 import '../domain/entities/sesame_class_groups.dart';
-import '../domain/entities/subscription_payment_result.dart';
+import '../domain/entities/payment_transaction_result.dart';
 import '../domain/usecases/credit_card_payment_use_case.dart';
 import '../domain/usecases/get_my_profile_data_use_case.dart';
 import '../domain/usecases/sesame_classes_search_usecase.dart';
@@ -26,7 +26,7 @@ extension UseCasesModule on GetIt {
         instanceName: "GetMyProfileDataUseCase");
     registerFactory<
             DomainUseCaseProtocol<CreditCardDetails,
-                Future<SubscriptionPaymentResult>>>(
+                Future<SesamePaymentTransactionResult>>>(
         () => CreditCardPaymentUseCase(),
         instanceName: "CreditCardPaymentUseCase");
     registerFactory<NoInputDomainUseCaseProtocol<Future<List<void>>>>(

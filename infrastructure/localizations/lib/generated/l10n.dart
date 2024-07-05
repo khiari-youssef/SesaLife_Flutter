@@ -1299,6 +1299,66 @@ class S {
       args: [],
     );
   }
+
+  /// `Teacher not designated !`
+  String get session_detail_teacher_not_designated {
+    return Intl.message(
+      'Teacher not designated !',
+      name: 'session_detail_teacher_not_designated',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Date & time schedule`
+  String get session_detail_date_time_schedule {
+    return Intl.message(
+      'Date & time schedule',
+      name: 'session_detail_date_time_schedule',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Room`
+  String get session_detail_room {
+    return Intl.message(
+      'Room',
+      name: 'session_detail_room',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Room not designated`
+  String get session_detail_room_not_designated {
+    return Intl.message(
+      'Room not designated',
+      name: 'session_detail_room_not_designated',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Content`
+  String get session_detail_content {
+    return Intl.message(
+      'Content',
+      name: 'session_detail_content',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Online session link`
+  String get session_detail_meeting_url {
+    return Intl.message(
+      'Online session link',
+      name: 'session_detail_meeting_url',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -3,7 +3,7 @@ import 'package:shared_dependencies/shared_dependencies.dart';
 import 'package:users_management_feature/ui/subscription/screens/subscription_payment_method.dart';
 import 'package:users_management_feature/ui/subscription/stateManagement/paymentInterface/subscription_payment_interface_bloc.dart';
 
-import '../../../domain/entities/student_subscription_record.dart';
+import '../../../domain/entities/sesame_payment_transaction.dart';
 import '../../navigation/users_navigation_configuration.gr.dart';
 import '../components/credit_card_details_storage_request_modal.dart';
 import '../components/credit_card_preview.dart';
@@ -348,7 +348,7 @@ class SubscriptionPaymentInterfaceState
 
 @RoutePage(name: "SubscriptionPaymentInterfaceRoute")
 class SubscriptionPaymentInterface extends StatefulWidget {
-  final StudentSubscriptionRecord paymentRecord;
+  final SesamePaymentTransaction paymentRecord;
   final PaymentMethod paymentMethod;
 
   const SubscriptionPaymentInterface(
