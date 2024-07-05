@@ -9,7 +9,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i3;
-import 'package:sessions_feature/ui/session_details/SessionDetailsBaseScreen.dart'
+import 'package:sessions_feature/ui/session_details/session_details_base_screen.dart'
     as _i2;
 import 'package:sessions_feature/ui/sessions_calendar/home_sessions.dart'
     as _i1;

@@ -1,6 +1,6 @@
 import 'package:shared_dependencies/shared_dependencies.dart';
 
-part 'MyProfileScreenEvent.freezed.dart';
+part 'my_profile_screen_event.freezed.dart';
 
 @freezed
 class MyProfileScreenEvent with _$MyProfileScreenEvent {

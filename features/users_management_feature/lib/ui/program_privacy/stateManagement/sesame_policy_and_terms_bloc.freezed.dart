@@ -16,19 +16,20 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$SesamePolicyAndTermsEvent {
+  DocumentType? get documentType => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() loadRulesData,
+    required TResult Function(DocumentType? documentType) loadRulesData,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? loadRulesData,
+    TResult? Function(DocumentType? documentType)? loadRulesData,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? loadRulesData,
+    TResult Function(DocumentType? documentType)? loadRulesData,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -48,6 +49,10 @@ mixin _$SesamePolicyAndTermsEvent {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  @JsonKey(ignore: true)
+  $SesamePolicyAndTermsEventCopyWith<SesamePolicyAndTermsEvent> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -55,6 +60,8 @@ abstract class $SesamePolicyAndTermsEventCopyWith<$Res> {
   factory $SesamePolicyAndTermsEventCopyWith(SesamePolicyAndTermsEvent value,
           $Res Function(SesamePolicyAndTermsEvent) then) =
       _$SesamePolicyAndTermsEventCopyWithImpl<$Res, SesamePolicyAndTermsEvent>;
+  @useResult
+  $Res call({DocumentType? documentType});
 }
 
 /// @nodoc
@@ -67,13 +74,30 @@ class _$SesamePolicyAndTermsEventCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? documentType = freezed,
+  }) {
+    return _then(_value.copyWith(
+      documentType: freezed == documentType
+          ? _value.documentType
+          : documentType // ignore: cast_nullable_to_non_nullable
+              as DocumentType?,
+    ) as $Val);
+  }
 }
 
 /// @nodoc
-abstract class _$$loadRulesDataImplCopyWith<$Res> {
+abstract class _$$loadRulesDataImplCopyWith<$Res>
+    implements $SesamePolicyAndTermsEventCopyWith<$Res> {
   factory _$$loadRulesDataImplCopyWith(
           _$loadRulesDataImpl value, $Res Function(_$loadRulesDataImpl) then) =
       __$$loadRulesDataImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({DocumentType? documentType});
 }
 
 /// @nodoc
@@ -83,51 +107,76 @@ class __$$loadRulesDataImplCopyWithImpl<$Res>
   __$$loadRulesDataImplCopyWithImpl(
       _$loadRulesDataImpl _value, $Res Function(_$loadRulesDataImpl) _then)
       : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? documentType = freezed,
+  }) {
+    return _then(_$loadRulesDataImpl(
+      freezed == documentType
+          ? _value.documentType
+          : documentType // ignore: cast_nullable_to_non_nullable
+              as DocumentType?,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$loadRulesDataImpl implements _loadRulesData {
-  const _$loadRulesDataImpl();
+  const _$loadRulesDataImpl(this.documentType);
+
+  @override
+  final DocumentType? documentType;
 
   @override
   String toString() {
-    return 'SesamePolicyAndTermsEvent.loadRulesData()';
+    return 'SesamePolicyAndTermsEvent.loadRulesData(documentType: $documentType)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$loadRulesDataImpl);
+        (other.runtimeType == runtimeType &&
+            other is _$loadRulesDataImpl &&
+            (identical(other.documentType, documentType) ||
+                other.documentType == documentType));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, documentType);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$loadRulesDataImplCopyWith<_$loadRulesDataImpl> get copyWith =>
+      __$$loadRulesDataImplCopyWithImpl<_$loadRulesDataImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() loadRulesData,
+    required TResult Function(DocumentType? documentType) loadRulesData,
   }) {
-    return loadRulesData();
+    return loadRulesData(documentType);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? loadRulesData,
+    TResult? Function(DocumentType? documentType)? loadRulesData,
   }) {
-    return loadRulesData?.call();
+    return loadRulesData?.call(documentType);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? loadRulesData,
+    TResult Function(DocumentType? documentType)? loadRulesData,
     required TResult orElse(),
   }) {
     if (loadRulesData != null) {
-      return loadRulesData();
+      return loadRulesData(documentType);
     }
     return orElse();
   }
@@ -162,7 +211,15 @@ class _$loadRulesDataImpl implements _loadRulesData {
 }
 
 abstract class _loadRulesData implements SesamePolicyAndTermsEvent {
-  const factory _loadRulesData() = _$loadRulesDataImpl;
+  const factory _loadRulesData(final DocumentType? documentType) =
+      _$loadRulesDataImpl;
+
+  @override
+  DocumentType? get documentType;
+  @override
+  @JsonKey(ignore: true)
+  _$$loadRulesDataImplCopyWith<_$loadRulesDataImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc

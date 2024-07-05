@@ -3,8 +3,8 @@ import 'package:shared_dependencies/shared_dependencies.dart';
 import 'package:users_management_feature/exports.dart';
 import 'package:users_management_feature/ui/navigation/users_navigation_configuration.gr.dart';
 
-import 'AppNavigationConfiguration.gr.dart';
-import 'AuthGuard.dart';
+import 'app_navigation_configuration.gr.dart';
+import 'auth_guard.dart';
 
 @AutoRouterConfig(
     replaceInRouteName: 'Page|Screen,Route',

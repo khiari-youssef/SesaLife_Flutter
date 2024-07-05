@@ -6,11 +6,17 @@ class SesamePolicyAndTermsScreenState
     extends State<SesamePolicyAndTermsScreen> {
   late ScrollController listController;
   late SesamePolicyAndTermsBloc bloc;
+  late DocumentType? documentType;
   List<double?>? listItemsOffsets;
 
   @override
   void initState() {
     super.initState();
+    documentType = switch (widget.doctype) {
+      "privacyPolicy" => DocumentType.privacyPolicy,
+      "termsOfService" => DocumentType.termsOfService,
+      _ => null
+    };
     listController = ScrollController();
   }
 
@@ -28,15 +34,21 @@ class SesamePolicyAndTermsScreenState
   }
 
   @override
-  Widget build(BuildContext context) =>
-      titleScreenBuilder(context, S.of(context).privacy_policy_label, null, () {
+  Widget build(BuildContext context) => titleScreenBuilder(
+          context,
+          switch (documentType) {
+            DocumentType.privacyPolicy => S.of(context).privacy_policy_label,
+            DocumentType.termsOfService => S.of(context).terms_of_service_label,
+            _ => ""
+          },
+          null, () {
         AutoRouter.of(context).back();
       },
           Padding(
               padding: EdgeInsets.symmetric(vertical: 12.h, horizontal: 16.w),
               child: BlocProvider<SesamePolicyAndTermsBloc>(
-                create: (context) =>
-                    bloc..add(const SesamePolicyAndTermsEvent.loadRulesData()),
+                create: (context) => bloc
+                  ..add(SesamePolicyAndTermsEvent.loadRulesData(documentType)),
                 child: BlocConsumer<SesamePolicyAndTermsBloc,
                     SesamePolicyAndTermsState>(
                   listener: (context, state) {},
@@ -99,8 +111,9 @@ class SesamePolicyAndTermsScreenState
                                                           .listSize,
                                                       onPressed: () {
                                                         bloc.add(
-                                                            const SesamePolicyAndTermsEvent
-                                                                .loadRulesData());
+                                                            SesamePolicyAndTermsEvent
+                                                                .loadRulesData(
+                                                                    documentType));
                                                       }))
                                             ]),
                                         16.verticalSpace,
@@ -165,7 +178,9 @@ class SesamePolicyAndTermsScreenState
 
 @RoutePage(name: "SesamePolicyAndTermsRoute")
 class SesamePolicyAndTermsScreen extends StatefulWidget {
-  const SesamePolicyAndTermsScreen({super.key});
+  final String doctype;
+  const SesamePolicyAndTermsScreen(
+      {super.key, @PathParam("doctype") required this.doctype});
 
   Widget buildItemSection(BuildContext context, AppRulesSection section) {
     return Column(

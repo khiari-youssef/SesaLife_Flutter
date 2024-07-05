@@ -2,7 +2,7 @@ import 'package:core/core_domain/DomainErrorType.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 import 'package:users_management_feature/domain/entities/SesameUser.dart';
 
-part 'MyProfileDataState.freezed.dart';
+part 'my_profile_data_state.freezed.dart';
 
 @freezed
 class MyProfileDataState with _$MyProfileDataState {

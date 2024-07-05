@@ -1,0 +1,138 @@
+{
+  "local" : "en_US",
+  "last_time_updated" : "2024-05-24T11:53:09Z",
+  "description" : "A Terms and Conditions agreement acts as a legal contract between you (the company) and the user. It's where you maintain your rights to exclude users from your app in the event that they abuse your website/app, set out the rules for using your service and note other important details and disclaimers..",
+   "summary" : [
+     "Introduction",
+     "Right to make changes to the agreement.",
+     "User guidelines (rules, restrictions, requirements)",
+     "Copyright and intellectual property.",
+     "Governing law",
+     "Limitation of liability"
+   ],
+  "sections" : [
+    {
+      "section_name" : "Personal information we collect",
+      "sub_sections" : [
+        {
+          "subsection_name" : "Candidate data protection",
+          "content" : [
+            "We will need the candidate's email,phone(optional),sex,birthdate,first name and last name in order to identify the candidate to proceed to the  next registration step. ",
+            "The above user details will be removed once the candidature is rejected ",
+            "When the candidate is selected, his/her data will be kept for tracking candidature history and profile creation."
+          ]
+        },
+        {
+          "subsection_name" : "User data protection",
+          "content" : [
+            "",
+            "Article 2",
+            "Article 3"
+          ]
+        },
+        {
+          "subsection_name" : "User financial data protection",
+          "content" : [
+            "Article 1",
+            "Article 2",
+            "Article 3"
+          ]
+        },
+        {
+          "subsection_name" : "User academic data protection",
+          "content" : [
+            "Article 1",
+            "Article 2",
+            "Article 3"
+          ]
+        }
+      ]
+    },
+    {
+      "section_name" : "How we use the information we collect",
+      "sub_sections" : [
+        {
+          "subsection_name" : "Camera access",
+          "content" : [
+            "Article 1",
+            "Article 2",
+            "Article 3"
+          ]
+        },
+        {
+          "subsection_name" : "Location access",
+          "content" : [
+            "Article 1",
+            "Article 2",
+            "Article 3"
+          ]
+        },
+        {
+          "subsection_name" : "Alarm access",
+          "content" : [
+            "Article 1",
+            "Article 2",
+            "Article 3"
+          ]
+        },
+        {
+          "subsection_name" : "Media & documents access",
+          "content" : [
+            "Article 1",
+            "Article 2",
+            "Article 3"
+          ]
+        }
+
+      ]
+    },
+    {
+      "section_name" : "Sharing and disclosure",
+      "sub_sections" : [
+        {
+          "subsection_name" : "Compliance",
+          "content" : [
+            "The app's security complies with the OWASP mobile apps security verification standard",
+            "Sesame university will take action against users with attempts to cheat while using the app"
+          ]
+        }
+      ]
+    },
+    {
+      "section_name" : "Third-Party Partners and Integrations",
+      "sub_sections" : [
+        {
+          "subsection_name" : "Compliance",
+          "content" : [
+            "The app's security complies with the OWASP mobile apps security verification standard",
+            "Sesame university will take action against users with attempts to cheat while using the app"
+          ]
+        }
+      ]
+    },
+    {
+      "section_name" : "Security",
+      "sub_sections" : [
+        {
+          "subsection_name" : "Compliance",
+          "content" : [
+            "The app's security complies with the OWASP mobile apps security verification standard",
+            "Sesame university will take action against users with attempts to cheat while using the app"
+          ]
+        }
+      ]
+    },
+    {
+      "section_name" : "Changes to This Privacy Policy",
+      "sub_sections" : [
+        {
+          "subsection_name" : "Compliance",
+          "content" : [
+            "The app's security complies with the OWASP mobile apps security verification standard",
+            "Sesame university will take action against users with attempts to cheat while using the app"
+          ]
+        }
+      ]
+    }
+  ]
+}

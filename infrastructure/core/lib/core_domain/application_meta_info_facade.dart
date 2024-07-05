@@ -21,4 +21,15 @@ class ApplicationMetaInfoFacade {
       return mapper.toDomain(dto);
     });
   }
+
+  Future<SesamePrivacyPolicyDocument> getAppTermsOfService(String local) async {
+    return rootBundle
+        .loadString("assets/terms_of_service.json")
+        .then((stringData) {
+      Map<String, dynamic> jsonData = jsonDecode(stringData);
+      SesamePrivacyPolicyDocumentDTO dto =
+          SesamePrivacyPolicyDocumentDTO.fromJson(jsonData);
+      return mapper.toDomain(dto);
+    });
+  }
 }

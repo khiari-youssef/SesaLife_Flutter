@@ -2,11 +2,11 @@ import 'package:core/core_domain/DomainErrorType.dart';
 import 'package:core/core_domain/DomainUseCaseProtocol.dart';
 import 'package:core/core_utils/Logger.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
-import 'package:users_management_feature/ui/myprofile/stateManagement/profile/MyProfileScreenEvent.dart';
+import 'package:users_management_feature/ui/myprofile/stateManagement/profile/my_profile_screen_event.dart';
 
 import '../../../../domain/entities/SesameUser.dart';
-import 'MyProfileDataState.dart';
-import 'MyProfileScreenGlobalState.dart';
+import 'my_profile_data_state.dart';
+import 'my_profile_screen_global_state.dart';
 
 class MyProfileBlocStateManager
     extends Bloc<MyProfileScreenEvent, MyProfileScreenGlobalState> {

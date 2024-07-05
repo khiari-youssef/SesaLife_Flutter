@@ -10,6 +10,8 @@ part 'sesame_policy_and_terms_bloc.freezed.dart';
 part 'sesame_policy_and_terms_event.dart';
 part 'sesame_policy_and_terms_state.dart';
 
+enum DocumentType { privacyPolicy, termsOfService }
+
 class SesamePolicyAndTermsBloc
     extends Bloc<SesamePolicyAndTermsEvent, SesamePolicyAndTermsState> {
   final Locale currentLocal;
@@ -23,14 +25,24 @@ class SesamePolicyAndTermsBloc
       Emitter<SesamePolicyAndTermsState> emit) async {
     emit(const SesamePolicyAndTermsState.loading());
     await Future.delayed(const Duration(seconds: 1));
-    SesamePolicyAndTermsState resultState = await applicationMetaInfo
-        .getAppPolicy(currentLocal.languageCode)
-        .then((data) {
-      return SesamePolicyAndTermsState.success(data);
-    }, onError: (error) {
-      return const SesamePolicyAndTermsState.error(
-          DomainErrorType.UnknownError);
-    });
-    emit(resultState);
+
+    applicationMetaInfo.getAppPolicy(currentLocal.languageCode);
+    if (event.documentType != null) {
+      Future<SesamePrivacyPolicyDocument> task = switch (event.documentType!) {
+        DocumentType.privacyPolicy =>
+          applicationMetaInfo.getAppPolicy(currentLocal.languageCode),
+        DocumentType.termsOfService =>
+          applicationMetaInfo.getAppTermsOfService(currentLocal.languageCode)
+      };
+      SesamePolicyAndTermsState resultState = await task.then((data) {
+        return SesamePolicyAndTermsState.success(data);
+      }, onError: (error) {
+        return const SesamePolicyAndTermsState.error(
+            DomainErrorType.UnknownError);
+      });
+      emit(resultState);
+    } else {
+      emit(const SesamePolicyAndTermsState.error(DomainErrorType.UnknownError));
+    }
   }
 }

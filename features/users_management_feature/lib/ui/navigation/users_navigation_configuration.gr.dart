@@ -26,11 +26,11 @@ import 'package:users_management_feature/ui/guest_space/GuestSpace.dart' as _i3;
 import 'package:users_management_feature/ui/login/auto_login_loading_screen.dart'
     as _i1;
 import 'package:users_management_feature/ui/login/login_screen.dart' as _i4;
-import 'package:users_management_feature/ui/myprofile/MyBadgeScreen.dart'
+import 'package:users_management_feature/ui/myprofile/my_badge_screen.dart'
     as _i5;
-import 'package:users_management_feature/ui/myprofile/MySettingsScreen.dart'
+import 'package:users_management_feature/ui/myprofile/my_settings_screen.dart'
     as _i6;
-import 'package:users_management_feature/ui/myprofile/MyUserProfileScreen.dart'
+import 'package:users_management_feature/ui/myprofile/my_user_profile_screen.dart'
     as _i8;
 import 'package:users_management_feature/ui/program_privacy/sesame_policy_and_terms.dart'
     as _i10;
@@ -116,9 +116,16 @@ abstract class $UsersNavigationConfiguration extends _i15.RootStackRouter {
       );
     },
     SesamePolicyAndTermsRoute.name: (routeData) {
+      final pathParams = routeData.inheritedPathParams;
+      final args = routeData.argsAs<SesamePolicyAndTermsRouteArgs>(
+          orElse: () => SesamePolicyAndTermsRouteArgs(
+              doctype: pathParams.getString('doctype')));
       return _i15.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i10.SesamePolicyAndTermsScreen(),
+        child: _i10.SesamePolicyAndTermsScreen(
+          key: args.key,
+          doctype: args.doctype,
+        ),
       );
     },
     SubscriptionPaymentInterfaceRoute.name: (routeData) {
@@ -346,16 +353,42 @@ class SesameClassesRouteArgs {
 
 /// generated route for
 /// [_i10.SesamePolicyAndTermsScreen]
-class SesamePolicyAndTermsRoute extends _i15.PageRouteInfo<void> {
-  const SesamePolicyAndTermsRoute({List<_i15.PageRouteInfo>? children})
-      : super(
+class SesamePolicyAndTermsRoute
+    extends _i15.PageRouteInfo<SesamePolicyAndTermsRouteArgs> {
+  SesamePolicyAndTermsRoute({
+    _i19.Key? key,
+    required String doctype,
+    List<_i15.PageRouteInfo>? children,
+  }) : super(
           SesamePolicyAndTermsRoute.name,
+          args: SesamePolicyAndTermsRouteArgs(
+            key: key,
+            doctype: doctype,
+          ),
+          rawPathParams: {'doctype': doctype},
           initialChildren: children,
         );
 
   static const String name = 'SesamePolicyAndTermsRoute';
 
-  static const _i15.PageInfo<void> page = _i15.PageInfo<void>(name);
+  static const _i15.PageInfo<SesamePolicyAndTermsRouteArgs> page =
+      _i15.PageInfo<SesamePolicyAndTermsRouteArgs>(name);
+}
+
+class SesamePolicyAndTermsRouteArgs {
+  const SesamePolicyAndTermsRouteArgs({
+    this.key,
+    required this.doctype,
+  });
+
+  final _i19.Key? key;
+
+  final String doctype;
+
+  @override
+  String toString() {
+    return 'SesamePolicyAndTermsRouteArgs{key: $key, doctype: $doctype}';
+  }
 }
 
 /// generated route for

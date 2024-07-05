@@ -7,10 +7,10 @@
 // ignore_for_file: type=lint
 // coverage:ignore-file
 
-import 'package:Sesalife/SesameUnauthorizedDeviceScreen.dart' as _i1;
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i2;
 import 'package:home_feature/exports.dart' as _i3;
+import 'package:Sesalife/sesame_unauthorized_device_screen.dart' as _i1;
 import 'package:users_management_feature/exports.dart' as _i4;
 
 abstract class $AppNavigationConfiguration extends _i2.RootStackRouter {

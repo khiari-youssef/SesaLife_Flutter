@@ -7,4 +7,4 @@ export 'package:users_management_feature/ui/navigation/users_navigation_configur
 
 export 'infrastructure/dataSources/users_hive_boxes_init.dart';
 export 'infrastructure/dtos/hive_adapters_register.dart';
-export 'ui/myprofile/MyUserProfileScreen.dart';
+export 'ui/myprofile/my_user_profile_screen.dart';

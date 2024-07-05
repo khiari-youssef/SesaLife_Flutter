@@ -1,11 +1,11 @@
 import 'package:core/core_utils/BioUtils.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 import 'package:users_management_feature/domain/entities/SesameUser.dart';
-import 'package:users_management_feature/ui/myprofile/MyProfileMenu.dart';
-import 'package:users_management_feature/ui/myprofile/MyProfilePreview.dart';
-import 'package:users_management_feature/ui/myprofile/stateManagement/profile/MyProfileBlocStateManager.dart';
-import 'package:users_management_feature/ui/myprofile/stateManagement/profile/MyProfileScreenEvent.dart';
-import 'package:users_management_feature/ui/myprofile/stateManagement/profile/MyProfileScreenGlobalState.dart';
+import 'package:users_management_feature/ui/myprofile/my_profile_menu.dart';
+import 'package:users_management_feature/ui/myprofile/my_profile_preview.dart';
+import 'package:users_management_feature/ui/myprofile/stateManagement/profile/my_profile_bloc_state_manager.dart';
+import 'package:users_management_feature/ui/myprofile/stateManagement/profile/my_profile_screen_event.dart';
+import 'package:users_management_feature/ui/myprofile/stateManagement/profile/my_profile_screen_global_state.dart';
 
 import '../navigation/users_navigation_configuration.gr.dart';
 

@@ -4,7 +4,7 @@ import 'package:shared_dependencies/shared_dependencies.dart';
 import 'package:users_management_feature/infrastructure/dataSources/users_hive_boxes_init.dart';
 import 'package:users_management_feature/infrastructure/dtos/hive_adapters_register.dart';
 
-import 'AppNavigationConfiguration.dart';
+import 'app_navigation_configuration.dart';
 import 'dependenciesLoader.dart';
 
 void main() async {
