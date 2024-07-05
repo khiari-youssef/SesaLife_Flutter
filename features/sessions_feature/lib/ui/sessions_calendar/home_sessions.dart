@@ -3,6 +3,7 @@ import 'package:sessions_feature/ui/sessions_calendar/bloc/home_calendar_state.d
 import 'package:sessions_feature/ui/sessions_calendar/components/calendar_top_bar.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 
+import '../navigation/sessions_navigation_configuration.gr.dart';
 import 'bloc/home_calendar_bloc.dart';
 import 'home_sessions_calendar_mode.dart';
 import 'home_sessions_list.dart';
@@ -90,8 +91,9 @@ class HomeSessionsScreenState extends State<HomeSessionsScreen>
                               SessionsCalendarMode(
                                 sessionsList: data,
                                 onSessionClicked: (int index) {
-                                  AutoRouter.of(context)
-                                      .pushNamed("/SessionDetailsRoute");
+                                  AutoRouter.of(context).push(
+                                      SessionDetailsRoute(
+                                          session: data[index]));
                                 },
                                 onDatePicked: (date) {
                                   context.read<HomeSessionsBloc>().add(
@@ -107,8 +109,9 @@ class HomeSessionsScreenState extends State<HomeSessionsScreen>
                             HomeCalendarTopBarViewMode.list => SessionsListMode(
                                 sessionsList: data,
                                 onSessionClicked: (int index) {
-                                  AutoRouter.of(context)
-                                      .pushNamed("SessionDetailsRoute");
+                                  AutoRouter.of(context).push(
+                                      SessionDetailsRoute(
+                                          session: data[index]));
                                 },
                               )
                           });

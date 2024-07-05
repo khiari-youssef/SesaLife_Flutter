@@ -9,10 +9,12 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i3;
+import 'package:sessions_feature/domain/entities/sesame_session.dart' as _i5;
 import 'package:sessions_feature/ui/session_details/session_details_base_screen.dart'
     as _i2;
 import 'package:sessions_feature/ui/sessions_calendar/home_sessions.dart'
     as _i1;
+import 'package:shared_dependencies/shared_dependencies.dart' as _i4;
 
 abstract class $SessionsNavigationConfiguration extends _i3.RootStackRouter {
   $SessionsNavigationConfiguration({super.navigatorKey});
@@ -26,9 +28,13 @@ abstract class $SessionsNavigationConfiguration extends _i3.RootStackRouter {
       );
     },
     SessionDetailsRoute.name: (routeData) {
+      final args = routeData.argsAs<SessionDetailsRouteArgs>();
       return _i3.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i2.SessionDetailsBaseScreen(),
+        child: _i2.SessionDetailsBaseScreen(
+          key: args.key,
+          session: args.session,
+        ),
       );
     },
   };
@@ -50,14 +56,38 @@ class HomeSessionsRoute extends _i3.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i2.SessionDetailsBaseScreen]
-class SessionDetailsRoute extends _i3.PageRouteInfo<void> {
-  const SessionDetailsRoute({List<_i3.PageRouteInfo>? children})
-      : super(
+class SessionDetailsRoute extends _i3.PageRouteInfo<SessionDetailsRouteArgs> {
+  SessionDetailsRoute({
+    _i4.Key? key,
+    required _i5.SesameSession session,
+    List<_i3.PageRouteInfo>? children,
+  }) : super(
           SessionDetailsRoute.name,
+          args: SessionDetailsRouteArgs(
+            key: key,
+            session: session,
+          ),
           initialChildren: children,
         );
 
   static const String name = 'SessionDetailsRoute';
 
-  static const _i3.PageInfo<void> page = _i3.PageInfo<void>(name);
+  static const _i3.PageInfo<SessionDetailsRouteArgs> page =
+      _i3.PageInfo<SessionDetailsRouteArgs>(name);
+}
+
+class SessionDetailsRouteArgs {
+  const SessionDetailsRouteArgs({
+    this.key,
+    required this.session,
+  });
+
+  final _i4.Key? key;
+
+  final _i5.SesameSession session;
+
+  @override
+  String toString() {
+    return 'SessionDetailsRouteArgs{key: $key, session: $session}';
+  }
 }
