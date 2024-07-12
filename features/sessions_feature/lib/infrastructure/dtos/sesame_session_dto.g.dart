@@ -8,6 +8,9 @@ part of 'sesame_session_dto.dart';
 
 SesameSessionDTO _$SesameSessionDTOFromJson(Map<String, dynamic> json) =>
     SesameSessionDTO(
+      (json['sessionContent'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(k, e as String),
+      ),
       id: json['id'] as String,
       subject:
           SesameSubjectDTO.fromJson(json['subject'] as Map<String, dynamic>),
@@ -57,4 +60,5 @@ Map<String, dynamic> _$SesameSessionDTOToJson(SesameSessionDTO instance) =>
       'uploadRepository': instance.uploadRepository,
       'sessionTypeData': instance.sessionTypeData,
       'onlineMeetingURI': instance.onlineMeetingURI,
+      'sessionContent': instance.sessionContent,
     };

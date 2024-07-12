@@ -28,10 +28,15 @@ class CreditCardInputValidationService {
   }
 
   bool isCCHolderNameDValid(String ccHolderName) {
-    return ccNameRegExp.hasMatch(ccHolderName);
+    return ccNameRegExp.hasMatch(ccHolderName.replaceAll(" ", ""));
   }
 
   bool isCVValid(String cvv) {
-    return onlyNumbersRegExp.hasMatch(cvv) && cvv.length == 3;
+    try {
+      int.parse(cvv);
+      return cvv.length == 3;
+    } catch (e) {
+      return false;
+    }
   }
 }

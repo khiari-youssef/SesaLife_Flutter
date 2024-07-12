@@ -9,12 +9,12 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i3;
+import 'package:core/exports.dart' as _i4;
 import 'package:sessions_feature/domain/entities/sesame_session.dart' as _i5;
 import 'package:sessions_feature/ui/session_details/session_details_base_screen.dart'
     as _i2;
 import 'package:sessions_feature/ui/sessions_calendar/home_sessions.dart'
     as _i1;
-import 'package:shared_dependencies/shared_dependencies.dart' as _i4;
 
 abstract class $SessionsNavigationConfiguration extends _i3.RootStackRouter {
   $SessionsNavigationConfiguration({super.navigatorKey});
