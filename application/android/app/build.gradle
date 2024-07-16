@@ -23,8 +23,8 @@ if (flutterVersionName == null) {
 }
 // keystore properties
 def keystoreProperties = new Properties()
+def HOME_DIR = System.properties['user.home']
 def keyStorePropertiesPath = System.getenv().getOrDefault("SESALIFE_RELEASE_KEYSTORE_PROPS_PATH",null)
-println(keyStorePropertiesPath)
 if (keyStorePropertiesPath != null ){
     def  keystorePropertiesFile =rootProject.file(keyStorePropertiesPath)
     if (keystorePropertiesFile != null){
@@ -70,7 +70,7 @@ android {
             release{
                 keyAlias keystoreProperties['keyAlias']
                 keyPassword keystoreProperties['keyPassword']
-                storeFile file(keystoreProperties['storeFile'])
+                storeFile file("$HOME_DIR/${keystoreProperties['storeFile']}")
                 storePassword keystoreProperties['storePassword']
             }
         }
@@ -78,7 +78,7 @@ android {
 
     buildTypes {
         release {
-            signingConfig signingConfigs.debug
+            signingConfig signingConfigs.release
         }
     }
     configurations {
