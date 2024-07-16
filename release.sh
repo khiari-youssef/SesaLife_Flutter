@@ -5,7 +5,7 @@ GREEN='\033[0;32m'
 BLUE='\033[0;34m'
 
 echo "${BLUE} Build task :"
-#sh build.sh || (echo "${RED} CI build task failed" && exit)
+sh build.sh || (echo "${RED} CI build task failed" && exit)
 echo "${BLUE} Test Task :"
 cd test-runner || exit
 flutter test test/testAppRunner_test.dart || (echo "${RED} CI test task failed" && exit)
