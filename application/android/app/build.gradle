@@ -21,6 +21,20 @@ def flutterVersionName = localProperties.getProperty('flutter.versionName')
 if (flutterVersionName == null) {
     flutterVersionName = '1.0'
 }
+// keystore properties
+def keystoreProperties = new Properties()
+def keyStorePropertiesPath = System.getenv().getOrDefault("SESALIFE_RELEASE_KEYSTORE_PROPS_PATH",null)
+println(keyStorePropertiesPath)
+if (keyStorePropertiesPath != null ){
+    def  keystorePropertiesFile =rootProject.file(keyStorePropertiesPath)
+    if (keystorePropertiesFile != null){
+        keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+        logger.log(LogLevel.INFO,"sesalife-release-keystore app signing file loaded !")
+    }
+} else {
+    logger.log(LogLevel.ERROR, "sesalife-release-keystore app signing file file not found !")
+}
+
 
 android {
     namespace "tn.sesame.sesa_life"
@@ -51,10 +65,19 @@ android {
         versionName flutterVersionName
     }
 
+    signingConfigs {
+        if (!keystoreProperties.isEmpty()){
+            release{
+                keyAlias keystoreProperties['keyAlias']
+                keyPassword keystoreProperties['keyPassword']
+                storeFile file(keystoreProperties['storeFile'])
+                storePassword keystoreProperties['storePassword']
+            }
+        }
+    }
+
     buildTypes {
         release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
             signingConfig signingConfigs.debug
         }
     }
