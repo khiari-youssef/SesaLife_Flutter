@@ -1,12 +1,10 @@
-# SesaLife Flutter
 <div style="display: flex; flex-direction: row;">
 <img  src="/repo-assets/SesameBrand.png">
 <img  width="300" height="80" src="/repo-assets/flutter.png">
 <img width="80" height="80" src="/repo-assets/android.png">
  <img width="80" height="80"  src="/repo-assets/apple.png">
 </div>
-
-A flutter super app for sesame university students that helps them access their courses, pay their subscriptions and view their personal data .... 
+**SesaLife** is a flutter super app for sesame university students that helps them access their courses, pay their subscriptions and view their personal data .... 
 It's a template to showcase the multi-package structure of the flutter app as well as the clean architecture implementation.
 Improvements through pull requests are always welcome. 
 
