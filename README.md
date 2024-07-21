@@ -23,14 +23,17 @@ Improvements through pull requests are always welcome.
 ### Not all Features are implemented completely yet and data are mocked since  APIs are not available yet.
 
 
-
 ## Technical details :
 - Multi-package modular structure.
 - Clean architecture practices
 - Bloc pattern
 - Hive package for local storage and DIO for http requests.
 - Biometric authentication.
-- 
+- Custom Design system built on top of Material design.
+- Flutter secure storage based on Android keystore and iOs keychain to store credit card data.
+### Package modularization
+<img src="/repo-assets/package-arch.PNG">
+
 ### Architecture Layers
 <img src="/repo-assets/layers.PNG">
   
