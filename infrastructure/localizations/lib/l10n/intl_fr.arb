@@ -5,6 +5,8 @@
   "login" : "Se connecter",
   "auto_login_message" : "Connection automatique en cours ...",
   "logout" : "Se déconnecter",
+  "login_failed_title" : "Authentification a échoué !",
+  "login_error_invalid_credentials" : "Email ou mot de passe invalide !",
   "go_back": "Retourner",
   "device_auth_unsupported" : "Votre appareil ne supporte pas une forte authentification biometrique ! ou bien vous ne l'avez pas encore enregistré",
   "device_auth_action" : "Cette action nécessite votre authentification",

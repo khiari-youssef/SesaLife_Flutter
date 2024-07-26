@@ -100,6 +100,26 @@ class S {
     );
   }
 
+  /// `Authentification failed !`
+  String get login_failed_title {
+    return Intl.message(
+      'Authentification failed !',
+      name: 'login_failed_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Invalid email or password!`
+  String get login_error_invalid_credentials {
+    return Intl.message(
+      'Invalid email or password!',
+      name: 'login_error_invalid_credentials',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Go back`
   String get go_back {
     return Intl.message(

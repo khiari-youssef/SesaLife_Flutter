@@ -1,3 +1,4 @@
+import 'package:core/exports.dart';
 import 'package:designsystem/extensions.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 
@@ -46,10 +47,15 @@ class LoginScreenState extends State<LoginScreen> {
                 AutoRouter.of(context).replaceNamed("/HomeRootRoute");
               },
               error: (errorType) {
-                context.showToast(
-                    title: errorType.name,
-                    message: errorType.name,
-                    toastType: ToastType.Error);
+                if (errorType == DomainErrorType.InvalidCredentials) {
+                  context.showToast(
+                      title: S.of(context).login_failed_title,
+                      message: S.of(context).login_error_invalid_credentials,
+                      toastType: ToastType.Error);
+                } else {
+                  context.showToast(
+                      message: errorType.name, toastType: ToastType.Error);
+                }
               });
         },
         builder: (context, state) {

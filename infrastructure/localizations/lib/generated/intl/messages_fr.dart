@@ -98,6 +98,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "job_role": MessageLookupByLibrary.simpleMessage("role"),
         "lastName": MessageLookupByLibrary.simpleMessage("Nom"),
         "login": MessageLookupByLibrary.simpleMessage("Se connecter"),
+        "login_error_invalid_credentials": MessageLookupByLibrary.simpleMessage(
+            "Email ou mot de passe invalide !"),
+        "login_failed_title":
+            MessageLookupByLibrary.simpleMessage("Authentification a échoué !"),
         "logout": MessageLookupByLibrary.simpleMessage("Se déconnecter"),
         "my_personal_details":
             MessageLookupByLibrary.simpleMessage("Mes données personnelles"),

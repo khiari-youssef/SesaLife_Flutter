@@ -97,6 +97,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "job_role": MessageLookupByLibrary.simpleMessage("role"),
         "lastName": MessageLookupByLibrary.simpleMessage("LastName"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
+        "login_error_invalid_credentials":
+            MessageLookupByLibrary.simpleMessage("Invalid email or password!"),
+        "login_failed_title":
+            MessageLookupByLibrary.simpleMessage("Authentification failed !"),
         "logout": MessageLookupByLibrary.simpleMessage("Logout"),
         "my_personal_details":
             MessageLookupByLibrary.simpleMessage("My personal details"),
