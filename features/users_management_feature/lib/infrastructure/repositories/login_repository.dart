@@ -1,7 +1,9 @@
 import 'package:core/core_domain/AbstractDomainToExternalEntityMapper.dart';
+import 'package:core/core_domain/DomainErrorType.dart';
 import 'package:core/core_domain/entities/sesame_badge.dart';
 import 'package:core/core_domain/entities/sesame_class.dart';
 import 'package:core/core_domain/entities/user_sex.dart';
+import 'package:core/core_domain/exceptions/sesame_domain_exception.dart';
 import 'package:core/core_utils/Logger.dart';
 import 'package:users_management_feature/domain/entities/SesameStudent.dart';
 import 'package:users_management_feature/domain/entities/SesameTeacher.dart';
@@ -13,7 +15,7 @@ import '../../domain/entities/login_result.dart';
 import '../dataSources/users_local_data_source.dart';
 import '../dataSources/users_remote_data_source.dart';
 import '../dtos/SesameUserDTO.dart';
-import '../ports/repositoryContracts/LoginRepositoryContract.dart';
+import 'package:users_management_feature/domain/ports/repositoryContracts/LoginRepositoryContract.dart';
 
 class LoginRepository implements LoginRepositoryContract {
   final UsersLocalDataSource localDataSource;
@@ -69,7 +71,9 @@ class LoginRepository implements LoginRepositoryContract {
         .loginWithCredentials(email, password)
         .catchError((error) {
           logger.e("user with email $email does not exist");
-          throw Exception();
+          throw SesameDomainException(
+              type: DomainErrorType.InvalidCredentials,
+              message: "user with email $email does not exist");
         })
         .asStream()
         .first;

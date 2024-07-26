@@ -1,5 +1,6 @@
 import 'package:core/core_domain/DomainErrorType.dart';
 import 'package:core/core_domain/DomainUseCaseProtocol.dart';
+import 'package:core/core_domain/exceptions/sesame_domain_exception.dart';
 import 'package:core/core_utils/Logger.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 
@@ -20,7 +21,12 @@ class LoginStateBloc extends Bloc<LoginEvent, LoginState> {
             emit(const LoginState.success());
           }, onError: (error) {
             logger.e(error);
-            emit(const LoginState.error(DomainErrorType.UnknownError));
+            if (error is SesameDomainException) {
+              emit(
+                  LoginState.error(error.type ?? DomainErrorType.UnknownError));
+            } else {
+              emit(const LoginState.error(DomainErrorType.UnknownError));
+            }
           });
         }, updateEmail: (email) {
           emit(LoginState.onEmailUpdated(email));

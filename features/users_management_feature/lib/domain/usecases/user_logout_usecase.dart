@@ -1,8 +1,7 @@
 import 'package:core/core_data/localStorage/credit_card_secure_local_storage_interface.dart';
 import 'package:core/core_domain/DomainUseCaseProtocol.dart';
 import 'package:users_management_feature/infrastructure/repositories/user_settings_repository.dart';
-
-import '../../infrastructure/ports/repositoryContracts/UserDataRepositoryContract.dart';
+import 'package:users_management_feature/domain/ports/repositoryContracts/UserDataRepositoryContract.dart';
 
 class UserLogoutUseCase
     implements NoInputDomainUseCaseProtocol<Future<List<void>>> {

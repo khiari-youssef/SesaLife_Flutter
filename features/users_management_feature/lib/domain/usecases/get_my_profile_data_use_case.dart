@@ -1,8 +1,7 @@
 import 'package:core/core_domain/DomainUseCaseProtocol.dart';
 import 'package:core/core_utils/Logger.dart';
 import 'package:users_management_feature/domain/entities/SesameUser.dart';
-
-import '../../infrastructure/ports/repositoryContracts/UserDataRepositoryContract.dart';
+import 'package:users_management_feature/domain/ports/repositoryContracts/UserDataRepositoryContract.dart';
 
 class GetMyProfileDataUseCase
     implements NoInputDomainUseCaseProtocol<Future<SesameUser>> {

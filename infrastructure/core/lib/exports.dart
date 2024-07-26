@@ -17,6 +17,7 @@ export 'core_domain/FormTextValidationState.dart';
 export 'core_domain/application_meta_info_facade.dart';
 export 'core_domain/entities/entities.dart';
 export 'core_domain/utilities.dart';
+export 'core_domain/exceptions/sesame_domain_exception.dart';
 export 'core_utils/BioUtils.dart';
 export 'core_utils/Logger.dart';
 export 'core_utils/QrCode.dart';

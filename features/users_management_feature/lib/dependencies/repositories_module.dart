@@ -3,8 +3,8 @@ import 'package:shared_dependencies/shared_dependencies.dart';
 import 'package:users_management_feature/dependencies/dataSources_module.dart';
 import 'package:users_management_feature/dependencies/mappers_module.dart';
 
-import '../infrastructure/ports/repositoryContracts/LoginRepositoryContract.dart';
-import '../infrastructure/ports/repositoryContracts/UserDataRepositoryContract.dart';
+import 'package:users_management_feature/domain/ports/repositoryContracts/LoginRepositoryContract.dart';
+import 'package:users_management_feature/domain/ports/repositoryContracts/UserDataRepositoryContract.dart';
 import '../infrastructure/repositories/login_repository.dart';
 import '../infrastructure/repositories/sesame_classes_repository.dart';
 import '../infrastructure/repositories/user_data_repository.dart';
