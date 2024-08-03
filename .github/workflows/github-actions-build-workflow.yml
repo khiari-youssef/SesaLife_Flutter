@@ -16,6 +16,6 @@ jobs:
           channel: stable
           flutter-version: 3.22.1
       - run: flutter --version
-      - run: job completed successfully !
+      - run: echo "job completed successfully ! "
 
 
