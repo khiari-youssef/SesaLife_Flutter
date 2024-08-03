@@ -1,13 +1,11 @@
 import 'package:core/coreUI/user_profile_cards/profile_preview_list_item.dart';
 import 'package:core/exports.dart';
-import 'package:designsystem/theme/dimens.dart';
 import 'package:sessions_feature/domain/entities/sesame_course_session.dart';
 import 'package:sessions_feature/domain/entities/sesame_exam_session.dart';
 import 'package:sessions_feature/domain/entities/sesame_session.dart';
 import 'package:sessions_feature/ui/session_details/stateManagement/session_details_bloc.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 
-import '../components/labeled_display_text.dart';
 import '../components/session_schedule_display_section.dart';
 
 class SessionDetailsBaseScreenState extends State<SessionDetailsBaseScreen> {

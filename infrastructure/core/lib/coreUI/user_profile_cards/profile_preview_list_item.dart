@@ -48,7 +48,6 @@ class ProfilePreviewCard extends StatelessWidget {
                       ],
                     ),
             )));
-    ;
   }
 
   Widget buildRootCardElement(BuildContext context) {

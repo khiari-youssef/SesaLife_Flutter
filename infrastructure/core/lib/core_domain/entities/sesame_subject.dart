@@ -1,4 +1,3 @@
-import 'package:core/core_domain/entities/sesame_class.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 
 part 'sesame_subject.freezed.dart';

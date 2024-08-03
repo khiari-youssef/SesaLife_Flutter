@@ -17,7 +17,7 @@ jobs:
           flutter-version: 3.22.1
       - run: flutter --version
       - run: sh build.sh
-      - run: cd test-runner && sh runner.sh
+      - run: sh release.sh
       - run: echo "job completed successfully ! "
 
 
