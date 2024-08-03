@@ -6,7 +6,7 @@ on:
       - main
 jobs:
   installFlutter:
-    runs-on: macOS
+    runs-on: macos-14
     steps:
       - name: Clone repository
         uses: actions/checkout@v4
