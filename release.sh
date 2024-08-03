@@ -16,6 +16,6 @@ echo "${GREEN} Android app bundle generation Task :"
 cd application || exit
 OBFUSCATION_DEBUG_OUTPUT_DIR="$(pwd)/build/app/outputs/obfuscation"
 flutter build appbundle --release --obfuscate --split-debug-info="$OBFUSCATION_DEBUG_OUTPUT_DIR"  || (echo "${RED} CI Android AppBundle build task failed" && exit)
-echo "${GREEN} iOs app package generation Task :"
-flutter build ipa --obfuscate --split-debug-info="$OBFUSCATION_DEBUG_OUTPUT_DIR" || (echo "${RED} CI iOs AppBundle build task failed" && exit)
+# echo "${GREEN} iOs app package generation Task :"
+#flutter build ipa --obfuscate --split-debug-info="$OBFUSCATION_DEBUG_OUTPUT_DIR" || (echo "${RED} CI iOs AppBundle build task failed" && exit)
 
