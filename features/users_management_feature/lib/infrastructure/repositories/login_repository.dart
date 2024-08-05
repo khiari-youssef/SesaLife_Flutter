@@ -1,10 +1,10 @@
-import 'package:core/core_domain/AbstractDomainToExternalEntityMapper.dart';
-import 'package:core/core_domain/DomainErrorType.dart';
+import 'package:core/core_domain/abstract_domain_to_external_entity_mapper.dart';
+import 'package:core/core_domain/domain_error_type.dart';
 import 'package:core/core_domain/entities/sesame_badge.dart';
 import 'package:core/core_domain/entities/sesame_class.dart';
 import 'package:core/core_domain/entities/user_sex.dart';
 import 'package:core/core_domain/exceptions/sesame_domain_exception.dart';
-import 'package:core/core_utils/Logger.dart';
+import 'package:core/core_utils/logger.dart';
 import 'package:users_management_feature/domain/entities/SesameStudent.dart';
 import 'package:users_management_feature/domain/entities/SesameTeacher.dart';
 import 'package:users_management_feature/infrastructure/dtos/login_response_dto.dart';

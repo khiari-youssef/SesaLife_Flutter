@@ -16,7 +16,7 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$SesameDomainException {
-  DomainErrorType? get type => throw _privateConstructorUsedError;
+  DomainErrorType get type => throw _privateConstructorUsedError;
   String? get message => throw _privateConstructorUsedError;
   Map<String, dynamic>? get details => throw _privateConstructorUsedError;
 
@@ -32,7 +32,7 @@ abstract class $SesameDomainExceptionCopyWith<$Res> {
       _$SesameDomainExceptionCopyWithImpl<$Res, SesameDomainException>;
   @useResult
   $Res call(
-      {DomainErrorType? type, String? message, Map<String, dynamic>? details});
+      {DomainErrorType type, String? message, Map<String, dynamic>? details});
 }
 
 /// @nodoc
@@ -49,15 +49,15 @@ class _$SesameDomainExceptionCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? type = freezed,
+    Object? type = null,
     Object? message = freezed,
     Object? details = freezed,
   }) {
     return _then(_value.copyWith(
-      type: freezed == type
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as DomainErrorType?,
+              as DomainErrorType,
       message: freezed == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
@@ -80,7 +80,7 @@ abstract class _$$SesameDomainExceptionImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {DomainErrorType? type, String? message, Map<String, dynamic>? details});
+      {DomainErrorType type, String? message, Map<String, dynamic>? details});
 }
 
 /// @nodoc
@@ -95,15 +95,15 @@ class __$$SesameDomainExceptionImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? type = freezed,
+    Object? type = null,
     Object? message = freezed,
     Object? details = freezed,
   }) {
     return _then(_$SesameDomainExceptionImpl(
-      type: freezed == type
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as DomainErrorType?,
+              as DomainErrorType,
       message: freezed == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
@@ -120,11 +120,11 @@ class __$$SesameDomainExceptionImplCopyWithImpl<$Res>
 
 class _$SesameDomainExceptionImpl implements _SesameDomainException {
   const _$SesameDomainExceptionImpl(
-      {this.type, this.message, final Map<String, dynamic>? details})
+      {required this.type, this.message, final Map<String, dynamic>? details})
       : _details = details;
 
   @override
-  final DomainErrorType? type;
+  final DomainErrorType type;
   @override
   final String? message;
   final Map<String, dynamic>? _details;
@@ -166,12 +166,12 @@ class _$SesameDomainExceptionImpl implements _SesameDomainException {
 
 abstract class _SesameDomainException implements SesameDomainException {
   const factory _SesameDomainException(
-      {final DomainErrorType? type,
+      {required final DomainErrorType type,
       final String? message,
       final Map<String, dynamic>? details}) = _$SesameDomainExceptionImpl;
 
   @override
-  DomainErrorType? get type;
+  DomainErrorType get type;
   @override
   String? get message;
   @override

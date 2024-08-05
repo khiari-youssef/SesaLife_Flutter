@@ -1,4 +1,4 @@
-import 'package:core/core_utils/Logger.dart';
+import 'package:core/core_utils/logger.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 import 'package:users_management_feature/ui/myprofile/stateManagement/settings/my_settings_event.dart';
 import 'package:users_management_feature/ui/myprofile/stateManagement/settings/my_settings_state.dart';

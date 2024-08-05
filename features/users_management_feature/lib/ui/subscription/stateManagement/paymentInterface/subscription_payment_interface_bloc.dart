@@ -1,7 +1,7 @@
 import 'package:core/core_data/localStorage/credit_card_secure_local_storage_interface.dart';
-import 'package:core/core_domain/DomainErrorType.dart';
-import 'package:core/core_domain/DomainUseCaseProtocol.dart';
-import 'package:core/core_utils/Logger.dart';
+import 'package:core/core_domain/domain_error_type.dart';
+import 'package:core/core_domain/domain_use_case_protocol.dart';
+import 'package:core/core_utils/logger.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 
 import '../../../../domain/entities/payment_transaction_result.dart';

@@ -1,4 +1,4 @@
-import 'package:core/core_domain/AbstractDomainToExternalEntityMapper.dart';
+import 'package:core/core_domain/abstract_domain_to_external_entity_mapper.dart';
 import 'package:users_management_feature/domain/entities/SesameUser.dart';
 
 import '../dataSources/users_local_data_source.dart';

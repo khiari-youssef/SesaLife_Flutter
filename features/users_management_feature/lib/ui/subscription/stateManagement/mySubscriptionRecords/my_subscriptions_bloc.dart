@@ -1,5 +1,5 @@
 import 'package:bloc/bloc.dart';
-import 'package:core/core_domain/DomainErrorType.dart';
+import 'package:core/core_domain/domain_error_type.dart';
 import 'package:core/core_domain/entities/sesame_attachment.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:users_management_feature/domain/entities/annual_subscription_model.dart';

@@ -1,4 +1,4 @@
-import 'package:core/core_utils/BioUtils.dart';
+import 'package:core/core_utils/bio_utils.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 import 'package:users_management_feature/domain/entities/SesameUser.dart';
 import 'package:users_management_feature/ui/myprofile/my_profile_menu.dart';

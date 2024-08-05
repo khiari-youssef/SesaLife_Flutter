@@ -1,4 +1,4 @@
-import 'package:core/core_domain/DomainErrorType.dart';
+import 'package:core/core_domain/domain_error_type.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 import 'package:users_management_feature/domain/entities/SesameUser.dart';
 

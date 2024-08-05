@@ -1,7 +1,7 @@
 import 'dart:ui';
 
 import 'package:bloc/bloc.dart';
-import 'package:core/core_domain/DomainErrorType.dart';
+import 'package:core/core_domain/domain_error_type.dart';
 import 'package:core/core_domain/application_meta_info_facade.dart';
 import 'package:core/core_domain/entities/sesame_privacy_policy_document.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';

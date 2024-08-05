@@ -1,4 +1,4 @@
-import 'package:core/core_domain/DomainUseCaseProtocol.dart';
+import 'package:core/core_domain/domain_use_case_protocol.dart';
 import 'package:core/core_domain/entities/user_profile_preview.dart';
 
 import '../../infrastructure/repositories/users_search_repository.dart';

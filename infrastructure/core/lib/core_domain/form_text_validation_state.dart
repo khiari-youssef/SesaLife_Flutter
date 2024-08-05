@@ -1,6 +1,6 @@
 import 'package:shared_dependencies/shared_dependencies.dart';
 
-part 'FormTextValidationState.freezed.dart';
+part 'form_text_validation_state.freezed.dart';
 
 enum FormTextInvalidStateType { required, format }
 

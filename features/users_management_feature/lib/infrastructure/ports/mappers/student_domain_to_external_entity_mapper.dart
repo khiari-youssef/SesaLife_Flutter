@@ -1,5 +1,5 @@
 import 'package:core/core_data/dtos/sesame_class_dto.dart';
-import 'package:core/core_domain/AbstractDomainToExternalEntityMapper.dart';
+import 'package:core/core_domain/abstract_domain_to_external_entity_mapper.dart';
 import 'package:core/core_domain/entities/sesame_badge.dart';
 import 'package:core/core_domain/entities/sesame_class.dart';
 import 'package:core/core_domain/entities/user_sex.dart';

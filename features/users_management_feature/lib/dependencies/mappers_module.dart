@@ -1,5 +1,5 @@
 import 'package:core/core_data/dtos/sesame_privacy_policy_document_dto.dart';
-import 'package:core/core_domain/AbstractDomainToExternalEntityMapper.dart';
+import 'package:core/core_domain/abstract_domain_to_external_entity_mapper.dart';
 import 'package:core/core_domain/entities/sesame_privacy_policy_document.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 import 'package:users_management_feature/domain/entities/SesameStudent.dart';

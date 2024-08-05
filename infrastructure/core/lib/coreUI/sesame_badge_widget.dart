@@ -3,8 +3,8 @@ import 'dart:ui';
 
 import 'package:shared_dependencies/shared_dependencies.dart';
 
-import '../core_utils/BioUtils.dart';
-import '../core_utils/QrCode.dart';
+import '../core_utils/bio_utils.dart';
+import '../core_utils/qrCode.dart';
 
 class SesameBadgeWidgetState extends State<SesameBadgeWidget> {
   bool isHidden = true;
@@ -20,7 +20,7 @@ class SesameBadgeWidgetState extends State<SesameBadgeWidget> {
 
   @override
   Widget build(BuildContext context) {
-    Widget QrCodeWidget() => SizedBox(
+    Widget qrCodeWidget() => SizedBox(
         height: 200.h,
         width: 200.w,
         child: getQrCodeWidgetForData(widget.data));
@@ -30,7 +30,7 @@ class SesameBadgeWidgetState extends State<SesameBadgeWidget> {
             children: [
               ImageFiltered(
                 imageFilter: ImageFilter.blur(sigmaX: 6, sigmaY: 6),
-                child: QrCodeWidget(),
+                child: qrCodeWidget(),
               ),
               Card(
                   elevation: 1,
@@ -49,7 +49,7 @@ class SesameBadgeWidgetState extends State<SesameBadgeWidget> {
                 children: [
                   ImageFiltered(
                     imageFilter: ImageFilter.blur(sigmaX: 6, sigmaY: 6),
-                    child: QrCodeWidget(),
+                    child: qrCodeWidget(),
                   ),
                   SesameCustomButton(
                       variant: SesameButtonVariant.neutral,
@@ -67,7 +67,7 @@ class SesameBadgeWidgetState extends State<SesameBadgeWidget> {
                       })
                 ],
               )
-            : QrCodeWidget();
+            : qrCodeWidget();
   }
 }
 

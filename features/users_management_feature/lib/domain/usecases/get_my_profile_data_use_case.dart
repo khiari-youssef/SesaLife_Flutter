@@ -1,5 +1,5 @@
-import 'package:core/core_domain/DomainUseCaseProtocol.dart';
-import 'package:core/core_utils/Logger.dart';
+import 'package:core/core_domain/domain_use_case_protocol.dart';
+import 'package:core/core_utils/logger.dart';
 import 'package:users_management_feature/domain/entities/SesameUser.dart';
 import 'package:users_management_feature/domain/ports/repositoryContracts/UserDataRepositoryContract.dart';
 

@@ -1,5 +1,5 @@
-import 'package:core/core_domain/DomainErrorType.dart';
-import 'package:core/core_domain/DomainUseCaseProtocol.dart';
+import 'package:core/core_domain/domain_error_type.dart';
+import 'package:core/core_domain/domain_use_case_protocol.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 
 import '../../../domain/entities/sesame_class_groups.dart';

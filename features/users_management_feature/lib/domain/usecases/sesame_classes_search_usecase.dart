@@ -1,4 +1,4 @@
-import 'package:core/core_domain/DomainUseCaseProtocol.dart';
+import 'package:core/core_domain/domain_use_case_protocol.dart';
 
 import '../../infrastructure/repositories/sesame_classes_repository.dart';
 import '../entities/sesame_class_groups.dart';

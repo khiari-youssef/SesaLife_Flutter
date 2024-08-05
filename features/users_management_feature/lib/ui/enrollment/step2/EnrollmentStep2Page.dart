@@ -1,5 +1,5 @@
-import 'package:core/core_domain/FormTextValidationState.dart';
-import 'package:core/core_utils/Logger.dart';
+import 'package:core/core_domain/form_text_validation_state.dart';
+import 'package:core/core_utils/logger.dart';
 import 'package:designsystem/designsystem_exports.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 

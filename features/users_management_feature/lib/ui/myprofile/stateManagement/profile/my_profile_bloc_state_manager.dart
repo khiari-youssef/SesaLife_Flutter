@@ -1,6 +1,6 @@
-import 'package:core/core_domain/DomainErrorType.dart';
-import 'package:core/core_domain/DomainUseCaseProtocol.dart';
-import 'package:core/core_utils/Logger.dart';
+import 'package:core/core_domain/domain_error_type.dart';
+import 'package:core/core_domain/domain_use_case_protocol.dart';
+import 'package:core/core_utils/logger.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 import 'package:users_management_feature/ui/myprofile/stateManagement/profile/my_profile_screen_event.dart';
 
