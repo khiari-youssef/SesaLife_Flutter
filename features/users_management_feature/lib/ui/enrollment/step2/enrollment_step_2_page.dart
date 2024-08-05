@@ -3,8 +3,8 @@ import 'package:core/core_utils/logger.dart';
 import 'package:designsystem/designsystem_exports.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 
-import 'EnrollmentStep2PageStateDataState.dart';
-import 'EnrollmentStep2PageStateManager.dart';
+import 'enrollment_step2_page_state_data_state.dart';
+import 'enrollment_step2_page_state_manager.dart';
 
 class EnrollmentStep2PageState extends State<EnrollmentStep2Page> {
   final TextEditingController firstNameController = TextEditingController();

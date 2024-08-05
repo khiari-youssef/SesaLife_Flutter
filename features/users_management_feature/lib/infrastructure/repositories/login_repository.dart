@@ -15,7 +15,7 @@ import '../../domain/entities/login_result.dart';
 import '../dataSources/users_local_data_source.dart';
 import '../dataSources/users_remote_data_source.dart';
 import '../dtos/SesameUserDTO.dart';
-import 'package:users_management_feature/domain/ports/repositoryContracts/LoginRepositoryContract.dart';
+import 'package:users_management_feature/domain/ports/repositoryContracts/login_repository_contract.dart';
 
 class LoginRepository implements LoginRepositoryContract {
   final UsersLocalDataSource localDataSource;

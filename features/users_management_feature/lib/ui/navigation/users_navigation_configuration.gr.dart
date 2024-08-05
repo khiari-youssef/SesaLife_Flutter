@@ -20,7 +20,7 @@ import 'package:users_management_feature/domain/entities/sesame_payment_transact
     as _i20;
 import 'package:users_management_feature/domain/usecases/user_search_usecase.dart'
     as _i22;
-import 'package:users_management_feature/ui/enrollment/EnrollmentScreen.dart'
+import 'package:users_management_feature/ui/enrollment/enrollment_screen.dart'
     as _i2;
 import 'package:users_management_feature/ui/guest_space/guest_space.dart'
     as _i3;

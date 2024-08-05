@@ -1,12 +1,12 @@
 import 'package:shared_dependencies/shared_dependencies.dart';
 import 'package:users_management_feature/ui/enrollment/step1/EnrollmentStep1Page.dart';
 
-import 'EnrollmentResultPage.dart';
-import 'ViewPagerCustomPage.dart';
-import 'step2/EnrollmentStep2Page.dart';
-import 'step3/EnrollmentStep3Page.dart';
-import 'step4/EnrollmentStep4Page.dart';
-import 'verificationStep/EnrollmentIdentifyVerificationStepPage.dart';
+import 'enrollment_result_page.dart';
+import 'view_pager_custom_page.dart';
+import 'step2/enrollment_step_2_page.dart';
+import 'step3/enrollment_step3_page.dart';
+import 'step4/enrollment_step_page.dart';
+import 'verificationStep/enrollment_identify_verification_step_page.dart';
 
 @RoutePage(name: "EnrollmentRoute")
 class EnrollmentScreen extends StatefulWidget {

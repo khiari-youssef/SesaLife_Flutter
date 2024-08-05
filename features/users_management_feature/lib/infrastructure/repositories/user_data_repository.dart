@@ -3,7 +3,7 @@ import 'package:users_management_feature/domain/entities/SesameUser.dart';
 
 import '../dataSources/users_local_data_source.dart';
 import '../dtos/SesameUserDTO.dart';
-import 'package:users_management_feature/domain/ports/repositoryContracts/UserDataRepositoryContract.dart';
+import 'package:users_management_feature/domain/ports/repositoryContracts/user_data_repository_contract.dart';
 
 class UserDataRepository implements UserdataRepositoryContract {
   final UsersLocalDataSource localDataSource;

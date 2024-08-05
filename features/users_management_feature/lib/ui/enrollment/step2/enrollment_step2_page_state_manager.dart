@@ -1,7 +1,7 @@
 import 'package:core/exports.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 
-import 'EnrollmentStep2PageStateDataState.dart';
+import 'enrollment_step2_page_state_data_state.dart';
 
 class EnrollmentStep2PageStateStateManager
     extends Cubit<EnrollmentStep2PageStateDataState> {

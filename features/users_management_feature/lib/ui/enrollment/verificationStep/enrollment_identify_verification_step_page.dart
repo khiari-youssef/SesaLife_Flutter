@@ -1,6 +1,6 @@
 import 'package:shared_dependencies/shared_dependencies.dart';
 
-import 'EnrollmentIdentifyVerificationStepPageStateManager.dart';
+import 'enrollment_identify_verification_step_page_state_manager.dart';
 
 class EnrollmentIdentifyVerificationStepPageState
     extends State<EnrollmentIdentifyVerificationStep> {
