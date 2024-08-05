@@ -1,6 +1,6 @@
 import 'package:core/exports.dart';
 
-import 'EnrollmentStep1PageStateManager.dart';
+import 'enrollment_step1_page_state_manager.dart';
 
 class EnrollmentStep1PageState extends State<EnrollmentStep1Page> {
   final TextEditingController emailController = TextEditingController();

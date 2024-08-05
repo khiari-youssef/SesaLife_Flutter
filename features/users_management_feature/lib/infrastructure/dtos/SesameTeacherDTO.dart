@@ -1,9 +1,9 @@
 import 'package:core/core_data/dtos/sesame_class_dto.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
-import 'package:users_management_feature/infrastructure/dtos/SesameRoleDTO.dart';
+import 'package:users_management_feature/infrastructure/dtos/sesame_role_dto.dart';
 import 'package:users_management_feature/infrastructure/dtos/SesameUserDTO.dart';
 
-import 'SesameBadgeDTO.dart';
+import 'sesame_badge_dto.dart';
 
 part 'SesameTeacherDTO.g.dart';
 

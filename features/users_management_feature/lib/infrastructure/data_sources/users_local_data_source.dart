@@ -1,5 +1,5 @@
 import 'package:shared_dependencies/shared_dependencies.dart';
-import 'package:users_management_feature/infrastructure/dataSources/users_hive_boxes_init.dart';
+import 'package:users_management_feature/infrastructure/data_sources/users_hive_boxes_init.dart';
 import 'package:users_management_feature/infrastructure/dtos/SesameUserDTO.dart';
 
 class UsersLocalDataSource {

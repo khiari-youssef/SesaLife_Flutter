@@ -8,8 +8,8 @@ import 'package:users_management_feature/domain/entities/SesameStudent.dart';
 import 'package:users_management_feature/infrastructure/dtos/SesameStudentDTO.dart';
 
 import '../../../domain/entities/SesameRole.dart';
-import '../../dtos/SesameBadgeDTO.dart';
-import '../../dtos/SesameRoleDTO.dart';
+import '../../dtos/sesame_badge_dto.dart';
+import '../../dtos/sesame_role_dto.dart';
 
 class StudentDomainToExternalEntityMapper
     implements

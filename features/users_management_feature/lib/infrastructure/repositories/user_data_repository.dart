@@ -1,7 +1,7 @@
 import 'package:core/core_domain/abstract_domain_to_external_entity_mapper.dart';
 import 'package:users_management_feature/domain/entities/SesameUser.dart';
 
-import '../dataSources/users_local_data_source.dart';
+import '../data_sources/users_local_data_source.dart';
 import '../dtos/SesameUserDTO.dart';
 import 'package:users_management_feature/domain/ports/repositoryContracts/user_data_repository_contract.dart';
 

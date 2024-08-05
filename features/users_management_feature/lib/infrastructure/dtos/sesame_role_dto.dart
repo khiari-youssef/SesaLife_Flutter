@@ -1,6 +1,6 @@
 import 'package:shared_dependencies/shared_dependencies.dart';
 
-part 'SesameRoleDTO.g.dart';
+part 'sesame_role_dto.g.dart';
 
 @HiveType(typeId: 4)
 @JsonSerializable()

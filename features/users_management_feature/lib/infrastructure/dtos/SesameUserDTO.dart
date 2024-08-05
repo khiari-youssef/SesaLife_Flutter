@@ -1,7 +1,7 @@
 import 'package:shared_dependencies/shared_dependencies.dart';
-import 'package:users_management_feature/infrastructure/dtos/SesameRoleDTO.dart';
+import 'package:users_management_feature/infrastructure/dtos/sesame_role_dto.dart';
 
-import 'SesameBadgeDTO.dart';
+import 'sesame_badge_dto.dart';
 
 part 'SesameUserDTO.g.dart';
 

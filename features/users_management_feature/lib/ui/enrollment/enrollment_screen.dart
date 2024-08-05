@@ -1,5 +1,5 @@
 import 'package:shared_dependencies/shared_dependencies.dart';
-import 'package:users_management_feature/ui/enrollment/step1/EnrollmentStep1Page.dart';
+import 'package:users_management_feature/ui/enrollment/step1/enrollment_step1_page.dart';
 
 import 'enrollment_result_page.dart';
 import 'view_pager_custom_page.dart';

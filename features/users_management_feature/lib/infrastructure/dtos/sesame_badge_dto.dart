@@ -1,6 +1,6 @@
 import 'package:shared_dependencies/shared_dependencies.dart';
 
-part 'SesameBadgeDTO.g.dart';
+part 'sesame_badge_dto.g.dart';
 
 @HiveType(typeId: 7)
 @JsonSerializable()
