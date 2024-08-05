@@ -30,5 +30,5 @@ echo "${GREEN} building application module ..."
 cd application || echo "${RED} could not access application folder" && exit
 flutter clean
 flutter pub get
-flutter pub run build_runner build --delete-conflicting-outputs
+flutter dart run build_runner build --delete-conflicting-outputs
 echo "${BLUE} build task completed"

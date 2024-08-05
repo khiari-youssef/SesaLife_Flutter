@@ -4,6 +4,8 @@ repository: https://github.com/khiari-youssef/SesaLife_Flutter
 packages:
   - application
   - features/**
+  - infrastructure/**
+  - test-runner/**
 
 
 scripts:
