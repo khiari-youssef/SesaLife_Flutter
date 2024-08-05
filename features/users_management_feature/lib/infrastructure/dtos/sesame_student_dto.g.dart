@@ -1,40 +1,46 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'SesameUserDTO.dart';
+part of 'sesame_student_dto.dart';
 
 // **************************************************************************
 // TypeAdapterGenerator
 // **************************************************************************
 
-class SesameUserDTOAdapter extends TypeAdapter<SesameUserDTO> {
+class SesameStudentDTOAdapter extends TypeAdapter<SesameStudentDTO> {
   @override
-  final int typeId = 0;
+  final int typeId = 1;
 
   @override
-  SesameUserDTO read(BinaryReader reader) {
+  SesameStudentDTO read(BinaryReader reader) {
     final numOfFields = reader.readByte();
     final fields = <int, dynamic>{
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
-    return SesameUserDTO(
+    return SesameStudentDTO(
       registrationID: fields[0] as String,
       candidatureID: fields[1] as String,
-      registrationDate: fields[10] as String,
       firstName: fields[2] as String,
       lastName: fields[3] as String,
       email: fields[4] as String,
       sex: fields[5] as String,
+      registrationDate: fields[10] as String,
       birthdate: fields[6] as String,
       profilePictureUrl: fields[7] as String,
       role: fields[8] as SesameRoleDTO,
       badge: fields[9] as SesameBadgeDTO,
+      sesameClass: fields[11] as SesameClassDTO,
+      portfolioId: fields[12] as String?,
     );
   }
 
   @override
-  void write(BinaryWriter writer, SesameUserDTO obj) {
+  void write(BinaryWriter writer, SesameStudentDTO obj) {
     writer
+      ..writeByte(13)
       ..writeByte(11)
+      ..write(obj.sesameClass)
+      ..writeByte(12)
+      ..write(obj.portfolioId)
       ..writeByte(0)
       ..write(obj.registrationID)
       ..writeByte(1)
@@ -65,7 +71,7 @@ class SesameUserDTOAdapter extends TypeAdapter<SesameUserDTO> {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is SesameUserDTOAdapter &&
+      other is SesameStudentDTOAdapter &&
           runtimeType == other.runtimeType &&
           typeId == other.typeId;
 }
@@ -74,22 +80,25 @@ class SesameUserDTOAdapter extends TypeAdapter<SesameUserDTO> {
 // JsonSerializableGenerator
 // **************************************************************************
 
-SesameUserDTO _$SesameUserDTOFromJson(Map<String, dynamic> json) =>
-    SesameUserDTO(
+SesameStudentDTO _$SesameStudentDTOFromJson(Map<String, dynamic> json) =>
+    SesameStudentDTO(
       registrationID: json['registrationID'] as String,
       candidatureID: json['candidatureID'] as String,
-      registrationDate: json['registrationDate'] as String,
       firstName: json['firstName'] as String,
       lastName: json['lastName'] as String,
       email: json['email'] as String,
       sex: json['sex'] as String,
+      registrationDate: json['registrationDate'] as String,
       birthdate: json['birthdate'] as String,
       profilePictureUrl: json['profilePictureUrl'] as String,
       role: SesameRoleDTO.fromJson(json['role'] as Map<String, dynamic>),
       badge: SesameBadgeDTO.fromJson(json['badge'] as Map<String, dynamic>),
+      sesameClass:
+          SesameClassDTO.fromJson(json['sesameClass'] as Map<String, dynamic>),
+      portfolioId: json['portfolioId'] as String?,
     );
 
-Map<String, dynamic> _$SesameUserDTOToJson(SesameUserDTO instance) =>
+Map<String, dynamic> _$SesameStudentDTOToJson(SesameStudentDTO instance) =>
     <String, dynamic>{
       'registrationID': instance.registrationID,
       'candidatureID': instance.candidatureID,
@@ -102,4 +111,6 @@ Map<String, dynamic> _$SesameUserDTOToJson(SesameUserDTO instance) =>
       'role': instance.role,
       'badge': instance.badge,
       'registrationDate': instance.registrationDate,
+      'sesameClass': instance.sesameClass,
+      'portfolioId': instance.portfolioId,
     };

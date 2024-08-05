@@ -3,7 +3,7 @@ import 'package:shared_dependencies/shared_dependencies.dart';
 
 import 'sesame_badge_dto.dart';
 import 'sesame_role_dto.dart';
-import 'SesameStudentDTO.dart';
+import 'sesame_student_dto.dart';
 
 part 'sesame_professional_student_dto.g.dart';
 

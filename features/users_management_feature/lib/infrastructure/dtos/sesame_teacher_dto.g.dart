@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'SesameTeacherDTO.dart';
+part of 'sesame_teacher_dto.dart';
 
 // **************************************************************************
 // TypeAdapterGenerator

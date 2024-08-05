@@ -1,6 +1,6 @@
 import 'package:shared_dependencies/shared_dependencies.dart';
 
-import '../dtos/SesameUserDTO.dart';
+import '../dtos/sesame_user_dto.dart';
 
 const String settingsBoxName = "mySettingsDataBox";
 const String userTokenBoxName = "tokenBox";

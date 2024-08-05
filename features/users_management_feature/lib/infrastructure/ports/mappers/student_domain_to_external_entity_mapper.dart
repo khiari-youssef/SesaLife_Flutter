@@ -5,7 +5,7 @@ import 'package:core/core_domain/entities/sesame_class.dart';
 import 'package:core/core_domain/entities/user_sex.dart';
 import 'package:core/core_domain/utilities.dart';
 import 'package:users_management_feature/domain/entities/SesameStudent.dart';
-import 'package:users_management_feature/infrastructure/dtos/SesameStudentDTO.dart';
+import 'package:users_management_feature/infrastructure/dtos/sesame_student_dto.dart';
 
 import '../../../domain/entities/SesameRole.dart';
 import '../../dtos/sesame_badge_dto.dart';

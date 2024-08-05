@@ -2,9 +2,9 @@ import 'package:core/core_domain/abstract_domain_to_external_entity_mapper.dart'
 import 'package:core/exports.dart';
 import 'package:users_management_feature/domain/entities/SesameTeacher.dart';
 import 'package:users_management_feature/domain/entities/SesameUser.dart';
-import 'package:users_management_feature/infrastructure/dtos/SesameStudentDTO.dart';
-import 'package:users_management_feature/infrastructure/dtos/SesameTeacherDTO.dart';
-import 'package:users_management_feature/infrastructure/dtos/SesameUserDTO.dart';
+import 'package:users_management_feature/infrastructure/dtos/sesame_student_dto.dart';
+import 'package:users_management_feature/infrastructure/dtos/sesame_teacher_dto.dart';
+import 'package:users_management_feature/infrastructure/dtos/sesame_user_dto.dart';
 
 import '../../../domain/entities/SesameStudent.dart';
 import '../../dtos/sesame_professional_student_dto.dart';

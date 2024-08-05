@@ -3,7 +3,7 @@ import 'package:users_management_feature/infrastructure/dtos/sesame_role_dto.dar
 
 import 'sesame_badge_dto.dart';
 
-part 'SesameUserDTO.g.dart';
+part 'sesame_user_dto.g.dart';
 
 @HiveType(typeId: 0)
 @JsonSerializable()

@@ -2,11 +2,11 @@ import 'package:core/core_data/dtos/dtos.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 import 'package:users_management_feature/infrastructure/dtos/sesame_badge_dto.dart';
 import 'package:users_management_feature/infrastructure/dtos/sesame_role_dto.dart';
-import 'package:users_management_feature/infrastructure/dtos/SesameStudentDTO.dart';
-import 'package:users_management_feature/infrastructure/dtos/SesameTeacherDTO.dart';
+import 'package:users_management_feature/infrastructure/dtos/sesame_student_dto.dart';
+import 'package:users_management_feature/infrastructure/dtos/sesame_teacher_dto.dart';
 import 'package:users_management_feature/infrastructure/dtos/sesame_professional_student_dto.dart';
 
-import 'SesameUserDTO.dart';
+import 'sesame_user_dto.dart';
 
 void registerAllHiveAdapters() {
   Hive.registerAdapter(SesameBadgeDTOAdapter());

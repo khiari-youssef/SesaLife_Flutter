@@ -5,10 +5,10 @@ import 'package:shared_dependencies/shared_dependencies.dart';
 import 'package:users_management_feature/infrastructure/dtos/enrollment_candidature_dto.dart';
 import 'package:users_management_feature/infrastructure/dtos/sesame_badge_dto.dart';
 import 'package:users_management_feature/infrastructure/dtos/sesame_role_dto.dart';
-import 'package:users_management_feature/infrastructure/dtos/SesameTeacherDTO.dart';
-import 'package:users_management_feature/infrastructure/dtos/SesameUserDTO.dart';
+import 'package:users_management_feature/infrastructure/dtos/sesame_teacher_dto.dart';
+import 'package:users_management_feature/infrastructure/dtos/sesame_user_dto.dart';
 
-import '../dtos/SesameStudentDTO.dart';
+import '../dtos/sesame_student_dto.dart';
 import '../dtos/login_response_dto.dart';
 
 class UsersRemoteDataSource {
