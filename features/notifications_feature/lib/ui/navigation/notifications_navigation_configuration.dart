@@ -1,6 +1,6 @@
 import 'package:shared_dependencies/shared_dependencies.dart';
 
-import 'NotificationsNavigationConfiguration.gr.dart';
+import 'notifications_navigation_configuration.gr.dart';
 
 @AutoRouterConfig(replaceInRouteName: 'Screen|Page,Route')
 class NotificationsNavigationConfiguration

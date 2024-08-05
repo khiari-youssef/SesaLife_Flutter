@@ -9,7 +9,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i2;
-import 'package:notifications_feature/ui/home_notifications/HomeNotificationsScreen.dart'
+import 'package:notifications_feature/ui/home_notifications/home_notifications_screen.dart'
     as _i1;
 
 abstract class $NotificationsNavigationConfiguration

@@ -12,7 +12,7 @@ import 'package:auto_route/auto_route.dart' as _i2;
 import 'package:events_management_feature/events_management_feature_exports.dart'
     as _i6;
 import 'package:home_feature/ui/navigation/home_root_screen.dart' as _i1;
-import 'package:notifications_feature/ui/navigation/NotificationsNavigationConfiguration.dart'
+import 'package:notifications_feature/ui/navigation/notifications_navigation_configuration.dart'
     as _i4;
 import 'package:sessions_feature/ui/navigation/sessions_navigation_configuration.dart'
     as _i5;

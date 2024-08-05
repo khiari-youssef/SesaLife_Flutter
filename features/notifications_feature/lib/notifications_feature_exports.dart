@@ -1,4 +1,4 @@
 library notifications_feature;
 
-export 'ui/home_notifications/HomeNotificationsScreen.dart';
-export 'ui/navigation/NotificationsNavigationConfiguration.dart';
+export 'ui/home_notifications/home_notifications_screen.dart';
+export 'ui/navigation/notifications_navigation_configuration.dart';
