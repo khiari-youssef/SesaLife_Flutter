@@ -1,4 +1,4 @@
-import 'package:designsystem/components/images/CustomClickableIcon.dart';
+import 'package:designsystem/components/images/custom_clickable_icon.dart';
 import 'package:designsystem/designsystem_exports.dart';
 
 class TextFieldIcon {
@@ -42,7 +42,7 @@ class SesameCustomTextField extends StatelessWidget {
         .typography
         .black
         .labelMedium
-        ?.copyWith(color: Theme.of(context).colorScheme.onBackground);
+        ?.copyWith(color: Theme.of(context).colorScheme.onSurface);
     InputBorder textFieldBorder = Theme.of(context).brightness ==
             Brightness.dark
         ? OutlineInputBorder(

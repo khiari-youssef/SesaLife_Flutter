@@ -1,5 +1,5 @@
 import 'package:core/exports.dart';
-import 'package:designsystem/components/images/CustomIcon.dart';
+import 'package:designsystem/components/images/custom_icon.dart';
 import 'package:designsystem/theme/dimens.dart';
 import 'package:intl/intl.dart';
 

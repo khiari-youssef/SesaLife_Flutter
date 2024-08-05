@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../theme/dimens.dart';
-import '../images/CustomIcon.dart';
+import '../images/custom_icon.dart';
 
 export 'package:designsystem/components/buttons/sesame_custom_button.dart';
 export 'package:designsystem/components/input/sesame_custom_text_field.dart';

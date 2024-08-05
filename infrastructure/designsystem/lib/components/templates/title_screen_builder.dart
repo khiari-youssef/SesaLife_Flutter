@@ -1,4 +1,4 @@
-import 'package:designsystem/components/scaffolds/ScreenTitleBar.dart';
+import 'package:designsystem/components/scaffolds/screen_title_bar.dart';
 
 import '../../designsystem_exports.dart';
 

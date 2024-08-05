@@ -1,5 +1,5 @@
 import 'package:core/core_domain/entities/entities.dart';
-import 'package:designsystem/components/images/CustomIcon.dart';
+import 'package:designsystem/components/images/custom_icon.dart';
 import 'package:designsystem/designsystem_exports.dart';
 
 class ProfilePreviewCard extends StatelessWidget {

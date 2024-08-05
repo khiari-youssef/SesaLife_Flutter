@@ -1,4 +1,4 @@
-import 'package:designsystem/components/images/CustomIcon.dart';
+import 'package:designsystem/components/images/custom_icon.dart';
 import 'package:designsystem/designsystem_exports.dart';
 
 enum HomeCalendarTopBarViewMode { calendar, list }

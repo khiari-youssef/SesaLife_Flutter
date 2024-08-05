@@ -1,4 +1,4 @@
-import 'package:designsystem/components/images/CustomIcon.dart';
+import 'package:designsystem/components/images/custom_icon.dart';
 import 'package:designsystem/designsystem_exports.dart';
 
 class FormStepButton extends StatelessWidget {
@@ -16,11 +16,11 @@ class FormStepButton extends StatelessWidget {
     return TextButton(
         onPressed: isEnabled ? onClicked : null,
         style: ButtonStyle(
-            shape: MaterialStatePropertyAll(RoundedRectangleBorder(
+            shape: WidgetStatePropertyAll(RoundedRectangleBorder(
                 borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(8.r),
                     bottomLeft: Radius.circular(8.r)))),
-            backgroundColor: MaterialStatePropertyAll(isEnabled
+            backgroundColor: WidgetStatePropertyAll(isEnabled
                 ? Theme.of(context).colorScheme.secondary
                 : Color.alphaBlend(const Color(0xCCF3F3F3),
                     Theme.of(context).colorScheme.secondary))),

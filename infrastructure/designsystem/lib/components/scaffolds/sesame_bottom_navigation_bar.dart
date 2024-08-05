@@ -1,4 +1,4 @@
-import 'package:designsystem/components/images/CustomIcon.dart';
+import 'package:designsystem/components/images/custom_icon.dart';
 import 'package:flutter/material.dart';
 
 class SesameBottomNavigationBar extends StatelessWidget {
@@ -44,7 +44,8 @@ class SesameBottomNavigationBar extends StatelessWidget {
         items: navBarItems,
         type: BottomNavigationBarType.fixed,
         unselectedItemColor: const Color(0xFFFBFBFB),
-        selectedItemColor: Theme.of(context).colorScheme.surfaceVariant,
+        selectedItemColor:
+            Theme.of(context).colorScheme.surfaceContainerHighest,
         showSelectedLabels: false,
         showUnselectedLabels: false,
         onTap: onItemSelected);

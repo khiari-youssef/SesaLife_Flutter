@@ -1,5 +1,5 @@
 import 'package:core/exports.dart';
-import 'package:designsystem/components/images/CustomIcon.dart';
+import 'package:designsystem/components/images/custom_icon.dart';
 
 enum CreditCardType { visa, masterCard }
 

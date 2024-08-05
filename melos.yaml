@@ -7,7 +7,6 @@ packages:
   - infrastructure/**
   - test-runner/**
 
-
 scripts:
   analyze:
     exec: dart analyze .
