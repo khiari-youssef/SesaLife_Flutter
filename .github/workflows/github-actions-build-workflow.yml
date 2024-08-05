@@ -12,7 +12,6 @@ jobs:
         with:
           distribution: 'corretto' # See 'Supported distributions' for available options
           java-version: '17'
-      - run: ./gradlew build --no-daemon
       - name: Clone repository
         uses: actions/checkout@v4
       - name: Setup gradle

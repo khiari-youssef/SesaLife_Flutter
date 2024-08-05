@@ -4,7 +4,7 @@ import 'dart:ui';
 import 'package:shared_dependencies/shared_dependencies.dart';
 
 import '../core_utils/bio_utils.dart';
-import '../core_utils/qrCode.dart';
+import '../core_utils/qr_code.dart';
 
 class SesameBadgeWidgetState extends State<SesameBadgeWidget> {
   bool isHidden = true;

@@ -20,4 +20,4 @@ export 'core_domain/utilities.dart';
 export 'core_domain/exceptions/sesame_domain_exception.dart';
 export 'core_utils/bio_utils.dart';
 export 'core_utils/logger.dart';
-export 'core_utils/qrCode.dart';
+export 'core_utils/qr_code.dart';

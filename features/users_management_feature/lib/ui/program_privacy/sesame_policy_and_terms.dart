@@ -143,7 +143,6 @@ class SesamePolicyAndTermsScreenState
                                                   double? targetOffset =
                                                       listItemsOffsets?[
                                                           title.$1];
-                                                  print(targetOffset);
                                                   if (targetOffset != null) {
                                                     listController
                                                         .jumpTo(targetOffset);
@@ -164,7 +163,6 @@ class SesamePolicyAndTermsScreenState
                                         20.verticalSpace,
                                       ]);
                                 } else {
-                                  print(index - 1);
                                   listItemsOffsets?[index - 1] =
                                       Scrollable.of(context).position.pixels;
                                   return widget.buildItemSection(

@@ -22,8 +22,7 @@ class LoginStateBloc extends Bloc<LoginEvent, LoginState> {
           }, onError: (error) {
             logger.e(error);
             if (error is SesameDomainException) {
-              emit(
-                  LoginState.error(error.type ?? DomainErrorType.UnknownError));
+              emit(LoginState.error(error.type));
             } else {
               emit(const LoginState.error(DomainErrorType.UnknownError));
             }
