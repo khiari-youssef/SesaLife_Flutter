@@ -1,6 +1,6 @@
 import 'package:core/core_domain/application_meta_info_facade.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
-import 'package:users_management_feature/dependencies/dataSources_module.dart';
+import 'package:users_management_feature/dependencies/data_sources_module.dart';
 import 'package:users_management_feature/dependencies/mappers_module.dart';
 
 import 'package:users_management_feature/domain/ports/repositoryContracts/login_repository_contract.dart';

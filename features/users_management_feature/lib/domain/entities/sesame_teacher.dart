@@ -1,5 +1,5 @@
 import 'package:core/core_domain/entities/sesame_class.dart';
-import 'package:users_management_feature/domain/entities/SesameUser.dart';
+import 'package:users_management_feature/domain/entities/sesame_user.dart';
 
 class SesameTeacher extends SesameUser {
   final String profBackground;

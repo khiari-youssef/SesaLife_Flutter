@@ -1,6 +1,6 @@
 import 'package:designsystem/designsystem_exports.dart';
 
-import '../../domain/entities/SesameDiplomaOption.dart';
+import '../../domain/entities/sesame_diploma_option.dart';
 
 class DiplomaOptionsRadioGroupState extends State<DiplomaOptionsRadioGroup> {
   String? selectedGroupID;

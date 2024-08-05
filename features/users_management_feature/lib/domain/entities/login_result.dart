@@ -1,4 +1,4 @@
-import 'package:users_management_feature/domain/entities/SesameUser.dart';
+import 'package:users_management_feature/domain/entities/sesame_user.dart';
 
 class LoginResult {
   final String token;

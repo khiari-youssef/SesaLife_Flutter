@@ -1,7 +1,7 @@
 import 'package:core/core_domain/domain_use_case_protocol.dart';
 
 import 'package:users_management_feature/domain/ports/repositoryContracts/login_repository_contract.dart';
-import '../entities/SesameUser.dart';
+import '../entities/sesame_user.dart';
 import '../entities/login_method.dart';
 
 class UserLoginUseCase

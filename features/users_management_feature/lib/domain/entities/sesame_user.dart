@@ -1,5 +1,5 @@
 import 'package:core/exports.dart';
-import 'package:users_management_feature/domain/entities/SesameRole.dart';
+import 'package:users_management_feature/domain/entities/sesame_role.dart';
 
 abstract class SesameUser {
   final String registrationID;

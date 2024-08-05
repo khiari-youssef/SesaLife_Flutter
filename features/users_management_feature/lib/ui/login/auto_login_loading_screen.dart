@@ -2,7 +2,7 @@ import 'package:core/core_domain/domain_use_case_protocol.dart';
 import 'package:core/core_utils/logger.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 
-import '../../domain/entities/SesameUser.dart';
+import '../../domain/entities/sesame_user.dart';
 import '../../domain/entities/login_method.dart';
 
 @RoutePage(name: "AutoLoginLoadingRoute")

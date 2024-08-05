@@ -1,8 +1,8 @@
 import 'package:shared_dependencies/shared_dependencies.dart';
-import 'package:users_management_feature/domain/entities/SesameUser.dart';
+import 'package:users_management_feature/domain/entities/sesame_user.dart';
 
-import '../../domain/entities/SesameStudent.dart';
-import '../../domain/entities/SesameTeacher.dart';
+import '../../domain/entities/sesame_student.dart';
+import '../../domain/entities/sesame_teacher.dart';
 
 class MyProfileMenu extends StatelessWidget {
   final SesameUser user;

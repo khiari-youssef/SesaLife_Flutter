@@ -4,7 +4,7 @@ import 'package:core/core_domain/exceptions/sesame_domain_exception.dart';
 import 'package:core/core_utils/logger.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 
-import '../../domain/entities/SesameUser.dart';
+import '../../domain/entities/sesame_user.dart';
 import '../../domain/entities/login_method.dart';
 import 'login_state.dart';
 

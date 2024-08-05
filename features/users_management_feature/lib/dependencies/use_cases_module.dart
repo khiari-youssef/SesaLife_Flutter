@@ -3,7 +3,7 @@ import 'package:core/core_domain/domain_use_case_protocol.dart';
 import 'package:core/core_domain/entities/user_profile_preview.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 
-import '../domain/entities/SesameUser.dart';
+import '../domain/entities/sesame_user.dart';
 import '../domain/entities/login_method.dart';
 import '../domain/entities/sesame_class_groups.dart';
 import '../domain/entities/payment_transaction_result.dart';

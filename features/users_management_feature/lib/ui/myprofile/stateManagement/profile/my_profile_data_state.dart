@@ -1,6 +1,6 @@
 import 'package:core/core_domain/domain_error_type.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
-import 'package:users_management_feature/domain/entities/SesameUser.dart';
+import 'package:users_management_feature/domain/entities/sesame_user.dart';
 
 part 'my_profile_data_state.freezed.dart';
 

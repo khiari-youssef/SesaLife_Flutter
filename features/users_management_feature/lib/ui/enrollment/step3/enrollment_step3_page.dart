@@ -1,6 +1,6 @@
 import 'package:designsystem/designsystem_exports.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
-import 'package:users_management_feature/domain/entities/SesameDiplomaOption.dart';
+import 'package:users_management_feature/domain/entities/sesame_diploma_option.dart';
 
 import '../diploma_options_radio_group.dart';
 

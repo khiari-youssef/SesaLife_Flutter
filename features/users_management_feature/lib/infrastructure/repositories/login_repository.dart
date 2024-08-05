@@ -5,12 +5,12 @@ import 'package:core/core_domain/entities/sesame_class.dart';
 import 'package:core/core_domain/entities/user_sex.dart';
 import 'package:core/core_domain/exceptions/sesame_domain_exception.dart';
 import 'package:core/core_utils/logger.dart';
-import 'package:users_management_feature/domain/entities/SesameStudent.dart';
-import 'package:users_management_feature/domain/entities/SesameTeacher.dart';
+import 'package:users_management_feature/domain/entities/sesame_student.dart';
+import 'package:users_management_feature/domain/entities/sesame_teacher.dart';
 import 'package:users_management_feature/infrastructure/dtos/login_response_dto.dart';
 
-import '../../domain/entities/SesameRole.dart';
-import '../../domain/entities/SesameUser.dart';
+import '../../domain/entities/sesame_role.dart';
+import '../../domain/entities/sesame_user.dart';
 import '../../domain/entities/login_result.dart';
 import '../data_sources/users_local_data_source.dart';
 import '../data_sources/users_remote_data_source.dart';

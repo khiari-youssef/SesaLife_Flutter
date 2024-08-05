@@ -2,7 +2,7 @@ import 'package:core/core_data/dtos/sesame_privacy_policy_document_dto.dart';
 import 'package:core/core_domain/abstract_domain_to_external_entity_mapper.dart';
 import 'package:core/core_domain/entities/sesame_privacy_policy_document.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
-import 'package:users_management_feature/domain/entities/SesameStudent.dart';
+import 'package:users_management_feature/domain/entities/sesame_student.dart';
 import 'package:users_management_feature/infrastructure/dtos/sesame_student_dto.dart';
 import 'package:users_management_feature/infrastructure/dtos/sesame_user_dto.dart';
 import 'package:users_management_feature/infrastructure/ports/mappers/prof_student_domain_to_external_entity_mapper.dart';
@@ -10,8 +10,8 @@ import 'package:users_management_feature/infrastructure/ports/mappers/student_do
 import 'package:users_management_feature/infrastructure/ports/mappers/teacher_domain_to_external_entity_mapper.dart';
 import 'package:users_management_feature/infrastructure/ports/mappers/user_domain_to_external_entity_mapper.dart';
 
-import '../domain/entities/SesameTeacher.dart';
-import '../domain/entities/SesameUser.dart';
+import '../domain/entities/sesame_teacher.dart';
+import '../domain/entities/sesame_user.dart';
 import '../infrastructure/dtos/sesame_teacher_dto.dart';
 import '../infrastructure/dtos/sesame_professional_student_dto.dart';
 import '../infrastructure/ports/mappers/app_rules_domain_to_external_entity_mapper.dart';

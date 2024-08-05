@@ -1,9 +1,9 @@
 import 'package:core/core_domain/entities/user_sex.dart';
 import 'package:designsystem/designsystem_exports.dart';
-import 'package:users_management_feature/domain/entities/SesameUser.dart';
+import 'package:users_management_feature/domain/entities/sesame_user.dart';
 
-import '../../domain/entities/SesameStudent.dart';
-import '../../domain/entities/SesameTeacher.dart';
+import '../../domain/entities/sesame_student.dart';
+import '../../domain/entities/sesame_teacher.dart';
 
 class MyProfilePreview extends StatelessWidget {
   final String profilePictureUrl;

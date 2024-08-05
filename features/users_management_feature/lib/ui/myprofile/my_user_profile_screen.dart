@@ -1,6 +1,6 @@
 import 'package:core/core_utils/bio_utils.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
-import 'package:users_management_feature/domain/entities/SesameUser.dart';
+import 'package:users_management_feature/domain/entities/sesame_user.dart';
 import 'package:users_management_feature/ui/myprofile/my_profile_menu.dart';
 import 'package:users_management_feature/ui/myprofile/my_profile_preview.dart';
 import 'package:users_management_feature/ui/myprofile/stateManagement/profile/my_profile_bloc_state_manager.dart';

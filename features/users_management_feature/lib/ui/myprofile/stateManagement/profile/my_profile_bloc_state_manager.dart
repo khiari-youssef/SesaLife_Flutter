@@ -4,7 +4,7 @@ import 'package:core/core_utils/logger.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 import 'package:users_management_feature/ui/myprofile/stateManagement/profile/my_profile_screen_event.dart';
 
-import '../../../../domain/entities/SesameUser.dart';
+import '../../../../domain/entities/sesame_user.dart';
 import 'my_profile_data_state.dart';
 import 'my_profile_screen_global_state.dart';
 
