@@ -1,6 +1,6 @@
 import 'package:shared_dependencies/shared_dependencies.dart';
 
-part 'AnnualSubscriptionModelDTO.g.dart';
+part 'annual_subscription_model_dto.g.dart';
 
 @JsonSerializable()
 class AnnualSubscriptionModelDTO extends HiveObject {

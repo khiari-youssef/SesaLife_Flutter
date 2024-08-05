@@ -4,8 +4,8 @@ import 'package:core/core_domain/domain_use_case_protocol.dart';
 import 'package:core/core_utils/logger.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
 
-import '../../../../domain/entities/payment_transaction_result.dart';
-import '../../../../domain/services/credit_card_input_validation_service.dart';
+import 'package:users_management_feature/domain/entities/payment_transaction_result.dart';
+import 'package:users_management_feature/domain/services/credit_card_input_validation_service.dart';
 
 part 'subscription_payment_interface_bloc.freezed.dart';
 part 'subscription_payment_interface_event.dart';

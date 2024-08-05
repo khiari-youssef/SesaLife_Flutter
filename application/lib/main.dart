@@ -5,7 +5,7 @@ import 'package:users_management_feature/infrastructure/dataSources/users_hive_b
 import 'package:users_management_feature/infrastructure/dtos/hive_adapters_register.dart';
 
 import 'app_navigation_configuration.dart';
-import 'dependenciesLoader.dart';
+import 'dependencies_loader.dart';
 
 void main() async {
   const List<Locale> supportedLocals = [

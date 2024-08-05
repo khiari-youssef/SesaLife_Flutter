@@ -24,7 +24,7 @@ jobs:
       - run: flutter doctor --verbose
       - run: flutter --version
       - run: sh build.sh
-      - run: cd test-runner && test test/testAppRunner_test.dart
+      - run: cd test-runner && test test/test_app_runner_test.dart
      # - run: sh release.sh
 
 

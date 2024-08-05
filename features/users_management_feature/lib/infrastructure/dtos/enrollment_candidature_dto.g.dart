@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'EnrollmentCandidatureDTO.dart';
+part of 'enrollment_candidature_dto.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator

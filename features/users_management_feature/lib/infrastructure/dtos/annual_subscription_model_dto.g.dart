@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'AnnualSubscriptionModelDTO.dart';
+part of 'annual_subscription_model_dto.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator

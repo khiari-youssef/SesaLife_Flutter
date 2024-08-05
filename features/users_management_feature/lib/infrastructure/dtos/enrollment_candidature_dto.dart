@@ -1,6 +1,6 @@
 import 'package:shared_dependencies/shared_dependencies.dart';
 
-part 'EnrollmentCandidatureDTO.g.dart';
+part 'enrollment_candidature_dto.g.dart';
 
 @JsonSerializable()
 class EnrollmentCandidatureDTO {

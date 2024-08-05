@@ -2,7 +2,7 @@ import 'dart:isolate';
 
 import 'package:core/core_data/dtos/dtos.dart';
 import 'package:shared_dependencies/shared_dependencies.dart';
-import 'package:users_management_feature/infrastructure/dtos/EnrollmentCandidatureDTO.dart';
+import 'package:users_management_feature/infrastructure/dtos/enrollment_candidature_dto.dart';
 import 'package:users_management_feature/infrastructure/dtos/SesameBadgeDTO.dart';
 import 'package:users_management_feature/infrastructure/dtos/SesameRoleDTO.dart';
 import 'package:users_management_feature/infrastructure/dtos/SesameTeacherDTO.dart';
