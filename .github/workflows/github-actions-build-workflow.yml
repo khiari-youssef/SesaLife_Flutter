@@ -32,6 +32,5 @@ jobs:
       - run: sh build.sh
       - run: cd test-runner && test test/testAppRunner_test.dart
       - run: sh release.sh
-      - run: echo "job completed successfully ! "
 
 
