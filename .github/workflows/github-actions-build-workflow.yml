@@ -12,10 +12,6 @@ jobs:
         with:
           distribution: 'corretto' # See 'Supported distributions' for available options
           java-version: '17'
-          cache: 'gradle'
-          cache-dependency-path: | # optional
-           sub-project/*.gradle*
-           sub-project/**/gradle-wrapper.properties
       - run: ./gradlew build --no-daemon
       - name: Clone repository
         uses: actions/checkout@v4
