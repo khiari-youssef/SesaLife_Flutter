@@ -4,6 +4,7 @@ RED='\033[0;31m'
 GREEN='\033[0;32m'
 BLUE='\033[0;34m'
 
+
 echo "${BLUE} Release Task :"
 flutter clean
 echo "${GREEN} Android app bundle generation Task :"
