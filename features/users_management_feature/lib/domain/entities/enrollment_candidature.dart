@@ -7,7 +7,7 @@ class EnrollmentCandidature {
   final DateTime birthDate;
   final String firstName;
   final String lastName;
-  final String program_id;
+  final String programId;
   final String status;
   EnrollmentCandidature(
       this.personalEmail,
@@ -16,6 +16,6 @@ class EnrollmentCandidature {
       this.birthDate,
       this.firstName,
       this.lastName,
-      this.program_id,
+      this.programId,
       this.status);
 }

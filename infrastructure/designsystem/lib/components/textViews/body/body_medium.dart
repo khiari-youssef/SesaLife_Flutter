@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:designsystem/designsystem_exports.dart';
 
 class BodyMedium extends StatelessWidget {

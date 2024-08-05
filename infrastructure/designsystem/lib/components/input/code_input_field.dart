@@ -27,7 +27,7 @@ class CodeInputField extends StatelessWidget {
         animationDuration: const Duration(milliseconds: 300),
         backgroundColor: Colors.transparent,
         textStyle: Theme.of(context).typography.black.labelMedium?.copyWith(
-            color: Theme.of(context).colorScheme.onBackground,
+            color: Theme.of(context).colorScheme.onSurface,
             fontSize: 16.sp,
             fontWeight: FontWeight.w700),
         onCompleted: onCompleted);

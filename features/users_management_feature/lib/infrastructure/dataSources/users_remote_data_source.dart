@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'dart:isolate';
 
 import 'package:core/core_data/dtos/dtos.dart';
@@ -63,8 +62,8 @@ class UsersRemoteDataSource {
   Future<bool> submitCandidatureRequest(
       EnrollmentCandidatureDTO candidatureForm) async {
     return await Isolate.run(() async {
-      Response<dynamic> response = await dio.get("");
-      Map<String, dynamic> payload = jsonDecode(response.data.toString());
+      //Response<dynamic> response = await dio.get("");
+      // Map<String, dynamic> payload = jsonDecode(response.data.toString());
       return true;
     });
   }

@@ -21,7 +21,7 @@ class MyProfileBlocStateManager
           return MyProfileDataState.success(result);
         }, onError: (error) {
           logger.e(error);
-          const MyProfileDataState.error(DomainErrorType.NotFound);
+          const MyProfileDataState.error(DomainErrorType.notFound);
         });
         emit(state.copyWith(profileDataState: resultState));
       }, logout: () async {

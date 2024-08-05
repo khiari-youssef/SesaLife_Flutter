@@ -38,11 +38,11 @@ class SesamePolicyAndTermsBloc
         return SesamePolicyAndTermsState.success(data);
       }, onError: (error) {
         return const SesamePolicyAndTermsState.error(
-            DomainErrorType.UnknownError);
+            DomainErrorType.unknownError);
       });
       emit(resultState);
     } else {
-      emit(const SesamePolicyAndTermsState.error(DomainErrorType.UnknownError));
+      emit(const SesamePolicyAndTermsState.error(DomainErrorType.unknownError));
     }
   }
 }

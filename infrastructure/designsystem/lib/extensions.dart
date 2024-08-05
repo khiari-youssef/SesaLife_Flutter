@@ -20,7 +20,7 @@ Widget buildWithLoadingState(Widget child, bool enableLoading) {
           : child);
 }
 
-enum ToastType { Success, Error, Info, Warning }
+enum ToastType { success, error, info, warning }
 
 extension UIextensions on BuildContext {
   showToast(
@@ -28,10 +28,10 @@ extension UIextensions on BuildContext {
     toastification.show(
       context: this,
       type: switch (toastType) {
-        ToastType.Info => ToastificationType.info,
-        ToastType.Error => ToastificationType.error,
-        ToastType.Warning => ToastificationType.warning,
-        ToastType.Success => ToastificationType.success
+        ToastType.info => ToastificationType.info,
+        ToastType.error => ToastificationType.error,
+        ToastType.warning => ToastificationType.warning,
+        ToastType.success => ToastificationType.success
       },
       style: ToastificationStyle.fillColored,
       autoCloseDuration: const Duration(seconds: 5),
@@ -64,13 +64,10 @@ extension UIextensions on BuildContext {
       dragToClose: true,
       applyBlurEffect: true,
       callbacks: ToastificationCallbacks(
-        onTap: (toastItem) => print('Toast ${toastItem.id} tapped'),
-        onCloseButtonTap: (toastItem) =>
-            print('Toast ${toastItem.id} close button tapped'),
-        onAutoCompleteCompleted: (toastItem) =>
-            print('Toast ${toastItem.id} auto complete completed'),
-        onDismissed: (toastItem) => print('Toast ${toastItem.id} dismissed'),
-      ),
+          onTap: (toastItem) => "",
+          onCloseButtonTap: (toastItem) => "",
+          onAutoCompleteCompleted: (toastItem) => "",
+          onDismissed: (toastItem) => ""),
     );
   }
 }

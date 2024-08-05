@@ -47,14 +47,14 @@ class LoginScreenState extends State<LoginScreen> {
                 AutoRouter.of(context).replaceNamed("/HomeRootRoute");
               },
               error: (errorType) {
-                if (errorType == DomainErrorType.InvalidCredentials) {
+                if (errorType == DomainErrorType.invalidCredentials) {
                   context.showToast(
                       title: S.of(context).login_failed_title,
                       message: S.of(context).login_error_invalid_credentials,
-                      toastType: ToastType.Error);
+                      toastType: ToastType.error);
                 } else {
                   context.showToast(
-                      message: errorType.name, toastType: ToastType.Error);
+                      message: errorType.name, toastType: ToastType.error);
                 }
               });
         },

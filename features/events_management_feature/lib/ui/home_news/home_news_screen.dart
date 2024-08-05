@@ -3,8 +3,7 @@ import 'package:shared_dependencies/shared_dependencies.dart';
 class HomeNewsScreenState extends State<HomeNewsScreen> {
   @override
   Widget build(BuildContext context) {
-    ThemeData theme = Theme.of(context);
-    return Center();
+    return const Center();
   }
 }
 

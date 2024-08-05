@@ -47,7 +47,7 @@ class GuestSpace extends StatelessWidget {
                       context.showToast(
                           title: "Error",
                           message: "Could not launch url",
-                          toastType: ToastType.Error);
+                          toastType: ToastType.error);
                     });
                   } else {
                     currentRouter

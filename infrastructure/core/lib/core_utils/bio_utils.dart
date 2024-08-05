@@ -38,7 +38,7 @@ class SesameDeviceAuthManager {
     }, onError: (e) {
       context.showToast(
           message: S.of(context).device_auth_unsupported,
-          toastType: ToastType.Error);
+          toastType: ToastType.error);
     });
   }
 }

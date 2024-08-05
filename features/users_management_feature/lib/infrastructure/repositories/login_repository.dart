@@ -72,7 +72,7 @@ class LoginRepository implements LoginRepositoryContract {
         .catchError((error) {
           logger.e("user with email $email does not exist");
           throw SesameDomainException(
-              type: DomainErrorType.InvalidCredentials,
+              type: DomainErrorType.invalidCredentials,
               message: "user with email $email does not exist");
         })
         .asStream()
